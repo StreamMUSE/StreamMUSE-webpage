@@ -96,9 +96,9 @@ export default function AudioLibrarySection() {
               onChange={(e) => updateFilter('model_architecture', e.target.value)}
             >
               <option value="all">全部</option>
-              <option value="xinyue_old">Xinyue's Old</option>
-              <option value="xinyue_new">Xinyue's New</option>
-              <option value="xinyue_new_chord">Xinyue's New with Chord</option>
+              <option value="xinyue_old">Xinyue&apos;s Old</option>
+              <option value="xinyue_new">Xinyue&apos;s New</option>
+              <option value="xinyue_new_chord">Xinyue&apos;s New with Chord</option>
             </select>
           </div>
 
