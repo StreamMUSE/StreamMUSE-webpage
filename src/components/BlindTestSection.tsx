@@ -20,14 +20,7 @@ export default function BlindTestSection() {
   const sampleAudio: AudioMetadata = {
     id: 'sample_a',
     filename: 'xinyue_new_025b_sample.mid',
-    metadata: {
-      model_architecture: 'xinyue_new',
-      model_parameters: '0.25b',
-      training_dataset: 'aria_unique',
-      prompt_length: '75t',
-      generation_length: '100t', 
-      inference_mode: 'real_time'
-    },
+    version: '1.0',
     audio_info: {
       duration: 30,
       file_size: '45KB',
@@ -49,11 +42,6 @@ export default function BlindTestSection() {
   const sampleAudioB: AudioMetadata = {
     ...sampleAudio,
     id: 'sample_b',
-    metadata: {
-      ...sampleAudio.metadata,
-      model_architecture: 'xinyue_old',
-      model_parameters: '0.12b'
-    }
   }
 
   useEffect(() => {
@@ -228,7 +216,8 @@ export default function BlindTestSection() {
             </button>
           </div>
           <MidiVisualizer 
-            audioMetadata={currentPair?.[0] || sampleAudio} 
+            notes={[]} // 修复：使用空数组作为安全的占位符
+            duration={currentPair?.[0]?.audio_info.duration || 30}
             isPlaying={isPlayingA}
           />
         </div>
@@ -259,7 +248,8 @@ export default function BlindTestSection() {
             </button>
           </div>
           <MidiVisualizer 
-            audioMetadata={currentPair?.[1] || sampleAudioB} 
+            notes={[]} // 修复：使用空数组作为安全的占位符
+            duration={currentPair?.[1]?.audio_info.duration || 30}
             isPlaying={isPlayingB}
           />
         </div>

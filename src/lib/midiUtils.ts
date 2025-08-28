@@ -88,58 +88,58 @@ export class MidiProcessor {
     )
   }
 
-  /**
-   * 生成示例 MIDI 数据（用于演示）
-   */
-  static generateSampleMidi(duration: number = 30): MidiTrack[] {
-    const notes: MidiNote[] = []
-    const scales = [60, 62, 64, 65, 67, 69, 71, 72] // C 大调音阶
+  // /**
+  //  * 生成示例 MIDI 数据（用于演示）
+  //  */
+  // static generateSampleMidi(duration: number = 30): MidiTrack[] {
+  //   const notes: MidiNote[] = []
+  //   const scales = [60, 62, 64, 65, 67, 69, 71, 72] // C 大调音阶
     
-    // 生成主旋律
-    for (let i = 0; i < duration * 2; i++) {
-      const start = (i * 0.5) + Math.random() * 0.2
-      if (start >= duration) break
+  //   // 生成主旋律
+  //   for (let i = 0; i < duration * 2; i++) {
+  //     const start = (i * 0.5) + Math.random() * 0.2
+  //     if (start >= duration) break
       
-      notes.push({
-        pitch: scales[Math.floor(Math.random() * scales.length)] + Math.floor(Math.random() * 12),
-        start,
-        duration: 0.3 + Math.random() * 0.7,
-        velocity: 70 + Math.random() * 40,
-        channel: 0
-      })
-    }
+  //     notes.push({
+  //       pitch: scales[Math.floor(Math.random() * scales.length)] + Math.floor(Math.random() * 12),
+  //       start,
+  //       duration: 0.3 + Math.random() * 0.7,
+  //       velocity: 70 + Math.random() * 40,
+  //       channel: 0
+  //     })
+  //   }
     
-    // 生成和弦伴奏
-    const chordNotes: MidiNote[] = []
-    for (let i = 0; i < duration / 2; i++) {
-      const start = i * 2
-      const root = scales[Math.floor(Math.random() * scales.length)]
-      
-      // 三和弦
-      [0, 4, 7].forEach(interval => {
-        chordNotes.push({
-          pitch: root + interval,
-          start,
-          duration: 1.8,
-          velocity: 50 + Math.random() * 20,
-          channel: 1
-        })
-      })
-    }
+  //   // 生成和弦伴奏
+  //   const chordNotes: MidiNote[] = []
+  //   for (let i = 0; i < duration / 2; i++) {
+  //     const start = i * 2
+  //     const root: number = scales[Math.floor(Math.random() * scales.length)]
+
+  //     // 三和弦
+  //     [0, 4, 7].forEach((interval: number) => {
+  //       chordNotes.push({
+  //         pitch: root + interval,
+  //         start,
+  //         duration: 1.8,
+  //         velocity: 50 + Math.random() * 20,
+  //         channel: 1
+  //       })
+  //     })
+  //   }
     
-    return [
-      {
-        name: 'Melody',
-        notes: notes.sort((a, b) => a.start - b.start),
-        instrument: 1 // Piano
-      },
-      {
-        name: 'Chords', 
-        notes: chordNotes.sort((a, b) => a.start - b.start),
-        instrument: 1 // Piano
-      }
-    ]
-  }
+  //   return [
+  //     {
+  //       name: 'Melody',
+  //       notes: notes.sort((a, b) => a.start - b.start),
+  //       instrument: 1 // Piano
+  //     },
+  //     {
+  //       name: 'Chords', 
+  //       notes: chordNotes.sort((a, b) => a.start - b.start),
+  //       instrument: 1 // Piano
+  //     }
+  //   ]
+  // }
 }
 
 /**
