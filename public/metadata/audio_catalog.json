@@ -1,0 +1,88 @@
+[
+  {
+    "groupId": "xinyue_old-0.12b-pop909-offline-001-200t-001-200t",
+    "sharedMetadata": {
+      "model_architecture": "xinyue_old",
+      "model_parameters": "0.12b",
+      "training_dataset": "pop909",
+      "inference_mode": "offline",
+      "prompt_length": "200t",
+      "generation_length": "200t",
+      "prompt_file": "001",
+      "input_file": "001"
+    },
+    "instances": [
+      {
+        "id": "audio_1",
+        "filename": "offline_tem_1.0_prompt_001_200t_input_001_200t_001.mid",
+        "midi_url": "/audio/xinyue_old/012b/pop909/offline/offline_tem_1.0_prompt_001_200t_input_001_200t_001.mid",
+        "version": "001",
+        "audio_info": {
+          "duration": 30,
+          "file_size": "N/A",
+          "format": "midi"
+        },
+        "generation_params": {
+          "temperature": 1,
+          "top_p": 0.9,
+          "seed": 1234
+        },
+        "evaluation": {
+          "votes": 0,
+          "elo_rating": 1500,
+          "total_comparisons": 0
+        },
+        "created_at": "2025-08-28T01:59:18.304Z"
+      }
+    ],
+    "availableTemperatures": [
+      1
+    ],
+    "availableVersions": [
+      "001"
+    ]
+  },
+  {
+    "groupId": "xinyue_old-0.12b-pop909-offline-002-200t-002-200t",
+    "sharedMetadata": {
+      "model_architecture": "xinyue_old",
+      "model_parameters": "0.12b",
+      "training_dataset": "pop909",
+      "inference_mode": "offline",
+      "prompt_length": "200t",
+      "generation_length": "200t",
+      "prompt_file": "002",
+      "input_file": "002"
+    },
+    "instances": [
+      {
+        "id": "audio_2",
+        "filename": "offline_tem_1.0_prompt_002_200t_input_002_200t_001.mid",
+        "midi_url": "/audio/xinyue_old/012b/pop909/offline/offline_tem_1.0_prompt_002_200t_input_002_200t_001.mid",
+        "version": "001",
+        "audio_info": {
+          "duration": 30,
+          "file_size": "N/A",
+          "format": "midi"
+        },
+        "generation_params": {
+          "temperature": 1,
+          "top_p": 0.9,
+          "seed": 1234
+        },
+        "evaluation": {
+          "votes": 0,
+          "elo_rating": 1500,
+          "total_comparisons": 0
+        },
+        "created_at": "2025-08-28T01:59:18.304Z"
+      }
+    ],
+    "availableTemperatures": [
+      1
+    ],
+    "availableVersions": [
+      "001"
+    ]
+  }
+]
