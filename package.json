@@ -6,9 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "predev": "node scripts/generate-audio-catalog.mjs",
-    "prebuild": "node scripts/generate-audio-catalog.mjs"
+    "lint": "next lint"
   },
   "dependencies": {
     "@tonejs/midi": "^2.0.28",
