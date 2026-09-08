@@ -27,4 +27,9 @@
 - Migration `001_evaluation.sql` was applied to the initially empty production database. Both study tables were verified to contain zero rows.
 - All three Vercel website projects are connected to this resource: `stream-muse-webpage`, `stream-muse-webpage-7tns`, `stream-muse-webpage-8ytb`.
 - The third project's connection was added with Production and Preview environments, Preview database branching, `DATABASE` variable prefix, and Sensitive enabled.
-- Preview submission/export verification is pending deployment of the feature branch. No test answers were inserted into production.
+- Commit `ba29cc27e5a357e84db6f71f723a020c1dad6bb2` built successfully in all three Vercel projects. Their integration provisioning points to the same independent Neon branch `preview/codex/v2-listening-evaluation` (`br-aged-boat-awbtvqmk`). Production uses the separate `main` database branch.
+- A real browser evaluation on `stream-muse-webpage-8ytb-kk3486oev.vercel.app` successfully created a session, loaded the final four audio files and saved nine scores plus ranking. Reload retained completion. Exporting that Preview database produced exactly one completed response; its scores, display/system mapping, assets, seeds and ranking were verified against the browser and catalog.
+- Production was queried again after the Preview test: zero sessions and zero responses. No test answers were inserted into production.
+- The actual user project also passed type checking and a fresh production build after regenerating its old local dependencies/build cache. Its pre-existing `LICENSE`, `next.config.js` and `tailwind.config.js` deletions and `.agent` directory were preserved.
+
+Review entry: [primary project Preview](https://stream-muse-webpage-git-ae4ef9-stanley-zhengs-projects-08a97b0e.vercel.app/versions/v2/evaluate). The feature branch is `codex/v2-listening-evaluation`; production release remains a separate merge into `main`.
