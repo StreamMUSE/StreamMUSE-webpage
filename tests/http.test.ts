@@ -15,8 +15,16 @@ test('running API: request validation, anonymous restore, concurrent submit and 
   assert.equal(session.submitted, false)
   assert.ok(!JSON.stringify(session).includes('sourceFile'))
   session.samples.forEach((sample: Record<string, unknown>) => {
-    assert.deepEqual(Object.keys(sample).sort(), ['duration', 'id', 'label', 'src'])
+    assert.deepEqual(Object.keys(sample).sort(), ['duration', 'id', 'label', 'src', 'visualizationSrc'])
   })
+  for (const asset of [session.reference, ...session.samples]) {
+    const notes = await fetch(`${base}${asset.visualizationSrc}`)
+    assert.equal(notes.status, 200)
+    const roll = await notes.json()
+    assert.equal(roll.schemaVersion, 1)
+    assert.ok(roll.notes.length > 0)
+    assert.equal((await fetch(`${base}${asset.src}`, { method: 'HEAD' })).status, 200)
+  }
   assert.deepEqual(await (await post('/api/evaluation-sessions', { sessionId: id })).json(), session)
   const restored = await fetch(`${base}/api/evaluation-sessions/${id}`)
   assert.equal(restored.headers.get('cache-control'), 'no-store')

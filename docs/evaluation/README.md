@@ -14,13 +14,13 @@ The static page at `/versions/v2/evaluate` compares three anonymous accompanimen
 
 Source: `ISMIR_LBD_20260907`, using the ten numbered song folders. The `_raw` folders are excluded. The original playback timing, velocities, rests and ending are preserved; unheard P+C prompts are not inserted. Melody-only outputs caused by empty accompaniment are retained in the sample pool (v1 seed2 for songs 01, 02, 04 and 10).
 
-Dataset version: `ismir-lbd-20260907-playback-v1`. Rubric version: `beat-h2-accompaniment-v1`.
+Dataset version: `ismir-lbd-20260907-playback-v2`. Rubric version: `beat-h2-accompaniment-v1`.
 
 Coherence, Plausibility and Musicality follow BEAT, Appendix H.2, pp. 18–19, in the supplied `02_BEAT_Uniform_Temporal_Steps.pdf`. The five verbal anchors in `src/lib/evaluation/rubric.ts` were written for this study; the paper does not supply them. Each sample requires three integer scores from 1 to 5. Overall ranking is a separate permutation of A/B/C; it need not agree with score averages. Do not change anchors or audio in place during collection. Use a new rubric/dataset version for substantive changes and retain assets used by saved sessions.
 
 ## Audio preparation
 
-The 100 MP3 files in `public/media/evaluation` use opaque resource IDs. They are pre-rendered and served as static files. No model or MIDI synthesizer runs when a participant visits.
+The 100 current MP3 files in `public/media/evaluation` use opaque resource IDs. They are pre-rendered and served as static files. No model or MIDI synthesizer runs when a participant visits.
 
 Prerequisites: Node.js 20.12+ (Next.js requires 20.9+), FluidSynth, FFmpeg including ffprobe, and MuseScore's MS Basic soundfont. Install project dependencies with `npm ci`, then:
 
@@ -28,9 +28,13 @@ Prerequisites: Node.js 20.12+ (Next.js requires 20.9+), FluidSynth, FFmpeg inclu
 npm run evaluation:audio -- '/path/to/ISMIR_LBD_20260907' '/Applications/MuseScore 4.app/Contents/Resources/sound/MS Basic.sf3'
 ```
 
-Rendering uses the same MS Basic soundfont checksum, 44.1 kHz stereo, fixed FluidSynth gain 0.3, no chorus/reverb, polyphony 512 and MP3 VBR quality 3 for every file. There is no per-file normalization. The full MIDI timeline, including its end-of-track event, is retained, followed by three seconds of piano release. Any additional renderer waiting time is removed only after verifying its peak is below 0.0005 (about −66 dBFS). This removes the renderer's long silent padding on song 03 without changing note timing or cutting musical content. `audio-audit.json` records source/audio hashes, track note counts, duration, peak, RMS and discarded-tail peak; the soundfont license is included. The soundfont itself is not distributed. The preparation script rejects non-piano tracks, silent combined output, clipping risk, audible tails beyond the common release window, and audio shorter than the MIDI. Cached renders are stored in the system temporary directory, keyed by source and render settings.
+Rendering uses the same MS Basic soundfont checksum, 44.1 kHz stereo, fixed FluidSynth gain 0.3, no chorus/reverb, polyphony 512 and MP3 VBR quality 3 for every file. Melody and accompaniment are rendered as separate stems, preserving the original MIDI track events and tempo map, then mixed with linear gains of 1.0 and 0.4 respectively (accompaniment −7.96 dB). There is no per-file normalization, compression, or participant-adjustable stem balance. The same mix applies to all three systems and every seed. Track names `Guitar`/`Piano` in v0 map to melody/accompaniment; both still use the piano soundfont. Empty accompaniment remains silent. The full MIDI timeline, including its end-of-track event, is retained, followed by three seconds of piano release. Any additional renderer waiting time is removed only after verifying its peak is below 0.0005 (about −66 dBFS). This removes the renderer's long silent padding on song 03 without changing note timing or cutting musical content. `audio-audit.json` records source/audio/visualization hashes, track note counts, duration, mix peak/RMS, pre-gain stem peak/RMS and discarded-tail peak; the soundfont license is included. The soundfont itself is not distributed. The preparation script rejects non-piano tracks, silent combined output, clipping risk, audible tails beyond the common release window, and audio shorter than the MIDI. Cached renders are stored in the system temporary directory, keyed by source and render settings.
 
-Browser playback uses native controls and metadata-only preloading. Starting one player pauses the previous player. Reaching the end is shown as a playback status, not treated as proof of attentive listening. Full listening is not enforced.
+Browser playback uses native audio controls and metadata-only preloading. A Canvas piano roll accompanies each of the four players: melody in teal, accompaniment in terracotta, a moving playhead and active-note outlines. Its 12-second window follows the audio element’s current time, so seek, pause and replay stay synchronized; no separate synthesizer or timing clock runs in the browser. Click the roll to seek within the visible window, use arrow keys for five-second steps, Home/End for the endpoints, or use the native audio bar to seek anywhere. Every seed/system/reference within a song shares the same pitch range and timeline. Note JSON contains only role, pitch, time, duration and velocity; opaque asset paths disclose no filenames, system names or seeds. Only the four assigned note files are loaded. A note-load failure offers retry and leaves audio playback available.
+
+The first dataset (`ismir-lbd-20260907-playback-v1`) remains archived in `docs/evaluation/history`, and all 100 original MP3 files remain at their original URLs. Their corresponding note JSON is added without changing the recordings. Existing sessions keep their stored assignment, dataset version and audio, including on retry; newly created sessions use playback-v2. No database migration is required for this update.
+
+ Starting one player pauses the previous player. Reaching the end is shown as a playback status, not treated as proof of attentive listening. Full listening is not enforced.
 
 ## Database setup
 

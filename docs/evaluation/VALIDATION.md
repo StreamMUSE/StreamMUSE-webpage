@@ -33,3 +33,13 @@
 - The actual user project also passed type checking and a fresh production build after regenerating its old local dependencies/build cache. Its pre-existing `LICENSE`, `next.config.js` and `tailwind.config.js` deletions and `.agent` directory were preserved.
 
 Review entry: [primary project Preview](https://stream-muse-webpage-git-ae4ef9-stanley-zhengs-projects-08a97b0e.vercel.app/versions/v2/evaluate). The feature branch is `codex/v2-listening-evaluation`; production release remains a separate merge into `main`.
+
+
+## Balanced mix and synchronized piano roll (2026-09-08)
+
+- Playback-v2 contains 100 newly rendered recordings with fixed linear melody/accompaniment gains of 1.0/0.4 (−7.96 dB on accompaniment), no per-file normalization. Original tempo, note timing, velocity and controller events are preserved in separately rendered stems. All 100 playback-v1 recordings retain their original hashes and URLs; their catalog and audit are archived in `history`.
+- Maximum new mix peak: 0.125607. Maximum discarded tail peak: 0.0000729994. The common three-second piano release is retained. The 100 current note files contain 36,602 notes and total approximately 3.9 MiB; each listener loads four assigned files only. All samples for one melody share a pitch range, timeline and 12-second viewing window.
+- All 12 automated tests passed with local PostgreSQL and the running API enabled, no skips. Added coverage includes tempo changes and sustain in stem splitting, seek boundaries, anonymous note data, historical asset preservation and real HTTP access to assigned audio/JSON resources. Type checking and lint passed without errors or warnings.
+- Browser checks passed at desktop and 390 × 844: audio-clock animation and active-note outlines, five-second keyboard seeking, pointer seeking, Home/End, exclusive playback, draft/asset restoration, and four responsive canvases without horizontal overflow.
+- Temporarily removing one local note file showed a retry message while retaining the audio controls and selected score. Restoring the file and pressing Retry note view recovered all four canvases. End seeking follows the browser's actual media duration.
+- Existing sessions deliberately retain their original recording. Use a fresh deployment URL/origin when reviewing the new mix, so an earlier browser draft does not restore playback-v1.

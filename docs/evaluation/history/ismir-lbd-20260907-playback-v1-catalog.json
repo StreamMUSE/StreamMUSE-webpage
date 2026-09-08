@@ -1,0 +1,957 @@
+{
+  "datasetVersion": "ismir-lbd-20260907-playback-v1",
+  "render": {
+    "soundfont": "MuseScore MS Basic",
+    "soundfontSha256": "5ea2375e8bd7d8e71def1036978c1621e85b66934169b6a2744b27b9b3c2d99c",
+    "sampleRate": 44100,
+    "gain": 0.3,
+    "reverb": false,
+    "chorus": false,
+    "polyphony": 512,
+    "encoding": "MP3 VBR quality 3, stereo",
+    "tailSeconds": 3,
+    "padding": "Preserve the full MIDI timeline, then retain 3 seconds for piano release."
+  },
+  "songs": [
+    {
+      "id": "01",
+      "title": "童话",
+      "reference": {
+        "id": "55b56824e29488a45ddd7703",
+        "src": "/media/evaluation/55b56824e29488a45ddd7703.mp3",
+        "duration": 76.878367,
+        "sourceSha256": "6f135bf339236cdb3e3eaf8f8bb2a5061cbe7c515cdbd1a140e5457dafff3065",
+        "sourceFile": "01_童话/00_melody_full.mid"
+      },
+      "samples": [
+        {
+          "id": "2c716b74acc9d83db185258c",
+          "src": "/media/evaluation/2c716b74acc9d83db185258c.mp3",
+          "duration": 76.878367,
+          "sourceSha256": "2806cda9b860dd016d8bbb2e96e38f79f7a052e3f28c2f0bbae27ce64d6cb4bf",
+          "sourceFile": "01_童话/01_rule_constraints_s0_full.mid",
+          "version": "v2",
+          "seed": 0
+        },
+        {
+          "id": "aab62ae11b9aec0a7bf2d9b4",
+          "src": "/media/evaluation/aab62ae11b9aec0a7bf2d9b4.mp3",
+          "duration": 76.878367,
+          "sourceSha256": "8eae90b1d5c61a797953f85e1cb046494b1d02ad303714ca05f186ca8caf953e",
+          "sourceFile": "01_童话/02_rule_constraints_s1_full.mid",
+          "version": "v2",
+          "seed": 1
+        },
+        {
+          "id": "33771ca08ff54511a3148afe",
+          "src": "/media/evaluation/33771ca08ff54511a3148afe.mp3",
+          "duration": 76.878367,
+          "sourceSha256": "7f4d372271e71f1c36188c9b33225b006f6aa325182d5b438cb9cf808af5ff11",
+          "sourceFile": "01_童话/03_rule_constraints_s2_full.mid",
+          "version": "v2",
+          "seed": 2
+        },
+        {
+          "id": "3dc3a3a131fd306452cb8a49",
+          "src": "/media/evaluation/3dc3a3a131fd306452cb8a49.mp3",
+          "duration": 76.878367,
+          "sourceSha256": "57a93b93f3bea65f5afb5a2c676281ba38b5c5704f0592b92a54a6a18e840054",
+          "sourceFile": "01_童话/04_single_n1_s0_full.mid",
+          "version": "v1",
+          "seed": 0
+        },
+        {
+          "id": "d74e76db66d2fe6f195ffbe9",
+          "src": "/media/evaluation/d74e76db66d2fe6f195ffbe9.mp3",
+          "duration": 76.878367,
+          "sourceSha256": "7b6f5869445f93001c86700436b303fc4af11b9ef8b2c8e83a6393ba210973a6",
+          "sourceFile": "01_童话/05_single_n1_s1_full.mid",
+          "version": "v1",
+          "seed": 1
+        },
+        {
+          "id": "6a3f446035a53556a01b4f9c",
+          "src": "/media/evaluation/6a3f446035a53556a01b4f9c.mp3",
+          "duration": 76.878367,
+          "sourceSha256": "4a99796e1619dec52f54a35fcdfbaa9ada45dadfdef2d278f816552dedd2ba21",
+          "sourceFile": "01_童话/06_single_n1_s2_full.mid",
+          "version": "v1",
+          "seed": 2
+        },
+        {
+          "id": "1ce707f8c8da1a3e6ebda2a1",
+          "src": "/media/evaluation/1ce707f8c8da1a3e6ebda2a1.mp3",
+          "duration": 77.217959,
+          "sourceSha256": "89d41c48737658c815b20f9960f1589aa8c3062b699f91e148c42093bf26dea1",
+          "sourceFile": "01_童话/07_legacy_s0_full.mid",
+          "version": "v0",
+          "seed": 0
+        },
+        {
+          "id": "6cd13a4a31ebd0ae7f75d3a6",
+          "src": "/media/evaluation/6cd13a4a31ebd0ae7f75d3a6.mp3",
+          "duration": 76.382041,
+          "sourceSha256": "50c7c0859dbd5b4b30f233f4dad41409f1594c7e2046b73ee5ab2e9544c11961",
+          "sourceFile": "01_童话/08_legacy_s1_full.mid",
+          "version": "v0",
+          "seed": 1
+        },
+        {
+          "id": "61522c4bed0430ebc4793d4e",
+          "src": "/media/evaluation/61522c4bed0430ebc4793d4e.mp3",
+          "duration": 75.546122,
+          "sourceSha256": "407af857134d7abf9d3195a9089e99ab6c0632a5f9e1d36784b80f8e0c18bd00",
+          "sourceFile": "01_童话/09_legacy_s2_full.mid",
+          "version": "v0",
+          "seed": 2
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Night dancer",
+      "reference": {
+        "id": "eff8a0705dd5e72fa9ef2c83",
+        "src": "/media/evaluation/eff8a0705dd5e72fa9ef2c83.mp3",
+        "duration": 78.210612,
+        "sourceSha256": "b7982f23dc31dd04145ea7e9fe794c619bce5e5875b567c76bae92d41807c7fa",
+        "sourceFile": "02_Night dancer/00_melody_full.mid"
+      },
+      "samples": [
+        {
+          "id": "6df7703a57deeb51c3f82a59",
+          "src": "/media/evaluation/6df7703a57deeb51c3f82a59.mp3",
+          "duration": 78.210612,
+          "sourceSha256": "8e5bd7de20d095ac8e381b20a6b7e85bdde2fb569adc97aa5bda09af7cd396e5",
+          "sourceFile": "02_Night dancer/01_rule_constraints_s0_full.mid",
+          "version": "v2",
+          "seed": 0
+        },
+        {
+          "id": "d54404b782d9b49a13d663b5",
+          "src": "/media/evaluation/d54404b782d9b49a13d663b5.mp3",
+          "duration": 78.210612,
+          "sourceSha256": "8e5e516b2f860de58f06b1dc8793052d9b258d2f531a99f42a6dd506cc03cda7",
+          "sourceFile": "02_Night dancer/02_rule_constraints_s1_full.mid",
+          "version": "v2",
+          "seed": 1
+        },
+        {
+          "id": "67af8b18debd94ff9ddd649d",
+          "src": "/media/evaluation/67af8b18debd94ff9ddd649d.mp3",
+          "duration": 78.210612,
+          "sourceSha256": "e8d02d8c6e8c9ff4f06467b5363eceb95f1bd2529d9042606d0f34d6d74019b7",
+          "sourceFile": "02_Night dancer/03_rule_constraints_s2_full.mid",
+          "version": "v2",
+          "seed": 2
+        },
+        {
+          "id": "df8212da9dcc7c81469613d9",
+          "src": "/media/evaluation/df8212da9dcc7c81469613d9.mp3",
+          "duration": 78.210612,
+          "sourceSha256": "1763d99f74ec990c338063b2c41203de2df727bd8da44a2cc8470db8070791e1",
+          "sourceFile": "02_Night dancer/04_single_n1_s0_full.mid",
+          "version": "v1",
+          "seed": 0
+        },
+        {
+          "id": "d756c7c4a0884c86bef9de14",
+          "src": "/media/evaluation/d756c7c4a0884c86bef9de14.mp3",
+          "duration": 78.210612,
+          "sourceSha256": "156a87a35babccb22f2e768976355f7d420abc0d20b35dbd8b345a801f065d43",
+          "sourceFile": "02_Night dancer/05_single_n1_s1_full.mid",
+          "version": "v1",
+          "seed": 1
+        },
+        {
+          "id": "7beabb7691a7f8e91939d73c",
+          "src": "/media/evaluation/7beabb7691a7f8e91939d73c.mp3",
+          "duration": 78.210612,
+          "sourceSha256": "7d7e5110a98f9d17803542f54a192ac032348cdbea6691b8af2c0a15269c9bb5",
+          "sourceFile": "02_Night dancer/06_single_n1_s2_full.mid",
+          "version": "v1",
+          "seed": 2
+        },
+        {
+          "id": "ea65794b10d610286aa29da6",
+          "src": "/media/evaluation/ea65794b10d610286aa29da6.mp3",
+          "duration": 77.531429,
+          "sourceSha256": "d848498054ed5c0a3c285031948f3ffe2dfc80652e819f0a3e50dacda29ffca7",
+          "sourceFile": "02_Night dancer/07_legacy_s0_full.mid",
+          "version": "v0",
+          "seed": 0
+        },
+        {
+          "id": "5f9287cd92fa14f3e92eb8d5",
+          "src": "/media/evaluation/5f9287cd92fa14f3e92eb8d5.mp3",
+          "duration": 76.382041,
+          "sourceSha256": "20406c0fc1a6daa903d4d651c4265eb7cb34d0c83538d3e1d0b53c8c57e570ca",
+          "sourceFile": "02_Night dancer/08_legacy_s1_full.mid",
+          "version": "v0",
+          "seed": 1
+        },
+        {
+          "id": "1e4a8921577f4532fedab7e3",
+          "src": "/media/evaluation/1e4a8921577f4532fedab7e3.mp3",
+          "duration": 76.382041,
+          "sourceSha256": "08bcfc5f3dc5ffe4b8f9ff37f7559a6afae9f0a12b5f74b383a807cf55f89545",
+          "sourceFile": "02_Night dancer/09_legacy_s2_full.mid",
+          "version": "v0",
+          "seed": 2
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "群青",
+      "reference": {
+        "id": "b8fe16128bc1d873a92d3261",
+        "src": "/media/evaluation/b8fe16128bc1d873a92d3261.mp3",
+        "duration": 126.537143,
+        "sourceSha256": "58abd382d6371ad4edb1d9ad28d51e7bfc908d593cf5295cd690a4c7462d471e",
+        "sourceFile": "03_群青/00_melody_full.mid"
+      },
+      "samples": [
+        {
+          "id": "f4151db86e6b552d46796dfb",
+          "src": "/media/evaluation/f4151db86e6b552d46796dfb.mp3",
+          "duration": 126.876735,
+          "sourceSha256": "882a50c16562a2d70e2b84fa0c5e0bf3ff840f152c5efea7686bcd23b7f5e940",
+          "sourceFile": "03_群青/01_rule_constraints_s0_full.mid",
+          "version": "v2",
+          "seed": 0
+        },
+        {
+          "id": "56a38012f51c3008b749f26c",
+          "src": "/media/evaluation/56a38012f51c3008b749f26c.mp3",
+          "duration": 126.876735,
+          "sourceSha256": "e1fcaccac97882475ba92cf552a635e258392038fd909927ad6f07152ffe0c67",
+          "sourceFile": "03_群青/02_rule_constraints_s1_full.mid",
+          "version": "v2",
+          "seed": 1
+        },
+        {
+          "id": "da208361309dd4e5c7132e03",
+          "src": "/media/evaluation/da208361309dd4e5c7132e03.mp3",
+          "duration": 126.876735,
+          "sourceSha256": "89b0a5fafa913186acce506c89adf39ab5f1f5ae7a3959a4e49c1e07eadb9c48",
+          "sourceFile": "03_群青/03_rule_constraints_s2_full.mid",
+          "version": "v2",
+          "seed": 2
+        },
+        {
+          "id": "04b6e3a07d93c372839dc6a0",
+          "src": "/media/evaluation/04b6e3a07d93c372839dc6a0.mp3",
+          "duration": 126.876735,
+          "sourceSha256": "184b942c4c378c22b7d0eaeb8bf0aacc26ff2239603e61b14dee9395819d673a",
+          "sourceFile": "03_群青/04_single_n1_s0_full.mid",
+          "version": "v1",
+          "seed": 0
+        },
+        {
+          "id": "07f59eb86f5b5f920c4af914",
+          "src": "/media/evaluation/07f59eb86f5b5f920c4af914.mp3",
+          "duration": 126.537143,
+          "sourceSha256": "37630831269bbb5216de924e90e990910a978e7464bf4c90eb855c8e0d683648",
+          "sourceFile": "03_群青/05_single_n1_s1_full.mid",
+          "version": "v1",
+          "seed": 1
+        },
+        {
+          "id": "80c2ad0d5288332e002f8756",
+          "src": "/media/evaluation/80c2ad0d5288332e002f8756.mp3",
+          "duration": 126.537143,
+          "sourceSha256": "69ae2fa43294b78156c741d8bba50cea4c5ea0d35841fd3d376f3b3a1620f547",
+          "sourceFile": "03_群青/06_single_n1_s2_full.mid",
+          "version": "v1",
+          "seed": 2
+        },
+        {
+          "id": "ea0bdf883962188d55320002",
+          "src": "/media/evaluation/ea0bdf883962188d55320002.mp3",
+          "duration": 126.040816,
+          "sourceSha256": "64e46a8d2b3892f85f2fae4a135f85220e464ec844a27d359b69df00f8d715e5",
+          "sourceFile": "03_群青/07_legacy_s0_full.mid",
+          "version": "v0",
+          "seed": 0
+        },
+        {
+          "id": "995d547029b7a08aefefa671",
+          "src": "/media/evaluation/995d547029b7a08aefefa671.mp3",
+          "duration": 133.720816,
+          "sourceSha256": "b4231b93f19ce02f0d17a032867299181262eb5d22707a098cea5458b82ed68a",
+          "sourceFile": "03_群青/08_legacy_s1_full.mid",
+          "version": "v0",
+          "seed": 1
+        },
+        {
+          "id": "b50d8fedbd1dff00507d981f",
+          "src": "/media/evaluation/b50d8fedbd1dff00507d981f.mp3",
+          "duration": 127.033469,
+          "sourceSha256": "34b6d840bebb940c4ce986d542f28d72f377aa426bc0bc1d3b45568075529bea",
+          "sourceFile": "03_群青/09_legacy_s2_full.mid",
+          "version": "v0",
+          "seed": 2
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "lemon",
+      "reference": {
+        "id": "f6d3fdc4b2b78be389749a64",
+        "src": "/media/evaluation/f6d3fdc4b2b78be389749a64.mp3",
+        "duration": 62.040816,
+        "sourceSha256": "754d4ac7745e4cb2aabfed0288749571b6cc8ed863c6278155b1c3c07fc087a9",
+        "sourceFile": "04_lemon/00_melody_full.mid"
+      },
+      "samples": [
+        {
+          "id": "dbec410ea3a5189e10fe9a34",
+          "src": "/media/evaluation/dbec410ea3a5189e10fe9a34.mp3",
+          "duration": 62.197551,
+          "sourceSha256": "275c2e8a61009be5066185238d8c63dad1f718d4fa53f14b25d3a21fc710540e",
+          "sourceFile": "04_lemon/01_rule_constraints_s0_full.mid",
+          "version": "v2",
+          "seed": 0
+        },
+        {
+          "id": "7078b51d6ad88806dd5447e0",
+          "src": "/media/evaluation/7078b51d6ad88806dd5447e0.mp3",
+          "duration": 62.197551,
+          "sourceSha256": "7f734bae1abd50e6efb8e5898be70001375a9ed7fda69a29c3f14e4610086770",
+          "sourceFile": "04_lemon/02_rule_constraints_s1_full.mid",
+          "version": "v2",
+          "seed": 1
+        },
+        {
+          "id": "ed599227ff694448d726f873",
+          "src": "/media/evaluation/ed599227ff694448d726f873.mp3",
+          "duration": 62.197551,
+          "sourceSha256": "b01f57a2849712e8f8a49bd00fdbae254293ed29a8943c775c8e920f02205ff8",
+          "sourceFile": "04_lemon/03_rule_constraints_s2_full.mid",
+          "version": "v2",
+          "seed": 2
+        },
+        {
+          "id": "7ef334da13d5c406749b1fac",
+          "src": "/media/evaluation/7ef334da13d5c406749b1fac.mp3",
+          "duration": 62.040816,
+          "sourceSha256": "2aa932a6832a35f9bf242f370f3fd95af637e2a55e9b7c7fd82f0fced06e3d94",
+          "sourceFile": "04_lemon/04_single_n1_s0_full.mid",
+          "version": "v1",
+          "seed": 0
+        },
+        {
+          "id": "ae961ec490d1a0bdf4aa60a6",
+          "src": "/media/evaluation/ae961ec490d1a0bdf4aa60a6.mp3",
+          "duration": 62.197551,
+          "sourceSha256": "2eb451998d25188fd7f5a2e3709f1efc80db73852e015209f1ce3b999c7af310",
+          "sourceFile": "04_lemon/05_single_n1_s1_full.mid",
+          "version": "v1",
+          "seed": 1
+        },
+        {
+          "id": "8686030bf4d1969453168f0f",
+          "src": "/media/evaluation/8686030bf4d1969453168f0f.mp3",
+          "duration": 62.040816,
+          "sourceSha256": "b7a225bab162ce4f6b13d005aebf297f06a610f05c50abb4b83a3f673acaf930",
+          "sourceFile": "04_lemon/06_single_n1_s2_full.mid",
+          "version": "v1",
+          "seed": 2
+        },
+        {
+          "id": "710e6bf6e8810af4023cdedb",
+          "src": "/media/evaluation/710e6bf6e8810af4023cdedb.mp3",
+          "duration": 60.865306,
+          "sourceSha256": "f6f2bd684278c6ac5b0e8e3349530e49e755b07cad9a697e3d15c84382946e83",
+          "sourceFile": "04_lemon/07_legacy_s0_full.mid",
+          "version": "v0",
+          "seed": 0
+        },
+        {
+          "id": "ece6023ad9777df8d0b064a5",
+          "src": "/media/evaluation/ece6023ad9777df8d0b064a5.mp3",
+          "duration": 62.040816,
+          "sourceSha256": "5c2a4de76f43a1e8ed1df613e22c1356def13aa634c70d4e6efe5a173751ad50",
+          "sourceFile": "04_lemon/08_legacy_s1_full.mid",
+          "version": "v0",
+          "seed": 1
+        },
+        {
+          "id": "c98bdeaf4a0d822b970c0794",
+          "src": "/media/evaluation/c98bdeaf4a0d822b970c0794.mp3",
+          "duration": 61.884082,
+          "sourceSha256": "1f88551e3823719585fd62ccbe468c78c2b876845f851c2f4e2da1b1d52bdd8b",
+          "sourceFile": "04_lemon/09_legacy_s2_full.mid",
+          "version": "v0",
+          "seed": 2
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "cruel angel",
+      "reference": {
+        "id": "db520fad4866fd914a20d04c",
+        "src": "/media/evaluation/db520fad4866fd914a20d04c.mp3",
+        "duration": 109.035102,
+        "sourceSha256": "b88075fa4107a45ee23dc854d24f430a8930c7786f109b1d2f1aa653c83b4c33",
+        "sourceFile": "05_cruel angel/00_melody_full.mid"
+      },
+      "samples": [
+        {
+          "id": "81d12eeba826b2a859296c57",
+          "src": "/media/evaluation/81d12eeba826b2a859296c57.mp3",
+          "duration": 109.714286,
+          "sourceSha256": "3db97ab0ffb0c36934afe2d6cfa59c80d40f8ce9c369f974162f5950f7ce4f3d",
+          "sourceFile": "05_cruel angel/01_rule_constraints_s0_full.mid",
+          "version": "v2",
+          "seed": 0
+        },
+        {
+          "id": "9cc5ff3679e439a012212e0b",
+          "src": "/media/evaluation/9cc5ff3679e439a012212e0b.mp3",
+          "duration": 109.531429,
+          "sourceSha256": "57384f1c35b047e5410f200cb1982c06c033b9c68a43c7adbd3fc44e30d804ad",
+          "sourceFile": "05_cruel angel/02_rule_constraints_s1_full.mid",
+          "version": "v2",
+          "seed": 1
+        },
+        {
+          "id": "07293de91e46e50ec79660c0",
+          "src": "/media/evaluation/07293de91e46e50ec79660c0.mp3",
+          "duration": 109.374694,
+          "sourceSha256": "5c6cdab7784dd80a157cd02fff7e30770be6d3d4ec1be25232e6ea7def5b8c4e",
+          "sourceFile": "05_cruel angel/03_rule_constraints_s2_full.mid",
+          "version": "v2",
+          "seed": 2
+        },
+        {
+          "id": "e9241c9029a25f36cdea2a3a",
+          "src": "/media/evaluation/e9241c9029a25f36cdea2a3a.mp3",
+          "duration": 109.714286,
+          "sourceSha256": "4966f34393cea77319920bec61669f8277d6e14e30c95ca9af1bc621f59601ee",
+          "sourceFile": "05_cruel angel/04_single_n1_s0_full.mid",
+          "version": "v1",
+          "seed": 0
+        },
+        {
+          "id": "6d4c806785b00f83d379c0f4",
+          "src": "/media/evaluation/6d4c806785b00f83d379c0f4.mp3",
+          "duration": 109.531429,
+          "sourceSha256": "ee475c75a5d363cf60485b74b67a3774db4d994ca358c2e15ee3c6ab22e009ce",
+          "sourceFile": "05_cruel angel/05_single_n1_s1_full.mid",
+          "version": "v1",
+          "seed": 1
+        },
+        {
+          "id": "fc995dc8757b784e560cb1e5",
+          "src": "/media/evaluation/fc995dc8757b784e560cb1e5.mp3",
+          "duration": 109.531429,
+          "sourceSha256": "65276b57d3d0e976e481328cdbfe151f4bd41299eded09cb5a5cfea8f686b625",
+          "sourceFile": "05_cruel angel/06_single_n1_s2_full.mid",
+          "version": "v1",
+          "seed": 2
+        },
+        {
+          "id": "6461dcaff60d23767cbd2656",
+          "src": "/media/evaluation/6461dcaff60d23767cbd2656.mp3",
+          "duration": 109.035102,
+          "sourceSha256": "6472de20a8d84656cc672f9b66630a02dca38b25fcc26aadc8eea0d79f3c5ee9",
+          "sourceFile": "05_cruel angel/07_legacy_s0_full.mid",
+          "version": "v0",
+          "seed": 0
+        },
+        {
+          "id": "947813ff9b427c47d0f08cc7",
+          "src": "/media/evaluation/947813ff9b427c47d0f08cc7.mp3",
+          "duration": 109.035102,
+          "sourceSha256": "286e2180f8d1bbe5b85636a13692cc29b070e3e0383c1fd5abd206d9b3f1e8dc",
+          "sourceFile": "05_cruel angel/08_legacy_s1_full.mid",
+          "version": "v0",
+          "seed": 1
+        },
+        {
+          "id": "37834f57f4770ee87c5d16f0",
+          "src": "/media/evaluation/37834f57f4770ee87c5d16f0.mp3",
+          "duration": 109.374694,
+          "sourceSha256": "45b3585dd8d3336328c162aeef50bd01f6e4891ba1a972d4ff04e9d35b47639f",
+          "sourceFile": "05_cruel angel/09_legacy_s2_full.mid",
+          "version": "v0",
+          "seed": 2
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "告白气球",
+      "reference": {
+        "id": "2956ac9a46181935e56f38b0",
+        "src": "/media/evaluation/2956ac9a46181935e56f38b0.mp3",
+        "duration": 88.711837,
+        "sourceSha256": "c23eff6a72f2ae34be5fca60655db6fcf3f7308ba9cc20e6baf2815614fd954f",
+        "sourceFile": "06_告白气球/00_melody_full.mid"
+      },
+      "samples": [
+        {
+          "id": "80933a54a125da5d98fc61d3",
+          "src": "/media/evaluation/80933a54a125da5d98fc61d3.mp3",
+          "duration": 88.868571,
+          "sourceSha256": "a956d0bc2147647e8064ed53410833bdb111aefc7302231ddbad002b38dea93b",
+          "sourceFile": "06_告白气球/01_rule_constraints_s0_full.mid",
+          "version": "v2",
+          "seed": 0
+        },
+        {
+          "id": "bd34b470c015ed7f91769db0",
+          "src": "/media/evaluation/bd34b470c015ed7f91769db0.mp3",
+          "duration": 88.868571,
+          "sourceSha256": "7b7f8986449c4e49164d18113812d13bbee5053fc3f9bece8b6622a511d19fae",
+          "sourceFile": "06_告白气球/02_rule_constraints_s1_full.mid",
+          "version": "v2",
+          "seed": 1
+        },
+        {
+          "id": "835d026a28a6d28669d2c59c",
+          "src": "/media/evaluation/835d026a28a6d28669d2c59c.mp3",
+          "duration": 88.868571,
+          "sourceSha256": "86885aab06490ffbd00ce12ee67cba838c9dfcf53683a8ffcb43f86827892cff",
+          "sourceFile": "06_告白气球/03_rule_constraints_s2_full.mid",
+          "version": "v2",
+          "seed": 2
+        },
+        {
+          "id": "da8c2c59995d6e69000349b2",
+          "src": "/media/evaluation/da8c2c59995d6e69000349b2.mp3",
+          "duration": 88.868571,
+          "sourceSha256": "3b3db5855fafc5c4dfe324a7b051dfe32554877f076157d90e7067b0789c825c",
+          "sourceFile": "06_告白气球/04_single_n1_s0_full.mid",
+          "version": "v1",
+          "seed": 0
+        },
+        {
+          "id": "cb8ca1fe49513d1c2110e2c0",
+          "src": "/media/evaluation/cb8ca1fe49513d1c2110e2c0.mp3",
+          "duration": 88.868571,
+          "sourceSha256": "939fa2097fee9702848f8c6250cec9c3c31b5cf0f2a4f8b4688503fb705abc8a",
+          "sourceFile": "06_告白气球/05_single_n1_s1_full.mid",
+          "version": "v1",
+          "seed": 1
+        },
+        {
+          "id": "c73759726aa3215828a6d2e9",
+          "src": "/media/evaluation/c73759726aa3215828a6d2e9.mp3",
+          "duration": 88.868571,
+          "sourceSha256": "43e260a3e78a7c5e769cf0813f71e08fdd923e2617c8d5fab0c0bd1cb67385bc",
+          "sourceFile": "06_告白气球/06_single_n1_s2_full.mid",
+          "version": "v1",
+          "seed": 2
+        },
+        {
+          "id": "3fcffa5b67d2dbc13f56d840",
+          "src": "/media/evaluation/3fcffa5b67d2dbc13f56d840.mp3",
+          "duration": 89.208163,
+          "sourceSha256": "faa3bf2cd5eb10140d26f0138945b4aa551e271ec6f7c4bb9986e89f304fbb15",
+          "sourceFile": "06_告白气球/07_legacy_s0_full.mid",
+          "version": "v0",
+          "seed": 0
+        },
+        {
+          "id": "f3a3a0c8a4e932aaa7909ac6",
+          "src": "/media/evaluation/f3a3a0c8a4e932aaa7909ac6.mp3",
+          "duration": 88.032653,
+          "sourceSha256": "c9bd34a3fcc1b882c5ea661782d50fff97eac404782d4cc74fccfbdd39722cf4",
+          "sourceFile": "06_告白气球/08_legacy_s1_full.mid",
+          "version": "v0",
+          "seed": 1
+        },
+        {
+          "id": "cedb47122e5e76d675d35fe1",
+          "src": "/media/evaluation/cedb47122e5e76d675d35fe1.mp3",
+          "duration": 88.868571,
+          "sourceSha256": "7fe863c89bdf1443d489ba36f8a7bc0cfa50cfe38c7dc60ceb38b8b56f0b10ff",
+          "sourceFile": "06_告白气球/09_legacy_s2_full.mid",
+          "version": "v0",
+          "seed": 2
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "青花瓷",
+      "reference": {
+        "id": "e03dba328900d5c798346443",
+        "src": "/media/evaluation/e03dba328900d5c798346443.mp3",
+        "duration": 108.042449,
+        "sourceSha256": "a02b5fc864245881ed7928fa08ab2c26b6426a65d53f89c5c279b84675125c62",
+        "sourceFile": "07_青花瓷/00_melody_full.mid"
+      },
+      "samples": [
+        {
+          "id": "bb578968451e4867d1848029",
+          "src": "/media/evaluation/bb578968451e4867d1848029.mp3",
+          "duration": 108.199184,
+          "sourceSha256": "881f108a2950140b22f1a381edbd6ac04f088f30428fad9b2432565b618f394f",
+          "sourceFile": "07_青花瓷/01_rule_constraints_s0_full.mid",
+          "version": "v2",
+          "seed": 0
+        },
+        {
+          "id": "a70895276d9a48946e458a01",
+          "src": "/media/evaluation/a70895276d9a48946e458a01.mp3",
+          "duration": 108.199184,
+          "sourceSha256": "1330f5f3212eb49d061b682e5492887484d0203919f264916896068a69e9c75c",
+          "sourceFile": "07_青花瓷/02_rule_constraints_s1_full.mid",
+          "version": "v2",
+          "seed": 1
+        },
+        {
+          "id": "8752e2ee7aee494a5bf456ba",
+          "src": "/media/evaluation/8752e2ee7aee494a5bf456ba.mp3",
+          "duration": 108.199184,
+          "sourceSha256": "f94f04a6632ccd4b0038ec613f2184a11b7ba72e6770dfa01e7cf91ad99d3a7d",
+          "sourceFile": "07_青花瓷/03_rule_constraints_s2_full.mid",
+          "version": "v2",
+          "seed": 2
+        },
+        {
+          "id": "4fb171b31e03f5166e756cbd",
+          "src": "/media/evaluation/4fb171b31e03f5166e756cbd.mp3",
+          "duration": 108.199184,
+          "sourceSha256": "171387dc05069f32853d431ff59d81c01ceeebe3f60bc503b721579710e79c8a",
+          "sourceFile": "07_青花瓷/04_single_n1_s0_full.mid",
+          "version": "v1",
+          "seed": 0
+        },
+        {
+          "id": "c318d619c2ea0cdc186ef2c2",
+          "src": "/media/evaluation/c318d619c2ea0cdc186ef2c2.mp3",
+          "duration": 108.199184,
+          "sourceSha256": "ccb0ce5e820b8802fc65c0f3e6844efb7baa60730443707b0fe24983ad361f97",
+          "sourceFile": "07_青花瓷/05_single_n1_s1_full.mid",
+          "version": "v1",
+          "seed": 1
+        },
+        {
+          "id": "639b0151c5d7e4ed516dd2b8",
+          "src": "/media/evaluation/639b0151c5d7e4ed516dd2b8.mp3",
+          "duration": 108.199184,
+          "sourceSha256": "96505431206519c7e18eb63b7736eaeb97f871fcccf5d3f1f1cb4a6c44d1a5ea",
+          "sourceFile": "07_青花瓷/06_single_n1_s2_full.mid",
+          "version": "v1",
+          "seed": 2
+        },
+        {
+          "id": "6ffaefa8ca03958a47bcc91c",
+          "src": "/media/evaluation/6ffaefa8ca03958a47bcc91c.mp3",
+          "duration": 108.538776,
+          "sourceSha256": "2f4e94c9cfd1fe188bf3d8680ecb35fc920d3daa5e3b494b2365ddc70560d2e7",
+          "sourceFile": "07_青花瓷/07_legacy_s0_full.mid",
+          "version": "v0",
+          "seed": 0
+        },
+        {
+          "id": "62fdac6e79c4dc4ccd292027",
+          "src": "/media/evaluation/62fdac6e79c4dc4ccd292027.mp3",
+          "duration": 109.374694,
+          "sourceSha256": "56f24ab405d4bcc545819cd83923a315418fe2922ce95dec763d6d1938b613d4",
+          "sourceFile": "07_青花瓷/08_legacy_s1_full.mid",
+          "version": "v0",
+          "seed": 1
+        },
+        {
+          "id": "8bedaa7db47f868a8d0d8c5f",
+          "src": "/media/evaluation/8bedaa7db47f868a8d0d8c5f.mp3",
+          "duration": 107.049796,
+          "sourceSha256": "33947bd517ff6f40b4a3810108c43280eb962898bf13c6c147535d27b1745db0",
+          "sourceFile": "07_青花瓷/09_legacy_s2_full.mid",
+          "version": "v0",
+          "seed": 2
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "小幸运",
+      "reference": {
+        "id": "9cb2ee7cc14a24d77af9ad48",
+        "src": "/media/evaluation/9cb2ee7cc14a24d77af9ad48.mp3",
+        "duration": 110.706939,
+        "sourceSha256": "2f78a4538babf6b1d830ddaf8c86dcbb23a6251568c95606f3bcb9b5f7772d74",
+        "sourceFile": "08_小幸运/00_melody_full.mid"
+      },
+      "samples": [
+        {
+          "id": "7019b80f9850ef8727e12899",
+          "src": "/media/evaluation/7019b80f9850ef8727e12899.mp3",
+          "duration": 110.863673,
+          "sourceSha256": "101cf9ff3c42158f43992f681f47e3b122f64d36782aa86a81c6a3cdd804bcd8",
+          "sourceFile": "08_小幸运/01_rule_constraints_s0_full.mid",
+          "version": "v2",
+          "seed": 0
+        },
+        {
+          "id": "1a1d4a03ec7f5a92b7ea7d45",
+          "src": "/media/evaluation/1a1d4a03ec7f5a92b7ea7d45.mp3",
+          "duration": 110.706939,
+          "sourceSha256": "f61183272afb3130b491d443669033591823815732782eab96ddba8bfd5cf57f",
+          "sourceFile": "08_小幸运/02_rule_constraints_s1_full.mid",
+          "version": "v2",
+          "seed": 1
+        },
+        {
+          "id": "e4a0fb7e8cc57af363f977ca",
+          "src": "/media/evaluation/e4a0fb7e8cc57af363f977ca.mp3",
+          "duration": 110.863673,
+          "sourceSha256": "3416263ad48ec067b4f21737823b47fde9f9475237a055cfc31f1fb3c8fdca72",
+          "sourceFile": "08_小幸运/03_rule_constraints_s2_full.mid",
+          "version": "v2",
+          "seed": 2
+        },
+        {
+          "id": "227799775d13f1664adf8e1f",
+          "src": "/media/evaluation/227799775d13f1664adf8e1f.mp3",
+          "duration": 110.863673,
+          "sourceSha256": "e059cd7c6845f345b66dfea30730ff4ef4fa534b08d3a4a9656fca9837fdc56f",
+          "sourceFile": "08_小幸运/04_single_n1_s0_full.mid",
+          "version": "v1",
+          "seed": 0
+        },
+        {
+          "id": "bfee980490b3e0c8a3419859",
+          "src": "/media/evaluation/bfee980490b3e0c8a3419859.mp3",
+          "duration": 110.863673,
+          "sourceSha256": "84514053d26ddf843eeaceae3c8d0064964be1edd8044b87bac22602ac6c7d38",
+          "sourceFile": "08_小幸运/05_single_n1_s1_full.mid",
+          "version": "v1",
+          "seed": 1
+        },
+        {
+          "id": "10ecf9d1c0fec7a073583ed0",
+          "src": "/media/evaluation/10ecf9d1c0fec7a073583ed0.mp3",
+          "duration": 110.863673,
+          "sourceSha256": "7e650cb8dbe7135aa89d09f4f7264a67d1a275152f9dcff7fbaedf22a24d96ec",
+          "sourceFile": "08_小幸运/06_single_n1_s2_full.mid",
+          "version": "v1",
+          "seed": 2
+        },
+        {
+          "id": "7f40826835b50881645a2bc5",
+          "src": "/media/evaluation/7f40826835b50881645a2bc5.mp3",
+          "duration": 109.217959,
+          "sourceSha256": "c023c0436e50cb3f09a418962b6f122a84812844300784285c4070f53b65f16f",
+          "sourceFile": "08_小幸运/07_legacy_s0_full.mid",
+          "version": "v0",
+          "seed": 0
+        },
+        {
+          "id": "0bdb10b2c0d084c28cbdc300",
+          "src": "/media/evaluation/0bdb10b2c0d084c28cbdc300.mp3",
+          "duration": 109.217959,
+          "sourceSha256": "0ecdf6c6d69509de90e3422e00f554277f98466e80027bd68bda485330523769",
+          "sourceFile": "08_小幸运/08_legacy_s1_full.mid",
+          "version": "v0",
+          "seed": 1
+        },
+        {
+          "id": "00161907b194be9c92af1ed9",
+          "src": "/media/evaluation/00161907b194be9c92af1ed9.mp3",
+          "duration": 109.531429,
+          "sourceSha256": "5971db64a5ea702ad151c48bf0a6471a38d61f910d612c3a657f2b54e09c9fc5",
+          "sourceFile": "08_小幸运/09_legacy_s2_full.mid",
+          "version": "v0",
+          "seed": 2
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "title": "月亮代表我的心",
+      "reference": {
+        "id": "9ca5effeeee52d3da6694ab4",
+        "src": "/media/evaluation/9ca5effeeee52d3da6694ab4.mp3",
+        "duration": 85.211429,
+        "sourceSha256": "1f9e819d411cc1ef58dac276616916c36f3ba6a99e7e0443fb491f7e297edfe3",
+        "sourceFile": "09_月亮代表我的心/00_melody_full.mid"
+      },
+      "samples": [
+        {
+          "id": "f7c8dbf242f4f91427788c76",
+          "src": "/media/evaluation/f7c8dbf242f4f91427788c76.mp3",
+          "duration": 85.211429,
+          "sourceSha256": "a4aef04e7f5a1c9a86310cca14a71540d4dfcfd4551d0a7f5d7d26c73e155fc6",
+          "sourceFile": "09_月亮代表我的心/01_rule_constraints_s0_full.mid",
+          "version": "v2",
+          "seed": 0
+        },
+        {
+          "id": "09498ba9b8c6ef9bcc2ee011",
+          "src": "/media/evaluation/09498ba9b8c6ef9bcc2ee011.mp3",
+          "duration": 85.55102,
+          "sourceSha256": "591f864c77cf49f8758d911becdd1f54bd5de8ed4752c38b90edee757a559f06",
+          "sourceFile": "09_月亮代表我的心/02_rule_constraints_s1_full.mid",
+          "version": "v2",
+          "seed": 1
+        },
+        {
+          "id": "f5f8691dd369848c93a1c8f0",
+          "src": "/media/evaluation/f5f8691dd369848c93a1c8f0.mp3",
+          "duration": 85.55102,
+          "sourceSha256": "741c5e79f9637f5453898df0c961321aec8b1bf44ae04e65ea485df157a851b2",
+          "sourceFile": "09_月亮代表我的心/03_rule_constraints_s2_full.mid",
+          "version": "v2",
+          "seed": 2
+        },
+        {
+          "id": "382c171e61f565b6f58c802a",
+          "src": "/media/evaluation/382c171e61f565b6f58c802a.mp3",
+          "duration": 85.55102,
+          "sourceSha256": "fec8347fe3150af635d61b2dc5be502284969ae00a389255d58920c2d15df74a",
+          "sourceFile": "09_月亮代表我的心/04_single_n1_s0_full.mid",
+          "version": "v1",
+          "seed": 0
+        },
+        {
+          "id": "7625dfb685d66ab48e35e27c",
+          "src": "/media/evaluation/7625dfb685d66ab48e35e27c.mp3",
+          "duration": 85.55102,
+          "sourceSha256": "2c6a4bd5ceb32dad775692233f3d1ef6842cfd1bb2ade60f1c484b72fa584f78",
+          "sourceFile": "09_月亮代表我的心/05_single_n1_s1_full.mid",
+          "version": "v1",
+          "seed": 1
+        },
+        {
+          "id": "c0de0c724d75d4e0fd645782",
+          "src": "/media/evaluation/c0de0c724d75d4e0fd645782.mp3",
+          "duration": 85.55102,
+          "sourceSha256": "47f49a7ce23b3e8c4219aca128ac05053ec0ebea6617bf9361e2e514320862d8",
+          "sourceFile": "09_月亮代表我的心/06_single_n1_s2_full.mid",
+          "version": "v1",
+          "seed": 2
+        },
+        {
+          "id": "8051d72a808be8c59afe5d2e",
+          "src": "/media/evaluation/8051d72a808be8c59afe5d2e.mp3",
+          "duration": 86.883265,
+          "sourceSha256": "b58835471c0e345887133dd42dd26189e906a6b9c9145f4f1528a9625813b815",
+          "sourceFile": "09_月亮代表我的心/07_legacy_s0_full.mid",
+          "version": "v0",
+          "seed": 0
+        },
+        {
+          "id": "6341985dab9240a32b719c50",
+          "src": "/media/evaluation/6341985dab9240a32b719c50.mp3",
+          "duration": 86.386939,
+          "sourceSha256": "6fe64af5f73ae28063849b3cea8113181713db9a3f366dce05146c9e1853e392",
+          "sourceFile": "09_月亮代表我的心/08_legacy_s1_full.mid",
+          "version": "v0",
+          "seed": 1
+        },
+        {
+          "id": "de0d8abcd26ea40cf22a1dcf",
+          "src": "/media/evaluation/de0d8abcd26ea40cf22a1dcf.mp3",
+          "duration": 84.871837,
+          "sourceSha256": "6c924d10489afbd0b4f4e14e286c148e307c9d47a64ccd0df46516f5e1753575",
+          "sourceFile": "09_月亮代表我的心/09_legacy_s2_full.mid",
+          "version": "v0",
+          "seed": 2
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "天空之城",
+      "reference": {
+        "id": "93c8533cbfb0cfd002872dbb",
+        "src": "/media/evaluation/93c8533cbfb0cfd002872dbb.mp3",
+        "duration": 87.379592,
+        "sourceSha256": "ab6a84f0b29ad24d7754f1ce6164e3030911366ae18b4bc7426148cdefbb5b2d",
+        "sourceFile": "10_天空之城/00_melody_full.mid"
+      },
+      "samples": [
+        {
+          "id": "8eac7f851bb0ea96f12c163e",
+          "src": "/media/evaluation/8eac7f851bb0ea96f12c163e.mp3",
+          "duration": 87.536327,
+          "sourceSha256": "4c27614b005f17eda0720e595ddf7d085ab3b13a1e76c35b8606a100ad7c8e45",
+          "sourceFile": "10_天空之城/01_rule_constraints_s0_full.mid",
+          "version": "v2",
+          "seed": 0
+        },
+        {
+          "id": "f148b8bd9aaf36f335faa20f",
+          "src": "/media/evaluation/f148b8bd9aaf36f335faa20f.mp3",
+          "duration": 87.536327,
+          "sourceSha256": "237206f59be3a5baab4a61c942279f08c8795f895fa6f4e49d108cac3a8fc4af",
+          "sourceFile": "10_天空之城/02_rule_constraints_s1_full.mid",
+          "version": "v2",
+          "seed": 1
+        },
+        {
+          "id": "dcd2e98b8fcac915ff821df8",
+          "src": "/media/evaluation/dcd2e98b8fcac915ff821df8.mp3",
+          "duration": 87.536327,
+          "sourceSha256": "944bd17dacd4c155319b95f6f3dbb5f336939450a5f9dd67e8ffb69f158a77a6",
+          "sourceFile": "10_天空之城/03_rule_constraints_s2_full.mid",
+          "version": "v2",
+          "seed": 2
+        },
+        {
+          "id": "8b9c72622cef8ba729c6950b",
+          "src": "/media/evaluation/8b9c72622cef8ba729c6950b.mp3",
+          "duration": 87.536327,
+          "sourceSha256": "1b9a65101039cad48ec7787e2532b6e0e4aaf486f21f8483967c4f134b73c462",
+          "sourceFile": "10_天空之城/04_single_n1_s0_full.mid",
+          "version": "v1",
+          "seed": 0
+        },
+        {
+          "id": "edc4e294e834da77ad79110c",
+          "src": "/media/evaluation/edc4e294e834da77ad79110c.mp3",
+          "duration": 87.536327,
+          "sourceSha256": "03ec6b7dac921a93e3cf16894bfbdfc373a62020099d91aa4b974b6c244e4157",
+          "sourceFile": "10_天空之城/05_single_n1_s1_full.mid",
+          "version": "v1",
+          "seed": 1
+        },
+        {
+          "id": "313c247846fb1bf16e9387c4",
+          "src": "/media/evaluation/313c247846fb1bf16e9387c4.mp3",
+          "duration": 87.379592,
+          "sourceSha256": "6f14603e64d1cd5034dcc75906e9a806a58dddef053fedcc0b00de45bbcb07dc",
+          "sourceFile": "10_天空之城/06_single_n1_s2_full.mid",
+          "version": "v1",
+          "seed": 2
+        },
+        {
+          "id": "27585fa7b31ca52105023fcc",
+          "src": "/media/evaluation/27585fa7b31ca52105023fcc.mp3",
+          "duration": 88.032653,
+          "sourceSha256": "902871e3eb18e88b23692f9b40637a74227b2a72fbd20dfba479c5c93addfd5c",
+          "sourceFile": "10_天空之城/07_legacy_s0_full.mid",
+          "version": "v0",
+          "seed": 0
+        },
+        {
+          "id": "b1cf54190a21d71d38946933",
+          "src": "/media/evaluation/b1cf54190a21d71d38946933.mp3",
+          "duration": 88.032653,
+          "sourceSha256": "eb63fa56aef49fc2f01ef76daabcaf8a446cc94d8283644840d192c41ec3cd36",
+          "sourceFile": "10_天空之城/08_legacy_s1_full.mid",
+          "version": "v0",
+          "seed": 1
+        },
+        {
+          "id": "044e3e837b1fbed93bc966da",
+          "src": "/media/evaluation/044e3e837b1fbed93bc966da.mp3",
+          "duration": 86.047347,
+          "sourceSha256": "47531c35ad2c10b59ccc8eb86d4f34462c86d9d15e586b82bfd3f7e7b960470a",
+          "sourceFile": "10_天空之城/09_legacy_s2_full.mid",
+          "version": "v0",
+          "seed": 2
+        }
+      ]
+    }
+  ]
+}

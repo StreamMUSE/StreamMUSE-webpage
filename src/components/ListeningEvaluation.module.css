@@ -18,11 +18,9 @@
 .button:disabled { opacity: .65; cursor: wait; }
 .button:focus-visible, .rank select:focus-visible, .textButton:focus-visible { outline: 3px solid var(--teal); outline-offset: 4px; }
 .finePrint { font-size: 12px !important; line-height: 1.6; color: var(--muted); }
-.reference { background: var(--surface-muted); display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: center; }
+.reference { background: var(--surface-muted); display: grid; grid-template-columns: 1fr; gap: 20px; }
 .reference h2 { font-size: 22px; }
 .reference p { font-size: 13px; margin-bottom: 0; }
-.player audio { display: block; width: 100%; height: 44px; }
-.playStatus { display: block; margin: 10px 0 0; font-size: 11px; color: var(--muted); line-height: 1.5; }
 .sectionIntro { margin: 42px 0 22px; }
 .sectionIntro h2 { font-size: 30px; font-weight: 600; letter-spacing: -.04em; margin: 0 0 12px; }
 .sectionIntro p { font-size: 14px; color: var(--muted); line-height: 1.7; max-width: 600px; }
@@ -32,7 +30,6 @@
 .sampleTitle h2 { margin: 6px 0 0; }
 .sampleLetter { border: 1px solid #bcd5d0; background: var(--surface-muted); color: var(--teal-dark); display: grid; place-items: center; width: 48px; height: 52px; border-radius: 12px; font-size: 25px; }
 .count { color: var(--muted); font-size: 11px; white-space: nowrap; }
-.sample > .player { padding-bottom: 24px; }
 .dimension { min-width: 0; margin: 22px 0 0; padding: 0; border: 0; }
 .dimension legend { font-size: 16px; font-weight: 600; letter-spacing: -.02em; }
 .dimension > p { font-size: 12px; margin: 6px 0 13px; }

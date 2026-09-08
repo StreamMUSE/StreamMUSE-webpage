@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight, Check, CheckCircle2, Headphones, Music2 } from '
 import { dimensions, labels, validateAnswers, type Dimension, type Label, type PublicSession } from '@/lib/evaluation/model'
 import { rubric, rubricVersion } from '@/lib/evaluation/rubric'
 import styles from './ListeningEvaluation.module.css'
+import EvaluationPlayer from './EvaluationPlayer'
 
 type DraftRatings = Partial<Record<Label, Partial<Record<Dimension, number>>>>
 type Draft = { sessionId: string; ratings: DraftRatings; ranking: (Label | '')[] }
@@ -41,21 +42,6 @@ function readDraft(value: string): Draft | null {
     const ranking = [0, 1, 2].map(i => labels.includes(draft.ranking?.[i]) ? draft.ranking[i] : '')
     return { sessionId: draft.sessionId, ratings, ranking }
   } catch { return null }
-}
-
-function AudioPlayer({ label, src, onPlay }: { label: string; src: string; onPlay: (audio: HTMLAudioElement) => void }) {
-  const [played, setPlayed] = useState(false)
-  const [ended, setEnded] = useState(false)
-  const [error, setError] = useState(false)
-  return (
-    <div className={styles.player}>
-      <audio aria-label={label} controls preload="metadata" src={src}
-        onPlay={event => { onPlay(event.currentTarget); setPlayed(true) }} onEnded={() => setEnded(true)}
-        onError={() => setError(true)} onLoadedMetadata={() => setError(false)} />
-      <span className={styles.playStatus}>{error ? 'Audio could not load. Check your connection and reload the audio.' : ended ? 'Reached the end · Replay anytime' : played ? 'Listening started · Replay or seek anytime' : 'Ready to listen · Replay or seek anytime'}</span>
-      {error ? <button type="button" className={styles.textButton} onClick={event => { const audio = event.currentTarget.parentElement?.querySelector('audio'); audio?.load() }}>Reload audio</button> : null}
-    </div>
-  )
 }
 
 export default function ListeningEvaluation() {
@@ -175,13 +161,13 @@ export default function ListeningEvaluation() {
         <form onSubmit={submit}>
           <section className={`${styles.panel} ${styles.reference}`} aria-labelledby="reference-title">
             <div><span className={styles.eyebrow}>YOUR REFERENCE</span><h2 id="reference-title">The original melody</h2><p>Listen for context. This melody is not scored.</p></div>
-            <AudioPlayer label="Reference melody" src={session.reference.src} onPlay={onPlay} />
+            <EvaluationPlayer label="Reference melody" asset={session.reference} onPlay={onPlay} />
           </section>
           <div className={styles.sectionIntro}><h2>Listen &amp; rate</h2><p>Choose one score for each dimension. All five levels are described below. Higher scores mean a stronger result.</p></div>
           {session.samples.map(sample => (
             <section key={sample.label} className={`${styles.panel} ${styles.sample}`} aria-labelledby={`sample-${sample.label}`}>
               <div className={styles.sampleHeader}><div className={styles.sampleTitle}><span className={styles.sampleLetter}>{sample.label}</span><div><span className={styles.eyebrow}>MELODY + ACCOMPANIMENT</span><h2 id={`sample-${sample.label}`}>Sample {sample.label}</h2></div></div><span className={styles.count}>{dimensions.filter(d => ratings[sample.label]?.[d]).length} / 3 scored</span></div>
-              <AudioPlayer label={`Sample ${sample.label}`} src={sample.src} onPlay={onPlay} />
+              <EvaluationPlayer label={`Sample ${sample.label}`} asset={sample} onPlay={onPlay} />
               {rubric.map(dimension => (
                 <fieldset key={dimension.id} className={styles.dimension} disabled={busy}>
                   <legend>{dimension.name}<span className={styles.srOnly}> for Sample {sample.label}</span></legend>

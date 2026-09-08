@@ -54,8 +54,8 @@ test('public projection omits identities, source paths, seed and dataset metadat
   const assignment = assignSamples(catalog, () => 0)
   const result = publicSession({ id: randomUUID(), dataset_version: 'private', rubric_version: 'rubric', song_id: assignment.songId, assignment, created_at: new Date() }, false)
   assert.deepEqual(Object.keys(result).sort(), ['id', 'reference', 'rubricVersion', 'samples', 'submitted'])
-  result.samples.forEach(sample => assert.deepEqual(Object.keys(sample).sort(), ['duration', 'id', 'label', 'src']))
-  assert.deepEqual(Object.keys(result.reference).sort(), ['duration', 'id', 'src'])
+  result.samples.forEach(sample => assert.deepEqual(Object.keys(sample).sort(), ['duration', 'id', 'label', 'src', 'visualizationSrc']))
+  assert.deepEqual(Object.keys(result.reference).sort(), ['duration', 'id', 'src', 'visualizationSrc'])
 })
 
 test('ratings and rankings reject incomplete, non-integer, coercible, duplicated or extra fields', () => {
