@@ -1,3 +1,5 @@
+import Link from 'next/link'
+import { ArrowRight, Headphones } from 'lucide-react'
 import MediaGallery from '@/components/MediaGallery'
 import MidiAssetList from '@/components/MidiAssetList'
 import SectionHeading from '@/components/SectionHeading'
@@ -12,6 +14,15 @@ export default function VersionPage({ version }: VersionPageProps) {
   return (
     <main className="page-shell">
       <VersionHero version={version} />
+
+      {version.slug === 'v2' ? (
+        <section className="evaluation-invitation" aria-labelledby="evaluation-title">
+          <div><span className="evaluation-eyebrow"><Headphones size={17} aria-hidden="true" />LISTENING STUDY</span>
+            <h2 id="evaluation-title">Help us understand what sounds musical.</h2>
+            <p>Listen to three accompaniment results for one melody, share your scores, and rank your favorites.</p></div>
+          <Link href="/versions/v2/evaluate">Listening evaluation<ArrowRight size={17} aria-hidden="true" /></Link>
+        </section>
+      ) : null}
 
       <section className="content-section" aria-labelledby="summary-title">
         <SectionHeading eyebrow={version.shortName} title="Version Summary" description="What this version contributes to the StreamMUSE project." />
