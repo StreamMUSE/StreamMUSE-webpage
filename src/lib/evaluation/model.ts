@@ -14,11 +14,14 @@ export type Assignment = { songId: string; reference: Asset; samples: Record<Lab
 export type StoredSession = {
   id: string; dataset_version: string; rubric_version: string; song_id: string
   assignment: Assignment; created_at: Date | string
+  participant_id?: string | null; round_number?: number | null
 }
 export type PublicSession = {
   id: string; rubricVersion: string; reference: Asset
   samples: (Asset & { label: Label })[]; submitted: boolean
 }
+
+export type PublicStudy = { session: PublicSession | null; completed: number; total: number; round: number }
 
 export class EvaluationError extends Error {
   constructor(public status: number, message: string) { super(message) }

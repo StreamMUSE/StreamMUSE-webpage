@@ -20,11 +20,11 @@ const synthesis = {
   sampleRate: 44100, gain: 0.3, reverb: false, chorus: false, polyphony: 512,
 }
 const render = {
-  ...synthesis, melodyGain: 1, accompanimentGain: 0.4, normalization: 'none',
+  ...synthesis, melodyGain: 1, accompanimentGain: 10 ** (-12 / 20), accompanimentDb: -12, normalization: 'none',
   encoding: 'MP3 VBR quality 3, stereo', tailSeconds: 3,
   padding: 'Preserve the full MIDI timeline, then retain 3 seconds for piano release.',
 }
-const catalog = { datasetVersion: 'ismir-lbd-20260907-playback-v2', render, songs: [] }
+const catalog = { datasetVersion: 'ismir-lbd-20260907-playback-v3', render, songs: [] }
 const audit = { datasetVersion: catalog.datasetVersion, render, assets: [] }
 let previous
 try { previous = JSON.parse(await readFile(join(root, 'src/data/evaluation-catalog.json'), 'utf8')) } catch {}

@@ -1,8 +1,59 @@
-import type { Sql } from 'postgres'
-import { EvaluationError, type Answers, type Assignment, type StoredSession } from './model'
+import type { Sql, TransactionSql } from 'postgres'
+import { assignSamples, publicSession, EvaluationError, type Answers, type Assignment, type StoredSession, type Catalog, type PublicStudy } from './model'
+
+type StudyRow = StoredSession & { submitted: boolean }
+async function studyRows(sql: Sql | TransactionSql, participantId: string): Promise<StudyRow[]> {
+  const rows = await sql`SELECT s.*, EXISTS (SELECT 1 FROM evaluation_responses r WHERE r.session_id = s.id) AS submitted
+    FROM evaluation_sessions s WHERE participant_id = ${participantId} ORDER BY round_number`
+  return rows as unknown as StudyRow[]
+}
+function studyView(rows: StudyRow[], total: number): PublicStudy {
+  const last = rows[rows.length - 1]
+  return { session: last ? publicSession(last, last.submitted) : null,
+    completed: rows.filter(row => row.submitted).length, total, round: last?.round_number ?? 0 }
+}
 
 export function evaluationRepository(sql: Sql) {
   return {
+    async study(participantId: string, total: number) {
+      if (!(await sql`SELECT id FROM evaluation_participants WHERE id = ${participantId}`).length) {
+        throw new EvaluationError(404, 'No listening progress has been saved yet.')
+      }
+      return studyView(await studyRows(sql, participantId), total)
+    },
+    async next(participantId: string, requestId: string, previousId: string | null,
+      catalog: Catalog, rubric: string, randomInt: (max: number) => number, origin: string | null): Promise<PublicStudy> {
+      return sql.begin(async tx => {
+        await tx`INSERT INTO evaluation_participants (id) VALUES (${participantId}) ON CONFLICT DO NOTHING`
+        // One transition per participant at a time, even across tabs or deployments.
+        await tx`SELECT id FROM evaluation_participants WHERE id = ${participantId} FOR UPDATE`
+        let rows = await studyRows(tx, participantId)
+        const existing = await tx`SELECT participant_id FROM evaluation_sessions WHERE id = ${requestId}`
+        if (existing.length) {
+          if (existing[0].participant_id !== participantId) throw new EvaluationError(409, 'This round belongs to a different listening session.')
+          return studyView(rows, catalog.songs.length)
+        }
+        if (previousId && !rows.some(row => row.id === previousId)) {
+          // Knowledge of the legacy UUID is the existing recovery authorization.
+          const legacy = await tx`SELECT s.*, EXISTS (SELECT 1 FROM evaluation_responses r WHERE r.session_id = s.id) AS submitted
+            FROM evaluation_sessions s WHERE id = ${previousId} FOR UPDATE`
+          if (!legacy.length) throw new EvaluationError(404, 'The previous round could not be found.')
+          if (legacy[0].participant_id || rows.length) throw new EvaluationError(409, 'This round belongs to a different listening session.')
+          if (!legacy[0].submitted) throw new EvaluationError(409, 'Submit the current round before continuing.')
+          await tx`UPDATE evaluation_sessions SET participant_id = ${participantId}, round_number = 1 WHERE id = ${previousId}`
+          rows = await studyRows(tx, participantId)
+        }
+        const last = rows[rows.length - 1]
+        // Stale Next requests and retries return the active/latest round without advancing.
+        if (last && (!last.submitted || last.id !== previousId)) return studyView(rows, catalog.songs.length)
+        const unseen = catalog.songs.filter(song => !rows.some(row => row.song_id === song.id))
+        if (!unseen.length || rows.length >= catalog.songs.length) return studyView(rows, catalog.songs.length)
+        const assignment = assignSamples({ ...catalog, songs: unseen }, randomInt)
+        await tx`INSERT INTO evaluation_sessions (id, dataset_version, rubric_version, song_id, assignment, source_origin, participant_id, round_number)
+          VALUES (${requestId}, ${catalog.datasetVersion}, ${rubric}, ${assignment.songId}, ${tx.json(assignment)}, ${origin}, ${participantId}, ${rows.length + 1})`
+        return studyView(await studyRows(tx, participantId), catalog.songs.length)
+      })
+    },
     async create(id: string, dataset: string, rubric: string, assignment: Assignment, origin: string | null) {
       // Client-generated UUID makes creation recoverable even if its response is lost.
       await sql`INSERT INTO evaluation_sessions (id, dataset_version, rubric_version, song_id, assignment, source_origin)

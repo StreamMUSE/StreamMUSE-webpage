@@ -3,13 +3,16 @@
 import Link from 'next/link'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { ArrowLeft, ArrowRight, Check, CheckCircle2, Headphones, Music2 } from 'lucide-react'
-import { dimensions, labels, validateAnswers, type Dimension, type Label, type PublicSession } from '@/lib/evaluation/model'
+import { dimensions, labels, validateAnswers, type Dimension, type Label, type PublicSession, type PublicStudy } from '@/lib/evaluation/model'
 import { rubric, rubricVersion } from '@/lib/evaluation/rubric'
 import styles from './ListeningEvaluation.module.css'
 import EvaluationPlayer from './EvaluationPlayer'
 
 type DraftRatings = Partial<Record<Label, Partial<Record<Dimension, number>>>>
-type Draft = { sessionId: string; ratings: DraftRatings; ranking: (Label | '')[] }
+type PendingRound = { sessionId: string; previousSessionId: string | null }
+type Draft = { participantId?: string; sessionId: string | null; ratings: DraftRatings; ranking: (Label | '')[]; pendingNext?: PendingRound }
+const participantKey = 'streammuse-evaluation-participant-v1'
+const isId = (value: unknown): value is string => typeof value === 'string' && /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(value)
 const storageKey = 'streammuse-listening-evaluation-v1'
 class RequestError extends Error { constructor(message: string, public status: number) { super(message) } }
 
@@ -33,19 +36,22 @@ async function request<T>(url: string, body?: unknown): Promise<T> {
 function readDraft(value: string): Draft | null {
   try {
     const draft = JSON.parse(value)
-    if (typeof draft.sessionId !== 'string' || !/^[0-9a-f-]{36}$/i.test(draft.sessionId)) return null
+    if (draft.sessionId !== null && !isId(draft.sessionId)) return null
     const ratings: DraftRatings = {}
     for (const label of labels) for (const dimension of dimensions) {
       const score = draft.ratings?.[label]?.[dimension]
       if (Number.isInteger(score) && score >= 1 && score <= 5) ratings[label] = { ...ratings[label], [dimension]: score }
     }
     const ranking = [0, 1, 2].map(i => labels.includes(draft.ranking?.[i]) ? draft.ranking[i] : '')
-    return { sessionId: draft.sessionId, ratings, ranking }
+    const pending = draft.pendingNext
+    const pendingNext = pending && isId(pending.sessionId) && (pending.previousSessionId === null || isId(pending.previousSessionId)) ? pending : undefined
+    return { participantId: isId(draft.participantId) ? draft.participantId : undefined, sessionId: draft.sessionId, ratings, ranking, pendingNext }
   } catch { return null }
 }
 
 export default function ListeningEvaluation() {
   const [session, setSession] = useState<PublicSession | null>(null)
+  const [progress, setProgress] = useState<Pick<PublicStudy, 'completed' | 'total' | 'round'> | null>(null)
   const [ratings, setRatings] = useState<DraftRatings>({})
   const [ranking, setRanking] = useState<(Label | '')[]>(['', '', ''])
   const [ready, setReady] = useState(false)
@@ -53,6 +59,11 @@ export default function ListeningEvaluation() {
   const [error, setError] = useState('')
   const [storageWarning, setStorageWarning] = useState(false)
   const sessionId = useRef<string | null>(null)
+  const participantId = useRef<string | null>(null)
+  const pendingNext = useRef<PendingRound | undefined>(undefined)
+  const answersRef = useRef({ ratings, ranking })
+  answersRef.current = { ratings, ranking }
+  const listeningRef = useRef<HTMLHeadingElement>(null)
   const activeAudio = useRef<HTMLAudioElement | null>(null)
   const inFlight = useRef(false)
   const statusRef = useRef<HTMLDivElement>(null)
@@ -60,6 +71,18 @@ export default function ListeningEvaluation() {
     try { localStorage.setItem(storageKey, JSON.stringify(draft)); setStorageWarning(false) }
     catch { setStorageWarning(true) }
   }, [])
+
+  const applyStudy = useCallback((study: PublicStudy, requestFinished = false) => {
+    const nextId = study.session?.id ?? null
+    const changed = nextId !== sessionId.current
+    const answers = changed ? { ratings: {}, ranking: ['', '', ''] as (Label | '')[] } : answersRef.current
+    if (changed) { setRatings(answers.ratings); setRanking(answers.ranking) }
+    if (requestFinished || (nextId && nextId !== pendingNext.current?.previousSessionId)) pendingNext.current = undefined
+    sessionId.current = nextId
+    setSession(study.session)
+    setProgress({ completed: study.completed, total: study.total, round: study.round })
+    persist({ participantId: participantId.current!, sessionId: nextId, ...answers, pendingNext: pendingNext.current })
+  }, [persist])
 
   const recover = useCallback(async (id: string) => {
     try { return await request<PublicSession>(`/api/evaluation-sessions/${id}`) }
@@ -73,34 +96,68 @@ export default function ListeningEvaluation() {
   useEffect(() => {
     let cancelled = false
     async function restore() {
-      let draft: Draft | null = null
-      try { const saved = localStorage.getItem(storageKey); if (saved) draft = readDraft(saved) } catch { setStorageWarning(true) }
+      let draft: Draft | null = null, savedParticipant: string | null = null
+      try {
+        const saved = localStorage.getItem(storageKey)
+        if (saved) draft = readDraft(saved)
+        savedParticipant = localStorage.getItem(participantKey)
+      } catch { setStorageWarning(true) }
+      participantId.current = isId(savedParticipant) ? savedParticipant : draft?.participantId ?? draft?.sessionId ?? crypto.randomUUID()
+      try { localStorage.setItem(participantKey, participantId.current) } catch { setStorageWarning(true) }
       if (draft) {
-        sessionId.current = draft.sessionId
+        sessionId.current = draft.sessionId; pendingNext.current = draft.pendingNext
         setRatings(draft.ratings); setRanking(draft.ranking)
-        try { const restored = await recover(draft.sessionId); if (!cancelled) setSession(restored) }
-        catch (error) { if (!cancelled) setError((error as Error).message) }
+        answersRef.current = { ratings: draft.ratings, ranking: draft.ranking }
+      }
+      try {
+        const study = await request<PublicStudy>(`/api/evaluation-participants/${participantId.current}`)
+        if (!cancelled) applyStudy(study)
+      } catch (error) {
+        if (error instanceof RequestError && error.status === 404) {
+          if (draft?.sessionId) {
+            try {
+              const restored = await recover(draft.sessionId)
+              if (!cancelled) { setSession(restored); setProgress({ completed: restored.submitted ? 1 : 0, total: 10, round: 1 }) }
+            } catch (legacyError) { if (!cancelled) setError((legacyError as Error).message) }
+          }
+        } else if (!cancelled) setError((error as Error).message)
       }
       if (!cancelled) setReady(true)
     }
     void restore()
     return () => { cancelled = true; activeAudio.current?.pause() }
-  }, [recover])
+  }, [recover, applyStudy])
 
   useEffect(() => {
-    if (ready && sessionId.current) persist({ sessionId: sessionId.current, ratings, ranking })
+    if (ready && participantId.current && (sessionId.current || pendingNext.current)) {
+      persist({ participantId: participantId.current, sessionId: sessionId.current, ratings, ranking, pendingNext: pendingNext.current })
+    }
   }, [ready, ratings, ranking, persist])
 
   async function start() {
-    if (inFlight.current) return
+    if (inFlight.current || !participantId.current) return
     inFlight.current = true; setBusy(true); setError('')
     try {
-      const isNew = !sessionId.current
-      const id = sessionId.current ?? crypto.randomUUID()
-      sessionId.current = id
-      persist({ sessionId: id, ratings, ranking })
-      const restored = isNew ? await request<PublicSession>('/api/evaluation-sessions', { sessionId: id }) : await recover(id)
-      setSession(restored)
+      // Preserve the old round/draft until the next assignment is confirmed.
+      // The same request UUID survives a lost response and a browser restart.
+      if (sessionId.current && !session) {
+        try {
+          const study = await request<PublicStudy>(`/api/evaluation-participants/${participantId.current}`)
+          applyStudy(study)
+        } catch (restoreError) {
+          if (!(restoreError instanceof RequestError) || restoreError.status !== 404) throw restoreError
+          const restored = await recover(sessionId.current)
+          setSession(restored); setProgress({ completed: restored.submitted ? 1 : 0, total: 10, round: 1 })
+        }
+        return
+      }
+      const next = pendingNext.current ?? { sessionId: crypto.randomUUID(), previousSessionId: sessionId.current }
+      pendingNext.current = next
+      persist({ participantId: participantId.current, sessionId: sessionId.current, ratings, ranking, pendingNext: next })
+      const study = await request<PublicStudy>('/api/evaluation-rounds', { participantId: participantId.current, ...next })
+      activeAudio.current?.pause()
+      applyStudy(study, true)
+      requestAnimationFrame(() => listeningRef.current?.focus())
     } catch (error) { setError((error as Error).message) }
     finally { inFlight.current = false; setBusy(false) }
   }
@@ -124,10 +181,13 @@ export default function ListeningEvaluation() {
       if (!result.submitted) throw new Error('Your submission has not been confirmed. Please retry.')
       activeAudio.current?.pause()
       setSession({ ...session, submitted: true })
-      requestAnimationFrame(() => statusRef.current?.focus())
+      setProgress(current => current ? { ...current, completed: Math.max(current.completed, current.round) } : { completed: 1, total: 10, round: 1 })
+      requestAnimationFrame(() => { statusRef.current?.focus({ preventScroll: true }); statusRef.current?.scrollIntoView({ block: 'start', behavior: 'smooth' }) })
     } catch (error) { setError((error as Error).message) }
     finally { inFlight.current = false; setBusy(false) }
   }
+
+  const complete = !!progress && progress.completed >= progress.total
 
   return (
     <main className={`page-shell ${styles.page}`}>
@@ -143,9 +203,12 @@ export default function ListeningEvaluation() {
       {error ? <div className={styles.error} role="alert">{error}</div> : null}
       {!ready ? <div className={styles.panel} role="status">Restoring your evaluation…</div> : session?.submitted ? (
         <div ref={statusRef} tabIndex={-1} className={`${styles.panel} ${styles.success}`} role="status">
-          <CheckCircle2 size={42} aria-hidden="true" /><h2>Thank you for listening.</h2>
-          <p>Your scores and ranking have been saved. Your evaluation is complete.</p>
-          <Link href="/versions/v2" className={styles.button}>Return to StreamMUSE<ArrowRight size={17} aria-hidden="true" /></Link>
+          <CheckCircle2 size={42} aria-hidden="true" /><h2>{complete ? 'All 10 melodies complete.' : 'This round is saved.'}</h2>
+          <p>{complete ? 'Thank you for listening. All your scores and rankings have been saved.' : 'Your scores and ranking have been saved. Continue with a different melody whenever you are ready.'}</p>
+          <p className={styles.progressCount}>{progress?.completed ?? 1} / {progress?.total ?? 10} melodies completed</p>
+          {!complete ? <button type="button" className={styles.button} onClick={start} disabled={busy}>{busy ? 'Preparing your next melody…' : 'Listen to the next melody'}<ArrowRight size={17} aria-hidden="true" /></button> : null}
+          <p className={styles.finePrint}>{complete ? 'Your listening study is complete.' : 'You can close this page and return later in the same browser. Your progress will be remembered.'}</p>
+          <Link href="/versions/v2" className={styles.textButton}>Return to StreamMUSE</Link>
         </div>
       ) : !session ? (
         <section className={`${styles.panel} ${styles.intro}`} aria-labelledby="before-title">
@@ -153,14 +216,15 @@ export default function ListeningEvaluation() {
           <div><h2 id="before-title">A few minutes of careful listening</h2>
             <p>You will hear one reference melody and three anonymous samples, A, B, and C. Each sample combines the melody with a generated accompaniment.</p>
             <ul><li>Use headphones if possible and keep your volume comfortable.</li><li>Rate the accompaniment and how it works with the melody, rather than your preference for the song.</li><li>Give three scores per sample, then rank all three. You can listen again at any time.</li></ul>
-            <p className={styles.finePrint}>No name, email, or account is required. We collect your scores and ranking for this research study. Your progress is saved in this browser.</p>
+            <p className={styles.finePrint}>No name, email, or account is required. We collect your scores and ranking for this research study. You can evaluate up to 10 different melodies. Your progress is saved in this browser, including when you close this page.</p>
             <button className={styles.button} type="button" onClick={start} disabled={busy}>{busy ? 'Preparing your samples…' : sessionId.current ? 'Restore evaluation' : 'Start listening'}<ArrowRight size={17} aria-hidden="true" /></button>
           </div>
         </section>
       ) : session.rubricVersion !== rubricVersion ? <div className={styles.panel}>This evaluation uses an earlier scoring guide. Please contact the study organizer to continue.</div> : (
-        <form onSubmit={submit}>
+        <form key={session.id} onSubmit={submit}>
+          <p className={styles.roundProgress} role="status">Melody {progress?.round ?? 1} of {progress?.total ?? 10} · {progress?.completed ?? 0} completed</p>
           <section className={`${styles.panel} ${styles.reference}`} aria-labelledby="reference-title">
-            <div><span className={styles.eyebrow}>YOUR REFERENCE</span><h2 id="reference-title">The original melody</h2><p>Listen for context. This melody is not scored.</p></div>
+            <div><span className={styles.eyebrow}>YOUR REFERENCE</span><h2 ref={listeningRef} tabIndex={-1} id="reference-title">The original melody</h2><p>Listen for context. This melody is not scored.</p></div>
             <EvaluationPlayer label="Reference melody" asset={session.reference} onPlay={onPlay} />
           </section>
           <div className={styles.sectionIntro}><h2>Listen &amp; rate</h2><p>Choose one score for each dimension. All five levels are described below. Higher scores mean a stronger result.</p></div>

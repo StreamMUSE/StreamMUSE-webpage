@@ -9,7 +9,7 @@ if (!destination || !destination.endsWith('.csv')) {
 }
 const sql = connect()
 try {
-  const rows = await sql`SELECT r.session_id, s.dataset_version, s.rubric_version, s.song_id, s.source_origin,
+  const rows = await sql`SELECT s.participant_id, s.round_number, r.session_id, s.dataset_version, s.rubric_version, s.song_id, s.source_origin,
     s.assignment, s.created_at, r.ratings, r.ranking, r.submitted_at
     FROM evaluation_responses r JOIN evaluation_sessions s ON s.id = r.session_id ORDER BY r.submitted_at, r.session_id`
   await writeFile(destination, responsesCsv(rows), { flag: 'wx', mode: 0o600 })

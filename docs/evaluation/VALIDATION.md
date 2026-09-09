@@ -43,3 +43,12 @@ Review entry: [primary project Preview](https://stream-muse-webpage-git-ae4ef9-s
 - Browser checks passed at desktop and 390 × 844: audio-clock animation and active-note outlines, five-second keyboard seeking, pointer seeking, Home/End, exclusive playback, draft/asset restoration, and four responsive canvases without horizontal overflow.
 - Temporarily removing one local note file showed a retry message while retaining the audio controls and selected score. Restoring the file and pressing Retry note view recovered all four canvases. End seeking follows the browser's actual media duration.
 - Existing sessions deliberately retain their original recording. Use a fresh deployment URL/origin when reviewing the new mix, so an earlier browser draft does not restore playback-v1.
+
+
+## Continuous participation and −12 dB accompaniment (2026-09-08)
+
+- Playback-v3 retains melody gain 1.0 and uses accompaniment gain 10^(−12/20) = 0.251188643150958. All 100 new recordings use this common balance; the 200 historical recordings and their note data remain available. The MIDI source events and note-view behavior are unchanged.
+- Migration 002 adds anonymous participants and nullable participant/round columns for legacy compatibility. Unique indexes and participant-row transaction locks protect song/round allocation across tabs, requests and deployments. Preview and production were migrated; production session/response counts remained zero before and after migration.
+- All 15 tests passed against local PostgreSQL and the running API with no skips. New tests complete ten unique songs, exercise eight concurrent Next requests per round, replay stale/lost-response requests, check separate participants, verify legacy continuation and confirm participant/round CSV columns. Type checking, lint and production build passed.
+- Browser checks: a successful first round showed a Next button and 1/10 progress; round two loaded a different reference and cleared all nine scores, ranking and audio positions. Closing and reopening the tab restored round two and its selected score. Submitting round two in a 390 × 844 viewport showed 2/10 progress without horizontal overflow.
+- A local database outage during Next showed a recoverable error while retaining the saved two-round progress. Restarting the local database and retrying entered round three with blank scores/ranking and two completed rounds. No production test answers were inserted.

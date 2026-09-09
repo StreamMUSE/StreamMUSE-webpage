@@ -84,3 +84,10 @@
   .submitPanel { flex-direction: column; align-items: stretch; }
   .button { width: 100%; }
 }
+
+.roundProgress { margin: 0 0 18px; font-size: 13px; color: var(--teal-dark); font-weight: 600; }
+.progressCount { font-size: 14px; font-weight: 600; color: var(--teal-dark) !important; }
+.reference h2 { scroll-margin-top: 95px; }
+.success .finePrint { margin-top: 20px; }
+
+.success { scroll-margin-top: 130px; }

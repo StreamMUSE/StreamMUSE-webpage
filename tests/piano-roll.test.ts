@@ -42,8 +42,9 @@ test('piano roll seek and follow window handle start, short songs, end, and out-
 
 test('all remixed assets have matching anonymous note data and a common per-song scale', () => {
   const audit = JSON.parse(readFileSync('docs/evaluation/audio-audit.json', 'utf8'))
-  assert.equal(catalog.datasetVersion, 'ismir-lbd-20260907-playback-v2')
-  assert.equal(audit.render.melodyGain, 1); assert.equal(audit.render.accompanimentGain, .4)
+  assert.equal(catalog.datasetVersion, 'ismir-lbd-20260907-playback-v3')
+  assert.equal(audit.render.melodyGain, 1); assert.ok(Math.abs(20 * Math.log10(audit.render.accompanimentGain) + 12) < 1e-10)
+  assert.equal(audit.render.accompanimentDb, -12)
   assert.equal(audit.render.normalization, 'none')
   for (const song of catalog.songs) {
     let scale: unknown
@@ -67,7 +68,7 @@ test('all remixed assets have matching anonymous note data and a common per-song
 })
 
 test('historical sessions keep original audio and gain anonymous visualizations without changing assignments', () => {
-  const old = JSON.parse(readFileSync('docs/evaluation/history/ismir-lbd-20260907-playback-v1-audit.json', 'utf8'))
+  const old = { assets: [1, 2].flatMap(version => JSON.parse(readFileSync(`docs/evaluation/history/ismir-lbd-20260907-playback-v${version}-audit.json`, 'utf8')).assets) }
   for (const asset of old.assets) {
     assert.equal(hash(readFileSync(`public${asset.src}`)), asset.audioSha256)
     assert.ok(JSON.parse(readFileSync(`public/media/evaluation/${asset.id}.json`, 'utf8')).notes.length > 0)
