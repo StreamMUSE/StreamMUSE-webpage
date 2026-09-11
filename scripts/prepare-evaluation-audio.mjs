@@ -1,19 +1,20 @@
 import { createHash } from 'node:crypto'
-import { readFile, writeFile, mkdir, readdir, stat } from 'node:fs/promises'
+import { readFile, writeFile, mkdir, readdir, stat, rm } from 'node:fs/promises'
 import { join, resolve, dirname } from 'node:path'
 import { spawnSync } from 'node:child_process'
 import { tmpdir } from 'node:os'
 import { splitMidi } from './evaluation-midi.mjs'
+import { datasetVersion, sampleCondition } from './evaluation-source.mjs'
 
-// Offline, reproducible rendering. Source MIDI files and previously published audio are never rewritten.
+// Offline, reproducible rendering. Source MIDI files are never rewritten.
 const [source, soundfont] = process.argv.slice(2)
 if (!source || !soundfont) {
-  console.error('Usage: node scripts/prepare-evaluation-audio.mjs <ISMIR_LBD_20260907> <MS Basic.sf3>')
+  console.error('Usage: node scripts/prepare-evaluation-audio.mjs <ISMIR_LBD_202609010> <MS Basic.sf3>')
   process.exit(1)
 }
 const root = process.cwd(), out = join(root, 'public/media/evaluation')
 const scratch = join(tmpdir(), 'streammuse-evaluation-stems')
-await Promise.all([out, scratch, join(root, 'src/data'), join(root, 'docs/evaluation/history')].map(dir => mkdir(dir, { recursive: true })))
+await Promise.all([out, scratch, join(root, 'src/data'), join(root, 'docs/evaluation')].map(dir => mkdir(dir, { recursive: true })))
 const hash = value => createHash('sha256').update(value).digest('hex')
 const synthesis = {
   soundfont: 'MuseScore MS Basic', soundfontSha256: hash(await readFile(soundfont)),
@@ -24,20 +25,8 @@ const render = {
   encoding: 'MP3 VBR quality 3, stereo', tailSeconds: 3,
   padding: 'Preserve the full MIDI timeline, then retain 3 seconds for piano release.',
 }
-const catalog = { datasetVersion: 'ismir-lbd-20260907-playback-v3', render, songs: [] }
+const catalog = { datasetVersion, render, songs: [] }
 const audit = { datasetVersion: catalog.datasetVersion, render, assets: [] }
-let previous
-try { previous = JSON.parse(await readFile(join(root, 'src/data/evaluation-catalog.json'), 'utf8')) } catch {}
-if (previous && previous.datasetVersion !== catalog.datasetVersion) {
-  for (const [input, suffix] of [['src/data/evaluation-catalog.json', 'catalog'], ['docs/evaluation/audio-audit.json', 'audit']]) {
-    const target = join(root, 'docs/evaluation/history', `${previous.datasetVersion}-${suffix}.json`)
-    try { await writeFile(target, await readFile(join(root, input)), { flag: 'wx' }) }
-    catch (error) { if (error.code !== 'EEXIST') throw error }
-  }
-}
-const historical = (await readdir(join(root, 'docs/evaluation/history'))).filter(name => name.endsWith('-catalog.json'))
-const oldAssets = (await Promise.all(historical.map(async file => JSON.parse(await readFile(join(root, 'docs/evaluation/history', file), 'utf8')))))
-  .flatMap(data => data.songs.flatMap(song => [song.reference, ...song.samples]))
 function command(program, args) {
   const result = spawnSync(program, args, { encoding: 'utf8', maxBuffer: 10 * 1024 * 1024 })
   if (result.status !== 0) throw new Error(`${program} failed: ${result.stderr || result.error || result.stdout}`)
@@ -66,15 +55,13 @@ for (const folder of folders.filter(folder => !selectedSongs || selectedSongs.in
   if (files.length !== 10) throw new Error(`Expected 10 MIDI files in ${folder}`)
   const prepared = await Promise.all(files.map(async filename => {
     const original = await readFile(join(source, folder, filename))
-    return { filename, sourceSha256: hash(original), ...splitMidi(original) }
+    return { filename, ...sampleCondition(filename), sourceSha256: hash(original), ...splitMidi(original) }
   }))
   // One pitch range and timeline across every seed/system of a song, including the reference.
   const pitches = prepared.flatMap(item => item.notes.map(note => note.pitch))
   const view = { duration: Math.max(...prepared.map(item => item.timelineEnd)) + render.tailSeconds,
     minPitch: Math.max(0, Math.min(...pitches) - 2), maxPitch: Math.min(127, Math.max(...pitches) + 2) }
-  for (const { filename, sourceSha256, stems, midi, notes, timelineEnd } of prepared) {
-    const version = filename.includes('legacy') ? 'v0' : filename.includes('single_n1') ? 'v1' : filename.includes('rule_constraints') ? 'v2' : 'reference'
-    const seed = version === 'reference' ? null : Number(filename.match(/_s([012])_/)[1])
+  for (const { filename, version, seed, sourceSha256, stems, midi, notes, timelineEnd } of prepared) {
     for (const track of midi.tracks.filter(t => t.notes.length)) {
       if (track.instrument.number !== 0 || track.instrument.percussion) throw new Error(`Non-piano program: ${folder}/${filename}`)
     }
@@ -110,8 +97,6 @@ for (const folder of folders.filter(folder => !selectedSongs || selectedSongs.in
     }
     const visualization = JSON.stringify({ schemaVersion: 1, ...view, notes }) + '\n'
     await writeFile(join(out, `${id}.json`), visualization)
-    // Historical sessions retain their audio; only their note visualization is added.
-    for (const old of oldAssets.filter(asset => asset.sourceSha256 === sourceSha256)) await writeFile(join(out, `${old.id}.json`), visualization)
     const asset = { id, src: `/media/evaluation/${id}.mp3`, visualizationSrc: `/media/evaluation/${id}.json`, duration: verification.duration, sourceSha256, sourceFile: `${folder}/${filename}` }
     if (version === 'reference') song.reference = asset
     else song.samples.push({ ...asset, version, seed })
@@ -128,9 +113,15 @@ for (const folder of folders.filter(folder => !selectedSongs || selectedSongs.in
 if (!selectedSongs) {
   await writeFile(join(root, 'src/data/evaluation-catalog.json'), JSON.stringify(catalog, null, 2) + '\n')
   await writeFile(join(root, 'docs/evaluation/audio-audit.json'), JSON.stringify(audit, null, 2) + '\n')
+  // Retire old recordings only after the complete replacement set is verified.
+  const currentFiles = new Set(audit.assets.flatMap(asset => [`${asset.id}.mp3`, `${asset.id}.json`]))
+  for (const file of await readdir(out)) {
+    if (/^[a-f0-9]{24}\.(mp3|json)$/.test(file) && !currentFiles.has(file)) await rm(join(out, file))
+  }
+  await rm(join(root, 'docs/evaluation/history'), { recursive: true, force: true })
 }
 try {
   const license = (await readFile(join(dirname(soundfont), 'MS Basic_License.md'), 'utf8')).split('\n').map(line => line.trimEnd()).join('\n').trimEnd() + '\n'
   await writeFile(join(root, 'docs/evaluation/SOUNDFONT-LICENSE.md'), license)
 } catch { console.warn('Include the soundfont license before publishing.') }
-console.log(`Prepared ${audit.assets.length} verified mixes and note visualizations. Historical audio retained.`)
+console.log(`Prepared ${audit.assets.length} verified mixes and note visualizations.${selectedSongs ? '' : ' Superseded samples removed.'}`)

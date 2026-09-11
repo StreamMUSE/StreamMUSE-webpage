@@ -1,12 +1,11 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
-import { createHash, randomUUID } from 'node:crypto'
+import { createHash } from 'node:crypto'
 import { parseMidi, writeMidi } from 'midi-file'
 import catalog from '../src/data/evaluation-catalog.json'
 import { splitMidi, trackRole } from '../scripts/evaluation-midi.mjs'
 import { visibleWindow, seekTime, formatTime, type PianoRoll } from '../src/lib/evaluation/piano-roll'
-import { publicSession, type Assignment } from '../src/lib/evaluation/model'
 
 const hash = (value: Buffer) => createHash('sha256').update(value).digest('hex')
 
@@ -42,7 +41,7 @@ test('piano roll seek and follow window handle start, short songs, end, and out-
 
 test('all remixed assets have matching anonymous note data and a common per-song scale', () => {
   const audit = JSON.parse(readFileSync('docs/evaluation/audio-audit.json', 'utf8'))
-  assert.equal(catalog.datasetVersion, 'ismir-lbd-20260907-playback-v3')
+  assert.equal(catalog.datasetVersion, 'ismir-lbd-202609010-playback-v1')
   assert.equal(audit.render.melodyGain, 1); assert.ok(Math.abs(20 * Math.log10(audit.render.accompanimentGain) + 12) < 1e-10)
   assert.equal(audit.render.accompanimentDb, -12)
   assert.equal(audit.render.normalization, 'none')
@@ -65,22 +64,4 @@ test('all remixed assets have matching anonymous note data and a common per-song
       }
     }
   }
-})
-
-test('historical sessions keep original audio and gain anonymous visualizations without changing assignments', () => {
-  const old = { assets: [1, 2].flatMap(version => JSON.parse(readFileSync(`docs/evaluation/history/ismir-lbd-20260907-playback-v${version}-audit.json`, 'utf8')).assets) }
-  for (const asset of old.assets) {
-    assert.equal(hash(readFileSync(`public${asset.src}`)), asset.audioSha256)
-    assert.ok(JSON.parse(readFileSync(`public/media/evaluation/${asset.id}.json`, 'utf8')).notes.length > 0)
-  }
-  const reference = old.assets.find((asset: { version: string }) => asset.version === 'reference')
-  const sample = old.assets.find((asset: { version: string }) => asset.version === 'v0')
-  const assignment = { songId: '01', reference, samples: { A: sample, B: sample, C: sample } } as Assignment
-  const before = JSON.stringify(assignment)
-  const result = publicSession({ id: randomUUID(), dataset_version: 'old', rubric_version: 'rubric', song_id: '01', assignment, created_at: new Date() }, false)
-  assert.equal(result.reference.src, reference.src)
-  assert.equal(result.samples[0].src, sample.src)
-  assert.equal(result.samples[0].visualizationSrc, `/media/evaluation/${sample.id}.json`)
-  assert.equal(JSON.stringify(assignment), before)
-  assert.ok(!JSON.stringify(result).includes('sourceFile'))
 })

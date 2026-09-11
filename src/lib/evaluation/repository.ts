@@ -13,13 +13,18 @@ function studyView(rows: StudyRow[], total: number): PublicStudy {
     completed: rows.filter(row => row.submitted).length, total, round: last?.round_number ?? 0 }
 }
 
-export function evaluationRepository(sql: Sql) {
+export function evaluationRepository(sql: Sql, activeDataset?: string) {
+  const requireCurrent = (dataset: string, expected = activeDataset) => {
+    if (expected && dataset !== expected) throw new EvaluationError(410, 'These recordings have been replaced. Reload the listening page to start the updated study.')
+  }
   return {
     async study(participantId: string, total: number) {
       if (!(await sql`SELECT id FROM evaluation_participants WHERE id = ${participantId}`).length) {
         throw new EvaluationError(404, 'No listening progress has been saved yet.')
       }
-      return studyView(await studyRows(sql, participantId), total)
+      const rows = await studyRows(sql, participantId)
+      rows.forEach(row => requireCurrent(row.dataset_version))
+      return studyView(rows, total)
     },
     async next(participantId: string, requestId: string, previousId: string | null,
       catalog: Catalog, rubric: string, randomInt: (max: number) => number, origin: string | null): Promise<PublicStudy> {
@@ -28,9 +33,11 @@ export function evaluationRepository(sql: Sql) {
         // One transition per participant at a time, even across tabs or deployments.
         await tx`SELECT id FROM evaluation_participants WHERE id = ${participantId} FOR UPDATE`
         let rows = await studyRows(tx, participantId)
-        const existing = await tx`SELECT participant_id FROM evaluation_sessions WHERE id = ${requestId}`
+        rows.forEach(row => requireCurrent(row.dataset_version, catalog.datasetVersion))
+        const existing = await tx`SELECT participant_id, dataset_version FROM evaluation_sessions WHERE id = ${requestId}`
         if (existing.length) {
           if (existing[0].participant_id !== participantId) throw new EvaluationError(409, 'This round belongs to a different listening session.')
+          requireCurrent(existing[0].dataset_version, catalog.datasetVersion)
           return studyView(rows, catalog.songs.length)
         }
         if (previousId && !rows.some(row => row.id === previousId)) {
@@ -39,6 +46,7 @@ export function evaluationRepository(sql: Sql) {
             FROM evaluation_sessions s WHERE id = ${previousId} FOR UPDATE`
           if (!legacy.length) throw new EvaluationError(404, 'The previous round could not be found.')
           if (legacy[0].participant_id || rows.length) throw new EvaluationError(409, 'This round belongs to a different listening session.')
+          requireCurrent(legacy[0].dataset_version, catalog.datasetVersion)
           if (!legacy[0].submitted) throw new EvaluationError(409, 'Submit the current round before continuing.')
           await tx`UPDATE evaluation_sessions SET participant_id = ${participantId}, round_number = 1 WHERE id = ${previousId}`
           rows = await studyRows(tx, participantId)
@@ -64,9 +72,11 @@ export function evaluationRepository(sql: Sql) {
       const rows = await sql`SELECT s.*, EXISTS (SELECT 1 FROM evaluation_responses r WHERE r.session_id = s.id) AS submitted
         FROM evaluation_sessions s WHERE s.id = ${id}`
       if (!rows.length) throw new EvaluationError(404, 'This evaluation could not be found. Please try restoring it again.')
+      requireCurrent(rows[0].dataset_version)
       return { session: rows[0] as unknown as StoredSession, submitted: rows[0].submitted }
     },
     async submit(id: string, answers: Answers) {
+      if (activeDataset) await this.get(id)
       // Separate statements are intentional: after a concurrent INSERT wins, the following
       // SELECT gets a fresh READ COMMITTED snapshot and sees the winning response.
       const inserted = await sql`INSERT INTO evaluation_responses (session_id, ratings, ranking)

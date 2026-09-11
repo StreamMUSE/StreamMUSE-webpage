@@ -7,13 +7,12 @@ import { dimensions, labels, validateAnswers, type Dimension, type Label, type P
 import { rubric, rubricVersion } from '@/lib/evaluation/rubric'
 import styles from './ListeningEvaluation.module.css'
 import EvaluationPlayer from './EvaluationPlayer'
+import { evaluationStorageKeys } from '@/lib/evaluation/storage'
 
 type DraftRatings = Partial<Record<Label, Partial<Record<Dimension, number>>>>
 type PendingRound = { sessionId: string; previousSessionId: string | null }
 type Draft = { participantId?: string; sessionId: string | null; ratings: DraftRatings; ranking: (Label | '')[]; pendingNext?: PendingRound }
-const participantKey = 'streammuse-evaluation-participant-v1'
 const isId = (value: unknown): value is string => typeof value === 'string' && /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(value)
-const storageKey = 'streammuse-listening-evaluation-v1'
 class RequestError extends Error { constructor(message: string, public status: number) { super(message) } }
 
 async function request<T>(url: string, body?: unknown): Promise<T> {
@@ -49,7 +48,8 @@ function readDraft(value: string): Draft | null {
   } catch { return null }
 }
 
-export default function ListeningEvaluation() {
+export default function ListeningEvaluation({ datasetVersion }: { datasetVersion: string }) {
+  const { participantKey, storageKey } = evaluationStorageKeys(datasetVersion)
   const [session, setSession] = useState<PublicSession | null>(null)
   const [progress, setProgress] = useState<Pick<PublicStudy, 'completed' | 'total' | 'round'> | null>(null)
   const [ratings, setRatings] = useState<DraftRatings>({})
@@ -70,7 +70,7 @@ export default function ListeningEvaluation() {
   const persist = useCallback((draft: Draft) => {
     try { localStorage.setItem(storageKey, JSON.stringify(draft)); setStorageWarning(false) }
     catch { setStorageWarning(true) }
-  }, [])
+  }, [storageKey])
 
   const applyStudy = useCallback((study: PublicStudy, requestFinished = false) => {
     const nextId = study.session?.id ?? null
@@ -126,7 +126,7 @@ export default function ListeningEvaluation() {
     }
     void restore()
     return () => { cancelled = true; activeAudio.current?.pause() }
-  }, [recover, applyStudy])
+  }, [recover, applyStudy, participantKey, storageKey])
 
   useEffect(() => {
     if (ready && participantId.current && (sessionId.current || pendingNext.current)) {

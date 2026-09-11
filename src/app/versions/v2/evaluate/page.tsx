@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ListeningEvaluation from '@/components/ListeningEvaluation'
+import catalog from '@/data/evaluation-catalog.json'
 
 export const metadata: Metadata = {
   title: 'Listening Evaluation | StreamMUSE',
@@ -8,5 +9,5 @@ export const metadata: Metadata = {
 }
 
 export default function EvaluationPage() {
-  return <ListeningEvaluation />
+  return <ListeningEvaluation key={catalog.datasetVersion} datasetVersion={catalog.datasetVersion} />
 }

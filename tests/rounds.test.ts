@@ -70,7 +70,7 @@ test('participants complete ten unique songs; concurrent, stale and lost-respons
   } finally { await sql.end(); await admin`DROP SCHEMA ${admin(schema)} CASCADE`; await admin.end() }
 })
 
-test('legacy completion becomes round one without changing audio, answers or dataset, then continues on an unseen song', { skip: !url }, async () => {
+test('a current single-round completion becomes round one and continues on an unseen song', { skip: !url }, async () => {
   assert.ok(['localhost', '127.0.0.1', '[::1]'].includes(new URL(url!).hostname))
   const schema = `legacy_test_${randomUUID().replace(/-/g, '')}`
   const admin = postgres(url!, { max: 1, onnotice: () => {} })
@@ -79,7 +79,7 @@ test('legacy completion becomes round one without changing audio, answers or dat
   try {
     for (const file of readdirSync('db/migrations').filter(name => name.endsWith('.sql')).sort()) await sql.unsafe(readFileSync(`db/migrations/${file}`, 'utf8'))
     const repo = evaluationRepository(sql), participant = randomUUID(), oldId = randomUUID()
-    const oldCatalog = JSON.parse(readFileSync('docs/evaluation/history/ismir-lbd-20260907-playback-v2-catalog.json', 'utf8')) as Catalog
+    const oldCatalog = catalog
     const original = await repo.create(oldId, oldCatalog.datasetVersion, 'old-rubric', assignSamples(oldCatalog, () => 0), 'http://localhost')
     const requestId = randomUUID()
     await assert.rejects(repo.next(participant, requestId, oldId, catalog, 'new-rubric', () => 0, null), { status: 409 })
@@ -100,6 +100,43 @@ test('legacy completion becomes round one without changing audio, answers or dat
 })
 
 const base = process.env.EVALUATION_TEST_BASE_URL
+test('retired study APIs reject recovery, adoption and submission without changing saved answers', { skip: !base || !url }, async () => {
+  assert.ok(['localhost', '127.0.0.1', '[::1]'].includes(new URL(base!).hostname))
+  assert.ok(['localhost', '127.0.0.1', '[::1]'].includes(new URL(url!).hostname))
+  const sql = postgres(url!, { max: 1 })
+  const oldParticipant = randomUUID(), newParticipant = randomUUID(), oldId = randomUUID(), unsubmittedId = randomUUID()
+  const post = (path: string, body: unknown) => fetch(`${base}${path}`, { method: 'POST', headers: { 'content-type': 'application/json', origin: base! }, body: JSON.stringify(body) })
+  try {
+    const fixture = evaluationRepository(sql)
+    const oldCatalog = { ...catalog, datasetVersion: 'retired-test-dataset' }
+    await fixture.next(oldParticipant, oldId, null, oldCatalog, 'rubric', () => 0, base!)
+    await fixture.submit(oldId, answers)
+    await fixture.create(unsubmittedId, oldCatalog.datasetVersion, 'rubric', assignSamples(catalog, () => 0), base!)
+    const original = await sql`SELECT * FROM evaluation_responses WHERE session_id = ${oldId}`
+    const responses = [
+      await fetch(`${base}/api/evaluation-sessions/${oldId}`),
+      await fetch(`${base}/api/evaluation-participants/${oldParticipant}`),
+      await post('/api/evaluation-sessions', { sessionId: oldId }),
+      await post('/api/evaluation-rounds', { participantId: oldParticipant, sessionId: randomUUID(), previousSessionId: oldId }),
+      await post('/api/evaluation-rounds', { participantId: newParticipant, sessionId: randomUUID(), previousSessionId: unsubmittedId }),
+      await post('/api/evaluations', { sessionId: unsubmittedId, ...answers }),
+    ]
+    for (const response of responses) {
+      assert.equal(response.status, 410)
+      const result = await response.json()
+      assert.match(result.error, /recordings have been replaced/)
+      assert.ok(!JSON.stringify(result).includes('/media/'))
+    }
+    assert.deepEqual(await sql`SELECT * FROM evaluation_responses WHERE session_id = ${oldId}`, original)
+    assert.equal((await sql`SELECT * FROM evaluation_responses WHERE session_id = ${unsubmittedId}`).length, 0)
+  } finally {
+    await sql`DELETE FROM evaluation_responses WHERE session_id IN (${oldId}, ${unsubmittedId})`
+    await sql`DELETE FROM evaluation_sessions WHERE id IN (${oldId}, ${unsubmittedId})`
+    await sql`DELETE FROM evaluation_participants WHERE id IN (${oldParticipant}, ${newParticipant})`
+    await sql.end()
+  }
+})
+
 test('round APIs keep participant progress through ten submissions and reject invalid requests', { skip: !base }, async () => {
   assert.ok(['localhost', '127.0.0.1', '[::1]'].includes(new URL(base!).hostname))
   const post = (path: string, body: unknown) => fetch(`${base}${path}`, { method: 'POST', headers: { 'content-type': 'application/json', origin: base! }, body: JSON.stringify(body) })

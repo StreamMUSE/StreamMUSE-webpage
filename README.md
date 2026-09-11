@@ -4,7 +4,7 @@ This repository contains the StreamMUSE project page built with Next.js, React, 
 
 ## Listening Evaluation
 
-The v2 page links to a static listening study at `/versions/v2/evaluate`. Three API routes store anonymous sample assignments, scores, and ranking in Neon PostgreSQL. See [the evaluation guide](docs/evaluation/README.md) for database setup, the 100 audio assets, validation, Preview deployment, and local CSV export. Copy `.env.example` to an untracked `.env.local` and use a development database when working locally.
+The v2 page links to a static listening study at `/versions/v2/evaluate`. API routes store anonymous sample assignments, scores, and ranking in Neon PostgreSQL. See [the evaluation guide](docs/evaluation/README.md) for database setup, the 100 audio assets, validation, Preview deployment, and local CSV export. Copy `.env.example` to an untracked `.env.local` and use a development database when working locally.
 
 ## Development
 
