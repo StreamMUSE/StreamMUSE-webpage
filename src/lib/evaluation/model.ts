@@ -1,3 +1,4 @@
+import type { StemSources } from './stem-player'
 export const labels = ['A', 'B', 'C'] as const
 export const versions = ['v0', 'v1', 'v2'] as const
 export const dimensions = ['coherence', 'plausibility', 'musicality'] as const
@@ -6,7 +7,7 @@ export type Version = typeof versions[number]
 export type Dimension = typeof dimensions[number]
 export type Ratings = Record<Label, Record<Dimension, number>>
 export type Answers = { ratings: Ratings; ranking: Label[] }
-export type Asset = { id: string; src: string; duration: number; visualizationSrc?: string }
+export type Asset = { id: string; src: string; duration: number; visualizationSrc?: string; stemSources?: StemSources }
 export type Sample = Asset & { version: Version; seed: number }
 export type Song = { id: string; reference: Asset; samples: Sample[] }
 export type Catalog = { datasetVersion: string; songs: Song[] }
@@ -71,7 +72,7 @@ export function assignSamples(catalog: Catalog, randomInt: (max: number) => numb
     ;[selected[i], selected[j]] = [selected[j], selected[i]]
   }
   // Only the fields needed to reproduce this evaluation are stored in the assignment.
-  const asset = ({ id, src, duration, visualizationSrc }: Asset): Asset => ({ id, src, duration, visualizationSrc })
+  const asset = ({ id, src, duration, visualizationSrc, stemSources }: Asset): Asset => ({ id, src, duration, visualizationSrc, stemSources })
   return {
     songId: song.id, reference: asset(song.reference),
     samples: Object.fromEntries(labels.map((label, i) => [label, { ...asset(selected[i]), version: selected[i].version, seed: selected[i].seed }])) as Record<Label, Sample>,
@@ -79,7 +80,7 @@ export function assignSamples(catalog: Catalog, randomInt: (max: number) => numb
 }
 
 export function publicSession(session: StoredSession, submitted: boolean): PublicSession {
-  const asset = ({ id, src, duration, visualizationSrc }: Asset): Asset => ({ id, src, duration, visualizationSrc: visualizationSrc ?? `/media/evaluation/${id}.json` })
+  const asset = ({ id, src, duration, visualizationSrc, stemSources }: Asset): Asset => ({ id, src, duration, visualizationSrc: visualizationSrc ?? `/media/evaluation/${id}.json`, stemSources: { melody: stemSources?.melody ?? `/media/evaluation/${id}-melody.mp3`, accompaniment: stemSources?.accompaniment ?? `/media/evaluation/${id}-accompaniment.mp3` } })
   return {
     id: session.id, rubricVersion: session.rubric_version, reference: asset(session.assignment.reference), submitted,
     samples: labels.map(label => ({ label, ...asset(session.assignment.samples[label]) })),

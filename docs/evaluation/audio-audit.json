@@ -22,6 +22,10 @@
       "src": "/media/evaluation/3c1d23343aca756753c06f92.mp3",
       "visualizationSrc": "/media/evaluation/3c1d23343aca756753c06f92.json",
       "duration": 76.878367,
+      "stemSources": {
+        "melody": "/media/evaluation/3c1d23343aca756753c06f92-melody.mp3",
+        "accompaniment": "/media/evaluation/3c1d23343aca756753c06f92-accompaniment.mp3"
+      },
       "sourceSha256": "6f135bf339236cdb3e3eaf8f8bb2a5061cbe7c515cdbd1a140e5457dafff3065",
       "sourceFile": "01_童话/00_melody.mid",
       "peak": 0.0821014940738678,
@@ -42,6 +46,16 @@
       "midiDuration": 73.8332595,
       "timelineEnd": 73.83628979999999,
       "audioSha256": "829cce9d929c1e0bdf2963a4bc450fb140998242bd1f0845b2da1aa89420cb82",
+      "stemAudio": {
+        "melody": {
+          "duration": 76.878367,
+          "sha256": "829cce9d929c1e0bdf2963a4bc450fb140998242bd1f0845b2da1aa89420cb82"
+        },
+        "accompaniment": {
+          "duration": 76.878367,
+          "sha256": "63173b1d3aa9d45c549b8ca1a96233b9d08fe6dc939c9525f8ae4bed05a76a4a"
+        }
+      },
       "visualizationSha256": "cd9a2bc59cb32f70f0ebed730d9014ba0d445f250b2825dcd262a1d6d0cb68c3",
       "version": "reference",
       "seed": null,
@@ -63,6 +77,10 @@
       "src": "/media/evaluation/51c808b91194a8b31628b70d.mp3",
       "visualizationSrc": "/media/evaluation/51c808b91194a8b31628b70d.json",
       "duration": 77.714286,
+      "stemSources": {
+        "melody": "/media/evaluation/51c808b91194a8b31628b70d-melody.mp3",
+        "accompaniment": "/media/evaluation/51c808b91194a8b31628b70d-accompaniment.mp3"
+      },
       "sourceSha256": "49b36e09daaee1a05a2a9fdfa60acc07d7507689a6a0a4e848baab69f9602c49",
       "sourceFile": "01_童话/legacy_m2a_s0.mid",
       "peak": 0.08771052211523056,
@@ -83,6 +101,16 @@
       "midiDuration": 74.666592,
       "timelineEnd": 74.6696223,
       "audioSha256": "35ce27a646c81c5d84735dc28369c4aa1d09face5aa826967f193be02e2ade98",
+      "stemAudio": {
+        "melody": {
+          "duration": 77.714286,
+          "sha256": "2229c3ae0e475d8d8e83e832a904287ce915a1706fdc1fe39e5524ff524dc06a"
+        },
+        "accompaniment": {
+          "duration": 77.714286,
+          "sha256": "2ce4f79b93e804e2b45d167fe86c7fffd94249b4741c587e47c1ca34c2f4bf98"
+        }
+      },
       "visualizationSha256": "7e43f62fb198815fa3f086b9e30477a0443951a4201d8c981c05824a88dbcee9",
       "version": "v0",
       "seed": 0,
@@ -104,6 +132,10 @@
       "src": "/media/evaluation/c059dd6e0510a8553553f828.mp3",
       "visualizationSrc": "/media/evaluation/c059dd6e0510a8553553f828.json",
       "duration": 78.706939,
+      "stemSources": {
+        "melody": "/media/evaluation/c059dd6e0510a8553553f828-melody.mp3",
+        "accompaniment": "/media/evaluation/c059dd6e0510a8553553f828-accompaniment.mp3"
+      },
       "sourceSha256": "187b2f7c7c8b25d85c772e5e02086755a40ef81c166bd78c440211b74c76e413",
       "sourceFile": "01_童话/legacy_m2a_s1.mid",
       "peak": 0.09047579765319824,
@@ -124,6 +156,16 @@
       "midiDuration": 75.666591,
       "timelineEnd": 75.66962129999999,
       "audioSha256": "1dc7aae084f18c60201b810a8430525191e5dde29827b1675440c42ffc3b12b0",
+      "stemAudio": {
+        "melody": {
+          "duration": 78.706939,
+          "sha256": "58509adc9ddc82bcf1edf19f9d6df7f4ef75d31c464db96005e824962225fa20"
+        },
+        "accompaniment": {
+          "duration": 78.706939,
+          "sha256": "5d665b0e68dfe11905a65519516b2609d34295aa4dff6a901e81b02e1b19fb38"
+        }
+      },
       "visualizationSha256": "b7f7308b0b2b869e9067e267b388b598468b183d5a2e08d996dc04facefae9b1",
       "version": "v0",
       "seed": 1,
@@ -145,6 +187,10 @@
       "src": "/media/evaluation/59a7344102974156d5ab1387.mp3",
       "visualizationSrc": "/media/evaluation/59a7344102974156d5ab1387.json",
       "duration": 77.217959,
+      "stemSources": {
+        "melody": "/media/evaluation/59a7344102974156d5ab1387-melody.mp3",
+        "accompaniment": "/media/evaluation/59a7344102974156d5ab1387-accompaniment.mp3"
+      },
       "sourceSha256": "ed20300881dd575596192165323f32c25115d983654959ff1ef76fffff910550",
       "sourceFile": "01_童话/legacy_m2a_s2.mid",
       "peak": 0.08461258560419083,
@@ -165,6 +211,16 @@
       "midiDuration": 74.1665925,
       "timelineEnd": 74.1696228,
       "audioSha256": "8768d939d1a77768344d04a3cebd30d5797c965079e152bc28ff84375958bb73",
+      "stemAudio": {
+        "melody": {
+          "duration": 77.217959,
+          "sha256": "f9eb0c42f6b49bee8b8da99643e96c9e2f4d36cda5ce268f63c1fc2615b49d3a"
+        },
+        "accompaniment": {
+          "duration": 77.217959,
+          "sha256": "8163eb20d2e5a8bef360fabca1ca1963ee3499ad57806c2ee59ee57136b5bd60"
+        }
+      },
       "visualizationSha256": "d436fe94698a72648901c6f5a896a98d1468bdf0e54db812e83fbcbca7574b7f",
       "version": "v0",
       "seed": 2,
@@ -186,6 +242,10 @@
       "src": "/media/evaluation/a13e4d870c1eb7df252fd162.mp3",
       "visualizationSrc": "/media/evaluation/a13e4d870c1eb7df252fd162.json",
       "duration": 76.878367,
+      "stemSources": {
+        "melody": "/media/evaluation/a13e4d870c1eb7df252fd162-melody.mp3",
+        "accompaniment": "/media/evaluation/a13e4d870c1eb7df252fd162-accompaniment.mp3"
+      },
       "sourceSha256": "4a99796e1619dec52f54a35fcdfbaa9ada45dadfdef2d278f816552dedd2ba21",
       "sourceFile": "01_童话/lekai_no_prompt_s0.mid",
       "peak": 0.03615467622876167,
@@ -206,6 +266,16 @@
       "midiDuration": 73.8332595,
       "timelineEnd": 73.83628979999999,
       "audioSha256": "2bcea9e3447ac76c39279345e07f3458bac5bec21180fe8a4144f0234547ba8e",
+      "stemAudio": {
+        "melody": {
+          "duration": 76.878367,
+          "sha256": "2bcea9e3447ac76c39279345e07f3458bac5bec21180fe8a4144f0234547ba8e"
+        },
+        "accompaniment": {
+          "duration": 76.878367,
+          "sha256": "63173b1d3aa9d45c549b8ca1a96233b9d08fe6dc939c9525f8ae4bed05a76a4a"
+        }
+      },
       "visualizationSha256": "edd5ca1b21a06b9fe9ee9e2c49c3ccdc4d1acc724214443a1c0b8925edd553ac",
       "version": "v1",
       "seed": 0,
@@ -227,6 +297,10 @@
       "src": "/media/evaluation/a925b8692ab33b8e2d85a5f9.mp3",
       "visualizationSrc": "/media/evaluation/a925b8692ab33b8e2d85a5f9.json",
       "duration": 76.878367,
+      "stemSources": {
+        "melody": "/media/evaluation/a925b8692ab33b8e2d85a5f9-melody.mp3",
+        "accompaniment": "/media/evaluation/a925b8692ab33b8e2d85a5f9-accompaniment.mp3"
+      },
       "sourceSha256": "4a99796e1619dec52f54a35fcdfbaa9ada45dadfdef2d278f816552dedd2ba21",
       "sourceFile": "01_童话/lekai_no_prompt_s1.mid",
       "peak": 0.03615467622876167,
@@ -247,6 +321,16 @@
       "midiDuration": 73.8332595,
       "timelineEnd": 73.83628979999999,
       "audioSha256": "2bcea9e3447ac76c39279345e07f3458bac5bec21180fe8a4144f0234547ba8e",
+      "stemAudio": {
+        "melody": {
+          "duration": 76.878367,
+          "sha256": "2bcea9e3447ac76c39279345e07f3458bac5bec21180fe8a4144f0234547ba8e"
+        },
+        "accompaniment": {
+          "duration": 76.878367,
+          "sha256": "63173b1d3aa9d45c549b8ca1a96233b9d08fe6dc939c9525f8ae4bed05a76a4a"
+        }
+      },
       "visualizationSha256": "edd5ca1b21a06b9fe9ee9e2c49c3ccdc4d1acc724214443a1c0b8925edd553ac",
       "version": "v1",
       "seed": 1,
@@ -268,6 +352,10 @@
       "src": "/media/evaluation/1a2a0972ac555cb6f7def1f7.mp3",
       "visualizationSrc": "/media/evaluation/1a2a0972ac555cb6f7def1f7.json",
       "duration": 76.878367,
+      "stemSources": {
+        "melody": "/media/evaluation/1a2a0972ac555cb6f7def1f7-melody.mp3",
+        "accompaniment": "/media/evaluation/1a2a0972ac555cb6f7def1f7-accompaniment.mp3"
+      },
       "sourceSha256": "aada76bdd66835e07d7cac4b23157480803df826e6784aece6869692eddd2c3b",
       "sourceFile": "01_童话/lekai_no_prompt_s2.mid",
       "peak": 0.0409182533621788,
@@ -288,6 +376,16 @@
       "midiDuration": 73.8332595,
       "timelineEnd": 73.83628979999999,
       "audioSha256": "96c486f0454d189ac1ac72cb6c8fdf5a8b97697e427584e3614b350b09d59bef",
+      "stemAudio": {
+        "melody": {
+          "duration": 76.878367,
+          "sha256": "2bcea9e3447ac76c39279345e07f3458bac5bec21180fe8a4144f0234547ba8e"
+        },
+        "accompaniment": {
+          "duration": 76.878367,
+          "sha256": "87fe40b3bfcfd912c08d1126fa310a6eac75129ce43ac47862803f935bc41095"
+        }
+      },
       "visualizationSha256": "47c92c99c6632719e3408425b14b8059f6e4ff700cb58dcd6057e761a9b86dcd",
       "version": "v1",
       "seed": 2,
@@ -309,6 +407,10 @@
       "src": "/media/evaluation/2a1bb4b31b773e829b0ea994.mp3",
       "visualizationSrc": "/media/evaluation/2a1bb4b31b773e829b0ea994.json",
       "duration": 76.878367,
+      "stemSources": {
+        "melody": "/media/evaluation/2a1bb4b31b773e829b0ea994-melody.mp3",
+        "accompaniment": "/media/evaluation/2a1bb4b31b773e829b0ea994-accompaniment.mp3"
+      },
       "sourceSha256": "4b11258d086edef390628533be20dee88e242891958aed7b646dc1171bcd35f8",
       "sourceFile": "01_童话/pc_rule_if_else_n10_s0.mid",
       "peak": 0.05157970264554024,
@@ -329,6 +431,16 @@
       "midiDuration": 73.8332595,
       "timelineEnd": 73.83628979999999,
       "audioSha256": "e0f496be17831d731dbc303d545d0b7b3eb4d7449826e6caaeb2abb4cc28fd6f",
+      "stemAudio": {
+        "melody": {
+          "duration": 76.878367,
+          "sha256": "2bcea9e3447ac76c39279345e07f3458bac5bec21180fe8a4144f0234547ba8e"
+        },
+        "accompaniment": {
+          "duration": 76.878367,
+          "sha256": "f792ded99e7972799be7fc5bdd88276a2265893c784bef1572cb3c0207b452e5"
+        }
+      },
       "visualizationSha256": "fa83010b9beae77756f4f9bde4f41a2476dcc64b798795f33508b7aae0b06af8",
       "version": "v2",
       "seed": 0,
@@ -350,6 +462,10 @@
       "src": "/media/evaluation/db3d8f7732fde5fd118ab3f4.mp3",
       "visualizationSrc": "/media/evaluation/db3d8f7732fde5fd118ab3f4.json",
       "duration": 76.878367,
+      "stemSources": {
+        "melody": "/media/evaluation/db3d8f7732fde5fd118ab3f4-melody.mp3",
+        "accompaniment": "/media/evaluation/db3d8f7732fde5fd118ab3f4-accompaniment.mp3"
+      },
       "sourceSha256": "1f7bb8289ac9cd5c3dcdb362fd32339c5e96ef6925dd9a4b787201f9bd2d58a2",
       "sourceFile": "01_童话/pc_rule_if_else_n10_s1.mid",
       "peak": 0.043953489512205124,
@@ -370,6 +486,16 @@
       "midiDuration": 73.8332595,
       "timelineEnd": 73.83628979999999,
       "audioSha256": "20e8d7c3d2e2f9cadb1c438c916b8a5283fa471af6c0d8e92da0c28c08f485b8",
+      "stemAudio": {
+        "melody": {
+          "duration": 76.878367,
+          "sha256": "2bcea9e3447ac76c39279345e07f3458bac5bec21180fe8a4144f0234547ba8e"
+        },
+        "accompaniment": {
+          "duration": 76.878367,
+          "sha256": "44392067452bc873bba47f7370e48179a5cdfb6139df9d743681d0c75606c8d2"
+        }
+      },
       "visualizationSha256": "b1beb81bf47beba6d0042aa5a798c890835e620bfb150ae36a2ed93564dd51cf",
       "version": "v2",
       "seed": 1,
@@ -391,6 +517,10 @@
       "src": "/media/evaluation/8552a00840f831993a8d7292.mp3",
       "visualizationSrc": "/media/evaluation/8552a00840f831993a8d7292.json",
       "duration": 76.878367,
+      "stemSources": {
+        "melody": "/media/evaluation/8552a00840f831993a8d7292-melody.mp3",
+        "accompaniment": "/media/evaluation/8552a00840f831993a8d7292-accompaniment.mp3"
+      },
       "sourceSha256": "da97b9e0d7d422f8fe1903912634cf9e0ffa6bc301d5d5bb576a35d01c9f55ee",
       "sourceFile": "01_童话/pc_rule_if_else_n10_s2.mid",
       "peak": 0.04495663568377495,
@@ -411,6 +541,16 @@
       "midiDuration": 73.8332595,
       "timelineEnd": 73.83628979999999,
       "audioSha256": "ecae241e2ed766dc0c7604cab08d9a1f75374571b778b9d348fba438e3652dac",
+      "stemAudio": {
+        "melody": {
+          "duration": 76.878367,
+          "sha256": "2bcea9e3447ac76c39279345e07f3458bac5bec21180fe8a4144f0234547ba8e"
+        },
+        "accompaniment": {
+          "duration": 76.878367,
+          "sha256": "93b277693b319a102548c6136ea93a653812ffdd7fab6adfa0502f060d08b22c"
+        }
+      },
       "visualizationSha256": "e5261278d8412d7754cf339d62ecf0dd6bcbc988f73621a059500fe10bef06aa",
       "version": "v2",
       "seed": 2,
@@ -432,6 +572,10 @@
       "src": "/media/evaluation/da4a2ea1b07843fd769edd91.mp3",
       "visualizationSrc": "/media/evaluation/da4a2ea1b07843fd769edd91.json",
       "duration": 78.210612,
+      "stemSources": {
+        "melody": "/media/evaluation/da4a2ea1b07843fd769edd91-melody.mp3",
+        "accompaniment": "/media/evaluation/da4a2ea1b07843fd769edd91-accompaniment.mp3"
+      },
       "sourceSha256": "b7982f23dc31dd04145ea7e9fe794c619bce5e5875b567c76bae92d41807c7fa",
       "sourceFile": "02_Night dancer/00_melody.mid",
       "peak": 0.08023721724748611,
@@ -452,6 +596,16 @@
       "midiDuration": 75.1665915,
       "timelineEnd": 75.1696218,
       "audioSha256": "346162118fa92d955518bd0c056a3895861414db9cf7af00c685cdadfc78b848",
+      "stemAudio": {
+        "melody": {
+          "duration": 78.210612,
+          "sha256": "346162118fa92d955518bd0c056a3895861414db9cf7af00c685cdadfc78b848"
+        },
+        "accompaniment": {
+          "duration": 78.210612,
+          "sha256": "c64e5893d0fcc7c773b5302592dbeeaf6fe5ae9a69aa6333004c3e5d1ecbaff7"
+        }
+      },
       "visualizationSha256": "9cb705518ed5bc278ff19439619777365ef0a315da525c7c50b7161592c59307",
       "version": "reference",
       "seed": null,
@@ -473,6 +627,10 @@
       "src": "/media/evaluation/9db35915c0d69ed6a63b3b37.mp3",
       "visualizationSrc": "/media/evaluation/9db35915c0d69ed6a63b3b37.json",
       "duration": 79.882449,
+      "stemSources": {
+        "melody": "/media/evaluation/9db35915c0d69ed6a63b3b37-melody.mp3",
+        "accompaniment": "/media/evaluation/9db35915c0d69ed6a63b3b37-accompaniment.mp3"
+      },
       "sourceSha256": "fd9eae112d4d14dd296417b484641890cf4f953a581ef03c8c6b96aa2e8dc956",
       "sourceFile": "02_Night dancer/legacy_m2a_s0.mid",
       "peak": 0.11876758933067322,
@@ -493,6 +651,16 @@
       "midiDuration": 76.8332565,
       "timelineEnd": 76.8362868,
       "audioSha256": "1c9ee077975e185f76be7e10851fc00798ad1105a978f770a604816ef03a3466",
+      "stemAudio": {
+        "melody": {
+          "duration": 79.882449,
+          "sha256": "5c3788258603db15193fa2a8b09fd4f3e70d2df1e2c91e078984e63733d8925b"
+        },
+        "accompaniment": {
+          "duration": 79.882449,
+          "sha256": "c0e337db46ef987c42218e77a9808abd29dda90f018091bcc73269473259e04d"
+        }
+      },
       "visualizationSha256": "bec64c02bf89990d4333c78a3abc2dc39f02f10fa1f867d1454d6dbff44632d5",
       "version": "v0",
       "seed": 0,
@@ -514,6 +682,10 @@
       "src": "/media/evaluation/15d0c321b963fd1e3cb7ebeb.mp3",
       "visualizationSrc": "/media/evaluation/15d0c321b963fd1e3cb7ebeb.json",
       "duration": 78.863673,
+      "stemSources": {
+        "melody": "/media/evaluation/15d0c321b963fd1e3cb7ebeb-melody.mp3",
+        "accompaniment": "/media/evaluation/15d0c321b963fd1e3cb7ebeb-accompaniment.mp3"
+      },
       "sourceSha256": "ae99305eff8d1ac3666876e3c4e52a196c8a4e12794f81297ed348a9c4da555e",
       "sourceFile": "02_Night dancer/legacy_m2a_s1.mid",
       "peak": 0.1208140179514885,
@@ -534,6 +706,16 @@
       "midiDuration": 75.8332575,
       "timelineEnd": 75.8362878,
       "audioSha256": "de62c4bdb91d1e4a33a2a84c84368df37fbcb2c6f859d14a7462d188705b0c4e",
+      "stemAudio": {
+        "melody": {
+          "duration": 78.863673,
+          "sha256": "ff886627fd93ac73b92e289f74eaaaf53c0893953f1f6bc5826910d222ec4e9b"
+        },
+        "accompaniment": {
+          "duration": 78.863673,
+          "sha256": "003c3afc4013848ba8d99d0899fceb7915b6cc718e8fb62dc660bc640efa2413"
+        }
+      },
       "visualizationSha256": "b1e7755b2a9240c92282e7f0292b31ede1f38773a8211e15837128e766fa848f",
       "version": "v0",
       "seed": 1,
@@ -555,6 +737,10 @@
       "src": "/media/evaluation/a93cc03626b78971df713044.mp3",
       "visualizationSrc": "/media/evaluation/a93cc03626b78971df713044.json",
       "duration": 79.542857,
+      "stemSources": {
+        "melody": "/media/evaluation/a93cc03626b78971df713044-melody.mp3",
+        "accompaniment": "/media/evaluation/a93cc03626b78971df713044-accompaniment.mp3"
+      },
       "sourceSha256": "e2c5f6d5f6e4b8201f5ad4ae77094bcd630d5d6242b2217290a670b5fc5a4bb9",
       "sourceFile": "02_Night dancer/legacy_m2a_s2.mid",
       "peak": 0.11765873432159424,
@@ -575,6 +761,16 @@
       "midiDuration": 76.4999235,
       "timelineEnd": 76.5029538,
       "audioSha256": "3337508d47b70853254fd7e89727c33fa0c7404a3fabfe0ea7becbb8cb7227cb",
+      "stemAudio": {
+        "melody": {
+          "duration": 79.542857,
+          "sha256": "fe3a1c76fd72cce66d607f110b6b42fe67c77f7db54db888ef2991470c5390bf"
+        },
+        "accompaniment": {
+          "duration": 79.542857,
+          "sha256": "28cda87642af355a828f20d407c4455a9e40a5d47d65d9f29f713de169291e04"
+        }
+      },
       "visualizationSha256": "de0ece6c8823bb71bd338d53b39bf564cd0b1638088e386135c3092b5cce7850",
       "version": "v0",
       "seed": 2,
@@ -596,6 +792,10 @@
       "src": "/media/evaluation/ec700594c9dcf2f0ffa197d8.mp3",
       "visualizationSrc": "/media/evaluation/ec700594c9dcf2f0ffa197d8.json",
       "duration": 78.210612,
+      "stemSources": {
+        "melody": "/media/evaluation/ec700594c9dcf2f0ffa197d8-melody.mp3",
+        "accompaniment": "/media/evaluation/ec700594c9dcf2f0ffa197d8-accompaniment.mp3"
+      },
       "sourceSha256": "683954220cd6705dcce60505de2e32db7b626fe81940338b41cd320ddc12dc32",
       "sourceFile": "02_Night dancer/lekai_no_prompt_s0.mid",
       "peak": 0.06433846056461334,
@@ -616,6 +816,16 @@
       "midiDuration": 75.1665915,
       "timelineEnd": 75.1696218,
       "audioSha256": "a418deab626430475bece7c582f7406ae96d1cd3d91eda04e98535396cd50b00",
+      "stemAudio": {
+        "melody": {
+          "duration": 78.210612,
+          "sha256": "fca5d7b345cb7ca721ea634809a8db232dee83520fd92a4b31a73db5c23780ff"
+        },
+        "accompaniment": {
+          "duration": 78.210612,
+          "sha256": "daa8d37dcdc65f16a83936a4948bbc2cbd14d74680c5a547f8749528cc359c77"
+        }
+      },
       "visualizationSha256": "b93e02bda58b8bcacf011987cae6ff16b7fca50a8b40b22d096cf95dae8fdb78",
       "version": "v1",
       "seed": 0,
@@ -637,6 +847,10 @@
       "src": "/media/evaluation/a52447f42deb24ebced76051.mp3",
       "visualizationSrc": "/media/evaluation/a52447f42deb24ebced76051.json",
       "duration": 78.210612,
+      "stemSources": {
+        "melody": "/media/evaluation/a52447f42deb24ebced76051-melody.mp3",
+        "accompaniment": "/media/evaluation/a52447f42deb24ebced76051-accompaniment.mp3"
+      },
       "sourceSha256": "d55712ef6d6834277bae0c1ac3308e7bcd2dd6b816322cd37c4b69742260482f",
       "sourceFile": "02_Night dancer/lekai_no_prompt_s1.mid",
       "peak": 0.051569852977991104,
@@ -657,6 +871,16 @@
       "midiDuration": 75.1665915,
       "timelineEnd": 75.1696218,
       "audioSha256": "c2bf296e48924427c554508c6d69862b037a394a97f5e811c9d9035c6f1335fa",
+      "stemAudio": {
+        "melody": {
+          "duration": 78.210612,
+          "sha256": "fca5d7b345cb7ca721ea634809a8db232dee83520fd92a4b31a73db5c23780ff"
+        },
+        "accompaniment": {
+          "duration": 78.210612,
+          "sha256": "69870c80b1c02045f8dbbeaeeea4e7d55433fcff45f9c7dae5d3e7a2bc647634"
+        }
+      },
       "visualizationSha256": "1c95817ed481af4f01913bb891152d16f98ddf75b95ae6044501201648c0eea0",
       "version": "v1",
       "seed": 1,
@@ -678,6 +902,10 @@
       "src": "/media/evaluation/4ef669cc45e6a50c5b731260.mp3",
       "visualizationSrc": "/media/evaluation/4ef669cc45e6a50c5b731260.json",
       "duration": 78.210612,
+      "stemSources": {
+        "melody": "/media/evaluation/4ef669cc45e6a50c5b731260-melody.mp3",
+        "accompaniment": "/media/evaluation/4ef669cc45e6a50c5b731260-accompaniment.mp3"
+      },
       "sourceSha256": "e39f6b5a6f30fadd369107d8e223b9803ba8f297a6b1f5afd93039bd54248816",
       "sourceFile": "02_Night dancer/lekai_no_prompt_s2.mid",
       "peak": 0.05920133739709854,
@@ -698,6 +926,16 @@
       "midiDuration": 75.1665915,
       "timelineEnd": 75.1696218,
       "audioSha256": "cb0cf00327d9c2ba478a81749a8188729baf472512fa97380fdfbd3680f5d519",
+      "stemAudio": {
+        "melody": {
+          "duration": 78.210612,
+          "sha256": "fca5d7b345cb7ca721ea634809a8db232dee83520fd92a4b31a73db5c23780ff"
+        },
+        "accompaniment": {
+          "duration": 78.210612,
+          "sha256": "0fce5f7db55477fddc501941946b21f716d122ee0f29fe135773e45aaa0b7289"
+        }
+      },
       "visualizationSha256": "5ccf4e3729845a843a13081f5f2c840df22ea147f817f747013f1a3034cc3f41",
       "version": "v1",
       "seed": 2,
@@ -719,6 +957,10 @@
       "src": "/media/evaluation/bb698aae9cba6226370427ea.mp3",
       "visualizationSrc": "/media/evaluation/bb698aae9cba6226370427ea.json",
       "duration": 78.210612,
+      "stemSources": {
+        "melody": "/media/evaluation/bb698aae9cba6226370427ea-melody.mp3",
+        "accompaniment": "/media/evaluation/bb698aae9cba6226370427ea-accompaniment.mp3"
+      },
       "sourceSha256": "459d65ed34d40efbbc6eda20457e36b136e58ddb6781b8d9f6b72ebec77768a9",
       "sourceFile": "02_Night dancer/pc_rule_if_else_n10_s0.mid",
       "peak": 0.05156984552741051,
@@ -739,6 +981,16 @@
       "midiDuration": 75.1665915,
       "timelineEnd": 75.1696218,
       "audioSha256": "dc28e6cb96cc366c37fd931b051211f076de4d41a647f7f26c0a0f4e61d86f7a",
+      "stemAudio": {
+        "melody": {
+          "duration": 78.210612,
+          "sha256": "fca5d7b345cb7ca721ea634809a8db232dee83520fd92a4b31a73db5c23780ff"
+        },
+        "accompaniment": {
+          "duration": 78.210612,
+          "sha256": "67d9ffd2623f9a6e0d6471fbab304c7821097d43458d524b4c135ce5025e26a1"
+        }
+      },
       "visualizationSha256": "0f40f78854cef854dedc5f9117a3f3c336a92f15d3a4c56c9c3d99560ed6b5c2",
       "version": "v2",
       "seed": 0,
@@ -760,6 +1012,10 @@
       "src": "/media/evaluation/78ecd40993c64c4a8425f48c.mp3",
       "visualizationSrc": "/media/evaluation/78ecd40993c64c4a8425f48c.json",
       "duration": 78.210612,
+      "stemSources": {
+        "melody": "/media/evaluation/78ecd40993c64c4a8425f48c-melody.mp3",
+        "accompaniment": "/media/evaluation/78ecd40993c64c4a8425f48c-accompaniment.mp3"
+      },
       "sourceSha256": "6c2992891cdbbb4395b6d2c6ff7ea8b0905b059dc2dc09aaccc12c3571ce335a",
       "sourceFile": "02_Night dancer/pc_rule_if_else_n10_s1.mid",
       "peak": 0.05869203805923462,
@@ -780,6 +1036,16 @@
       "midiDuration": 75.1665915,
       "timelineEnd": 75.1696218,
       "audioSha256": "b915bba3e6b9465405b94d43f6e730f850fa459937e1501fa2a7069bc80eb83a",
+      "stemAudio": {
+        "melody": {
+          "duration": 78.210612,
+          "sha256": "fca5d7b345cb7ca721ea634809a8db232dee83520fd92a4b31a73db5c23780ff"
+        },
+        "accompaniment": {
+          "duration": 78.210612,
+          "sha256": "0a6c90c4df22e04722ae9967c153426e611c848c79914ceecd51d6dd68602a3d"
+        }
+      },
       "visualizationSha256": "1a883dccdda7d636de9895f863ec199edbcfbdce71e9f8c435c603ca2c0101e8",
       "version": "v2",
       "seed": 1,
@@ -801,6 +1067,10 @@
       "src": "/media/evaluation/b3ac746f3747bae0dd1db6f6.mp3",
       "visualizationSrc": "/media/evaluation/b3ac746f3747bae0dd1db6f6.json",
       "duration": 78.210612,
+      "stemSources": {
+        "melody": "/media/evaluation/b3ac746f3747bae0dd1db6f6-melody.mp3",
+        "accompaniment": "/media/evaluation/b3ac746f3747bae0dd1db6f6-accompaniment.mp3"
+      },
       "sourceSha256": "bd18d1d38f85366e80f91f71d05a8db0df5594e0fd262a6f67120e0a14ab4b7a",
       "sourceFile": "02_Night dancer/pc_rule_if_else_n10_s2.mid",
       "peak": 0.06291428208351135,
@@ -821,6 +1091,16 @@
       "midiDuration": 75.1665915,
       "timelineEnd": 75.1696218,
       "audioSha256": "db62fd4e73fc01fe6e7eac0290992662203fbcf21d763e92db5cba96cf401103",
+      "stemAudio": {
+        "melody": {
+          "duration": 78.210612,
+          "sha256": "fca5d7b345cb7ca721ea634809a8db232dee83520fd92a4b31a73db5c23780ff"
+        },
+        "accompaniment": {
+          "duration": 78.210612,
+          "sha256": "0fc23d3dd91e106852f5c466074747eb211377a87f2925c9aefa467d0d289a57"
+        }
+      },
       "visualizationSha256": "0085fb20b3dd3b69e5188299b073578af0950c14c902abcd8d52949b39dedae4",
       "version": "v2",
       "seed": 2,
@@ -842,6 +1122,10 @@
       "src": "/media/evaluation/7b41b3a216f7c5d7f8ee365f.mp3",
       "visualizationSrc": "/media/evaluation/7b41b3a216f7c5d7f8ee365f.json",
       "duration": 126.537143,
+      "stemSources": {
+        "melody": "/media/evaluation/7b41b3a216f7c5d7f8ee365f-melody.mp3",
+        "accompaniment": "/media/evaluation/7b41b3a216f7c5d7f8ee365f-accompaniment.mp3"
+      },
       "sourceSha256": "58abd382d6371ad4edb1d9ad28d51e7bfc908d593cf5295cd690a4c7462d471e",
       "sourceFile": "03_群青/00_melody.mid",
       "peak": 0.0830429270863533,
@@ -862,6 +1146,16 @@
       "midiDuration": 123.4998765,
       "timelineEnd": 123.50290679999999,
       "audioSha256": "1679a38ea1a3b526c87daf2015ae59ee26b618682348f392d9e9b142b66bb6ee",
+      "stemAudio": {
+        "melody": {
+          "duration": 126.537143,
+          "sha256": "1679a38ea1a3b526c87daf2015ae59ee26b618682348f392d9e9b142b66bb6ee"
+        },
+        "accompaniment": {
+          "duration": 126.537143,
+          "sha256": "9379cb10bd60a116a0195e4e5127fff48876273ef76ebf847917c13cf3d05476"
+        }
+      },
       "visualizationSha256": "4e83a7c44a948f6ded8624dbbb3cdb5850e8171e12a8317c5a4ec76c4632abe3",
       "version": "reference",
       "seed": null,
@@ -883,6 +1177,10 @@
       "src": "/media/evaluation/ca426e02db81da54397c3394.mp3",
       "visualizationSrc": "/media/evaluation/ca426e02db81da54397c3394.json",
       "duration": 130.533878,
+      "stemSources": {
+        "melody": "/media/evaluation/ca426e02db81da54397c3394-melody.mp3",
+        "accompaniment": "/media/evaluation/ca426e02db81da54397c3394-accompaniment.mp3"
+      },
       "sourceSha256": "324cf21261940ab639897a6b1a1dc359057c4f04c4a0cbfee37f5251dec04105",
       "sourceFile": "03_群青/legacy_m2a_s0.mid",
       "peak": 0.12788869440555573,
@@ -903,6 +1201,16 @@
       "midiDuration": 127.4998725,
       "timelineEnd": 127.50290279999999,
       "audioSha256": "8edb54f5b8e87ef6b9e55f2b09d31ab1d450926343dca6bdcba3593be8f5a033",
+      "stemAudio": {
+        "melody": {
+          "duration": 130.533878,
+          "sha256": "7a34eb8b4d1f89d0bd7fb579f872939179dcb6b97abb4f046066318b95441474"
+        },
+        "accompaniment": {
+          "duration": 130.533878,
+          "sha256": "5cfd42e0a33c09fcf0a685d56f28cb2513b7bd6dd80b00823d30bfabb8ab1578"
+        }
+      },
       "visualizationSha256": "435d76ced2bb240d63d2069d0c5798b12de6dcefb8b74eb77cbd77edbdea0073",
       "version": "v0",
       "seed": 0,
@@ -924,6 +1232,10 @@
       "src": "/media/evaluation/1dd8b57e4f9a2d68f41399b6.mp3",
       "visualizationSrc": "/media/evaluation/1dd8b57e4f9a2d68f41399b6.json",
       "duration": 128.052245,
+      "stemSources": {
+        "melody": "/media/evaluation/1dd8b57e4f9a2d68f41399b6-melody.mp3",
+        "accompaniment": "/media/evaluation/1dd8b57e4f9a2d68f41399b6-accompaniment.mp3"
+      },
       "sourceSha256": "2a5bbc233dc3ad2c72a9b45b88a2b34f212440ec2d1f07737ff380f13e905b76",
       "sourceFile": "03_群青/legacy_m2a_s1.mid",
       "peak": 0.1335204541683197,
@@ -944,6 +1256,16 @@
       "midiDuration": 124.999875,
       "timelineEnd": 125.0029053,
       "audioSha256": "b14d592049cccf543a8708e176b196a84dc8b7e2e7e5be55f59fda1e94013f65",
+      "stemAudio": {
+        "melody": {
+          "duration": 128.052245,
+          "sha256": "a90c88d147b257225367cf182d0de697d0c162de4a70d3a2ca665a6c1ec4fe16"
+        },
+        "accompaniment": {
+          "duration": 128.052245,
+          "sha256": "ddb0d62b4795da7f6d747f4c2711604590bb40d06b28eb637459b25b8ff1b4e4"
+        }
+      },
       "visualizationSha256": "c5b9f645c3a1d6cc0f9304c3ccc317ff1087c03e474173c0ad5007a337dbd2f6",
       "version": "v0",
       "seed": 1,
@@ -965,6 +1287,10 @@
       "src": "/media/evaluation/42b40adf8b51604e9ed50c1d.mp3",
       "visualizationSrc": "/media/evaluation/42b40adf8b51604e9ed50c1d.json",
       "duration": 125.701224,
+      "stemSources": {
+        "melody": "/media/evaluation/42b40adf8b51604e9ed50c1d-melody.mp3",
+        "accompaniment": "/media/evaluation/42b40adf8b51604e9ed50c1d-accompaniment.mp3"
+      },
       "sourceSha256": "57fcde2ef3c6f529ca7d52bc1c720e6c1583db0b17f590195f269e2f842f6d73",
       "sourceFile": "03_群青/legacy_m2a_s2.mid",
       "peak": 0.12723492085933685,
@@ -985,6 +1311,16 @@
       "midiDuration": 122.666544,
       "timelineEnd": 122.6695743,
       "audioSha256": "5d00ddc9c3fecbf28df07b820345acaac17dcd61b6a15400745a622b9d7d1e84",
+      "stemAudio": {
+        "melody": {
+          "duration": 125.701224,
+          "sha256": "4ad70ceb2660b7e11675f6ad40f983a3e7c9daab9cf407f2c9181d006388a4d0"
+        },
+        "accompaniment": {
+          "duration": 125.701224,
+          "sha256": "fbd5d4808718a70d42c2474eed89b5105782d1f9de8c7052277dec60b76d51fe"
+        }
+      },
       "visualizationSha256": "74dac738379d772ae76ebcc2b02bf5ecf488567cd58b5d283288e9cd7950a4e9",
       "version": "v0",
       "seed": 2,
@@ -1006,6 +1342,10 @@
       "src": "/media/evaluation/7b0aae1e5a6a67dac17f768a.mp3",
       "visualizationSrc": "/media/evaluation/7b0aae1e5a6a67dac17f768a.json",
       "duration": 126.876735,
+      "stemSources": {
+        "melody": "/media/evaluation/7b0aae1e5a6a67dac17f768a-melody.mp3",
+        "accompaniment": "/media/evaluation/7b0aae1e5a6a67dac17f768a-accompaniment.mp3"
+      },
       "sourceSha256": "cabfa92f84d3f05ab3ec10f0262d0c425acef2c5fa793cf50c0089a88acf0672",
       "sourceFile": "03_群青/lekai_no_prompt_s0.mid",
       "peak": 0.0556853786110878,
@@ -1026,6 +1366,16 @@
       "midiDuration": 123.8332095,
       "timelineEnd": 123.83623979999999,
       "audioSha256": "8d20361a336caf582caa70f4047fe469cd0e1c75225ab501e8f960d5b0fd62c8",
+      "stemAudio": {
+        "melody": {
+          "duration": 126.876735,
+          "sha256": "cfe2aca91d21c93309387ca46dd6037f2f2049a9abd61d569c78927bd7e30c3a"
+        },
+        "accompaniment": {
+          "duration": 126.876735,
+          "sha256": "e4e2b02ae372bb0b6001ec2350031234cc161bfc356d5c10593f932bc354f3aa"
+        }
+      },
       "visualizationSha256": "c45d57694a973cf02f7ecddd71c0aa9b8edfbd5283bcd65ebac1d6cc28f64366",
       "version": "v1",
       "seed": 0,
@@ -1047,6 +1397,10 @@
       "src": "/media/evaluation/4d79a33cb0c68d06ddd5fc8b.mp3",
       "visualizationSrc": "/media/evaluation/4d79a33cb0c68d06ddd5fc8b.json",
       "duration": 126.537143,
+      "stemSources": {
+        "melody": "/media/evaluation/4d79a33cb0c68d06ddd5fc8b-melody.mp3",
+        "accompaniment": "/media/evaluation/4d79a33cb0c68d06ddd5fc8b-accompaniment.mp3"
+      },
       "sourceSha256": "75c3f1124eb5a11cc2f8e55e457b29c74b7e25523f22b217195afc59c9b19b5a",
       "sourceFile": "03_群青/lekai_no_prompt_s1.mid",
       "peak": 0.05692068114876747,
@@ -1067,6 +1421,16 @@
       "midiDuration": 123.4998765,
       "timelineEnd": 123.50290679999999,
       "audioSha256": "324498c946cd650ebff0c116f71beebb65f504fc49fa2fe76983da97af5358cd",
+      "stemAudio": {
+        "melody": {
+          "duration": 126.537143,
+          "sha256": "efd836652ebf9a6e29c7255cd6fc04b4253adf6afaa010d9dd3496ea7322c2dc"
+        },
+        "accompaniment": {
+          "duration": 126.537143,
+          "sha256": "9db93b3b2ee80ea7c65a2445ba00324560b5cf81fcb4b6b6022da8c2df21aaeb"
+        }
+      },
       "visualizationSha256": "536be46b17a1e7c03e1425e4317e431a632d2e8d366bc7f27a4b42f0881d7006",
       "version": "v1",
       "seed": 1,
@@ -1088,6 +1452,10 @@
       "src": "/media/evaluation/dac2a4335712d857933752ee.mp3",
       "visualizationSrc": "/media/evaluation/dac2a4335712d857933752ee.json",
       "duration": 126.537143,
+      "stemSources": {
+        "melody": "/media/evaluation/dac2a4335712d857933752ee-melody.mp3",
+        "accompaniment": "/media/evaluation/dac2a4335712d857933752ee-accompaniment.mp3"
+      },
       "sourceSha256": "9e3ed4888ab6f8eb71c5c7c96fcf61c1551a7cf7249e450c78dcb7a03ac9b4fc",
       "sourceFile": "03_群青/lekai_no_prompt_s2.mid",
       "peak": 0.06303633004426956,
@@ -1108,6 +1476,16 @@
       "midiDuration": 123.4998765,
       "timelineEnd": 123.50290679999999,
       "audioSha256": "4c4d1942a17ca5db78b2f1b62a692bbcde162adcde8de4108a6213f726b1afe4",
+      "stemAudio": {
+        "melody": {
+          "duration": 126.537143,
+          "sha256": "efd836652ebf9a6e29c7255cd6fc04b4253adf6afaa010d9dd3496ea7322c2dc"
+        },
+        "accompaniment": {
+          "duration": 126.537143,
+          "sha256": "0bdd56a00c1fd92b8065adf6b6763365e6289fa6dca9e987d9ec02cf5f190252"
+        }
+      },
       "visualizationSha256": "82ac21c80c71873a26b0170a21f50a3f949a8d16ab72728e6879a631f8b5bb3a",
       "version": "v1",
       "seed": 2,
@@ -1129,6 +1507,10 @@
       "src": "/media/evaluation/516cd0c79fdd7deba828bc2d.mp3",
       "visualizationSrc": "/media/evaluation/516cd0c79fdd7deba828bc2d.json",
       "duration": 126.876735,
+      "stemSources": {
+        "melody": "/media/evaluation/516cd0c79fdd7deba828bc2d-melody.mp3",
+        "accompaniment": "/media/evaluation/516cd0c79fdd7deba828bc2d-accompaniment.mp3"
+      },
       "sourceSha256": "11eeb2c2508270dac55435ba4ca44d78934b662d9a94350a93fcdd84aefb354b",
       "sourceFile": "03_群青/pc_rule_if_else_n10_s0.mid",
       "peak": 0.06105516850948334,
@@ -1149,6 +1531,16 @@
       "midiDuration": 123.8332095,
       "timelineEnd": 123.83623979999999,
       "audioSha256": "9ec9589bfa7a8467fbce75d873a0e673c06113e3249863364e086ec1c5a80632",
+      "stemAudio": {
+        "melody": {
+          "duration": 126.876735,
+          "sha256": "cfe2aca91d21c93309387ca46dd6037f2f2049a9abd61d569c78927bd7e30c3a"
+        },
+        "accompaniment": {
+          "duration": 126.876735,
+          "sha256": "c79b356d774f574a7c2109b74028b1b20718f029ca3603d66ba786925fc7bd2e"
+        }
+      },
       "visualizationSha256": "4913e920b29bc30b33e84e022d993a5fc5f29ca97280a6225b2fec60a9e3b336",
       "version": "v2",
       "seed": 0,
@@ -1170,6 +1562,10 @@
       "src": "/media/evaluation/fad780548fee2bcfcad1b478.mp3",
       "visualizationSrc": "/media/evaluation/fad780548fee2bcfcad1b478.json",
       "duration": 126.876735,
+      "stemSources": {
+        "melody": "/media/evaluation/fad780548fee2bcfcad1b478-melody.mp3",
+        "accompaniment": "/media/evaluation/fad780548fee2bcfcad1b478-accompaniment.mp3"
+      },
       "sourceSha256": "cc0e6ce56616132b0e55b23f9b3532bf945d21a94047ce32d485e1ce4637e03c",
       "sourceFile": "03_群青/pc_rule_if_else_n10_s1.mid",
       "peak": 0.06104084849357605,
@@ -1190,6 +1586,16 @@
       "midiDuration": 123.8332095,
       "timelineEnd": 123.83623979999999,
       "audioSha256": "40f3759349ac73fa603395b33bb05ed9f10ff8f5502ec18d83a219a551c0dfc7",
+      "stemAudio": {
+        "melody": {
+          "duration": 126.876735,
+          "sha256": "cfe2aca91d21c93309387ca46dd6037f2f2049a9abd61d569c78927bd7e30c3a"
+        },
+        "accompaniment": {
+          "duration": 126.876735,
+          "sha256": "1b55bae9bf8eb110b18c205a3821beae57c20f07742be74a9df847de5819f949"
+        }
+      },
       "visualizationSha256": "dbc93b51d4b1f1bc117575f98082ad045eecd4b06e5b4387ce136adef49bf420",
       "version": "v2",
       "seed": 1,
@@ -1211,6 +1617,10 @@
       "src": "/media/evaluation/a4cc4c1dcaae022762d161ea.mp3",
       "visualizationSrc": "/media/evaluation/a4cc4c1dcaae022762d161ea.json",
       "duration": 126.537143,
+      "stemSources": {
+        "melody": "/media/evaluation/a4cc4c1dcaae022762d161ea-melody.mp3",
+        "accompaniment": "/media/evaluation/a4cc4c1dcaae022762d161ea-accompaniment.mp3"
+      },
       "sourceSha256": "7c901761cf4857fc9907ab4af66026fbc48813f44b849bc064f0795077dbf63a",
       "sourceFile": "03_群青/pc_rule_if_else_n10_s2.mid",
       "peak": 0.05507295951247215,
@@ -1231,6 +1641,16 @@
       "midiDuration": 123.4998765,
       "timelineEnd": 123.50290679999999,
       "audioSha256": "58feddff4a55409a2bbaa6cb9788f19f2e4719a9bd13bbfa25b7d5bd085cc546",
+      "stemAudio": {
+        "melody": {
+          "duration": 126.537143,
+          "sha256": "efd836652ebf9a6e29c7255cd6fc04b4253adf6afaa010d9dd3496ea7322c2dc"
+        },
+        "accompaniment": {
+          "duration": 126.537143,
+          "sha256": "a99123ee3a9c3b2211bf9c0ac391ab694bc364cb7b5fa3b298ead0fc99505063"
+        }
+      },
       "visualizationSha256": "362770f16cbc7c44fe049fc9673dd8ba0b53d282fb5169007ea7d8eb99ef7883",
       "version": "v2",
       "seed": 2,
@@ -1252,6 +1672,10 @@
       "src": "/media/evaluation/63a5f1a8eaa3e826265e36d4.mp3",
       "visualizationSrc": "/media/evaluation/63a5f1a8eaa3e826265e36d4.json",
       "duration": 62.040816,
+      "stemSources": {
+        "melody": "/media/evaluation/63a5f1a8eaa3e826265e36d4-melody.mp3",
+        "accompaniment": "/media/evaluation/63a5f1a8eaa3e826265e36d4-accompaniment.mp3"
+      },
       "sourceSha256": "754d4ac7745e4cb2aabfed0288749571b6cc8ed863c6278155b1c3c07fc087a9",
       "sourceFile": "04_lemon/00_melody.mid",
       "peak": 0.0891665369272232,
@@ -1272,6 +1696,16 @@
       "midiDuration": 58.999941,
       "timelineEnd": 59.0029713,
       "audioSha256": "8183fc73144ea89b5be4da112e4e630fe3edc387d7790f22d3ad32b4fa26333e",
+      "stemAudio": {
+        "melody": {
+          "duration": 62.040816,
+          "sha256": "8183fc73144ea89b5be4da112e4e630fe3edc387d7790f22d3ad32b4fa26333e"
+        },
+        "accompaniment": {
+          "duration": 62.040816,
+          "sha256": "442c42e7b37d0e8ca53c9e3ff3acc2d5684f227d6c54a0c76d105d039e6a96cf"
+        }
+      },
       "visualizationSha256": "05f9206c24eef74af8f68262b5e0d2d56851756cd276c5092ae30054670efff8",
       "version": "reference",
       "seed": null,
@@ -1293,6 +1727,10 @@
       "src": "/media/evaluation/daa6856ba278dbec54dbcb3c.mp3",
       "visualizationSrc": "/media/evaluation/daa6856ba278dbec54dbcb3c.json",
       "duration": 64.052245,
+      "stemSources": {
+        "melody": "/media/evaluation/daa6856ba278dbec54dbcb3c-melody.mp3",
+        "accompaniment": "/media/evaluation/daa6856ba278dbec54dbcb3c-accompaniment.mp3"
+      },
       "sourceSha256": "002efbfde4196d34d098e25b0e6137879281e9449413885394822a2e448220ab",
       "sourceFile": "04_lemon/legacy_m2a_s0.mid",
       "peak": 0.1110428124666214,
@@ -1313,6 +1751,16 @@
       "midiDuration": 60.999939,
       "timelineEnd": 61.0029693,
       "audioSha256": "5afedc33377f9d2bc6745e681cedc2016b60618fabae43dc68cf6733835950f6",
+      "stemAudio": {
+        "melody": {
+          "duration": 64.052245,
+          "sha256": "2df0240e45cc6b942df2229d6332b35949e1ca232cf89fc77e3994538dede787"
+        },
+        "accompaniment": {
+          "duration": 64.052245,
+          "sha256": "9710d7e470171465dda9850eefa769d90ec68dcd2a8a01505de6fd129c5ddd6c"
+        }
+      },
       "visualizationSha256": "51e15ca1e5191ae3314d7839c02407275eee099200a99b8ab10f2f9f936d2bce",
       "version": "v0",
       "seed": 0,
@@ -1334,6 +1782,10 @@
       "src": "/media/evaluation/d6163d6fc8d805ac118a236b.mp3",
       "visualizationSrc": "/media/evaluation/d6163d6fc8d805ac118a236b.json",
       "duration": 62.876735,
+      "stemSources": {
+        "melody": "/media/evaluation/d6163d6fc8d805ac118a236b-melody.mp3",
+        "accompaniment": "/media/evaluation/d6163d6fc8d805ac118a236b-accompaniment.mp3"
+      },
       "sourceSha256": "4b947f454ed24d66a4ef5151284a860ea3a366405c28afe603586438b4bf93f4",
       "sourceFile": "04_lemon/legacy_m2a_s1.mid",
       "peak": 0.10955265164375305,
@@ -1354,6 +1806,16 @@
       "midiDuration": 59.8332735,
       "timelineEnd": 59.836303799999996,
       "audioSha256": "25276004b90e96e65c2c783be94ea9d533f7f20a81adfaa60f825194b7e23c42",
+      "stemAudio": {
+        "melody": {
+          "duration": 62.876735,
+          "sha256": "72b0b328d4a29bb580533cb480bc17d9e69a58204802b9e54e0c86c4e637d938"
+        },
+        "accompaniment": {
+          "duration": 62.876735,
+          "sha256": "55ea5c47e49d75410f984c3648ef2cf5a12833538e99f78314f57fd41e1cde26"
+        }
+      },
       "visualizationSha256": "5b200be06ec80b866f48a79ad8289268f9fb38648ecc49093e2b459dd1301187",
       "version": "v0",
       "seed": 1,
@@ -1375,6 +1837,10 @@
       "src": "/media/evaluation/b1f38dd6f932d89c89b90a17.mp3",
       "visualizationSrc": "/media/evaluation/b1f38dd6f932d89c89b90a17.json",
       "duration": 63.529796,
+      "stemSources": {
+        "melody": "/media/evaluation/b1f38dd6f932d89c89b90a17-melody.mp3",
+        "accompaniment": "/media/evaluation/b1f38dd6f932d89c89b90a17-accompaniment.mp3"
+      },
       "sourceSha256": "12762e9e611affcc883258bdb0130ec631eb20a4e03d242d853fdbc641fbec18",
       "sourceFile": "04_lemon/legacy_m2a_s2.mid",
       "peak": 0.11424136161804199,
@@ -1395,6 +1861,16 @@
       "midiDuration": 60.499939499999996,
       "timelineEnd": 60.502969799999995,
       "audioSha256": "17da0e628c0ee8ffa8a66d6ab2806f920003da411619f12c52d39e715e2b347c",
+      "stemAudio": {
+        "melody": {
+          "duration": 63.529796,
+          "sha256": "50ada65a7c9effb3c9ed7f7112c9c5c9ebbb7e17d1a82b74f8851ef915594164"
+        },
+        "accompaniment": {
+          "duration": 63.529796,
+          "sha256": "bd89640f9ae0138cacf2979558e5839a4eaa782f5db7fcf0fd25e662b5dea559"
+        }
+      },
       "visualizationSha256": "bf9329b9bb15500478b8a748f86d592a679d32b9147350131f5d2f9be31ed91e",
       "version": "v0",
       "seed": 2,
@@ -1416,6 +1892,10 @@
       "src": "/media/evaluation/8f0fe975ba8f17f3105c15f1.mp3",
       "visualizationSrc": "/media/evaluation/8f0fe975ba8f17f3105c15f1.json",
       "duration": 62.197551,
+      "stemSources": {
+        "melody": "/media/evaluation/8f0fe975ba8f17f3105c15f1-melody.mp3",
+        "accompaniment": "/media/evaluation/8f0fe975ba8f17f3105c15f1-accompaniment.mp3"
+      },
       "sourceSha256": "f64fe94473be60afa8558f42f944ce19effc58e4fa76bcf5c4d6178cc72c29f2",
       "sourceFile": "04_lemon/lekai_no_prompt_s0.mid",
       "peak": 0.0533686988055706,
@@ -1436,6 +1916,16 @@
       "midiDuration": 59.1666075,
       "timelineEnd": 59.1696378,
       "audioSha256": "07d22b5c279d78b6f2e74ec995420070a50e209af57506bdfb7f6843bb1056bf",
+      "stemAudio": {
+        "melody": {
+          "duration": 62.197551,
+          "sha256": "93e43aa01593314e54a3305b6bbd02df15e1e713f753a137115014a4573f18d7"
+        },
+        "accompaniment": {
+          "duration": 62.197551,
+          "sha256": "a68117ee356ab58c73163304d9263a356b6f183b87165045010328628d65afec"
+        }
+      },
       "visualizationSha256": "631f568fbe9d9421b4be093ccb8830ec41e3d022f8d20f4841850afa7e46885e",
       "version": "v1",
       "seed": 0,
@@ -1457,6 +1947,10 @@
       "src": "/media/evaluation/c180ed715aabda0c391af514.mp3",
       "visualizationSrc": "/media/evaluation/c180ed715aabda0c391af514.json",
       "duration": 62.197551,
+      "stemSources": {
+        "melody": "/media/evaluation/c180ed715aabda0c391af514-melody.mp3",
+        "accompaniment": "/media/evaluation/c180ed715aabda0c391af514-accompaniment.mp3"
+      },
       "sourceSha256": "6d35f3f63e0b26f40c3d0b1c93f227c8933e4eeaf1d06f90123ab7cf03f47c79",
       "sourceFile": "04_lemon/lekai_no_prompt_s1.mid",
       "peak": 0.052886638790369034,
@@ -1477,6 +1971,16 @@
       "midiDuration": 59.1666075,
       "timelineEnd": 59.1696378,
       "audioSha256": "a4e0121e5865ee817332451004ea7a3d809a44ae6a9434cd55a9b16f3f4de38c",
+      "stemAudio": {
+        "melody": {
+          "duration": 62.197551,
+          "sha256": "93e43aa01593314e54a3305b6bbd02df15e1e713f753a137115014a4573f18d7"
+        },
+        "accompaniment": {
+          "duration": 62.197551,
+          "sha256": "3cee1e4ffc7e488f8a3e07c357bf3800fe3f253615deecefc9df5903cbb11a93"
+        }
+      },
       "visualizationSha256": "45ab17e16dc023062b685add8eb13f4c51eed403cf0a1df4b125f6f451b416db",
       "version": "v1",
       "seed": 1,
@@ -1498,6 +2002,10 @@
       "src": "/media/evaluation/503e843633d93b11630b48d7.mp3",
       "visualizationSrc": "/media/evaluation/503e843633d93b11630b48d7.json",
       "duration": 62.040816,
+      "stemSources": {
+        "melody": "/media/evaluation/503e843633d93b11630b48d7-melody.mp3",
+        "accompaniment": "/media/evaluation/503e843633d93b11630b48d7-accompaniment.mp3"
+      },
       "sourceSha256": "8cbdf3ad8ffb331d161c32c7a7d185f7f58856843b9e5a4a0f6e99032393618a",
       "sourceFile": "04_lemon/lekai_no_prompt_s2.mid",
       "peak": 0.05525276064872742,
@@ -1518,6 +2026,16 @@
       "midiDuration": 58.999941,
       "timelineEnd": 59.0029713,
       "audioSha256": "eec0516a42a061c6006bb9956b583588c64d703c8f1f245e82c6e5d43d9515f1",
+      "stemAudio": {
+        "melody": {
+          "duration": 62.040816,
+          "sha256": "6aa9cfc40e20682f87d0eca909ab354a3a738de82e8040aa5bc81a0660ed8479"
+        },
+        "accompaniment": {
+          "duration": 62.040816,
+          "sha256": "548fe4efff696c849c06e35f1df29a20df637d8ebd03455f2b1460931505cad0"
+        }
+      },
       "visualizationSha256": "a998e1c401cc31e8319eaacce271cd32613c493cdecf2821545aee568bf1de65",
       "version": "v1",
       "seed": 2,
@@ -1539,6 +2057,10 @@
       "src": "/media/evaluation/81b6a5d5a283fe28d26c0749.mp3",
       "visualizationSrc": "/media/evaluation/81b6a5d5a283fe28d26c0749.json",
       "duration": 62.197551,
+      "stemSources": {
+        "melody": "/media/evaluation/81b6a5d5a283fe28d26c0749-melody.mp3",
+        "accompaniment": "/media/evaluation/81b6a5d5a283fe28d26c0749-accompaniment.mp3"
+      },
       "sourceSha256": "d1be37ee75b83e66926ae2b7e16ac2bfa0c9b39e5cbedc75fa8e33da1142e95f",
       "sourceFile": "04_lemon/pc_rule_if_else_n10_s0.mid",
       "peak": 0.05582871288061142,
@@ -1559,6 +2081,16 @@
       "midiDuration": 59.1666075,
       "timelineEnd": 59.1696378,
       "audioSha256": "1cde66261f2dac78b818ea6f5b0866ab033c7bbf0a6076a9271549ad17240783",
+      "stemAudio": {
+        "melody": {
+          "duration": 62.197551,
+          "sha256": "93e43aa01593314e54a3305b6bbd02df15e1e713f753a137115014a4573f18d7"
+        },
+        "accompaniment": {
+          "duration": 62.197551,
+          "sha256": "6b8bf8e06f0da572c87198964e80ba650780139a9aa0e4a13c48e1ce555781eb"
+        }
+      },
       "visualizationSha256": "938ea912b2218e0eebe1e9fe8c81df144afc033bccc58074b99af8979e59bd6c",
       "version": "v2",
       "seed": 0,
@@ -1580,6 +2112,10 @@
       "src": "/media/evaluation/f28ae3086542d732e7252959.mp3",
       "visualizationSrc": "/media/evaluation/f28ae3086542d732e7252959.json",
       "duration": 62.197551,
+      "stemSources": {
+        "melody": "/media/evaluation/f28ae3086542d732e7252959-melody.mp3",
+        "accompaniment": "/media/evaluation/f28ae3086542d732e7252959-accompaniment.mp3"
+      },
       "sourceSha256": "ba7c458d1e3ccda6a90b0a7dbb1ad79fd17f0853a2f30b9d7018438a38e78f47",
       "sourceFile": "04_lemon/pc_rule_if_else_n10_s1.mid",
       "peak": 0.06250341236591339,
@@ -1600,6 +2136,16 @@
       "midiDuration": 59.1666075,
       "timelineEnd": 59.1696378,
       "audioSha256": "a0e4df84ac3d0c7bf0575086c6b64ae643e8a9dd2ff3497c8b90a00517cd8c8e",
+      "stemAudio": {
+        "melody": {
+          "duration": 62.197551,
+          "sha256": "93e43aa01593314e54a3305b6bbd02df15e1e713f753a137115014a4573f18d7"
+        },
+        "accompaniment": {
+          "duration": 62.197551,
+          "sha256": "11fe955ec92ee55e2703d29e5fa80545ce7602f9adb806a47749ae6aa7afe7df"
+        }
+      },
       "visualizationSha256": "3b7ddb83c4bc064879bcb822de114797addfea2992df7e0b9994e5423d7d5bbc",
       "version": "v2",
       "seed": 1,
@@ -1621,6 +2167,10 @@
       "src": "/media/evaluation/202b3e574184ee8499d84f35.mp3",
       "visualizationSrc": "/media/evaluation/202b3e574184ee8499d84f35.json",
       "duration": 62.197551,
+      "stemSources": {
+        "melody": "/media/evaluation/202b3e574184ee8499d84f35-melody.mp3",
+        "accompaniment": "/media/evaluation/202b3e574184ee8499d84f35-accompaniment.mp3"
+      },
       "sourceSha256": "a989f419609f0985a6bed5fc6c0ea2497084586fee82b0a98859e643df54fd95",
       "sourceFile": "04_lemon/pc_rule_if_else_n10_s2.mid",
       "peak": 0.06080607324838638,
@@ -1641,6 +2191,16 @@
       "midiDuration": 59.1666075,
       "timelineEnd": 59.1696378,
       "audioSha256": "23b79d5cf5adb1e6877815863c4f674116745dea35d1839e6680feedec3ba0d1",
+      "stemAudio": {
+        "melody": {
+          "duration": 62.197551,
+          "sha256": "93e43aa01593314e54a3305b6bbd02df15e1e713f753a137115014a4573f18d7"
+        },
+        "accompaniment": {
+          "duration": 62.197551,
+          "sha256": "ca81d141cabc1b33f71c2cd0c1e893436cae08bb4911bc5213e9635f751f049e"
+        }
+      },
       "visualizationSha256": "72b55ab64f242fa9efbd622f36ee4a5e441f238f58b4291cb7865922caf66e61",
       "version": "v2",
       "seed": 2,
@@ -1662,6 +2222,10 @@
       "src": "/media/evaluation/a9eeb4db947eb58f20ea6ca5.mp3",
       "visualizationSrc": "/media/evaluation/a9eeb4db947eb58f20ea6ca5.json",
       "duration": 109.035102,
+      "stemSources": {
+        "melody": "/media/evaluation/a9eeb4db947eb58f20ea6ca5-melody.mp3",
+        "accompaniment": "/media/evaluation/a9eeb4db947eb58f20ea6ca5-accompaniment.mp3"
+      },
       "sourceSha256": "b88075fa4107a45ee23dc854d24f430a8930c7786f109b1d2f1aa653c83b4c33",
       "sourceFile": "05_cruel angel/00_melody.mid",
       "peak": 0.1059354916214943,
@@ -1682,6 +2246,16 @@
       "midiDuration": 105.999894,
       "timelineEnd": 106.00292429999999,
       "audioSha256": "17ae837ffa04c196fde7734c5b9c3cb63fb11463989fe2ea5bf180bc3df188b7",
+      "stemAudio": {
+        "melody": {
+          "duration": 109.035102,
+          "sha256": "17ae837ffa04c196fde7734c5b9c3cb63fb11463989fe2ea5bf180bc3df188b7"
+        },
+        "accompaniment": {
+          "duration": 109.035102,
+          "sha256": "4dba4d5d84c7ea143f092c1e08b30925f72c14a458ca7c9db9e21d56b0997a85"
+        }
+      },
       "visualizationSha256": "d7d15d09598935aad0369a50ef7832d34d77aaac8087762eef26c5d6546f975f",
       "version": "reference",
       "seed": null,
@@ -1703,6 +2277,10 @@
       "src": "/media/evaluation/2b8b0efba8fc9d25788a12d0.mp3",
       "visualizationSrc": "/media/evaluation/2b8b0efba8fc9d25788a12d0.json",
       "duration": 110.550204,
+      "stemSources": {
+        "melody": "/media/evaluation/2b8b0efba8fc9d25788a12d0-melody.mp3",
+        "accompaniment": "/media/evaluation/2b8b0efba8fc9d25788a12d0-accompaniment.mp3"
+      },
       "sourceSha256": "8b20b654933730912aa1035fdaf96dd14fec372bb499f3dce62dc2a057e39c17",
       "sourceFile": "05_cruel angel/legacy_m2a_s0.mid",
       "peak": 0.11877484619617462,
@@ -1723,6 +2301,16 @@
       "midiDuration": 107.4998925,
       "timelineEnd": 107.5029228,
       "audioSha256": "76927b0ffb29617a5ce18e95cf01e27e3b30cd054d4ee1e837b2a2dca1f15bec",
+      "stemAudio": {
+        "melody": {
+          "duration": 110.550204,
+          "sha256": "d90d65e22db606571c27477b3572a243c8441df785ab4f6115ac248d9cdf67cb"
+        },
+        "accompaniment": {
+          "duration": 110.550204,
+          "sha256": "30d10c0d667dd2328984f2e90f19cc98e0deec1e2645dc7491505981aa578824"
+        }
+      },
       "visualizationSha256": "b03dd759f4fc2c3f28720016989e951a235489c810867c46681111d5c583c2db",
       "version": "v0",
       "seed": 0,
@@ -1744,6 +2332,10 @@
       "src": "/media/evaluation/e53a0e93e58feedad82f0551.mp3",
       "visualizationSrc": "/media/evaluation/e53a0e93e58feedad82f0551.json",
       "duration": 111.386122,
+      "stemSources": {
+        "melody": "/media/evaluation/e53a0e93e58feedad82f0551-melody.mp3",
+        "accompaniment": "/media/evaluation/e53a0e93e58feedad82f0551-accompaniment.mp3"
+      },
       "sourceSha256": "607b45b353ed67a245a9705522390661d0fcd8f6b645c7fe0f2ecbb939e8dcab",
       "sourceFile": "05_cruel angel/legacy_m2a_s1.mid",
       "peak": 0.12369243800640106,
@@ -1764,6 +2356,16 @@
       "midiDuration": 108.333225,
       "timelineEnd": 108.33625529999999,
       "audioSha256": "20cfed912adf286fa98914587f5f5a24e3eace2dd72dfd0a64fbe4c9c2766dad",
+      "stemAudio": {
+        "melody": {
+          "duration": 111.386122,
+          "sha256": "7cc21671993c85149783d1686efd857926d5901d8117dd1aae3d8be7ca9cb193"
+        },
+        "accompaniment": {
+          "duration": 111.386122,
+          "sha256": "c39af00f93c8f2c9fcb43350f2ef18168c006cf5efc0da02a8a88a4d918088ee"
+        }
+      },
       "visualizationSha256": "c19af525889caa28deac737a01add4863816413c6744a75625be197cb08832f3",
       "version": "v0",
       "seed": 1,
@@ -1785,6 +2387,10 @@
       "src": "/media/evaluation/546df11d428ef82a91b0035a.mp3",
       "visualizationSrc": "/media/evaluation/546df11d428ef82a91b0035a.json",
       "duration": 110.210612,
+      "stemSources": {
+        "melody": "/media/evaluation/546df11d428ef82a91b0035a-melody.mp3",
+        "accompaniment": "/media/evaluation/546df11d428ef82a91b0035a-accompaniment.mp3"
+      },
       "sourceSha256": "588569f57e9583baac882b60578558affba9992320054fe176eee8a03be91163",
       "sourceFile": "05_cruel angel/legacy_m2a_s2.mid",
       "peak": 0.118205226957798,
@@ -1805,6 +2411,16 @@
       "midiDuration": 107.16655949999999,
       "timelineEnd": 107.1695898,
       "audioSha256": "9310e5481cf0fc1b270e4a7bee266275795c18e12500e6603ccbdc2f12dfb698",
+      "stemAudio": {
+        "melody": {
+          "duration": 110.210612,
+          "sha256": "10c18052a47402947db9a89cbd8c5e52e2c041f0d27e494baa38600b0c6c841e"
+        },
+        "accompaniment": {
+          "duration": 110.210612,
+          "sha256": "3ebebbf875180bb4fcc19e54636ee0de49aab4154754cd69652ec3a895e9617d"
+        }
+      },
       "visualizationSha256": "075b8a2b14e9ed4cc6fefa8067f4a7a3d0a8bcd9e805a67f1ad120d4694a9cbb",
       "version": "v0",
       "seed": 2,
@@ -1826,6 +2442,10 @@
       "src": "/media/evaluation/86c957a74f5bacd2f9709fc6.mp3",
       "visualizationSrc": "/media/evaluation/86c957a74f5bacd2f9709fc6.json",
       "duration": 109.531429,
+      "stemSources": {
+        "melody": "/media/evaluation/86c957a74f5bacd2f9709fc6-melody.mp3",
+        "accompaniment": "/media/evaluation/86c957a74f5bacd2f9709fc6-accompaniment.mp3"
+      },
       "sourceSha256": "13b543e93e5209dc808029776399a1011a444daefc427cd3be810a918847c6fc",
       "sourceFile": "05_cruel angel/lekai_no_prompt_s0.mid",
       "peak": 0.057568687945604324,
@@ -1846,6 +2466,16 @@
       "midiDuration": 106.4998935,
       "timelineEnd": 106.50292379999999,
       "audioSha256": "d5f5b29ec7293bedcee061e02e49f50268a3e211315806780ad1fc9a4edccf88",
+      "stemAudio": {
+        "melody": {
+          "duration": 109.531429,
+          "sha256": "8b924746656f11f6f9eaa890efd4b293dd5d0d191b4f8dd60447edfdbf3828f4"
+        },
+        "accompaniment": {
+          "duration": 109.531429,
+          "sha256": "c7a6e9a69001bafccfb3ceec07501cea47297146a7e44c146ceeb570b1337289"
+        }
+      },
       "visualizationSha256": "ab5a271811e59b3f5cc33b506200e12bd60e5904419bd91303fb2ac9bf4f552e",
       "version": "v1",
       "seed": 0,
@@ -1867,6 +2497,10 @@
       "src": "/media/evaluation/d3d9ddef6a818af0c0a100a1.mp3",
       "visualizationSrc": "/media/evaluation/d3d9ddef6a818af0c0a100a1.json",
       "duration": 109.035102,
+      "stemSources": {
+        "melody": "/media/evaluation/d3d9ddef6a818af0c0a100a1-melody.mp3",
+        "accompaniment": "/media/evaluation/d3d9ddef6a818af0c0a100a1-accompaniment.mp3"
+      },
       "sourceSha256": "9eb78166e0ce45df2da4f1875bef94c9cd31123ecbb4d16e425a52bdfe9e3a35",
       "sourceFile": "05_cruel angel/lekai_no_prompt_s1.mid",
       "peak": 0.051951464265584946,
@@ -1887,6 +2521,16 @@
       "midiDuration": 105.999894,
       "timelineEnd": 106.00292429999999,
       "audioSha256": "08ef73420bf835dfb591d3c45df8a49cc3c8abb34100b383441ba9f48f54b6b4",
+      "stemAudio": {
+        "melody": {
+          "duration": 109.035102,
+          "sha256": "08ef73420bf835dfb591d3c45df8a49cc3c8abb34100b383441ba9f48f54b6b4"
+        },
+        "accompaniment": {
+          "duration": 109.035102,
+          "sha256": "4dba4d5d84c7ea143f092c1e08b30925f72c14a458ca7c9db9e21d56b0997a85"
+        }
+      },
       "visualizationSha256": "38e2e2416cf66cbcf62a7882c9befc2efe402e0f775c27dac94c6154d4f525a0",
       "version": "v1",
       "seed": 1,
@@ -1908,6 +2552,10 @@
       "src": "/media/evaluation/01450c6cc15c758f93bc09c6.mp3",
       "visualizationSrc": "/media/evaluation/01450c6cc15c758f93bc09c6.json",
       "duration": 109.035102,
+      "stemSources": {
+        "melody": "/media/evaluation/01450c6cc15c758f93bc09c6-melody.mp3",
+        "accompaniment": "/media/evaluation/01450c6cc15c758f93bc09c6-accompaniment.mp3"
+      },
       "sourceSha256": "4fe9ef637515d43a8aacdd80003821eab122b0495ddd784dfa33d8f2ffe3ab96",
       "sourceFile": "05_cruel angel/lekai_no_prompt_s2.mid",
       "peak": 0.051951464265584946,
@@ -1928,6 +2576,16 @@
       "midiDuration": 105.999894,
       "timelineEnd": 106.00292429999999,
       "audioSha256": "d37238b9db5481309676e7c35236774808b613fb6bbc88742275a15a6078275e",
+      "stemAudio": {
+        "melody": {
+          "duration": 109.035102,
+          "sha256": "08ef73420bf835dfb591d3c45df8a49cc3c8abb34100b383441ba9f48f54b6b4"
+        },
+        "accompaniment": {
+          "duration": 109.035102,
+          "sha256": "424caba4c52ed196ae638e23401cdefa1ac831e47c6b3d162fe4ef421d185e3e"
+        }
+      },
       "visualizationSha256": "fcd476e5e98dcdc2cee4a93a1950c6267dacaaf29320505109d4977555ee2b3a",
       "version": "v1",
       "seed": 2,
@@ -1949,6 +2607,10 @@
       "src": "/media/evaluation/4da1f4d712d641191ffba42f.mp3",
       "visualizationSrc": "/media/evaluation/4da1f4d712d641191ffba42f.json",
       "duration": 109.531429,
+      "stemSources": {
+        "melody": "/media/evaluation/4da1f4d712d641191ffba42f-melody.mp3",
+        "accompaniment": "/media/evaluation/4da1f4d712d641191ffba42f-accompaniment.mp3"
+      },
       "sourceSha256": "2afdb89cb64c15d8a899c2f88054a15c0870e1fee6eb44358bb71c98c692393e",
       "sourceFile": "05_cruel angel/pc_rule_if_else_n10_s0.mid",
       "peak": 0.05395476147532463,
@@ -1969,6 +2631,16 @@
       "midiDuration": 106.4998935,
       "timelineEnd": 106.50292379999999,
       "audioSha256": "cc9feec0ccbbecf1f687b2c8bf75120d074cb1326e076e2ed2677cd4e294bee1",
+      "stemAudio": {
+        "melody": {
+          "duration": 109.531429,
+          "sha256": "8b924746656f11f6f9eaa890efd4b293dd5d0d191b4f8dd60447edfdbf3828f4"
+        },
+        "accompaniment": {
+          "duration": 109.531429,
+          "sha256": "3844ede5c3cbeec6cc8e22fd8a6644f0c39ed19044229f5c98c25ee4a10cae56"
+        }
+      },
       "visualizationSha256": "ab20677bfc1799d98600e18c030fec162f615a51c07db12c15ad6f01485b78c1",
       "version": "v2",
       "seed": 0,
@@ -1990,6 +2662,10 @@
       "src": "/media/evaluation/3b299010e78a8a1308e1c141.mp3",
       "visualizationSrc": "/media/evaluation/3b299010e78a8a1308e1c141.json",
       "duration": 109.531429,
+      "stemSources": {
+        "melody": "/media/evaluation/3b299010e78a8a1308e1c141-melody.mp3",
+        "accompaniment": "/media/evaluation/3b299010e78a8a1308e1c141-accompaniment.mp3"
+      },
       "sourceSha256": "6fdbe7fdba2925bc248ddbf8229794f994411c32fd1a8d830c94ffb8ff5a38bd",
       "sourceFile": "05_cruel angel/pc_rule_if_else_n10_s1.mid",
       "peak": 0.06609445065259933,
@@ -2010,6 +2686,16 @@
       "midiDuration": 106.4998935,
       "timelineEnd": 106.50292379999999,
       "audioSha256": "e384dc4727d8dd886b1958b4c70c58b3d64eaba3027da68e4a0e1f22dbbb11c2",
+      "stemAudio": {
+        "melody": {
+          "duration": 109.531429,
+          "sha256": "8b924746656f11f6f9eaa890efd4b293dd5d0d191b4f8dd60447edfdbf3828f4"
+        },
+        "accompaniment": {
+          "duration": 109.531429,
+          "sha256": "fd82327cd84b9f8d18897b24410a012db0f28a86cf859cba801ae8bbeba30c6f"
+        }
+      },
       "visualizationSha256": "d978910f8ec9f5161ed929ac04858cc306a1ed6c93871a6197a1dd7dde325ae1",
       "version": "v2",
       "seed": 1,
@@ -2031,6 +2717,10 @@
       "src": "/media/evaluation/add8587dc637095179e43a06.mp3",
       "visualizationSrc": "/media/evaluation/add8587dc637095179e43a06.json",
       "duration": 109.531429,
+      "stemSources": {
+        "melody": "/media/evaluation/add8587dc637095179e43a06-melody.mp3",
+        "accompaniment": "/media/evaluation/add8587dc637095179e43a06-accompaniment.mp3"
+      },
       "sourceSha256": "31472791f6a5097fb876d68ba1fc5e0588f225f422a596f68e963e5a6bc60673",
       "sourceFile": "05_cruel angel/pc_rule_if_else_n10_s2.mid",
       "peak": 0.06200157105922699,
@@ -2051,6 +2741,16 @@
       "midiDuration": 106.4998935,
       "timelineEnd": 106.50292379999999,
       "audioSha256": "27cfd12fc809c8fbf745272cbd57084e46edabad21f2a3fb87521dd6f198f2ae",
+      "stemAudio": {
+        "melody": {
+          "duration": 109.531429,
+          "sha256": "8b924746656f11f6f9eaa890efd4b293dd5d0d191b4f8dd60447edfdbf3828f4"
+        },
+        "accompaniment": {
+          "duration": 109.531429,
+          "sha256": "f64b8a19a71e2c2068b89f39e036dd5d1fd9ec176561c114468dc87cb8134a18"
+        }
+      },
       "visualizationSha256": "f4050a9742b1ed8f0f2ec0f7ecedd5e3a15a0c14bf3d55c4bcd49660aa6b51fc",
       "version": "v2",
       "seed": 2,
@@ -2072,6 +2772,10 @@
       "src": "/media/evaluation/2751c3d76a893966fe0af7eb.mp3",
       "visualizationSrc": "/media/evaluation/2751c3d76a893966fe0af7eb.json",
       "duration": 88.711837,
+      "stemSources": {
+        "melody": "/media/evaluation/2751c3d76a893966fe0af7eb-melody.mp3",
+        "accompaniment": "/media/evaluation/2751c3d76a893966fe0af7eb-accompaniment.mp3"
+      },
       "sourceSha256": "c23eff6a72f2ae34be5fca60655db6fcf3f7308ba9cc20e6baf2815614fd954f",
       "sourceFile": "06_告白气球/00_melody.mid",
       "peak": 0.07968227565288544,
@@ -2092,6 +2796,16 @@
       "midiDuration": 85.666581,
       "timelineEnd": 85.6696113,
       "audioSha256": "ec8fc0023b9d3e7f0aa83208a7533909d68614cd9964a48d1316d1cb7e3edfc8",
+      "stemAudio": {
+        "melody": {
+          "duration": 88.711837,
+          "sha256": "ec8fc0023b9d3e7f0aa83208a7533909d68614cd9964a48d1316d1cb7e3edfc8"
+        },
+        "accompaniment": {
+          "duration": 88.711837,
+          "sha256": "b876cd54c11af56803b7f90ab0d95e758c70be503facb1fb950e9196ba3179f2"
+        }
+      },
       "visualizationSha256": "f88624b56cea302b447bed24df8975f9c6485e7751df37a982ee95c5e80abbb4",
       "version": "reference",
       "seed": null,
@@ -2113,6 +2827,10 @@
       "src": "/media/evaluation/d63f1034dbc3bcf885b00ae1.mp3",
       "visualizationSrc": "/media/evaluation/d63f1034dbc3bcf885b00ae1.json",
       "duration": 89.364898,
+      "stemSources": {
+        "melody": "/media/evaluation/d63f1034dbc3bcf885b00ae1-melody.mp3",
+        "accompaniment": "/media/evaluation/d63f1034dbc3bcf885b00ae1-accompaniment.mp3"
+      },
       "sourceSha256": "74d7786f8732cacbe2b52eca8e0bfa597ca657ee693e828fe6fdaad2bc4823ce",
       "sourceFile": "06_告白气球/legacy_m2a_s0.mid",
       "peak": 0.08446404337882996,
@@ -2133,6 +2851,16 @@
       "midiDuration": 86.333247,
       "timelineEnd": 86.33627729999999,
       "audioSha256": "d630b812e40434a72e9ab24dffb83a18a63aab6364603516df9e1331ad50945e",
+      "stemAudio": {
+        "melody": {
+          "duration": 89.364898,
+          "sha256": "50e8f91a0c3d946d46c463a2d966837f740de7a8c9e56cf2edf93f6e06be88f6"
+        },
+        "accompaniment": {
+          "duration": 89.364898,
+          "sha256": "d8740d74f99bc448e9e2acbd3069ab090f544ccbe66fc15849559a7698358aa0"
+        }
+      },
       "visualizationSha256": "bc54fbac6e246fd76dec6ffadd1a9e0a34cc32ef27dee9ab5c73bc3e83f41511",
       "version": "v0",
       "seed": 0,
@@ -2154,6 +2882,10 @@
       "src": "/media/evaluation/dd4729892fae3e7cce4314d9.mp3",
       "visualizationSrc": "/media/evaluation/dd4729892fae3e7cce4314d9.json",
       "duration": 88.868571,
+      "stemSources": {
+        "melody": "/media/evaluation/dd4729892fae3e7cce4314d9-melody.mp3",
+        "accompaniment": "/media/evaluation/dd4729892fae3e7cce4314d9-accompaniment.mp3"
+      },
       "sourceSha256": "b2dd2cae215768dbef15ec08cdcf4c81f9b0ca119cb45ced280fd7eb2e934b65",
       "sourceFile": "06_告白气球/legacy_m2a_s1.mid",
       "peak": 0.08538970351219177,
@@ -2174,6 +2906,16 @@
       "midiDuration": 85.8332475,
       "timelineEnd": 85.83627779999999,
       "audioSha256": "676c64c547aa9cfb159f1e3560bbf867573ebf46ac24ffb33363cf66452484f2",
+      "stemAudio": {
+        "melody": {
+          "duration": 88.868571,
+          "sha256": "a3cbb49b211e6d1e0b2c8d03839a5324f2f187abfcb104f0013b3a0480371207"
+        },
+        "accompaniment": {
+          "duration": 88.868571,
+          "sha256": "a0c35c0c399fd4fe87e9689424ad4df9459ecffc3ff9e7ac9f1acd7c6501424a"
+        }
+      },
       "visualizationSha256": "ef3eed5321bbd004f961ecfafde0e71469022b4600c1456a4262da6a571d1915",
       "version": "v0",
       "seed": 1,
@@ -2195,6 +2937,10 @@
       "src": "/media/evaluation/ee9b8b86d2cd7220417f4fa9.mp3",
       "visualizationSrc": "/media/evaluation/ee9b8b86d2cd7220417f4fa9.json",
       "duration": 91.533061,
+      "stemSources": {
+        "melody": "/media/evaluation/ee9b8b86d2cd7220417f4fa9-melody.mp3",
+        "accompaniment": "/media/evaluation/ee9b8b86d2cd7220417f4fa9-accompaniment.mp3"
+      },
       "sourceSha256": "71728e19cc6ae05648d7084db9d497539ef73573f340fec53b61dd15e6fbe3c1",
       "sourceFile": "06_告白气球/legacy_m2a_s2.mid",
       "peak": 0.08268097043037415,
@@ -2215,6 +2961,16 @@
       "midiDuration": 88.4999115,
       "timelineEnd": 88.50294179999999,
       "audioSha256": "bbbac443220d326618cc9dc345845d91be0006a91ddcc2782b3b382c128ad387",
+      "stemAudio": {
+        "melody": {
+          "duration": 91.533061,
+          "sha256": "c4f8295ea3b27788dd5ebb10ba25214ce2729f2981ad9a9de4b159602eca15f8"
+        },
+        "accompaniment": {
+          "duration": 91.533061,
+          "sha256": "3c1392c4babcecf06e8508e75506945ff5d827fd93bd8e7c0178601eb17ca277"
+        }
+      },
       "visualizationSha256": "dccdd3ebd855560457235eb9e21c06df00ca196b774194be9d8767ef74928061",
       "version": "v0",
       "seed": 2,
@@ -2236,6 +2992,10 @@
       "src": "/media/evaluation/8b6af0bc90125048ba29db4a.mp3",
       "visualizationSrc": "/media/evaluation/8b6af0bc90125048ba29db4a.json",
       "duration": 88.868571,
+      "stemSources": {
+        "melody": "/media/evaluation/8b6af0bc90125048ba29db4a-melody.mp3",
+        "accompaniment": "/media/evaluation/8b6af0bc90125048ba29db4a-accompaniment.mp3"
+      },
       "sourceSha256": "24103d7dbd227c63459af16b59b98373637b996d680c8bb67678fe0a2955bb25",
       "sourceFile": "06_告白气球/lekai_no_prompt_s0.mid",
       "peak": 0.05126531422138214,
@@ -2256,6 +3016,16 @@
       "midiDuration": 85.8332475,
       "timelineEnd": 85.83627779999999,
       "audioSha256": "337347f196fa92a3109efde5306d3e7ed260bb0971979d5924a89b5525f60943",
+      "stemAudio": {
+        "melody": {
+          "duration": 88.868571,
+          "sha256": "1f26cb8f44c1b9df2ce16bff6667fa492d0f8a909bb1f5e0deec9b103861fed4"
+        },
+        "accompaniment": {
+          "duration": 88.868571,
+          "sha256": "81e62058584d3f60c588eb2175fc21ad57abb9ff1b392eaa8166a5f8369b45bc"
+        }
+      },
       "visualizationSha256": "fac22e6a631938f37456fdc3c5cfbe4c47063a0cd6ed9421d0aed62ddf29cb72",
       "version": "v1",
       "seed": 0,
@@ -2277,6 +3047,10 @@
       "src": "/media/evaluation/a486440e12280c3ef33fe9fd.mp3",
       "visualizationSrc": "/media/evaluation/a486440e12280c3ef33fe9fd.json",
       "duration": 88.868571,
+      "stemSources": {
+        "melody": "/media/evaluation/a486440e12280c3ef33fe9fd-melody.mp3",
+        "accompaniment": "/media/evaluation/a486440e12280c3ef33fe9fd-accompaniment.mp3"
+      },
       "sourceSha256": "fa1a0b14feee75381f83fa1b0727fcc2c9043c2f35b04c3fe2c51c7f83972762",
       "sourceFile": "06_告白气球/lekai_no_prompt_s1.mid",
       "peak": 0.044389523565769196,
@@ -2297,6 +3071,16 @@
       "midiDuration": 85.8332475,
       "timelineEnd": 85.83627779999999,
       "audioSha256": "b7be0b71b23a9f7d29cfc7fb3df989215208b2bd462741405ac322c21d03db6e",
+      "stemAudio": {
+        "melody": {
+          "duration": 88.868571,
+          "sha256": "1f26cb8f44c1b9df2ce16bff6667fa492d0f8a909bb1f5e0deec9b103861fed4"
+        },
+        "accompaniment": {
+          "duration": 88.868571,
+          "sha256": "8a5a5fce559bbf624697d18e7b663e105106a194b1fe99c5179f38bc678d3514"
+        }
+      },
       "visualizationSha256": "ac0e856901e5588ea530e5a090cc397b1476e27f4b4c8c7fc22c78b77916500a",
       "version": "v1",
       "seed": 1,
@@ -2318,6 +3102,10 @@
       "src": "/media/evaluation/ece6535c45d67bf14b5b5508.mp3",
       "visualizationSrc": "/media/evaluation/ece6535c45d67bf14b5b5508.json",
       "duration": 88.868571,
+      "stemSources": {
+        "melody": "/media/evaluation/ece6535c45d67bf14b5b5508-melody.mp3",
+        "accompaniment": "/media/evaluation/ece6535c45d67bf14b5b5508-accompaniment.mp3"
+      },
       "sourceSha256": "fd342b5ff1bc2d0339330fc7e3ed3dce1d7d201c7a063e86bd9674b594f2e328",
       "sourceFile": "06_告白气球/lekai_no_prompt_s2.mid",
       "peak": 0.04323334991931915,
@@ -2338,6 +3126,16 @@
       "midiDuration": 85.8332475,
       "timelineEnd": 85.83627779999999,
       "audioSha256": "c6837a4d4aac523d711dafbb655a5e2ea430f70352ac05a779cc6622a485567a",
+      "stemAudio": {
+        "melody": {
+          "duration": 88.868571,
+          "sha256": "1f26cb8f44c1b9df2ce16bff6667fa492d0f8a909bb1f5e0deec9b103861fed4"
+        },
+        "accompaniment": {
+          "duration": 88.868571,
+          "sha256": "c4459850233e365488467fab6abca03020b85d39d6afca096b990d95ae5cd2b7"
+        }
+      },
       "visualizationSha256": "ef561c9b60aaa25d26af8ad7bb3cd0437428b64010dc49baf5995e8936a0abcb",
       "version": "v1",
       "seed": 2,
@@ -2359,6 +3157,10 @@
       "src": "/media/evaluation/e2c5e207fc634a39247257ae.mp3",
       "visualizationSrc": "/media/evaluation/e2c5e207fc634a39247257ae.json",
       "duration": 88.868571,
+      "stemSources": {
+        "melody": "/media/evaluation/e2c5e207fc634a39247257ae-melody.mp3",
+        "accompaniment": "/media/evaluation/e2c5e207fc634a39247257ae-accompaniment.mp3"
+      },
       "sourceSha256": "07493e62b9ef2638d3eb4e209411477f2d2305e6044343ab896b550cf96b4579",
       "sourceFile": "06_告白气球/pc_rule_if_else_n10_s0.mid",
       "peak": 0.04282946139574051,
@@ -2379,6 +3181,16 @@
       "midiDuration": 85.8332475,
       "timelineEnd": 85.83627779999999,
       "audioSha256": "db98205c4e5e2225cec7efec487c37705f2bc4b9f8e1311eb9720e71f6d918de",
+      "stemAudio": {
+        "melody": {
+          "duration": 88.868571,
+          "sha256": "1f26cb8f44c1b9df2ce16bff6667fa492d0f8a909bb1f5e0deec9b103861fed4"
+        },
+        "accompaniment": {
+          "duration": 88.868571,
+          "sha256": "cd92e54dc30c04fa13fe3ba04a1b52247abfc48cc0e3a38553c74b522230faa1"
+        }
+      },
       "visualizationSha256": "c478679ed774db60b11c785d697a0d6f4fbdadb7d67b744744d856f345b459aa",
       "version": "v2",
       "seed": 0,
@@ -2400,6 +3212,10 @@
       "src": "/media/evaluation/1b47ce73ddd104abdf3e3cb8.mp3",
       "visualizationSrc": "/media/evaluation/1b47ce73ddd104abdf3e3cb8.json",
       "duration": 88.868571,
+      "stemSources": {
+        "melody": "/media/evaluation/1b47ce73ddd104abdf3e3cb8-melody.mp3",
+        "accompaniment": "/media/evaluation/1b47ce73ddd104abdf3e3cb8-accompaniment.mp3"
+      },
       "sourceSha256": "2f9623f42b947efd1a40216da80dd3421cc5b59f80b7d196ed8782a204f63b1e",
       "sourceFile": "06_告白气球/pc_rule_if_else_n10_s1.mid",
       "peak": 0.04286833480000496,
@@ -2420,6 +3236,16 @@
       "midiDuration": 85.8332475,
       "timelineEnd": 85.83627779999999,
       "audioSha256": "6a146a0b1b8b327b9f9358b9724acdcd344a0b027224fdd2bc5e080ed04df38e",
+      "stemAudio": {
+        "melody": {
+          "duration": 88.868571,
+          "sha256": "1f26cb8f44c1b9df2ce16bff6667fa492d0f8a909bb1f5e0deec9b103861fed4"
+        },
+        "accompaniment": {
+          "duration": 88.868571,
+          "sha256": "50312d525e48ee962055330e666626dadd88685b506e590abc360af25cfcee6c"
+        }
+      },
       "visualizationSha256": "f14995fcd6f026f23f99b83a7fbe4fcb5642aed967cf5ecd7a344ddd5ae688a4",
       "version": "v2",
       "seed": 1,
@@ -2441,6 +3267,10 @@
       "src": "/media/evaluation/eee4457bd094ed7fffec0743.mp3",
       "visualizationSrc": "/media/evaluation/eee4457bd094ed7fffec0743.json",
       "duration": 88.868571,
+      "stemSources": {
+        "melody": "/media/evaluation/eee4457bd094ed7fffec0743-melody.mp3",
+        "accompaniment": "/media/evaluation/eee4457bd094ed7fffec0743-accompaniment.mp3"
+      },
       "sourceSha256": "e77c1b2849349b39f0f43a1132536c5f2b7e2a8e4c3e7ea9eafac1b2b7137638",
       "sourceFile": "06_告白气球/pc_rule_if_else_n10_s2.mid",
       "peak": 0.05374404042959213,
@@ -2461,6 +3291,16 @@
       "midiDuration": 85.8332475,
       "timelineEnd": 85.83627779999999,
       "audioSha256": "aafaa39eef3179d24238b8dc4cd657aedff786116ac3148ce98ea650e44b6d63",
+      "stemAudio": {
+        "melody": {
+          "duration": 88.868571,
+          "sha256": "1f26cb8f44c1b9df2ce16bff6667fa492d0f8a909bb1f5e0deec9b103861fed4"
+        },
+        "accompaniment": {
+          "duration": 88.868571,
+          "sha256": "14d19f25f6d1e80c38e4458271d238e05df3636c96256f105f9a9db98d02c12b"
+        }
+      },
       "visualizationSha256": "82470b17f2ec0ad11778254c4cf3bc909f182014d8285dd805288f3c6d0aa76a",
       "version": "v2",
       "seed": 2,
@@ -2482,6 +3322,10 @@
       "src": "/media/evaluation/7320052ab2ae8fa71f736234.mp3",
       "visualizationSrc": "/media/evaluation/7320052ab2ae8fa71f736234.json",
       "duration": 108.042449,
+      "stemSources": {
+        "melody": "/media/evaluation/7320052ab2ae8fa71f736234-melody.mp3",
+        "accompaniment": "/media/evaluation/7320052ab2ae8fa71f736234-accompaniment.mp3"
+      },
       "sourceSha256": "a02b5fc864245881ed7928fa08ab2c26b6426a65d53f89c5c279b84675125c62",
       "sourceFile": "07_青花瓷/00_melody.mid",
       "peak": 0.08132652193307877,
@@ -2502,6 +3346,16 @@
       "midiDuration": 104.999895,
       "timelineEnd": 105.0029253,
       "audioSha256": "b85acfc436da7c01f0c91191201644fe2f1554c2d6566434d2b2402cedd5f8ae",
+      "stemAudio": {
+        "melody": {
+          "duration": 108.042449,
+          "sha256": "b85acfc436da7c01f0c91191201644fe2f1554c2d6566434d2b2402cedd5f8ae"
+        },
+        "accompaniment": {
+          "duration": 108.042449,
+          "sha256": "4a8ea2c5f0002e38a2aa2b0e14868707f99331b56a8e1ec5429797f85d42cb01"
+        }
+      },
       "visualizationSha256": "c328f878e3a42d07e768bc8b2c4678d2a60e66674b590b90f108f04fac6ba75e",
       "version": "reference",
       "seed": null,
@@ -2523,6 +3377,10 @@
       "src": "/media/evaluation/0701d29ee61219dc04850745.mp3",
       "visualizationSrc": "/media/evaluation/0701d29ee61219dc04850745.json",
       "duration": 109.217959,
+      "stemSources": {
+        "melody": "/media/evaluation/0701d29ee61219dc04850745-melody.mp3",
+        "accompaniment": "/media/evaluation/0701d29ee61219dc04850745-accompaniment.mp3"
+      },
       "sourceSha256": "acf5d868b9c07280c7c14b9d6f4317332e5e2a3ddd825852398b9084ec8ac5f5",
       "sourceFile": "07_青花瓷/legacy_m2a_s0.mid",
       "peak": 0.0786876529455185,
@@ -2543,6 +3401,16 @@
       "midiDuration": 106.1665605,
       "timelineEnd": 106.1695908,
       "audioSha256": "ae4124c3b89cb6b5872a0882eb0ef48480cf6c5cafebca3a2d3026216afd00f4",
+      "stemAudio": {
+        "melody": {
+          "duration": 109.217959,
+          "sha256": "f8fa6cae5c8fdc9d12bf13227cd927fd5b975d35891a731f122d9f1b52c95b2c"
+        },
+        "accompaniment": {
+          "duration": 109.217959,
+          "sha256": "2bb996d230204939449a9d5e1c39238ebdbaacc36c0b8cb86ebd34c30e8b2cba"
+        }
+      },
       "visualizationSha256": "7580f4ce47b20f027c84a35ac3b6e787d70cfc86e8ba0c2d5598126f6ebdc40a",
       "version": "v0",
       "seed": 0,
@@ -2564,6 +3432,10 @@
       "src": "/media/evaluation/aeb0fdd32b9b1d46056c8a08.mp3",
       "visualizationSrc": "/media/evaluation/aeb0fdd32b9b1d46056c8a08.json",
       "duration": 109.87102,
+      "stemSources": {
+        "melody": "/media/evaluation/aeb0fdd32b9b1d46056c8a08-melody.mp3",
+        "accompaniment": "/media/evaluation/aeb0fdd32b9b1d46056c8a08-accompaniment.mp3"
+      },
       "sourceSha256": "e3658e5a43b49f7d8b802aff81d07c300dd9db60ca85ae0132c6da33c2c850e3",
       "sourceFile": "07_青花瓷/legacy_m2a_s1.mid",
       "peak": 0.08430902659893036,
@@ -2584,6 +3456,16 @@
       "midiDuration": 106.8332265,
       "timelineEnd": 106.8362568,
       "audioSha256": "2dbcb87175b45d2a0b5bab7b61848aa76fa3ace101c7615e570f666ef49aa305",
+      "stemAudio": {
+        "melody": {
+          "duration": 109.87102,
+          "sha256": "990b888d92b37dd995bd2b513c33fee240f0cf8cf5e063fe27bc1c582724a2d2"
+        },
+        "accompaniment": {
+          "duration": 109.87102,
+          "sha256": "6b3b84d50c29db012cb3eb2fc711eb9e1e7eaddf337da11fc3d7a4a8e673551a"
+        }
+      },
       "visualizationSha256": "ce49068fbe3f6ed4f81cd42cc48182967c35bd288fc4512e1fe3520685063511",
       "version": "v0",
       "seed": 1,
@@ -2605,6 +3487,10 @@
       "src": "/media/evaluation/0b2dc61a099ec18ca859779c.mp3",
       "visualizationSrc": "/media/evaluation/0b2dc61a099ec18ca859779c.json",
       "duration": 109.531429,
+      "stemSources": {
+        "melody": "/media/evaluation/0b2dc61a099ec18ca859779c-melody.mp3",
+        "accompaniment": "/media/evaluation/0b2dc61a099ec18ca859779c-accompaniment.mp3"
+      },
       "sourceSha256": "65cb93e478f7d6181af3cc7958af0fa69fcf8c00af61d96c8bb427401d664ed6",
       "sourceFile": "07_青花瓷/legacy_m2a_s2.mid",
       "peak": 0.07518988102674484,
@@ -2625,6 +3511,16 @@
       "midiDuration": 106.4998935,
       "timelineEnd": 106.50292379999999,
       "audioSha256": "7c5dfdf73350b3779249b9ce0393290649c001667ee2790985138246ff3f67e7",
+      "stemAudio": {
+        "melody": {
+          "duration": 109.531429,
+          "sha256": "b20173a2ec4c85d69cab11f45f5991712353a22e65816da4f260b22f25ce7449"
+        },
+        "accompaniment": {
+          "duration": 109.531429,
+          "sha256": "d5416f28f3bf3c5274d461f7b646cd55466b014518edf966aaaa651c41e4a7c4"
+        }
+      },
       "visualizationSha256": "88948dc49181e8a760f5b5d9e3e696188e3a036e96aff29580ebd40d92ddbe0e",
       "version": "v0",
       "seed": 2,
@@ -2646,6 +3542,10 @@
       "src": "/media/evaluation/14d63d10adc0f35b82ca1894.mp3",
       "visualizationSrc": "/media/evaluation/14d63d10adc0f35b82ca1894.json",
       "duration": 108.042449,
+      "stemSources": {
+        "melody": "/media/evaluation/14d63d10adc0f35b82ca1894-melody.mp3",
+        "accompaniment": "/media/evaluation/14d63d10adc0f35b82ca1894-accompaniment.mp3"
+      },
       "sourceSha256": "d8aff325526e6e12c998964d43a4fb275cc6a7a883a5c615ff6ff01b40e44103",
       "sourceFile": "07_青花瓷/lekai_no_prompt_s0.mid",
       "peak": 0.04634661599993706,
@@ -2666,6 +3566,16 @@
       "midiDuration": 104.999895,
       "timelineEnd": 105.0029253,
       "audioSha256": "20e519f59f2b5e269e9a058d106f09885b0435a5670d1beadedfe88f2333ef2b",
+      "stemAudio": {
+        "melody": {
+          "duration": 108.042449,
+          "sha256": "d85a76a75a9c1c9694c55bdb8afc02cefbcb009272b5386b9d13a1b4a96d8dbe"
+        },
+        "accompaniment": {
+          "duration": 108.042449,
+          "sha256": "b53f0c54c308fc82987cce72c5a970272803f9b6d8fe0dded26e77092029f692"
+        }
+      },
       "visualizationSha256": "1cbd8f8fc66d5d54c51e42401fc3fb7ee9f19b61f9baff2c053280271165fa9f",
       "version": "v1",
       "seed": 0,
@@ -2687,6 +3597,10 @@
       "src": "/media/evaluation/1982c2b378f612d63eeb489c.mp3",
       "visualizationSrc": "/media/evaluation/1982c2b378f612d63eeb489c.json",
       "duration": 108.199184,
+      "stemSources": {
+        "melody": "/media/evaluation/1982c2b378f612d63eeb489c-melody.mp3",
+        "accompaniment": "/media/evaluation/1982c2b378f612d63eeb489c-accompaniment.mp3"
+      },
       "sourceSha256": "e3f45c14fb671fc29a159672ca498aba2dcbe96a76ac5a8499f3cb3b2281f83e",
       "sourceFile": "07_青花瓷/lekai_no_prompt_s1.mid",
       "peak": 0.04398597031831741,
@@ -2707,6 +3621,16 @@
       "midiDuration": 105.1665615,
       "timelineEnd": 105.16959179999999,
       "audioSha256": "42c6bdb2f46e48f4a5bec36640df010a61f42ef833629330be765ecdd90f465b",
+      "stemAudio": {
+        "melody": {
+          "duration": 108.199184,
+          "sha256": "5c96950ebafc8b30d774034c11e3c3bf09d76467ecd98638a86dcc79e8acfb19"
+        },
+        "accompaniment": {
+          "duration": 108.199184,
+          "sha256": "3e8ce0fd306bd08d72d80850ffbc3ed5f1e384bb6ec5854990eb7d5dadaa91aa"
+        }
+      },
       "visualizationSha256": "ab6cac760b31b161a9c6bb2cd618df4ab00eb38a4cb8c81c64ea00e3c10eb623",
       "version": "v1",
       "seed": 1,
@@ -2728,6 +3652,10 @@
       "src": "/media/evaluation/68b466ec44f1b8b58cb21d33.mp3",
       "visualizationSrc": "/media/evaluation/68b466ec44f1b8b58cb21d33.json",
       "duration": 108.199184,
+      "stemSources": {
+        "melody": "/media/evaluation/68b466ec44f1b8b58cb21d33-melody.mp3",
+        "accompaniment": "/media/evaluation/68b466ec44f1b8b58cb21d33-accompaniment.mp3"
+      },
       "sourceSha256": "09c29d02704e089fc81f0868a59521980ec45d9cff28a58a8c2961a57bcd1009",
       "sourceFile": "07_青花瓷/lekai_no_prompt_s2.mid",
       "peak": 0.04038785398006439,
@@ -2748,6 +3676,16 @@
       "midiDuration": 105.1665615,
       "timelineEnd": 105.16959179999999,
       "audioSha256": "b3d767fccb532b78954c6d9b7ea4b3133ea737cf1fbba1041d182e4ddb649f50",
+      "stemAudio": {
+        "melody": {
+          "duration": 108.199184,
+          "sha256": "5c96950ebafc8b30d774034c11e3c3bf09d76467ecd98638a86dcc79e8acfb19"
+        },
+        "accompaniment": {
+          "duration": 108.199184,
+          "sha256": "277429bfe42018117a71e78526924eb76a521fbbc83e3a039d87a7f19f3fd921"
+        }
+      },
       "visualizationSha256": "93ab173400f733533e65bc1a5ae1b2eea66cd23be3fcd8537db0e002ba1d5ef2",
       "version": "v1",
       "seed": 2,
@@ -2769,6 +3707,10 @@
       "src": "/media/evaluation/13041ad63e3c308b165bdf93.mp3",
       "visualizationSrc": "/media/evaluation/13041ad63e3c308b165bdf93.json",
       "duration": 108.199184,
+      "stemSources": {
+        "melody": "/media/evaluation/13041ad63e3c308b165bdf93-melody.mp3",
+        "accompaniment": "/media/evaluation/13041ad63e3c308b165bdf93-accompaniment.mp3"
+      },
       "sourceSha256": "9ea3f34f67305c754b46ee3618263c204fc9e27be99a229978d04d21d0618e7e",
       "sourceFile": "07_青花瓷/pc_rule_if_else_n10_s0.mid",
       "peak": 0.04835491627454758,
@@ -2789,6 +3731,16 @@
       "midiDuration": 105.1665615,
       "timelineEnd": 105.16959179999999,
       "audioSha256": "5cb5b594bcb601ca1a6c32ddc3ac42ae68290d8f9edc64cfaa1e7d787f99f351",
+      "stemAudio": {
+        "melody": {
+          "duration": 108.199184,
+          "sha256": "5c96950ebafc8b30d774034c11e3c3bf09d76467ecd98638a86dcc79e8acfb19"
+        },
+        "accompaniment": {
+          "duration": 108.199184,
+          "sha256": "35f25ea1993891e620d835acac3fbab209e0e9ad642d7e7fa6ee593c71985145"
+        }
+      },
       "visualizationSha256": "9c9962a36da69a1ba6ad0e7da965576f5593de652bc9113e2a7da8bf05400876",
       "version": "v2",
       "seed": 0,
@@ -2810,6 +3762,10 @@
       "src": "/media/evaluation/915a375e91b3f4e865cea139.mp3",
       "visualizationSrc": "/media/evaluation/915a375e91b3f4e865cea139.json",
       "duration": 108.199184,
+      "stemSources": {
+        "melody": "/media/evaluation/915a375e91b3f4e865cea139-melody.mp3",
+        "accompaniment": "/media/evaluation/915a375e91b3f4e865cea139-accompaniment.mp3"
+      },
       "sourceSha256": "846d3ca613a7d621859eecfc0096c1ae46396df7c6c18612bf22df36c8358365",
       "sourceFile": "07_青花瓷/pc_rule_if_else_n10_s1.mid",
       "peak": 0.05606413632631302,
@@ -2830,6 +3786,16 @@
       "midiDuration": 105.1665615,
       "timelineEnd": 105.16959179999999,
       "audioSha256": "bd29572f3c37843592858a67ffd5da74b0fbb2fe8861f41eeacb72cb4378e483",
+      "stemAudio": {
+        "melody": {
+          "duration": 108.199184,
+          "sha256": "5c96950ebafc8b30d774034c11e3c3bf09d76467ecd98638a86dcc79e8acfb19"
+        },
+        "accompaniment": {
+          "duration": 108.199184,
+          "sha256": "213b85b28a6eff14ffc6f6ae2b6ab5ba84603ceda57513cdf1bd2c864c87505d"
+        }
+      },
       "visualizationSha256": "2b3137062eaeafcc04cd30c72922e17b472a58f3638998d91d40c0174054802f",
       "version": "v2",
       "seed": 1,
@@ -2851,6 +3817,10 @@
       "src": "/media/evaluation/15ba556370404d6ec595d034.mp3",
       "visualizationSrc": "/media/evaluation/15ba556370404d6ec595d034.json",
       "duration": 108.199184,
+      "stemSources": {
+        "melody": "/media/evaluation/15ba556370404d6ec595d034-melody.mp3",
+        "accompaniment": "/media/evaluation/15ba556370404d6ec595d034-accompaniment.mp3"
+      },
       "sourceSha256": "8af92008bb09dab266d0bcebf92e09f4eeb3e6b9fca47af3d1e02848d52d970a",
       "sourceFile": "07_青花瓷/pc_rule_if_else_n10_s2.mid",
       "peak": 0.04234946146607399,
@@ -2871,6 +3841,16 @@
       "midiDuration": 105.1665615,
       "timelineEnd": 105.16959179999999,
       "audioSha256": "7367b6d59e1cfb062705035cd6aec6cc53a0ca82bda67f0ed030e2a7ec53df1d",
+      "stemAudio": {
+        "melody": {
+          "duration": 108.199184,
+          "sha256": "5c96950ebafc8b30d774034c11e3c3bf09d76467ecd98638a86dcc79e8acfb19"
+        },
+        "accompaniment": {
+          "duration": 108.199184,
+          "sha256": "6a15ad27ea77d67cc8436608b3b9438665832a68adb2527b24eb11c8b3409d14"
+        }
+      },
       "visualizationSha256": "f87df947d565002e7d1f0b7feb49878aed5b3d97ba49b9b022b4e821cdc65327",
       "version": "v2",
       "seed": 2,
@@ -2892,6 +3872,10 @@
       "src": "/media/evaluation/ad86fe1cae13f5058793cf55.mp3",
       "visualizationSrc": "/media/evaluation/ad86fe1cae13f5058793cf55.json",
       "duration": 110.706939,
+      "stemSources": {
+        "melody": "/media/evaluation/ad86fe1cae13f5058793cf55-melody.mp3",
+        "accompaniment": "/media/evaluation/ad86fe1cae13f5058793cf55-accompaniment.mp3"
+      },
       "sourceSha256": "2f78a4538babf6b1d830ddaf8c86dcbb23a6251568c95606f3bcb9b5f7772d74",
       "sourceFile": "08_小幸运/00_melody.mid",
       "peak": 0.08434223383665085,
@@ -2912,6 +3896,16 @@
       "midiDuration": 107.66655899999999,
       "timelineEnd": 107.6695893,
       "audioSha256": "2e0c30c0d5ee1c93879ab2dd2de6c62536108f59e937040ca8eeaf97ac44b0f8",
+      "stemAudio": {
+        "melody": {
+          "duration": 110.706939,
+          "sha256": "2e0c30c0d5ee1c93879ab2dd2de6c62536108f59e937040ca8eeaf97ac44b0f8"
+        },
+        "accompaniment": {
+          "duration": 110.706939,
+          "sha256": "09e2ef023b091a8778dc3b21895ba5dcfd097eb8c1d638a0c74854d458e09377"
+        }
+      },
       "visualizationSha256": "b19a06e59294bf0ab424f3a09bf993ae3dde1d845b585df1a18be227ca1e29eb",
       "version": "reference",
       "seed": null,
@@ -2933,6 +3927,10 @@
       "src": "/media/evaluation/f76247d3764646e18465b638.mp3",
       "visualizationSrc": "/media/evaluation/f76247d3764646e18465b638.json",
       "duration": 111.882449,
+      "stemSources": {
+        "melody": "/media/evaluation/f76247d3764646e18465b638-melody.mp3",
+        "accompaniment": "/media/evaluation/f76247d3764646e18465b638-accompaniment.mp3"
+      },
       "sourceSha256": "d0401376a7c66c67f3ebc54342bce49a3e9c3cec36b9898400929b1bb412ae68",
       "sourceFile": "08_小幸运/legacy_m2a_s0.mid",
       "peak": 0.07904218882322311,
@@ -2953,6 +3951,16 @@
       "midiDuration": 108.8332245,
       "timelineEnd": 108.83625479999999,
       "audioSha256": "239d41c45fb435658f37045fca65639700c4d0f15e0ff7110b85700f4fc14162",
+      "stemAudio": {
+        "melody": {
+          "duration": 111.882449,
+          "sha256": "59cfff6bfc0a3da6203f97d8baa593027b481ae87d397fed31b5ecfdba507054"
+        },
+        "accompaniment": {
+          "duration": 111.882449,
+          "sha256": "a4b0aa8bbe0ce51bf70962f449930e4b71786aa7ee029f30fdcef92c1163af41"
+        }
+      },
       "visualizationSha256": "e5e3fac2dc6b49a3fb81ec9451eeeb094a0bf37828fd69724f5e8acff4cc8a7a",
       "version": "v0",
       "seed": 0,
@@ -2974,6 +3982,10 @@
       "src": "/media/evaluation/2b6f3f39909cc16f861381c6.mp3",
       "visualizationSrc": "/media/evaluation/2b6f3f39909cc16f861381c6.json",
       "duration": 111.542857,
+      "stemSources": {
+        "melody": "/media/evaluation/2b6f3f39909cc16f861381c6-melody.mp3",
+        "accompaniment": "/media/evaluation/2b6f3f39909cc16f861381c6-accompaniment.mp3"
+      },
       "sourceSha256": "c4e6f54d0be7cdc8b5ed8f67d8b693ccb9e782c5394b2b9d753cb73cd3bfe412",
       "sourceFile": "08_小幸运/legacy_m2a_s1.mid",
       "peak": 0.09045237302780151,
@@ -2994,6 +4006,16 @@
       "midiDuration": 108.4998915,
       "timelineEnd": 108.5029218,
       "audioSha256": "dddef00bb508c084a036a47eadef2827a48624eed4e5ecb0d79fda9aaa1d6a74",
+      "stemAudio": {
+        "melody": {
+          "duration": 111.542857,
+          "sha256": "230094196b6c682896dace7c7989baf6a12882889a69f7e715911d2ff439b159"
+        },
+        "accompaniment": {
+          "duration": 111.542857,
+          "sha256": "9adef05681df2c725d1380aa7f439a0d140bcab113deb782c7de8527da7ce522"
+        }
+      },
       "visualizationSha256": "a0bbf92c5dc62de624c9e130f6c81d3079cf38e0dc671d3b24dc83233255c7cc",
       "version": "v0",
       "seed": 1,
@@ -3015,6 +4037,10 @@
       "src": "/media/evaluation/ae7083711042389080dff532.mp3",
       "visualizationSrc": "/media/evaluation/ae7083711042389080dff532.json",
       "duration": 111.542857,
+      "stemSources": {
+        "melody": "/media/evaluation/ae7083711042389080dff532-melody.mp3",
+        "accompaniment": "/media/evaluation/ae7083711042389080dff532-accompaniment.mp3"
+      },
       "sourceSha256": "1063e449d8005f2ab842160a7f100a9252b71f07c65925c402f837777ab39f75",
       "sourceFile": "08_小幸运/legacy_m2a_s2.mid",
       "peak": 0.07930769771337509,
@@ -3035,6 +4061,16 @@
       "midiDuration": 108.4998915,
       "timelineEnd": 108.5029218,
       "audioSha256": "734803fa0369de9f73f390956f616b3559f6366a149bfe5ecf7ac7b1c16bde49",
+      "stemAudio": {
+        "melody": {
+          "duration": 111.542857,
+          "sha256": "230094196b6c682896dace7c7989baf6a12882889a69f7e715911d2ff439b159"
+        },
+        "accompaniment": {
+          "duration": 111.542857,
+          "sha256": "576cc055bb03c3417a7501a4f43d4169fc98036f2660ff07b73596701572e288"
+        }
+      },
       "visualizationSha256": "031c0db7fa2a1e0b15eaf8c32c8fad917368c4a8bfe1066e0ea80a33e698c094",
       "version": "v0",
       "seed": 2,
@@ -3056,6 +4092,10 @@
       "src": "/media/evaluation/23ee0e76f49cdb1789f0f318.mp3",
       "visualizationSrc": "/media/evaluation/23ee0e76f49cdb1789f0f318.json",
       "duration": 110.706939,
+      "stemSources": {
+        "melody": "/media/evaluation/23ee0e76f49cdb1789f0f318-melody.mp3",
+        "accompaniment": "/media/evaluation/23ee0e76f49cdb1789f0f318-accompaniment.mp3"
+      },
       "sourceSha256": "e5113004ef1b3aa0a68ce11dcfb11cbdaaa959377717a297147841563799b65b",
       "sourceFile": "08_小幸运/lekai_no_prompt_s0.mid",
       "peak": 0.03297144174575806,
@@ -3076,6 +4116,16 @@
       "midiDuration": 107.66655899999999,
       "timelineEnd": 107.6695893,
       "audioSha256": "45edd7a29a496fb1377c9dd745f7722981388706d263cb03fbcc3fe05116a19d",
+      "stemAudio": {
+        "melody": {
+          "duration": 110.706939,
+          "sha256": "45edd7a29a496fb1377c9dd745f7722981388706d263cb03fbcc3fe05116a19d"
+        },
+        "accompaniment": {
+          "duration": 110.706939,
+          "sha256": "09e2ef023b091a8778dc3b21895ba5dcfd097eb8c1d638a0c74854d458e09377"
+        }
+      },
       "visualizationSha256": "0d5a61711869a7327fa11125c4180431b0d51c2fb0f0dbfaee89730dd4d83147",
       "version": "v1",
       "seed": 0,
@@ -3097,6 +4147,10 @@
       "src": "/media/evaluation/3349ee8deaa509e16dd76029.mp3",
       "visualizationSrc": "/media/evaluation/3349ee8deaa509e16dd76029.json",
       "duration": 110.706939,
+      "stemSources": {
+        "melody": "/media/evaluation/3349ee8deaa509e16dd76029-melody.mp3",
+        "accompaniment": "/media/evaluation/3349ee8deaa509e16dd76029-accompaniment.mp3"
+      },
       "sourceSha256": "4ff2d1b7e4b88e0885dd3c0c39b749a0127e7c2150d8c2114e57cb22e9df34bc",
       "sourceFile": "08_小幸运/lekai_no_prompt_s1.mid",
       "peak": 0.05129896104335785,
@@ -3117,6 +4171,16 @@
       "midiDuration": 107.66655899999999,
       "timelineEnd": 107.6695893,
       "audioSha256": "8a6155f8f6d46569a5953f2656a8b7eb2c12d666bd27e909505c1fac60d6ac6f",
+      "stemAudio": {
+        "melody": {
+          "duration": 110.706939,
+          "sha256": "45edd7a29a496fb1377c9dd745f7722981388706d263cb03fbcc3fe05116a19d"
+        },
+        "accompaniment": {
+          "duration": 110.706939,
+          "sha256": "5e623bba76f701c05cca980179f1de8b68eb9a95901a456d134a66302211076c"
+        }
+      },
       "visualizationSha256": "e6fce87ce42c1947c5951056cdd0d234783b6b22632132769c188fd7a55b186f",
       "version": "v1",
       "seed": 1,
@@ -3138,6 +4202,10 @@
       "src": "/media/evaluation/bc1efe24fe8b24533df223c3.mp3",
       "visualizationSrc": "/media/evaluation/bc1efe24fe8b24533df223c3.json",
       "duration": 110.863673,
+      "stemSources": {
+        "melody": "/media/evaluation/bc1efe24fe8b24533df223c3-melody.mp3",
+        "accompaniment": "/media/evaluation/bc1efe24fe8b24533df223c3-accompaniment.mp3"
+      },
       "sourceSha256": "cc323914ed89fcc1650e1d576021a396851edcae6efa0e2e63972dacc245443e",
       "sourceFile": "08_小幸运/lekai_no_prompt_s2.mid",
       "peak": 0.03573387861251831,
@@ -3158,6 +4226,16 @@
       "midiDuration": 107.8332255,
       "timelineEnd": 107.83625579999999,
       "audioSha256": "b3ff283214b77aa130c3707b9ac0bb2548fe1e66731053c10cd27a4c8a6cccc5",
+      "stemAudio": {
+        "melody": {
+          "duration": 110.863673,
+          "sha256": "441f09ef01bd6707b1fd8eee4d415052ed7e1d267ed0474153988133e8282f7d"
+        },
+        "accompaniment": {
+          "duration": 110.863673,
+          "sha256": "4d87237a135f5773b3d6f88fcd1ab6711185406004f24e3fa975c01900e62923"
+        }
+      },
       "visualizationSha256": "c60cbf145c4fee854032bbf123284af6aecb99c202e72fe51bbb8f60b945b780",
       "version": "v1",
       "seed": 2,
@@ -3179,6 +4257,10 @@
       "src": "/media/evaluation/829487eac3f4ce4b3571a8a1.mp3",
       "visualizationSrc": "/media/evaluation/829487eac3f4ce4b3571a8a1.json",
       "duration": 110.863673,
+      "stemSources": {
+        "melody": "/media/evaluation/829487eac3f4ce4b3571a8a1-melody.mp3",
+        "accompaniment": "/media/evaluation/829487eac3f4ce4b3571a8a1-accompaniment.mp3"
+      },
       "sourceSha256": "8b86e25ce355fe81dc6ad835adb11205ed6d4a7a48e471255765c8ae4986998e",
       "sourceFile": "08_小幸运/pc_rule_if_else_n10_s0.mid",
       "peak": 0.03591408208012581,
@@ -3199,6 +4281,16 @@
       "midiDuration": 107.8332255,
       "timelineEnd": 107.83625579999999,
       "audioSha256": "7c03ea7ed91c8f0799e66f2103046c86c16dd48b74eb2d8b146c6416a55d09bd",
+      "stemAudio": {
+        "melody": {
+          "duration": 110.863673,
+          "sha256": "441f09ef01bd6707b1fd8eee4d415052ed7e1d267ed0474153988133e8282f7d"
+        },
+        "accompaniment": {
+          "duration": 110.863673,
+          "sha256": "0c52c7b5841000b3d85bb764ce91194331d4020a0dfd1da7d4519b833a3d7941"
+        }
+      },
       "visualizationSha256": "9a3ddabed1c10fdbb8a3bcc0eb1fd670701fed202173a4267327aee90c49d565",
       "version": "v2",
       "seed": 0,
@@ -3220,6 +4312,10 @@
       "src": "/media/evaluation/d5dbc77cbf76fce5086da682.mp3",
       "visualizationSrc": "/media/evaluation/d5dbc77cbf76fce5086da682.json",
       "duration": 110.863673,
+      "stemSources": {
+        "melody": "/media/evaluation/d5dbc77cbf76fce5086da682-melody.mp3",
+        "accompaniment": "/media/evaluation/d5dbc77cbf76fce5086da682-accompaniment.mp3"
+      },
       "sourceSha256": "cc19bb25739ae9888af836f1b01dcfde7f4a8137e7e65267bad9f8a762e1cc5e",
       "sourceFile": "08_小幸运/pc_rule_if_else_n10_s1.mid",
       "peak": 0.041820675134658813,
@@ -3240,6 +4336,16 @@
       "midiDuration": 107.8332255,
       "timelineEnd": 107.83625579999999,
       "audioSha256": "6760b032d1de2a4cc55d26f2dc2e595d308738f3ebf90fbcb3d8c0cadcfa751e",
+      "stemAudio": {
+        "melody": {
+          "duration": 110.863673,
+          "sha256": "441f09ef01bd6707b1fd8eee4d415052ed7e1d267ed0474153988133e8282f7d"
+        },
+        "accompaniment": {
+          "duration": 110.863673,
+          "sha256": "b0b7cd3f87c1d640fcd29d831ac8ecff04dadd0f5a05612527a422e4b08e63c1"
+        }
+      },
       "visualizationSha256": "6b61263a40e502d3334ac6018b20b0cc6dabf141cbca291a8a2843f6f7a07879",
       "version": "v2",
       "seed": 1,
@@ -3261,6 +4367,10 @@
       "src": "/media/evaluation/dea721dc0f990328725c5e69.mp3",
       "visualizationSrc": "/media/evaluation/dea721dc0f990328725c5e69.json",
       "duration": 110.863673,
+      "stemSources": {
+        "melody": "/media/evaluation/dea721dc0f990328725c5e69-melody.mp3",
+        "accompaniment": "/media/evaluation/dea721dc0f990328725c5e69-accompaniment.mp3"
+      },
       "sourceSha256": "72114374c075346f5375fe79b33d44208ebdbb28f2d993a9f9cf2184af1b04d6",
       "sourceFile": "08_小幸运/pc_rule_if_else_n10_s2.mid",
       "peak": 0.05188202112913132,
@@ -3281,6 +4391,16 @@
       "midiDuration": 107.8332255,
       "timelineEnd": 107.83625579999999,
       "audioSha256": "b6786613a19cdd2837423e78586436a32150b4678d49f1bf2c4f33de2affcacd",
+      "stemAudio": {
+        "melody": {
+          "duration": 110.863673,
+          "sha256": "441f09ef01bd6707b1fd8eee4d415052ed7e1d267ed0474153988133e8282f7d"
+        },
+        "accompaniment": {
+          "duration": 110.863673,
+          "sha256": "29ed99226ba5fa722bfb7482f16b5b2f70f3a7a73616edb3df17bf16981bffb5"
+        }
+      },
       "visualizationSha256": "35d07b899ae85ad28760de7a52a446289fbe3054b55415d8ca969c424128becc",
       "version": "v2",
       "seed": 2,
@@ -3302,6 +4422,10 @@
       "src": "/media/evaluation/d240a9ef49aa513aefb0481a.mp3",
       "visualizationSrc": "/media/evaluation/d240a9ef49aa513aefb0481a.json",
       "duration": 85.211429,
+      "stemSources": {
+        "melody": "/media/evaluation/d240a9ef49aa513aefb0481a-melody.mp3",
+        "accompaniment": "/media/evaluation/d240a9ef49aa513aefb0481a-accompaniment.mp3"
+      },
       "sourceSha256": "1f9e819d411cc1ef58dac276616916c36f3ba6a99e7e0443fb491f7e297edfe3",
       "sourceFile": "09_月亮代表我的心/00_melody.mid",
       "peak": 0.08287922292947769,
@@ -3322,6 +4446,16 @@
       "midiDuration": 82.1665845,
       "timelineEnd": 82.16961479999999,
       "audioSha256": "bd5100fc59c8d23d050e76b7fd593669bf311b1546067e2741bc49dbfb9a6569",
+      "stemAudio": {
+        "melody": {
+          "duration": 85.211429,
+          "sha256": "bd5100fc59c8d23d050e76b7fd593669bf311b1546067e2741bc49dbfb9a6569"
+        },
+        "accompaniment": {
+          "duration": 85.211429,
+          "sha256": "72746d15dbeb74ec1d315023dca32bea10869759cfd296936cdd088f8b1ad0fd"
+        }
+      },
       "visualizationSha256": "5748ad516df145294650ee5a282ead9f9878a11f8e962c3179fae1ea3c8fd4e1",
       "version": "reference",
       "seed": null,
@@ -3343,6 +4477,10 @@
       "src": "/media/evaluation/023a9c21d1cf249ea8466471.mp3",
       "visualizationSrc": "/media/evaluation/023a9c21d1cf249ea8466471.json",
       "duration": 86.386939,
+      "stemSources": {
+        "melody": "/media/evaluation/023a9c21d1cf249ea8466471-melody.mp3",
+        "accompaniment": "/media/evaluation/023a9c21d1cf249ea8466471-accompaniment.mp3"
+      },
       "sourceSha256": "3aad6fc10fd7a27afcb2fb7d5c4defdc87ff63b297ed410bbdc902d70afb3e97",
       "sourceFile": "09_月亮代表我的心/legacy_m2a_s0.mid",
       "peak": 0.08408685773611069,
@@ -3363,6 +4501,16 @@
       "midiDuration": 83.33324999999999,
       "timelineEnd": 83.3362803,
       "audioSha256": "ae3a36ee3fe8fa4cb0af40b614dfad80e2d491afbdf9b4e0f0b34894446c06d4",
+      "stemAudio": {
+        "melody": {
+          "duration": 86.386939,
+          "sha256": "bd887a0aee3aa48df4b6eca996d628acbcccebacf1555758c83851f67ff8c332"
+        },
+        "accompaniment": {
+          "duration": 86.386939,
+          "sha256": "fdeed1b809b26fbe21d2c8bf62e02e4edea2bbe1a86c783f1540c3bf78a39ccb"
+        }
+      },
       "visualizationSha256": "a90ea99124df644df0a1c5c80b4a4dc9e7c0a7b1bffa4f7e4f2bb2d5f26f5334",
       "version": "v0",
       "seed": 0,
@@ -3384,6 +4532,10 @@
       "src": "/media/evaluation/0cf80be7754e69baf75a9adc.mp3",
       "visualizationSrc": "/media/evaluation/0cf80be7754e69baf75a9adc.json",
       "duration": 87.196735,
+      "stemSources": {
+        "melody": "/media/evaluation/0cf80be7754e69baf75a9adc-melody.mp3",
+        "accompaniment": "/media/evaluation/0cf80be7754e69baf75a9adc-accompaniment.mp3"
+      },
       "sourceSha256": "0e6640d9e1f76aaff8493fbf62ce4bfb96b8e6e2b76ffcfd00733fa7571f2435",
       "sourceFile": "09_月亮代表我的心/legacy_m2a_s1.mid",
       "peak": 0.08411569148302078,
@@ -3404,6 +4556,16 @@
       "midiDuration": 84.1665825,
       "timelineEnd": 84.1696128,
       "audioSha256": "64baba000dc23090caa4add5ec307f1f7849b93fdf75091a6a283d0442ea0448",
+      "stemAudio": {
+        "melody": {
+          "duration": 87.196735,
+          "sha256": "4767e22ebfd17245b4f39210922327773c999b27ead7f5657df79d40131f6bfb"
+        },
+        "accompaniment": {
+          "duration": 87.196735,
+          "sha256": "22e55490dab352f5f5d4401e8f77b0d4aa087ee891374775a3d2f006d9f5354f"
+        }
+      },
       "visualizationSha256": "6e2c0611e02d4fd342346e3ca0d29d2ab573831cbeab84ec5ca3df7afe77f90b",
       "version": "v0",
       "seed": 1,
@@ -3425,6 +4587,10 @@
       "src": "/media/evaluation/c5be9704359c2aa62e8ad380.mp3",
       "visualizationSrc": "/media/evaluation/c5be9704359c2aa62e8ad380.json",
       "duration": 86.883265,
+      "stemSources": {
+        "melody": "/media/evaluation/c5be9704359c2aa62e8ad380-melody.mp3",
+        "accompaniment": "/media/evaluation/c5be9704359c2aa62e8ad380-accompaniment.mp3"
+      },
       "sourceSha256": "7d97dc467e75468ccc3611452d40e21a07b8f090a049c5b312d36ae4487ab6c7",
       "sourceFile": "09_月亮代表我的心/legacy_m2a_s2.mid",
       "peak": 0.08486298471689224,
@@ -3445,6 +4611,16 @@
       "midiDuration": 83.8332495,
       "timelineEnd": 83.8362798,
       "audioSha256": "5c5b9bfd26f896f535818df9b4cf3671c067001229b0436f9acb5d63b9dcaab4",
+      "stemAudio": {
+        "melody": {
+          "duration": 86.883265,
+          "sha256": "534f57a989afb9c00a8a0041f3c48bfe71300a1f6604c2b59aab5fd8b6be3e92"
+        },
+        "accompaniment": {
+          "duration": 86.883265,
+          "sha256": "5dc96073c22aa9512afc0fc67c25d8c47602a1963b237c15742a80ea601b8063"
+        }
+      },
       "visualizationSha256": "f8eadfabaddc78dc2aca9ca184203aaafacb08f29ec57a2bc8c806e2d64d13f8",
       "version": "v0",
       "seed": 2,
@@ -3466,6 +4642,10 @@
       "src": "/media/evaluation/533031bc95eb62887f3629e9.mp3",
       "visualizationSrc": "/media/evaluation/533031bc95eb62887f3629e9.json",
       "duration": 85.211429,
+      "stemSources": {
+        "melody": "/media/evaluation/533031bc95eb62887f3629e9-melody.mp3",
+        "accompaniment": "/media/evaluation/533031bc95eb62887f3629e9-accompaniment.mp3"
+      },
       "sourceSha256": "10f2047b5bc4d7160be09214617e8be49d2f01fc6308d7f8484cc8c05c3bf834",
       "sourceFile": "09_月亮代表我的心/lekai_no_prompt_s0.mid",
       "peak": 0.0374525748193264,
@@ -3486,6 +4666,16 @@
       "midiDuration": 82.1665845,
       "timelineEnd": 82.16961479999999,
       "audioSha256": "b10a93400f2ac3150a581a41f930af6e0857f7f5691f37163b8c7e0f910e8df9",
+      "stemAudio": {
+        "melody": {
+          "duration": 85.211429,
+          "sha256": "b10a93400f2ac3150a581a41f930af6e0857f7f5691f37163b8c7e0f910e8df9"
+        },
+        "accompaniment": {
+          "duration": 85.211429,
+          "sha256": "72746d15dbeb74ec1d315023dca32bea10869759cfd296936cdd088f8b1ad0fd"
+        }
+      },
       "visualizationSha256": "f8df341ace699a9ab5fb347ac5bbb673df1c872a16b42dc5080f4959838dfc2d",
       "version": "v1",
       "seed": 0,
@@ -3507,6 +4697,10 @@
       "src": "/media/evaluation/6517e7dd99392422f18368b2.mp3",
       "visualizationSrc": "/media/evaluation/6517e7dd99392422f18368b2.json",
       "duration": 85.211429,
+      "stemSources": {
+        "melody": "/media/evaluation/6517e7dd99392422f18368b2-melody.mp3",
+        "accompaniment": "/media/evaluation/6517e7dd99392422f18368b2-accompaniment.mp3"
+      },
       "sourceSha256": "10f2047b5bc4d7160be09214617e8be49d2f01fc6308d7f8484cc8c05c3bf834",
       "sourceFile": "09_月亮代表我的心/lekai_no_prompt_s1.mid",
       "peak": 0.0374525748193264,
@@ -3527,6 +4721,16 @@
       "midiDuration": 82.1665845,
       "timelineEnd": 82.16961479999999,
       "audioSha256": "b10a93400f2ac3150a581a41f930af6e0857f7f5691f37163b8c7e0f910e8df9",
+      "stemAudio": {
+        "melody": {
+          "duration": 85.211429,
+          "sha256": "b10a93400f2ac3150a581a41f930af6e0857f7f5691f37163b8c7e0f910e8df9"
+        },
+        "accompaniment": {
+          "duration": 85.211429,
+          "sha256": "72746d15dbeb74ec1d315023dca32bea10869759cfd296936cdd088f8b1ad0fd"
+        }
+      },
       "visualizationSha256": "f8df341ace699a9ab5fb347ac5bbb673df1c872a16b42dc5080f4959838dfc2d",
       "version": "v1",
       "seed": 1,
@@ -3548,6 +4752,10 @@
       "src": "/media/evaluation/f1b7d53b804f0e207a9aa45b.mp3",
       "visualizationSrc": "/media/evaluation/f1b7d53b804f0e207a9aa45b.json",
       "duration": 85.55102,
+      "stemSources": {
+        "melody": "/media/evaluation/f1b7d53b804f0e207a9aa45b-melody.mp3",
+        "accompaniment": "/media/evaluation/f1b7d53b804f0e207a9aa45b-accompaniment.mp3"
+      },
       "sourceSha256": "4b095b1fdf2cd5327adb8b188808244715107bb8f948b3a979259bacf45aab53",
       "sourceFile": "09_月亮代表我的心/lekai_no_prompt_s2.mid",
       "peak": 0.037600137293338776,
@@ -3568,6 +4776,16 @@
       "midiDuration": 82.4999175,
       "timelineEnd": 82.5029478,
       "audioSha256": "3b92892074e00ce8be6bdd3a86feb2c6c86a5c228a3ef12ccaf1b9139639bb3f",
+      "stemAudio": {
+        "melody": {
+          "duration": 85.55102,
+          "sha256": "8cd0916480ac1ec093d74aad789ce3f068d842d4154d372a88e3b693722efdc8"
+        },
+        "accompaniment": {
+          "duration": 85.55102,
+          "sha256": "c485980a1c566d2fc1f774c57ff5e44f2bfcbb3ac3eba6700309cb4d0fc312b5"
+        }
+      },
       "visualizationSha256": "72a8b86bebb31ef10e7066e44c4527efa8d7efb06f25ca420bca962489fe2c8e",
       "version": "v1",
       "seed": 2,
@@ -3589,6 +4807,10 @@
       "src": "/media/evaluation/95f5ec496f1e49a348ff24e1.mp3",
       "visualizationSrc": "/media/evaluation/95f5ec496f1e49a348ff24e1.json",
       "duration": 85.211429,
+      "stemSources": {
+        "melody": "/media/evaluation/95f5ec496f1e49a348ff24e1-melody.mp3",
+        "accompaniment": "/media/evaluation/95f5ec496f1e49a348ff24e1-accompaniment.mp3"
+      },
       "sourceSha256": "963af2f4c278049e5207340aa0b5ff742f72226ac2c982da6dea99d733335313",
       "sourceFile": "09_月亮代表我的心/pc_rule_if_else_n10_s0.mid",
       "peak": 0.054215021431446075,
@@ -3609,6 +4831,16 @@
       "midiDuration": 82.1665845,
       "timelineEnd": 82.16961479999999,
       "audioSha256": "395647ad6356d8ff7af6d993745ff2f16eace25a9ccc4400637064cdfa1e9d84",
+      "stemAudio": {
+        "melody": {
+          "duration": 85.211429,
+          "sha256": "b10a93400f2ac3150a581a41f930af6e0857f7f5691f37163b8c7e0f910e8df9"
+        },
+        "accompaniment": {
+          "duration": 85.211429,
+          "sha256": "6f8ba5349427d5f938744da2ab7b969ad81d99b0fffef875cdc31b5230a0dbe7"
+        }
+      },
       "visualizationSha256": "cde96e43244b02ffadff7ef3ff06cd0ebe6eb9732533e67bad674bf6328b8708",
       "version": "v2",
       "seed": 0,
@@ -3630,6 +4862,10 @@
       "src": "/media/evaluation/56b37e651adcf8c553d7f542.mp3",
       "visualizationSrc": "/media/evaluation/56b37e651adcf8c553d7f542.json",
       "duration": 85.55102,
+      "stemSources": {
+        "melody": "/media/evaluation/56b37e651adcf8c553d7f542-melody.mp3",
+        "accompaniment": "/media/evaluation/56b37e651adcf8c553d7f542-accompaniment.mp3"
+      },
       "sourceSha256": "0f21ba9a68dc9cf745d5ee873fe047b504102384c0deb537ac5dbfcdf134144e",
       "sourceFile": "09_月亮代表我的心/pc_rule_if_else_n10_s1.mid",
       "peak": 0.05189730226993561,
@@ -3650,6 +4886,16 @@
       "midiDuration": 82.4999175,
       "timelineEnd": 82.5029478,
       "audioSha256": "4d9485959fa2c9ea04bf0461a1c30620a67ec3ecc1c3347657c59069590aed09",
+      "stemAudio": {
+        "melody": {
+          "duration": 85.55102,
+          "sha256": "8cd0916480ac1ec093d74aad789ce3f068d842d4154d372a88e3b693722efdc8"
+        },
+        "accompaniment": {
+          "duration": 85.55102,
+          "sha256": "89b50015afb2253bf02c3825cae0748a7a3d5130d8388c211325911452abe644"
+        }
+      },
       "visualizationSha256": "a7b2185d4aa1c0879f9f525d837c8a52471829d4484cdd408e563325884f16df",
       "version": "v2",
       "seed": 1,
@@ -3671,6 +4917,10 @@
       "src": "/media/evaluation/48a2731381cd53357f8dd621.mp3",
       "visualizationSrc": "/media/evaluation/48a2731381cd53357f8dd621.json",
       "duration": 85.211429,
+      "stemSources": {
+        "melody": "/media/evaluation/48a2731381cd53357f8dd621-melody.mp3",
+        "accompaniment": "/media/evaluation/48a2731381cd53357f8dd621-accompaniment.mp3"
+      },
       "sourceSha256": "1e058b5352abdbf9e45e7137b45afd7e3ee92fdde3750389e3ba9e44ccd39d7a",
       "sourceFile": "09_月亮代表我的心/pc_rule_if_else_n10_s2.mid",
       "peak": 0.043856360018253326,
@@ -3691,6 +4941,16 @@
       "midiDuration": 82.1665845,
       "timelineEnd": 82.16961479999999,
       "audioSha256": "19250e1937e00d29f26fea36feb559a00a32d0c1565cf1d436188c64eaf653aa",
+      "stemAudio": {
+        "melody": {
+          "duration": 85.211429,
+          "sha256": "b10a93400f2ac3150a581a41f930af6e0857f7f5691f37163b8c7e0f910e8df9"
+        },
+        "accompaniment": {
+          "duration": 85.211429,
+          "sha256": "a851c429f01e88170e94a7376ec7598e5099d0648f1152ca1f2714efe28a86dc"
+        }
+      },
       "visualizationSha256": "20dd501a04f0159deecf3ed52e589f57a110878724c5bd08a5a5597a57cc7a13",
       "version": "v2",
       "seed": 2,
@@ -3712,6 +4972,10 @@
       "src": "/media/evaluation/c12f74cedccdbe75c15278d0.mp3",
       "visualizationSrc": "/media/evaluation/c12f74cedccdbe75c15278d0.json",
       "duration": 87.379592,
+      "stemSources": {
+        "melody": "/media/evaluation/c12f74cedccdbe75c15278d0-melody.mp3",
+        "accompaniment": "/media/evaluation/c12f74cedccdbe75c15278d0-accompaniment.mp3"
+      },
       "sourceSha256": "ab6a84f0b29ad24d7754f1ce6164e3030911366ae18b4bc7426148cdefbb5b2d",
       "sourceFile": "10_天空之城/00_melody.mid",
       "peak": 0.08155816048383713,
@@ -3732,6 +4996,16 @@
       "midiDuration": 84.333249,
       "timelineEnd": 84.3362793,
       "audioSha256": "6ba1f68976e7c73e64a13e2a82a8b1dffeb035557ea775592c4a164cedb8e3be",
+      "stemAudio": {
+        "melody": {
+          "duration": 87.379592,
+          "sha256": "6ba1f68976e7c73e64a13e2a82a8b1dffeb035557ea775592c4a164cedb8e3be"
+        },
+        "accompaniment": {
+          "duration": 87.379592,
+          "sha256": "232cc23861c57fd592a6e4b5bff51948413af59b60720491b389f805b9cb14aa"
+        }
+      },
       "visualizationSha256": "b62d64ce23b845ca1c735627b04fbbd8a35bfebd3a2e1c38177220ff813e79b8",
       "version": "reference",
       "seed": null,
@@ -3753,6 +5027,10 @@
       "src": "/media/evaluation/6c124476adb25850b90c925a.mp3",
       "visualizationSrc": "/media/evaluation/6c124476adb25850b90c925a.json",
       "duration": 87.875918,
+      "stemSources": {
+        "melody": "/media/evaluation/6c124476adb25850b90c925a-melody.mp3",
+        "accompaniment": "/media/evaluation/6c124476adb25850b90c925a-accompaniment.mp3"
+      },
       "sourceSha256": "8895f66e14b6b6cd4bf835fef2ba09e16c0ecb0bcb0b265d8e1cc21a84c096ff",
       "sourceFile": "10_天空之城/legacy_m2a_s0.mid",
       "peak": 0.08668109774589539,
@@ -3773,6 +5051,16 @@
       "midiDuration": 84.8332485,
       "timelineEnd": 84.83627879999999,
       "audioSha256": "45f03aa7398d67f231bb8b53fe647591d9aa56a6ad4b075db6a2f2c2db0ce5dc",
+      "stemAudio": {
+        "melody": {
+          "duration": 87.875918,
+          "sha256": "5c11cc60327e63ede0a0121541d226a0a1463cf9b4e572565f57a1cd0e5d08c2"
+        },
+        "accompaniment": {
+          "duration": 87.875918,
+          "sha256": "3b866c4750e04b6317edfb93afdcadada431f6e57b3e5801cfca68c89f2511b2"
+        }
+      },
       "visualizationSha256": "75f1abdbf2e7796e4802a8096175287347e7eaacb0336a522842f7c9b4ea00f5",
       "version": "v0",
       "seed": 0,
@@ -3794,6 +5082,10 @@
       "src": "/media/evaluation/97c861ce1ceb0348169177f1.mp3",
       "visualizationSrc": "/media/evaluation/97c861ce1ceb0348169177f1.json",
       "duration": 88.711837,
+      "stemSources": {
+        "melody": "/media/evaluation/97c861ce1ceb0348169177f1-melody.mp3",
+        "accompaniment": "/media/evaluation/97c861ce1ceb0348169177f1-accompaniment.mp3"
+      },
       "sourceSha256": "9ae92d41633c8dc4e18c4f6bb316d46311e25c7da8af6402b0998cc8138697f9",
       "sourceFile": "10_天空之城/legacy_m2a_s1.mid",
       "peak": 0.08808004856109619,
@@ -3814,6 +5106,16 @@
       "midiDuration": 85.666581,
       "timelineEnd": 85.6696113,
       "audioSha256": "4df96c037acaa7159f0226e182b8ab7b4aad9c7d4d2d647aaaff777c70979315",
+      "stemAudio": {
+        "melody": {
+          "duration": 88.711837,
+          "sha256": "a0d239ecb0ffa17ff13a45f93d8294f971c64b3e95e33e90d1a6c94f2a050d48"
+        },
+        "accompaniment": {
+          "duration": 88.711837,
+          "sha256": "c66a828940a1687d9557aec45323d7ea6624a701772bc2c3c65534d977871386"
+        }
+      },
       "visualizationSha256": "709b980d768d1e13648717c9373b091a7a4630a1ab8882bde518f96976fb3f45",
       "version": "v0",
       "seed": 1,
@@ -3835,6 +5137,10 @@
       "src": "/media/evaluation/dafe9094c647a1887b030b19.mp3",
       "visualizationSrc": "/media/evaluation/dafe9094c647a1887b030b19.json",
       "duration": 92.212245,
+      "stemSources": {
+        "melody": "/media/evaluation/dafe9094c647a1887b030b19-melody.mp3",
+        "accompaniment": "/media/evaluation/dafe9094c647a1887b030b19-accompaniment.mp3"
+      },
       "sourceSha256": "379e1d8ece79c058ebb115848d3585a1cf52c5d61eabf972c92f88b03f94533d",
       "sourceFile": "10_天空之城/legacy_m2a_s2.mid",
       "peak": 0.08618687838315964,
@@ -3855,6 +5161,16 @@
       "midiDuration": 89.1665775,
       "timelineEnd": 89.1696078,
       "audioSha256": "ed295b31abb021f018b8891d0d15f59377065aaece95b4f7d79bde9565cbf9ac",
+      "stemAudio": {
+        "melody": {
+          "duration": 92.212245,
+          "sha256": "3f3ef8f6b55d3e2ec833853d2d12f3abf5ac246e8c0f6ccb29c50c47f94de9dd"
+        },
+        "accompaniment": {
+          "duration": 92.212245,
+          "sha256": "f33b11b1222c99993d3cfaeee4233c69c57cfb1025852651aa802434b63831b2"
+        }
+      },
       "visualizationSha256": "f11a8c2fbd02d5f6b9eaa37d1bfc48a9c8a0afd0fbd60874412d7f8b4f050726",
       "version": "v0",
       "seed": 2,
@@ -3876,6 +5192,10 @@
       "src": "/media/evaluation/2ebd8fc5e03225afd4f57677.mp3",
       "visualizationSrc": "/media/evaluation/2ebd8fc5e03225afd4f57677.json",
       "duration": 87.379592,
+      "stemSources": {
+        "melody": "/media/evaluation/2ebd8fc5e03225afd4f57677-melody.mp3",
+        "accompaniment": "/media/evaluation/2ebd8fc5e03225afd4f57677-accompaniment.mp3"
+      },
       "sourceSha256": "c960932e3022eaa6c8a6a2d19c2b3b8dabd2d8ad76e39dbcf3bdcc2c085ca2c8",
       "sourceFile": "10_天空之城/lekai_no_prompt_s0.mid",
       "peak": 0.042220309376716614,
@@ -3896,6 +5216,16 @@
       "midiDuration": 84.333249,
       "timelineEnd": 84.3362793,
       "audioSha256": "4227ea8aafe6f0e8e08717259e128c006bd103a99d5dbeefd508fc59b0adbf53",
+      "stemAudio": {
+        "melody": {
+          "duration": 87.379592,
+          "sha256": "367656349fb4d00d99aa9a7ed00e428d51f9b2b5b2f648fdc8b26c219d35af4c"
+        },
+        "accompaniment": {
+          "duration": 87.379592,
+          "sha256": "dee12a75c1aa4596f4bea78bd2e6811abcf5348b94c43050f0e7ada4c205764e"
+        }
+      },
       "visualizationSha256": "a9b39fc8581fa9ae04cccc549526c218714b66a6e68a41ef25e16eaae9457a88",
       "version": "v1",
       "seed": 0,
@@ -3917,6 +5247,10 @@
       "src": "/media/evaluation/f4d2035f9c9f43045e548b95.mp3",
       "visualizationSrc": "/media/evaluation/f4d2035f9c9f43045e548b95.json",
       "duration": 87.379592,
+      "stemSources": {
+        "melody": "/media/evaluation/f4d2035f9c9f43045e548b95-melody.mp3",
+        "accompaniment": "/media/evaluation/f4d2035f9c9f43045e548b95-accompaniment.mp3"
+      },
       "sourceSha256": "6f14603e64d1cd5034dcc75906e9a806a58dddef053fedcc0b00de45bbcb07dc",
       "sourceFile": "10_天空之城/lekai_no_prompt_s1.mid",
       "peak": 0.0374877005815506,
@@ -3937,6 +5271,16 @@
       "midiDuration": 84.333249,
       "timelineEnd": 84.3362793,
       "audioSha256": "367656349fb4d00d99aa9a7ed00e428d51f9b2b5b2f648fdc8b26c219d35af4c",
+      "stemAudio": {
+        "melody": {
+          "duration": 87.379592,
+          "sha256": "367656349fb4d00d99aa9a7ed00e428d51f9b2b5b2f648fdc8b26c219d35af4c"
+        },
+        "accompaniment": {
+          "duration": 87.379592,
+          "sha256": "232cc23861c57fd592a6e4b5bff51948413af59b60720491b389f805b9cb14aa"
+        }
+      },
       "visualizationSha256": "59a086fb01e74624a30eb59d99eb28829266d9cb9923cbe8c66cb44a5b40544d",
       "version": "v1",
       "seed": 1,
@@ -3958,6 +5302,10 @@
       "src": "/media/evaluation/87123ac192c35e944ba2c405.mp3",
       "visualizationSrc": "/media/evaluation/87123ac192c35e944ba2c405.json",
       "duration": 87.536327,
+      "stemSources": {
+        "melody": "/media/evaluation/87123ac192c35e944ba2c405-melody.mp3",
+        "accompaniment": "/media/evaluation/87123ac192c35e944ba2c405-accompaniment.mp3"
+      },
       "sourceSha256": "a8d8bad356288baeb84c44e12b0814d04f4f90594a357eb83e3edb448889219e",
       "sourceFile": "10_天空之城/lekai_no_prompt_s2.mid",
       "peak": 0.038975611329078674,
@@ -3978,6 +5326,16 @@
       "midiDuration": 84.4999155,
       "timelineEnd": 84.50294579999999,
       "audioSha256": "26aaa85c34d58f3b66e76c9152f7b02821cab6bb551fbfc03a957b3d51124232",
+      "stemAudio": {
+        "melody": {
+          "duration": 87.536327,
+          "sha256": "15a6efd369a4d40bc8d9a4dc9c78019602dcf2678ea346be2025e35993fbee82"
+        },
+        "accompaniment": {
+          "duration": 87.536327,
+          "sha256": "b0ffc2bdcf6fcd1e64e5438a5d03fd6c09cafae024fa275dfb48885977fb3ba8"
+        }
+      },
       "visualizationSha256": "60edb7583596d72756da077f6f5b1a2ef1dd012c1f85a63f3303e08d6d398d2e",
       "version": "v1",
       "seed": 2,
@@ -3999,6 +5357,10 @@
       "src": "/media/evaluation/23a9cb3a88cbf46c15fc254c.mp3",
       "visualizationSrc": "/media/evaluation/23a9cb3a88cbf46c15fc254c.json",
       "duration": 87.536327,
+      "stemSources": {
+        "melody": "/media/evaluation/23a9cb3a88cbf46c15fc254c-melody.mp3",
+        "accompaniment": "/media/evaluation/23a9cb3a88cbf46c15fc254c-accompaniment.mp3"
+      },
       "sourceSha256": "e341a75939550fb01075b7a796e59beea31c66a25294862bcb0e9a12d1cb53be",
       "sourceFile": "10_天空之城/pc_rule_if_else_n10_s0.mid",
       "peak": 0.042332060635089874,
@@ -4019,6 +5381,16 @@
       "midiDuration": 84.4999155,
       "timelineEnd": 84.50294579999999,
       "audioSha256": "dccdff889c6ff30efdd704bfbbe21051ce54967616540c4fdf8c4a2952bb46fc",
+      "stemAudio": {
+        "melody": {
+          "duration": 87.536327,
+          "sha256": "15a6efd369a4d40bc8d9a4dc9c78019602dcf2678ea346be2025e35993fbee82"
+        },
+        "accompaniment": {
+          "duration": 87.536327,
+          "sha256": "b75ce8656205deec37fb801f854809cc081dae1eb79f251d198b9439a72691f6"
+        }
+      },
       "visualizationSha256": "34e7ae3b557126dd10c365311e9d7667520fb67bb6508ac324db258372cae2f1",
       "version": "v2",
       "seed": 0,
@@ -4040,6 +5412,10 @@
       "src": "/media/evaluation/164e75357c586a6ae6526037.mp3",
       "visualizationSrc": "/media/evaluation/164e75357c586a6ae6526037.json",
       "duration": 87.536327,
+      "stemSources": {
+        "melody": "/media/evaluation/164e75357c586a6ae6526037-melody.mp3",
+        "accompaniment": "/media/evaluation/164e75357c586a6ae6526037-accompaniment.mp3"
+      },
       "sourceSha256": "7af229df0c8e62a357e31e544833fc6ba6a35858aac3960e33a21fdd3b6469dd",
       "sourceFile": "10_天空之城/pc_rule_if_else_n10_s1.mid",
       "peak": 0.04910711571574211,
@@ -4060,6 +5436,16 @@
       "midiDuration": 84.4999155,
       "timelineEnd": 84.50294579999999,
       "audioSha256": "2f1913519d98541b37039fa0b4086f84fae01189125f839d7a43d31237ece47b",
+      "stemAudio": {
+        "melody": {
+          "duration": 87.536327,
+          "sha256": "15a6efd369a4d40bc8d9a4dc9c78019602dcf2678ea346be2025e35993fbee82"
+        },
+        "accompaniment": {
+          "duration": 87.536327,
+          "sha256": "b25c212f71881a7a8c434e67bfb304e70873193b78ea34d185fe3ef75c7d929f"
+        }
+      },
       "visualizationSha256": "7bb21b7962736442c38f309df65b01cf273aa00a85d2369c149975d2b5f16be8",
       "version": "v2",
       "seed": 1,
@@ -4081,6 +5467,10 @@
       "src": "/media/evaluation/dbc321ee9c86480e00a7ef62.mp3",
       "visualizationSrc": "/media/evaluation/dbc321ee9c86480e00a7ef62.json",
       "duration": 87.536327,
+      "stemSources": {
+        "melody": "/media/evaluation/dbc321ee9c86480e00a7ef62-melody.mp3",
+        "accompaniment": "/media/evaluation/dbc321ee9c86480e00a7ef62-accompaniment.mp3"
+      },
       "sourceSha256": "e1bcc74dae097a2aeff0cfda4c2d01c8cd70441694cc5012a30868d5f7a84089",
       "sourceFile": "10_天空之城/pc_rule_if_else_n10_s2.mid",
       "peak": 0.0480857789516449,
@@ -4101,6 +5491,16 @@
       "midiDuration": 84.4999155,
       "timelineEnd": 84.50294579999999,
       "audioSha256": "3eeff04de09510795d6622be43de0c9f7e28d6540124aabcaf3718870e50474d",
+      "stemAudio": {
+        "melody": {
+          "duration": 87.536327,
+          "sha256": "15a6efd369a4d40bc8d9a4dc9c78019602dcf2678ea346be2025e35993fbee82"
+        },
+        "accompaniment": {
+          "duration": 87.536327,
+          "sha256": "a2c3fd9c0d28a0f6d8cdb4102a207e0f719d602394ce2510c240afd97a81b792"
+        }
+      },
       "visualizationSha256": "6410654eca64f597817f6ab7bada1f8836b8fcce9b542d73e1309a737573a7ab",
       "version": "v2",
       "seed": 2,

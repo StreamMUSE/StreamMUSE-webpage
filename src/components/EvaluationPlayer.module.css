@@ -11,6 +11,21 @@
 .hint { margin: 0 !important; padding: 8px 15px 12px; color: #66766d !important; font-size: 10px !important; line-height: 1.5 !important; }
 .placeholder { min-height: 244px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; padding: 20px; color: var(--muted); font-size: 12px; text-align: center; }
 .placeholder button, .retry { color: var(--teal-dark); font-size: 12px; background: transparent; border: 0; padding: 8px 0; cursor: pointer; text-decoration: underline; }
-.player audio { display: block; width: 100%; height: 44px; }
+
+.transport { display: flex; align-items: center; gap: 12px; }
+.playButton { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-width: 88px; height: 40px; border: 0; border-radius: 8px; background: var(--teal); color: white; font: inherit; font-size: 12px; cursor: pointer; }
+.position { min-width: 0; flex: 1; }
+.player input[type="range"] { accent-color: #087d77; cursor: pointer; height: 28px; }
+.mix { min-width: 0; margin: 16px 0 0; padding: 10px 12px; border: 1px solid #d8e4dc; border-radius: 10px; background: #f8faf7; }
+.mix legend { padding: 0 5px; font-size: 11px; color: #52655c; }
+.volumeRow { display: grid; grid-template-columns: 28px minmax(0, 1fr); align-items: center; gap: 2px 8px; margin-bottom: 9px; }
+.volumeRow label { grid-column: 1 / -1; grid-row: 1; color: #254b40; font-size: 11px; padding-right: 60px; }
+.volumeRow output { grid-column: 2; grid-row: 1; justify-self: end; color: #52655c; font-size: 11px; font-variant-numeric: tabular-nums; }
+.volumeRow input { width: 100%; min-width: 0; margin: 0; }
+.mute { display: grid; place-items: center; width: 28px; height: 32px; padding: 0; border: 0; border-radius: 5px; background: transparent; color: #52655c; cursor: pointer; }
+.mute[aria-pressed="true"] { background: #e0e9e3; color: #193e33; }
+.reset { display: block; margin-left: auto; border: 0; background: transparent; color: var(--teal-dark); cursor: pointer; padding: 4px 0; font-size: 11px; text-decoration: underline; }
+.player button:focus-visible, .player input:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+
 .status { display: block; margin-top: 10px; font-size: 11px; color: var(--muted); line-height: 1.5; }
 @media (max-width: 420px) { .legend { gap: 8px 12px; padding: 12px 10px 6px; font-size: 10px; } .hint { padding-left: 10px; padding-right: 10px; } }

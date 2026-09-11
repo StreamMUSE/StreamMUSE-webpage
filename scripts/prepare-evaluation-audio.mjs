@@ -95,12 +95,30 @@ for (const folder of folders.filter(folder => !selectedSongs || selectedSongs.in
       verification = { ...stats, stems: stemStats, duration, midiDuration: midi.duration, timelineEnd, audioSha256: hash(await readFile(mp3)) }
       await writeFile(cached, JSON.stringify(verification))
     }
+    // Publish the unattenuated stereo stems with identical padding/encoder settings.
+    // Keep the existing render identity and mixed MP3s stable for saved assignments.
+    const stemSources = {}, stemAudio = {}
+    for (const [role, bytes] of Object.entries(stems)) {
+      const stemId = hash(Buffer.concat([bytes, Buffer.from(JSON.stringify(synthesis))])).slice(0, 24)
+      const wav = join(scratch, `${stemId}.wav`), stemMidi = join(scratch, `${stemId}.mid`)
+      try { await stat(wav) } catch {
+        await writeFile(stemMidi, bytes)
+        command('fluidsynth', ['-ni', '-F', wav, '-T', 'wav', '-O', 'float', '-r', String(synthesis.sampleRate), '-g', String(synthesis.gain), '-R', '0', '-C', '0', '-o', 'synth.polyphony=512', resolve(soundfont), stemMidi])
+      }
+      const file = `${id}-${role}.mp3`, target = join(out, file)
+      command('ffmpeg', ['-y', '-v', 'error', '-i', wav, '-af', 'apad', '-t', String(renderDuration), '-codec:a', 'libmp3lame', '-q:a', '3', '-map_metadata', '-1', target])
+      const duration = Number(command('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'default=noprint_wrappers=1:nokey=1', target]).trim())
+      if (Math.abs(duration - verification.duration) > 0.000001) throw new Error(`Stem timeline mismatch: ${file}`)
+      stemSources[role] = `/media/evaluation/${file}`
+      stemAudio[role] = { duration, sha256: hash(await readFile(target)) }
+    }
+    if ((verification.stems.melody.peak + verification.stems.accompaniment.peak) * 10 ** (6 / 20) >= .98) throw new Error(`Insufficient headroom at +6 dB: ${id}`)
     const visualization = JSON.stringify({ schemaVersion: 1, ...view, notes }) + '\n'
     await writeFile(join(out, `${id}.json`), visualization)
-    const asset = { id, src: `/media/evaluation/${id}.mp3`, visualizationSrc: `/media/evaluation/${id}.json`, duration: verification.duration, sourceSha256, sourceFile: `${folder}/${filename}` }
+    const asset = { id, src: `/media/evaluation/${id}.mp3`, visualizationSrc: `/media/evaluation/${id}.json`, duration: verification.duration, stemSources, sourceSha256, sourceFile: `${folder}/${filename}` }
     if (version === 'reference') song.reference = asset
     else song.samples.push({ ...asset, version, seed })
-    audit.assets.push({ ...asset, ...verification, visualizationSha256: hash(visualization), version, seed, notesByTrack: midi.tracks.map(t => ({ name: t.name, program: t.instrument.number, notes: t.notes.length })) })
+    audit.assets.push({ ...asset, ...verification, stemAudio, visualizationSha256: hash(visualization), version, seed, notesByTrack: midi.tracks.map(t => ({ name: t.name, program: t.instrument.number, notes: t.notes.length })) })
     console.log(`${folder}/${filename} → ${id}; peak ${verification.peak.toFixed(3)}, melody RMS ${verification.stems.melody.rms.toFixed(4)}, acc RMS ${(verification.stems.accompaniment.rms * render.accompanimentGain).toFixed(4)}`)
   }
   for (const version of ['v0', 'v1', 'v2']) {
@@ -114,9 +132,9 @@ if (!selectedSongs) {
   await writeFile(join(root, 'src/data/evaluation-catalog.json'), JSON.stringify(catalog, null, 2) + '\n')
   await writeFile(join(root, 'docs/evaluation/audio-audit.json'), JSON.stringify(audit, null, 2) + '\n')
   // Retire old recordings only after the complete replacement set is verified.
-  const currentFiles = new Set(audit.assets.flatMap(asset => [`${asset.id}.mp3`, `${asset.id}.json`]))
+  const currentFiles = new Set(audit.assets.flatMap(asset => [`${asset.id}.mp3`, `${asset.id}.json`, `${asset.id}-melody.mp3`, `${asset.id}-accompaniment.mp3`]))
   for (const file of await readdir(out)) {
-    if (/^[a-f0-9]{24}\.(mp3|json)$/.test(file) && !currentFiles.has(file)) await rm(join(out, file))
+    if (/^[a-f0-9]{24}(-(melody|accompaniment))?\.(mp3|json)$/.test(file) && !currentFiles.has(file)) await rm(join(out, file))
   }
   await rm(join(root, 'docs/evaluation/history'), { recursive: true, force: true })
 }

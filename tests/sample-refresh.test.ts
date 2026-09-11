@@ -22,10 +22,10 @@ test('September 10 playback files map to the requested systems and exclude old a
   }
 })
 
-test('the published media directory contains exactly the current 100 recordings and their piano rolls', () => {
+test('the published media directory contains exactly the current 100 recordings with stereo stems and piano rolls', () => {
   const expected = catalog.songs.flatMap(song => [song.reference, ...song.samples])
-    .flatMap(asset => [`${asset.id}.mp3`, `${asset.id}.json`]).sort()
-  assert.equal(expected.length, 200)
+    .flatMap(asset => [`${asset.id}.mp3`, `${asset.id}.json`, `${asset.id}-melody.mp3`, `${asset.id}-accompaniment.mp3`]).sort()
+  assert.equal(expected.length, 400)
   assert.deepEqual(readdirSync('public/media/evaluation').filter(name => !name.startsWith('.')).sort(), expected)
   assert.equal(existsSync('docs/evaluation/history'), false)
 })

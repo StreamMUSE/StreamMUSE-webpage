@@ -1,5 +1,7 @@
 'use client'
 
+import type { PlaybackHandle } from '@/lib/evaluation/stem-player'
+
 import Link from 'next/link'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { ArrowLeft, ArrowRight, Check, CheckCircle2, Headphones, Music2 } from 'lucide-react'
@@ -64,7 +66,7 @@ export default function ListeningEvaluation({ datasetVersion }: { datasetVersion
   const answersRef = useRef({ ratings, ranking })
   answersRef.current = { ratings, ranking }
   const listeningRef = useRef<HTMLHeadingElement>(null)
-  const activeAudio = useRef<HTMLAudioElement | null>(null)
+  const activeAudio = useRef<PlaybackHandle | null>(null)
   const inFlight = useRef(false)
   const statusRef = useRef<HTMLDivElement>(null)
   const persist = useCallback((draft: Draft) => {
@@ -125,7 +127,7 @@ export default function ListeningEvaluation({ datasetVersion }: { datasetVersion
       if (!cancelled) setReady(true)
     }
     void restore()
-    return () => { cancelled = true; activeAudio.current?.pause() }
+    return () => { cancelled = true; activeAudio.current?.release() }
   }, [recover, applyStudy, participantKey, storageKey])
 
   useEffect(() => {
@@ -155,15 +157,15 @@ export default function ListeningEvaluation({ datasetVersion }: { datasetVersion
       pendingNext.current = next
       persist({ participantId: participantId.current, sessionId: sessionId.current, ratings, ranking, pendingNext: next })
       const study = await request<PublicStudy>('/api/evaluation-rounds', { participantId: participantId.current, ...next })
-      activeAudio.current?.pause()
+      activeAudio.current?.release()
       applyStudy(study, true)
       requestAnimationFrame(() => listeningRef.current?.focus())
     } catch (error) { setError((error as Error).message) }
     finally { inFlight.current = false; setBusy(false) }
   }
 
-  function onPlay(audio: HTMLAudioElement) {
-    if (activeAudio.current && activeAudio.current !== audio) activeAudio.current.pause()
+  function onPlay(audio: PlaybackHandle) {
+    if (activeAudio.current && activeAudio.current !== audio) activeAudio.current.release()
     activeAudio.current = audio
   }
 
@@ -179,7 +181,7 @@ export default function ListeningEvaluation({ datasetVersion }: { datasetVersion
     try {
       const result = await request<{ submitted: boolean }>('/api/evaluations', { sessionId: session.id, ratings, ranking })
       if (!result.submitted) throw new Error('Your submission has not been confirmed. Please retry.')
-      activeAudio.current?.pause()
+      activeAudio.current?.release()
       setSession({ ...session, submitted: true })
       setProgress(current => current ? { ...current, completed: Math.max(current.completed, current.round) } : { completed: 1, total: 10, round: 1 })
       requestAnimationFrame(() => { statusRef.current?.focus({ preventScroll: true }); statusRef.current?.scrollIntoView({ block: 'start', behavior: 'smooth' }) })
@@ -225,7 +227,7 @@ export default function ListeningEvaluation({ datasetVersion }: { datasetVersion
           <p className={styles.roundProgress} role="status">Melody {progress?.round ?? 1} of {progress?.total ?? 10} · {progress?.completed ?? 0} completed</p>
           <section className={`${styles.panel} ${styles.reference}`} aria-labelledby="reference-title">
             <div><span className={styles.eyebrow}>YOUR REFERENCE</span><h2 ref={listeningRef} tabIndex={-1} id="reference-title">The original melody</h2><p>Listen for context. This melody is not scored.</p></div>
-            <EvaluationPlayer label="Reference melody" asset={session.reference} onPlay={onPlay} />
+            <EvaluationPlayer reference label="Reference melody" asset={session.reference} onPlay={onPlay} />
           </section>
           <div className={styles.sectionIntro}><h2>Listen &amp; rate</h2><p>Choose one score for each dimension. All five levels are described below. Higher scores mean a stronger result.</p></div>
           {session.samples.map(sample => (

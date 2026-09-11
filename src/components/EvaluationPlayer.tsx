@@ -1,6 +1,8 @@
 'use client'
 
 import { useCallback, useEffect, useId, useRef, useState } from 'react'
+import { Play, Pause, Volume2, VolumeX } from 'lucide-react'
+import { StemPlayer, defaultVolumes, type PlaybackHandle, type PlayerState, type StemRole } from '@/lib/evaluation/stem-player'
 import type { Asset } from '@/lib/evaluation/model'
 import { formatTime, seekTime, visibleWindow, type PianoRoll } from '@/lib/evaluation/piano-roll'
 import styles from './EvaluationPlayer.module.css'
@@ -58,19 +60,29 @@ function draw(canvas: HTMLCanvasElement, roll: PianoRoll, time: number, playing:
   ctx.lineWidth = 1; ctx.textAlign = 'left'
 }
 
-export default function EvaluationPlayer({ label, asset, onPlay }: {
-  label: string; asset: Asset; onPlay: (audio: HTMLAudioElement) => void
+export default function EvaluationPlayer({ label, asset, onPlay, reference = false }: {
+  label: string; asset: Asset; onPlay: (audio: PlaybackHandle) => void; reference?: boolean
 }) {
-  const audioRef = useRef<HTMLAudioElement>(null)
+  const audioRef = useRef<StemPlayer | null>(null)
   const hintId = useId()
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [roll, setRoll] = useState<PianoRoll | null>(null)
   const [rollError, setRollError] = useState(false)
-  const [audioError, setAudioError] = useState(false)
   const [played, setPlayed] = useState(false)
-  const [ended, setEnded] = useState(false)
   const [time, setTime] = useState(0)
-  const [duration, setDuration] = useState(asset.duration)
+  const [state, setState] = useState<PlayerState>({ status: 'idle', duration: asset.duration, volumes: structuredClone(defaultVolumes) })
+  const { duration } = state
+  const playing = state.status === 'playing', loading = state.status === 'loading'
+  const melodySrc = asset.stemSources?.melody ?? `/media/evaluation/${asset.id}-melody.mp3`
+  const accompanimentSrc = asset.stemSources?.accompaniment ?? `/media/evaluation/${asset.id}-accompaniment.mp3`
+  useEffect(() => {
+    const audio = new StemPlayer({ melody: melodySrc, accompaniment: accompanimentSrc }, asset.duration, next => {
+      setState(next); setTime(audio.currentTime)
+      if (next.status === 'playing') setPlayed(true)
+    })
+    audioRef.current = audio; setState(audio.state); setTime(0); setPlayed(false)
+    return () => { audio.dispose(); audioRef.current = null }
+  }, [melodySrc, accompanimentSrc, asset.duration])
   const [reload, setReload] = useState(0)
   const visualizationSrc = asset.visualizationSrc ?? `/media/evaluation/${asset.id}.json`
   useEffect(() => {
@@ -87,31 +99,36 @@ export default function EvaluationPlayer({ label, asset, onPlay }: {
 
   useEffect(() => {
     const audio = audioRef.current, canvas = canvasRef.current
-    if (!audio || !canvas || !roll) return
-    let frame = 0
-    const paint = () => draw(canvas, roll, audio.currentTime, !audio.paused && !audio.ended)
-    const tick = () => { paint(); frame = requestAnimationFrame(tick) }
-    const start = () => { cancelAnimationFrame(frame); frame = requestAnimationFrame(tick) }
-    const stop = () => { cancelAnimationFrame(frame); paint() }
-    const observer = new ResizeObserver(paint)
-    observer.observe(canvas)
-    audio.addEventListener('play', start); audio.addEventListener('pause', stop); audio.addEventListener('ended', stop)
-    audio.addEventListener('seeked', paint); audio.addEventListener('timeupdate', paint)
-    audio.addEventListener('loadedmetadata', paint)
-    paint(); if (!audio.paused) start()
-    return () => {
-      cancelAnimationFrame(frame); observer.disconnect()
-      audio.removeEventListener('play', start); audio.removeEventListener('pause', stop); audio.removeEventListener('ended', stop)
-      audio.removeEventListener('seeked', paint); audio.removeEventListener('timeupdate', paint); audio.removeEventListener('loadedmetadata', paint)
+    if (!audio) return
+    let frame = 0, lastUpdate = 0
+    const paint = () => { if (canvas && roll) draw(canvas, roll, audio.currentTime, audio.state.status === 'playing') }
+    const tick = (now: number) => {
+      paint()
+      if (now - lastUpdate > 100) { setTime(audio.currentTime); lastUpdate = now }
+      frame = requestAnimationFrame(tick)
     }
-  }, [roll])
+    const observer = new ResizeObserver(paint)
+    if (canvas) observer.observe(canvas)
+    paint()
+    if (playing) frame = requestAnimationFrame(tick)
+    return () => { cancelAnimationFrame(frame); observer.disconnect() }
+  }, [roll, playing])
+
+  useEffect(() => {
+    if (!playing && roll && canvasRef.current) draw(canvasRef.current, roll, time, false)
+  }, [roll, playing, time])
 
   const seek = useCallback((next: number) => {
-    const audio = audioRef.current
-    if (!audio || !Number.isFinite(audio.duration)) return
-    audio.currentTime = Math.max(0, Math.min(next, audio.duration))
-    setTime(audio.currentTime); setEnded(false)
+    audioRef.current?.seek(next)
+    setTime(audioRef.current?.currentTime ?? 0)
   }, [])
+
+  function togglePlayback() {
+    const audio = audioRef.current
+    if (!audio) return
+    if (audio.state.status === 'playing' || audio.state.status === 'loading') audio.pause()
+    else { onPlay(audio); void audio.play() }
+  }
 
   return (
     <div className={styles.player}>
@@ -137,13 +154,36 @@ export default function EvaluationPlayer({ label, asset, onPlay }: {
           }} /> : <div className={styles.placeholder} role="status">{rollError ? <>The note view could not load. You can still listen.<button type="button" onClick={() => setReload(value => value + 1)}>Retry note view</button></> : 'Loading notes…'}</div>}
         <p id={hintId} className={styles.hint}>Pitch ↑ · Time → · Click notes to seek · Arrow keys move 5s · Home/End jump to start/end</p>
       </div>
-      <audio ref={audioRef} aria-label={label} controls preload="metadata" src={asset.src}
-        onPlay={event => { onPlay(event.currentTarget); setPlayed(true); setEnded(false) }}
-        onTimeUpdate={event => setTime(event.currentTarget.currentTime)} onEnded={() => setEnded(true)}
-        onDurationChange={event => { if (Number.isFinite(event.currentTarget.duration)) setDuration(event.currentTarget.duration) }}
-        onError={() => setAudioError(true)} onLoadedMetadata={() => setAudioError(false)} />
-      <span className={styles.status}>{audioError ? 'Audio could not load. Check your connection and reload the audio.' : ended ? 'Reached the end · Replay anytime' : played ? 'Listening started · Replay or seek anytime' : 'Ready to listen · Replay or seek anytime'}</span>
-      {audioError ? <button className={styles.retry} type="button" onClick={() => audioRef.current?.load()}>Reload audio</button> : null}
+      <div className={styles.transport}>
+        <button type="button" className={styles.playButton} onClick={togglePlayback}
+          aria-label={`${loading ? 'Cancel loading' : playing ? 'Pause' : 'Play'} ${label}`}>
+          {playing ? <Pause size={17} aria-hidden="true" /> : <Play size={17} aria-hidden="true" />}
+          {loading ? 'Cancel' : playing ? 'Pause' : 'Play'}
+        </button>
+        <input className={styles.position} type="range" min={0} max={duration} step={.1} value={time}
+          aria-label={`${label} playback position`} aria-valuetext={`${formatTime(time)} of ${formatTime(duration)}`}
+          onChange={event => seek(Number(event.target.value))} />
+      </div>
+      <fieldset className={styles.mix} aria-label={`${label} volume controls`}>
+        <legend>Volume</legend>
+        {(reference ? ['melody'] : ['melody', 'accompaniment']).map(value => {
+          const role = value as StemRole, volume = state.volumes[role]
+          const name = role === 'melody' ? 'Melody' : 'Accompaniment'
+          return <div className={styles.volumeRow} key={role}>
+            <label htmlFor={`${hintId}-${role}`}>{name}</label>
+            <output htmlFor={`${hintId}-${role}`}>{volume.muted ? 'Muted' : `${volume.db > 0 ? '+' : ''}${volume.db} dB`}</output>
+            <button type="button" className={styles.mute} aria-label={`${volume.muted ? 'Unmute' : 'Mute'} ${label} ${role}`}
+              aria-pressed={volume.muted} onClick={() => audioRef.current?.setVolume(role, volume.db, !volume.muted)}>
+              {volume.muted ? <VolumeX size={17} aria-hidden="true" /> : <Volume2 size={17} aria-hidden="true" />}
+            </button>
+            <input id={`${hintId}-${role}`} type="range" min={-40} max={6} step={1} value={volume.db}
+              aria-label={`${label} ${role} volume`} aria-valuetext={`${volume.db} decibels${volume.muted ? ', muted' : ''}`}
+              onChange={event => audioRef.current?.setVolume(role, Number(event.target.value), false)} />
+          </div>
+        })}
+        <button type="button" className={styles.reset} aria-label={`${label} reset volumes`} onClick={() => audioRef.current?.resetVolumes()}>Reset default</button>
+      </fieldset>
+      <span className={styles.status} role="status">{state.status === 'error' ? `Audio could not load. ${state.error ?? 'Check your connection and press Play to retry.'}` : loading ? 'Loading audio…' : state.status === 'ended' ? 'Reached the end · Replay anytime' : played ? 'Listening started · Replay or seek anytime' : 'Ready to listen · Replay or seek anytime'}</span>
     </div>
   )
 }
