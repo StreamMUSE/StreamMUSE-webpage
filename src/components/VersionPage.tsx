@@ -19,7 +19,7 @@ export default function VersionPage({ version }: VersionPageProps) {
         <section className="evaluation-invitation" aria-labelledby="evaluation-title">
           <div><span className="evaluation-eyebrow"><Headphones size={17} aria-hidden="true" />LISTENING STUDY</span>
             <h2 id="evaluation-title">Help us understand what sounds musical.</h2>
-            <p>Listen to three accompaniment results for one melody, share your scores, and rank your favorites.</p></div>
+            <p>Listen to three accompaniment results for one melody and give each a single score for how well it supports the melody.</p></div>
           <Link href="/versions/v2/evaluate">Listening evaluation<ArrowRight size={17} aria-hidden="true" /></Link>
         </section>
       ) : null}

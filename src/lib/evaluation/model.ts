@@ -1,12 +1,12 @@
 import type { StemSources } from './stem-player'
 export const labels = ['A', 'B', 'C'] as const
 export const versions = ['v0', 'v1', 'v2'] as const
-export const dimensions = ['coherence', 'plausibility', 'musicality'] as const
+export const dimensions = ['quality'] as const
 export type Label = typeof labels[number]
 export type Version = typeof versions[number]
 export type Dimension = typeof dimensions[number]
 export type Ratings = Record<Label, Record<Dimension, number>>
-export type Answers = { ratings: Ratings; ranking: Label[] }
+export type Answers = { ratings: Ratings }
 export type Asset = { id: string; src: string; duration: number; visualizationSrc?: string; stemSources?: StemSources }
 export type Sample = Asset & { version: Version; seed: number }
 export type Song = { id: string; reference: Asset; samples: Sample[] }
@@ -43,8 +43,8 @@ function exactKeys(value: Record<string, unknown>, keys: readonly string[]) {
 
 // Return a canonical copy: comparisons must not depend on the order of JSON keys.
 export function validateAnswers(value: unknown): Answers {
-  const invalid = () => new EvaluationError(400, 'Choose all nine scores and rank A, B, and C once each.')
-  if (!isRecord(value) || !exactKeys(value, ['ratings', 'ranking']) || !isRecord(value.ratings) || !exactKeys(value.ratings, labels)) throw invalid()
+  const invalid = () => new EvaluationError(400, 'Choose one score from 1 to 5 for each sample: A, B, and C.')
+  if (!isRecord(value) || !exactKeys(value, ['ratings']) || !isRecord(value.ratings) || !exactKeys(value.ratings, labels)) throw invalid()
   const ratings = {} as Ratings
   for (const label of labels) {
     const scores = value.ratings[label]
@@ -56,8 +56,7 @@ export function validateAnswers(value: unknown): Answers {
       ratings[label][dimension] = score
     }
   }
-  if (!Array.isArray(value.ranking) || value.ranking.length !== 3 || new Set(value.ranking).size !== 3 || !value.ranking.every(label => labels.includes(label))) throw invalid()
-  return { ratings, ranking: [...value.ranking] as Label[] }
+  return { ratings }
 }
 
 export function assignSamples(catalog: Catalog, randomInt: (max: number) => number): Assignment {

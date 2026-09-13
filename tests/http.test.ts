@@ -34,12 +34,12 @@ test('running API: request validation, anonymous restore, concurrent submit and 
   assert.equal((await post('/api/evaluation-sessions', { sessionId: randomUUID() }, 'https://different.example')).status, 403)
   assert.equal((await post('/api/evaluation-sessions', { sessionId: randomUUID(), version: 'v2' })).status, 400)
   assert.equal((await post('/api/evaluations', { sessionId: id, ratings: {}, ranking: ['A', 'B', 'C'] })).status, 400)
-  const answers = { sessionId: id, ratings: { A: { coherence: 4, plausibility: 2, musicality: 3 }, B: { coherence: 2, plausibility: 5, musicality: 1 }, C: { coherence: 3, plausibility: 1, musicality: 4 } }, ranking: ['C', 'B', 'A'] }
+  const answers = { sessionId: id, ratings: { A: { quality: 4 }, B: { quality: 2 }, C: { quality: 4 } } }
   assert.equal((await post('/api/evaluations', { ...answers, ranking: ['A', 'A', 'B'] })).status, 400)
   const results = await Promise.all(Array.from({ length: 8 }, () => post('/api/evaluations', answers)))
   results.forEach(result => assert.equal(result.status, 200))
   const receipts = await Promise.all(results.map(result => result.json()))
   assert.equal(receipts.filter(receipt => !receipt.duplicate).length, 1)
-  assert.equal((await post('/api/evaluations', { ...answers, ranking: ['A', 'B', 'C'] })).status, 409)
+  assert.equal((await post('/api/evaluations', { ...answers, ratings: { ...answers.ratings, A: { quality: 3 } } })).status, 409)
   assert.equal((await (await fetch(`${base}/api/evaluation-sessions/${id}`)).json()).submitted, true)
 })

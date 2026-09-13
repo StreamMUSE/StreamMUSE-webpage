@@ -16,7 +16,7 @@
 .button { min-height: 48px; display: inline-flex; justify-content: center; align-items: center; gap: 18px; padding: 13px 22px; background: var(--teal-dark); color: #fff; border: 1px solid var(--teal-dark); border-radius: 9px; font-size: 14px; font-weight: 600; cursor: pointer; text-decoration: none; }
 .button:hover { background: #0c453f; }
 .button:disabled { opacity: .65; cursor: wait; }
-.button:focus-visible, .rank select:focus-visible, .textButton:focus-visible { outline: 3px solid var(--teal); outline-offset: 4px; }
+.button:focus-visible, .textButton:focus-visible { outline: 3px solid var(--teal); outline-offset: 4px; }
 .finePrint { font-size: 12px !important; line-height: 1.6; color: var(--muted); }
 .reference { background: var(--surface-muted); display: grid; grid-template-columns: 1fr; gap: 20px; }
 .reference h2 { font-size: 22px; }
@@ -34,7 +34,7 @@
 .dimension legend { font-size: 16px; font-weight: 600; letter-spacing: -.02em; }
 .dimension > p { font-size: 12px; margin: 6px 0 13px; }
 .levels { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
-.level { position: relative; cursor: pointer; display: flex; flex-direction: column; padding: 14px 11px; gap: 10px; border: 1px solid var(--border); border-radius: 10px; min-height: 150px; transition: background .12s, border-color .12s; }
+.level { position: relative; cursor: pointer; display: flex; flex-direction: column; padding: 14px 11px; gap: 10px; border: 1px solid var(--border); border-radius: 10px; min-height: 86px; transition: background .12s, border-color .12s; }
 .level:hover { border-color: var(--teal); background: #f6faf9; }
 .level input { position: absolute; width: 1px; height: 1px; opacity: 0; }
 .level:has(input:focus-visible) { outline: 3px solid var(--teal); outline-offset: 3px; }
@@ -44,11 +44,6 @@
 .levelCopy { display: flex; flex-direction: column; gap: 6px; }
 .levelCopy strong { font-size: 11px; line-height: 1.4; font-weight: 600; }
 .levelCopy > span { font-size: 11px; line-height: 1.5; color: var(--muted); }
-.rankPanel { margin-top: 36px; }
-.rankPanel > p { max-width: 720px; font-size: 14px; }
-.ranks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 24px; }
-.rank { display: flex; flex-direction: column; gap: 10px; font-size: 12px; font-weight: 600; }
-.rank select { font: inherit; font-size: 14px; font-weight: 400; color: var(--foreground); background: var(--surface); border: 1px solid var(--border); border-radius: 9px; padding: 12px; min-height: 48px; width: 100%; }
 .submitPanel { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin: 30px 0; }
 .progress { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--teal-dark); margin: 0 0 6px; }
 .submitPanel .finePrint { margin: 0; }
@@ -69,8 +64,8 @@
   .intro { display: block; }
   .introIcon { margin-bottom: 20px; }
   .reference { grid-template-columns: 1fr; gap: 20px; }
-  .levels { grid-template-columns: 1fr; gap: 7px; }
-  .level { min-height: 64px; flex-direction: row; align-items: center; gap: 12px; padding: 11px 12px; }
+  .levels { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 5px; }
+  .level { min-height: 88px; align-items: center; gap: 8px; padding: 10px 3px; text-align: center; }
   .score { width: 28px; height: 28px; flex-shrink: 0; }
   .levelCopy { gap: 3px; }
   .levelCopy strong, .levelCopy > span { font-size: 12px; }
@@ -80,7 +75,6 @@
   .sampleHeader { align-items: flex-start; }
   .sampleLetter { width: 38px; height: 46px; font-size: 22px; }
   .count { font-size: 10px; padding-top: 4px; }
-  .ranks { grid-template-columns: 1fr; }
   .submitPanel { flex-direction: column; align-items: stretch; }
   .button { width: 100%; }
 }
@@ -91,3 +85,16 @@
 .success .finePrint { margin-top: 20px; }
 
 .success { scroll-margin-top: 130px; }
+
+.guide { margin-top: 20px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); padding: 14px 18px; }
+.guide summary { cursor: pointer; color: var(--teal-dark); font-size: 13px; font-weight: 600; }
+.guide summary:focus-visible { outline: 2px solid var(--teal); outline-offset: 4px; }
+.guide ol { list-style: none; margin: 12px 0 0; padding: 0; }
+.guide li { display: grid; grid-template-columns: 105px 1fr; gap: 14px; padding: 12px 0; border-top: 1px solid var(--border); font-size: 12px; line-height: 1.6; color: var(--muted); }
+.guide li strong { color: var(--foreground); }
+.dimension .selectedDescription { min-height: 40px; margin-top: 12px; font-size: 12px; line-height: 1.6; }
+@media (max-width: 420px) {
+  .guide { padding: 12px; }
+  .guide li { grid-template-columns: 1fr; gap: 4px; }
+  .levelCopy strong { font-size: 10px; }
+}

@@ -1,37 +1,18 @@
 import type { Dimension } from './model'
 
-export const rubricVersion = 'beat-h2-accompaniment-v1'
-// Dimensions adapted from BEAT, Appendix H.2 (pp. 18–19).
-// These five-level anchors were written for this study; they are not paper quotations.
+export const rubricVersion = 'accompaniment-quality-v1'
+// Study-specific overall quality judgment: fit, appropriate repetition and response
+// to the melody's development. This is not the earlier three-dimension BEAT rubric.
+export const rubricGuidance = 'Judge how naturally the accompaniment supports the melody as it develops. Appropriate repetition can support the music; more variation is not automatically better. What matters is whether repetition and changes fit the melody.'
 export const rubric: { id: Dimension; name: string; question: string; levels: { title: string; description: string }[] }[] = [
   {
-    id: 'coherence', name: 'Coherence', question: 'How well does the accompaniment fit and support the melody?',
+    id: 'quality', name: 'Accompaniment quality', question: 'How naturally and appropriately does the accompaniment support the melody?',
     levels: [
-      { title: 'Disconnected', description: 'Little effective fit or support.' },
-      { title: 'Weak fit', description: 'Frequent mismatches; limited support.' },
-      { title: 'Mostly fits', description: 'Generally fits, with noticeable mismatches.' },
-      { title: 'Well coordinated', description: 'Fits well and usually supports the melody.' },
-      { title: 'Natural fit', description: 'Closely coordinated; consistently supports the melody.' },
-    ],
-  },
-  {
-    id: 'plausibility', name: 'Plausibility', question: 'How convincing are the musical organization, transitions, and development?',
-    levels: [
-      { title: 'Disorganized', description: 'Little recognizable musical structure.' },
-      { title: 'Weak structure', description: 'Frequent unnatural changes or connections.' },
-      { title: 'Generally plausible', description: 'Some awkward transitions or development.' },
-      { title: 'Well structured', description: 'Clear organization; mostly natural development.' },
-      { title: 'Convincing structure', description: 'Well formed, with natural transitions and development.' },
-    ],
-  },
-  {
-    id: 'musicality', name: 'Musicality', question: 'How would you rate the overall musical quality of this result?',
-    levels: [
-      { title: 'Very poor', description: 'Strongly detracts from the listening experience.' },
-      { title: 'Poor', description: 'Difficult to enjoy or engage with.' },
-      { title: 'Acceptable', description: 'An adequate but unremarkable listening experience.' },
-      { title: 'Good', description: 'Pleasant to hear, with musical expression.' },
-      { title: 'Excellent', description: 'Compelling and highly expressive.' },
+      { title: 'Very poor', description: 'The accompaniment struggles to support the melody, with serious clashes, mechanical repetition that ignores its development, or extensive changes unrelated to the melody.' },
+      { title: 'Poor', description: 'The accompaniment fits the melody weakly, with frequent mismatches, mechanical repetition, or changes that do not respond appropriately to the melody’s development.' },
+      { title: 'Fair', description: 'The accompaniment generally fits, but some passages repeat mechanically or change in ways that do not fit. Its response to the melody’s development is incomplete.' },
+      { title: 'Good', description: 'The accompaniment fits most of the time. Repetition and changes usually suit the music’s development, with occasional mechanical repetition or less natural responses.' },
+      { title: 'Very good', description: 'The accompaniment naturally supports the melody, maintaining or adjusting its patterns as needed. Repetition serves a musical purpose and changes respond appropriately, without obvious mechanical repetition or detachment.' },
     ],
   },
 ]

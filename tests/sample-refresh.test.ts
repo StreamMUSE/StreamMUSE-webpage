@@ -6,6 +6,8 @@ import catalog from '../src/data/evaluation-catalog.json'
 import { datasetVersion, sampleCondition } from '../scripts/evaluation-source.mjs'
 import { evaluationStorageKeys } from '../src/lib/evaluation/storage'
 
+import { rubricVersion } from '../src/lib/evaluation/rubric'
+
 test('September 10 playback files map to the requested systems and exclude old and raw results', () => {
   assert.equal(catalog.datasetVersion, datasetVersion)
   for (const song of catalog.songs) {
@@ -35,12 +37,17 @@ test('returning listeners start the refreshed study without consuming or overwri
     ['streammuse-evaluation-participant-v1', 'previous-participant'],
     ['streammuse-listening-evaluation-v1', 'previous-draft'],
   ])
-  const current = evaluationStorageKeys(catalog.datasetVersion)
+  const legacy = evaluationStorageKeys(catalog.datasetVersion, 'beat-h2-v1')
+  storage.set(legacy.participantKey, 'legacy-participant')
+  storage.set(legacy.storageKey, 'legacy-draft')
+  const current = evaluationStorageKeys(catalog.datasetVersion, rubricVersion)
   assert.equal(storage.get(current.participantKey), undefined)
   assert.equal(storage.get(current.storageKey), undefined)
   storage.set(current.participantKey, 'current-participant')
   storage.set(current.storageKey, 'current-draft')
-  const restored = evaluationStorageKeys(catalog.datasetVersion)
+  assert.equal(storage.get(legacy.participantKey), 'legacy-participant')
+  assert.equal(storage.get(legacy.storageKey), 'legacy-draft')
+  const restored = evaluationStorageKeys(catalog.datasetVersion, rubricVersion)
   assert.equal(storage.get(restored.participantKey), 'current-participant')
   assert.equal(storage.get(restored.storageKey), 'current-draft')
   assert.equal(storage.get('streammuse-evaluation-participant-v1'), 'previous-participant')

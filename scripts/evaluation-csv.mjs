@@ -1,6 +1,6 @@
 const labels = ['A', 'B', 'C']
 const versions = ['v0', 'v1', 'v2']
-const dimensions = ['coherence', 'plausibility', 'musicality']
+const dimensions = ['quality', 'coherence', 'plausibility', 'musicality']
 
 export const headers = [
   'participant_id', 'round_number', 'session_id', 'dataset_version', 'rubric_version', 'song_id', 'source_origin', 'created_at', 'submitted_at',
@@ -22,10 +22,10 @@ export function flattenResponse(row) {
       result[`${label}_${d}`] = row.ratings[label][d]
       result[`${sample.version}_${d}`] = row.ratings[label][d]
     }
-    result[`${label}_rank`] = row.ranking.indexOf(label) + 1
-    result[`${sample.version}_rank`] = row.ranking.indexOf(label) + 1
+    result[`${label}_rank`] = Array.isArray(row.ranking) ? row.ranking.indexOf(label) + 1 : undefined
+    result[`${sample.version}_rank`] = Array.isArray(row.ranking) ? row.ranking.indexOf(label) + 1 : undefined
   }
-  row.ranking.forEach((label, i) => { result[`rank_${i + 1}`] = label })
+  row.ranking?.forEach((label, i) => { result[`rank_${i + 1}`] = label })
   return result
 }
 

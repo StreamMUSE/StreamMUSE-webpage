@@ -1,4 +1,16 @@
-# Evaluation validation — 2026-09-08
+# Evaluation validation
+
+## Single accompaniment-quality score (2026-09-12)
+
+- Rubric `accompaniment-quality-v1` collects exactly three integer scores per round, one for A/B/C; ties are accepted and ranking is removed. Five anchors address melody fit, mechanical repetition, and appropriate changes. Audio files, assignments, MIDI visualization and independent volume controls are unchanged.
+- All 24 tests passed with the real local PostgreSQL database and HTTP server enabled, with no skips. Checks cover current and historical CSV mappings, three-score validation, SQL constraints, concurrent retries, conflicting submissions, ten-round continuation, and rejection of retired rubric sessions without modifying their saved responses. Type checking, lint and the production build passed; the evaluation page remains static with dynamic submission routes.
+- Browser verification at desktop and 390 × 844: five compact choices per sample with no horizontal overflow, full shared guide, selected descriptions, restoring a draft after reload, equal-score submission, restoring a saved round, and advancing to round two with all three scores cleared.
+- Migration 003 was applied to the existing Neon Preview branch. All six historical responses were verified unchanged by count and a digest of their full rows. The new table stores only quality ratings; historical ratings and ranks remain in their original table.
+- Production migration 003 remains pending before a future merge/release. No production credentials were obtained or production data changed in this update.
+
+## Earlier validation history
+
+The entries below describe earlier revisions and their then-current rubrics/audio. See the current evaluation README for the active study.
 
 ## Local verification
 

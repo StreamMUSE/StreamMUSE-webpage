@@ -8,8 +8,8 @@ import { readBody } from '../src/lib/evaluation/http'
 import { flattenResponse, responsesCsv } from '../scripts/evaluation-csv.mjs'
 
 const catalog = catalogData as Catalog
-const ratings = { A: { coherence: 1, plausibility: 2, musicality: 3 }, B: { coherence: 4, plausibility: 5, musicality: 1 }, C: { coherence: 2, plausibility: 3, musicality: 4 } }
-const answers = { ratings, ranking: ['C', 'A', 'B'] }
+const ratings = { A: { quality: 1 }, B: { quality: 4 }, C: { quality: 4 } }
+const answers = { ratings }
 
 test('catalog contains ten complete songs and 100 uniquely named, intact audio assets', () => {
   assert.equal(catalog.songs.length, 10)
@@ -58,7 +58,7 @@ test('public projection omits identities, source paths, seed and dataset metadat
   assert.deepEqual(Object.keys(result.reference).sort(), ['duration', 'id', 'src', 'stemSources', 'visualizationSrc'])
 })
 
-test('ratings and rankings reject incomplete, non-integer, coercible, duplicated or extra fields', () => {
+test('three quality scores allow ties and reject incomplete, non-integer or legacy answers', () => {
   assert.deepEqual(validateAnswers(answers), answers)
   for (const label of labels) for (const d of dimensions) for (const value of [0, 6, 2.5, '3', null, true, undefined]) {
     const invalid = structuredClone(answers); (invalid.ratings[label][d] as unknown) = value
@@ -84,17 +84,32 @@ test('JSON requests reject wrong origin, invalid JSON, arrays and oversized stre
   await assert.rejects(readBody(make('x'.repeat(4097))), { status: 413 })
 })
 
-test('CSV joins display labels to actual systems and independent ranking without averaging scores', () => {
+test('CSV maps quality scores to actual systems and leaves legacy ratings and ranks blank', () => {
   const assignment = assignSamples(catalog, () => 0)
-  const row = { session_id: randomUUID(), assignment, ratings, ranking: answers.ranking, source_origin: 'https://study.example', song_id: '01', created_at: new Date(0), submitted_at: new Date(1000) }
+  const row = { session_id: randomUUID(), assignment, ratings, ranking: null, source_origin: 'https://study.example', song_id: '01', created_at: new Date(0), submitted_at: new Date(1000) }
   const flat = flattenResponse(row)
   for (const label of labels) {
     const sample = assignment.samples[label]
     assert.equal(flat[`${sample.version}_seed`], sample.seed)
     assert.equal(flat[`${sample.version}_label`], label)
-    assert.equal(flat[`${sample.version}_rank`], answers.ranking.indexOf(label) + 1)
+    assert.equal(flat[`${sample.version}_rank`], undefined)
+    assert.equal(flat[`${sample.version}_coherence`], undefined)
     for (const d of dimensions) assert.equal(flat[`${sample.version}_${d}`], ratings[label][d])
   }
   assert.equal(responsesCsv([row]).split('\r\n').length, 3)
   assert.ok(responsesCsv([{ ...row, source_origin: '=SUM(1,2)' }]).includes('"\'=SUM(1,2)"'))
+})
+
+ test('CSV preserves historical nine-score ratings and ranking without inventing quality scores', () => {
+  const assignment = assignSamples(catalog, () => 0)
+  const oldRatings = { A: { coherence: 1, plausibility: 2, musicality: 3 }, B: { coherence: 4, plausibility: 5, musicality: 1 }, C: { coherence: 2, plausibility: 3, musicality: 4 } }
+  const ranking = ['C', 'A', 'B']
+  assert.throws(() => validateAnswers({ ratings: oldRatings, ranking }))
+  const flat = flattenResponse({ assignment, ratings: oldRatings, ranking })
+  for (const label of labels) {
+    const version = assignment.samples[label].version
+    assert.equal(flat[`${version}_quality`], undefined)
+    assert.equal(flat[`${version}_rank`], ranking.indexOf(label) + 1)
+    assert.equal(flat[`${version}_coherence`], oldRatings[label].coherence)
+  }
 })

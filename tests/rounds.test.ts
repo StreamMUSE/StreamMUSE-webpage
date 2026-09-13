@@ -8,9 +8,11 @@ import { assignSamples, validateAnswers, type Catalog } from '../src/lib/evaluat
 import { evaluationRepository } from '../src/lib/evaluation/repository'
 import { flattenResponse, responsesCsv } from '../scripts/evaluation-csv.mjs'
 
+import { rubricVersion } from '../src/lib/evaluation/rubric'
+
 const url = process.env.EVALUATION_TEST_DATABASE_URL
 const catalog = catalogData as Catalog
-const answers = validateAnswers({ ratings: { A: { coherence: 1, plausibility: 2, musicality: 3 }, B: { coherence: 3, plausibility: 4, musicality: 5 }, C: { coherence: 5, plausibility: 1, musicality: 2 } }, ranking: ['C', 'A', 'B'] })
+const answers = validateAnswers({ ratings: { A: { quality: 1 }, B: { quality: 3 }, C: { quality: 5 } } })
 
 test('participants complete ten unique songs; concurrent, stale and lost-response Next requests never skip a round', { skip: !url }, async () => {
   assert.ok(['localhost', '127.0.0.1', '[::1]'].includes(new URL(url!).hostname))
@@ -22,7 +24,7 @@ test('participants complete ten unique songs; concurrent, stale and lost-respons
     for (const file of readdirSync('db/migrations').filter(name => name.endsWith('.sql')).sort()) await sql.unsafe(readFileSync(`db/migrations/${file}`, 'utf8'))
     const repo = evaluationRepository(sql), participant = randomUUID()
     await assert.rejects(repo.study(participant, 10), { status: 404 })
-    const next = (id: string, previous: string | null) => repo.next(participant, id, previous, catalog, 'rubric', max => max - 1, 'http://localhost')
+    const next = (id: string, previous: string | null) => repo.next(participant, id, previous, catalog, rubricVersion, max => max - 1, 'http://localhost')
     const firstRequest = randomUUID()
     let study = await next(firstRequest, null)
     const firstId = study.session!.id
@@ -53,7 +55,7 @@ test('participants complete ten unique songs; concurrent, stale and lost-respons
       }
     }
     assert.equal(seen.size, 10)
-    const rows = await sql`SELECT r.*, s.participant_id, s.round_number, s.assignment FROM evaluation_responses r
+    const rows = await sql`SELECT r.*, s.participant_id, s.round_number, s.assignment FROM evaluation_quality_responses r
       JOIN evaluation_sessions s ON s.id = r.session_id WHERE s.participant_id = ${participant} ORDER BY round_number`
     assert.equal(rows.length, 10)
     rows.forEach((row, index) => { const flat = flattenResponse(row); assert.equal(flat.participant_id, participant); assert.equal(flat.round_number, index + 1) })
@@ -61,9 +63,9 @@ test('participants complete ten unique songs; concurrent, stale and lost-respons
     const reconnect = postgres(url!, { max: 1, connection: { search_path: schema } })
     try { assert.deepEqual(await evaluationRepository(reconnect).study(participant, 10), study) } finally { await reconnect.end() }
     const secondParticipant = randomUUID()
-    const second = await repo.next(secondParticipant, randomUUID(), null, catalog, 'rubric', () => 0, null)
+    const second = await repo.next(secondParticipant, randomUUID(), null, catalog, rubricVersion, () => 0, null)
     assert.equal(second.round, 1); assert.equal(second.completed, 0)
-    await assert.rejects(repo.next(secondParticipant, randomUUID(), firstId, catalog, 'rubric', () => 0, null), { status: 409 })
+    await assert.rejects(repo.next(secondParticipant, randomUUID(), firstId, catalog, rubricVersion, () => 0, null), { status: 409 })
     const sample = (await repo.get(second.session!.id)).session
     await assert.rejects(sql`INSERT INTO evaluation_sessions (id, dataset_version, rubric_version, song_id, assignment, participant_id, round_number)
       VALUES (${randomUUID()}, 'test', 'test', ${sample.song_id}, ${sql.json(sample.assignment)}, ${secondParticipant}, 2)`, { code: '23505' })
@@ -80,12 +82,12 @@ test('a current single-round completion becomes round one and continues on an un
     for (const file of readdirSync('db/migrations').filter(name => name.endsWith('.sql')).sort()) await sql.unsafe(readFileSync(`db/migrations/${file}`, 'utf8'))
     const repo = evaluationRepository(sql), participant = randomUUID(), oldId = randomUUID()
     const oldCatalog = catalog
-    const original = await repo.create(oldId, oldCatalog.datasetVersion, 'old-rubric', assignSamples(oldCatalog, () => 0), 'http://localhost')
+    const original = await repo.create(oldId, oldCatalog.datasetVersion, rubricVersion, assignSamples(oldCatalog, () => 0), 'http://localhost')
     const requestId = randomUUID()
-    await assert.rejects(repo.next(participant, requestId, oldId, catalog, 'new-rubric', () => 0, null), { status: 409 })
+    await assert.rejects(repo.next(participant, requestId, oldId, catalog, rubricVersion, () => 0, null), { status: 409 })
     assert.equal((await repo.get(oldId)).session.participant_id, null)
     await repo.submit(oldId, answers)
-    const next = await repo.next(participant, requestId, oldId, catalog, 'new-rubric', () => 0, null)
+    const next = await repo.next(participant, requestId, oldId, catalog, rubricVersion, () => 0, null)
     assert.equal(next.round, 2); assert.equal(next.completed, 1)
     const linked = (await repo.get(oldId)).session
     assert.equal(linked.participant_id, participant); assert.equal(linked.round_number, 1)
@@ -93,8 +95,8 @@ test('a current single-round completion becomes round one and continues on an un
     assert.equal(linked.dataset_version, oldCatalog.datasetVersion)
     const fresh = (await repo.get(next.session!.id)).session
     assert.notEqual(fresh.song_id, linked.song_id); assert.equal(fresh.dataset_version, catalog.datasetVersion)
-    assert.deepEqual(await repo.next(participant, requestId, oldId, catalog, 'new-rubric', () => 0, null), next)
-    await assert.rejects(repo.next(randomUUID(), randomUUID(), oldId, catalog, 'new-rubric', () => 0, null), { status: 409 })
+    assert.deepEqual(await repo.next(participant, requestId, oldId, catalog, rubricVersion, () => 0, null), next)
+    await assert.rejects(repo.next(randomUUID(), randomUUID(), oldId, catalog, rubricVersion, () => 0, null), { status: 409 })
     assert.equal((await repo.get(oldId)).submitted, true)
   } finally { await sql.end(); await admin`DROP SCHEMA ${admin(schema)} CASCADE`; await admin.end() }
 })
@@ -109,10 +111,10 @@ test('retired study APIs reject recovery, adoption and submission without changi
   try {
     const fixture = evaluationRepository(sql)
     const oldCatalog = { ...catalog, datasetVersion: 'retired-test-dataset' }
-    await fixture.next(oldParticipant, oldId, null, oldCatalog, 'rubric', () => 0, base!)
+    await fixture.next(oldParticipant, oldId, null, oldCatalog, rubricVersion, () => 0, base!)
     await fixture.submit(oldId, answers)
-    await fixture.create(unsubmittedId, oldCatalog.datasetVersion, 'rubric', assignSamples(catalog, () => 0), base!)
-    const original = await sql`SELECT * FROM evaluation_responses WHERE session_id = ${oldId}`
+    await fixture.create(unsubmittedId, oldCatalog.datasetVersion, rubricVersion, assignSamples(catalog, () => 0), base!)
+    const original = await sql`SELECT * FROM evaluation_quality_responses WHERE session_id = ${oldId}`
     const responses = [
       await fetch(`${base}/api/evaluation-sessions/${oldId}`),
       await fetch(`${base}/api/evaluation-participants/${oldParticipant}`),
@@ -127,10 +129,10 @@ test('retired study APIs reject recovery, adoption and submission without changi
       assert.match(result.error, /recordings have been replaced/)
       assert.ok(!JSON.stringify(result).includes('/media/'))
     }
-    assert.deepEqual(await sql`SELECT * FROM evaluation_responses WHERE session_id = ${oldId}`, original)
-    assert.equal((await sql`SELECT * FROM evaluation_responses WHERE session_id = ${unsubmittedId}`).length, 0)
+    assert.deepEqual(await sql`SELECT * FROM evaluation_quality_responses WHERE session_id = ${oldId}`, original)
+    assert.equal((await sql`SELECT * FROM evaluation_quality_responses WHERE session_id = ${unsubmittedId}`).length, 0)
   } finally {
-    await sql`DELETE FROM evaluation_responses WHERE session_id IN (${oldId}, ${unsubmittedId})`
+    await sql`DELETE FROM evaluation_quality_responses WHERE session_id IN (${oldId}, ${unsubmittedId})`
     await sql`DELETE FROM evaluation_sessions WHERE id IN (${oldId}, ${unsubmittedId})`
     await sql`DELETE FROM evaluation_participants WHERE id IN (${oldParticipant}, ${newParticipant})`
     await sql.end()

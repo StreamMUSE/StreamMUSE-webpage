@@ -15,7 +15,7 @@ let client: ReturnType<typeof postgres> | undefined
 export function repository() {
   if (!process.env.DATABASE_URL) throw new Error('Evaluation database is not configured')
   client ??= postgres(process.env.DATABASE_URL, { max: 1, idle_timeout: 20, connect_timeout: 10, prepare: false })
-  return evaluationRepository(client, evaluationCatalog.datasetVersion)
+  return evaluationRepository(client, evaluationCatalog.datasetVersion, rubricVersion)
 }
 export function newAssignment() {
   const catalog = catalogData as Catalog
