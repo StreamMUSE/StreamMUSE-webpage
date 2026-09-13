@@ -159,11 +159,11 @@ export const streamMuseVersions: StreamMuseVersion[] = [
   },
   {
     slug: 'v2',
-    name: 'StreamMUSE v2',
-    shortName: 'v2',
+    name: 'StreamMUSE+',
+    shortName: 'StreamMUSE+',
     status: 'Under development',
     statusTone: 'development',
-    summary: 'Explore recorded accompaniment demos and MIDI examples from StreamMUSE v2.',
+    summary: 'Explore recorded accompaniment demos and MIDI examples from StreamMUSE+.',
     focus: 'Melody-conditioned accompaniment, demonstrated through recorded performances and generated samples.',
     details: [
       'The current research iteration of StreamMUSE.',

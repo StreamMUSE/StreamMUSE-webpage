@@ -10,7 +10,7 @@ export default function SiteFooter() {
       <div className="footer-links">
         <Link href="/versions/v0">v0</Link>
         <Link href="/versions/v1">v1</Link>
-        <Link href="/versions/v2">v2</Link>
+        <Link href="/versions/v2">StreamMUSE+</Link>
         <a href="https://github.com/StreamMUSE/AE" target="_blank" rel="noreferrer">
           Code
         </a>

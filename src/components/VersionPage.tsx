@@ -25,7 +25,7 @@ export default function VersionPage({ version }: VersionPageProps) {
       </section>
 
       <section id="media" className="content-section" aria-label={version.slug === 'v2' ? 'Demo Videos' : 'Real-time demos'}>
-        <SectionHeading eyebrow="Recorded demos" title={version.slug === 'v2' ? 'Demo Videos' : 'Real-time'} description={version.slug === 'v2' ? 'Watch StreamMUSE v2 generate accompaniment across ten melodies, with multiple recorded takes to explore.' : 'A human performer plays the melody, while the system generates accompaniment in real time.'} />
+        <SectionHeading eyebrow="Recorded demos" title={version.slug === 'v2' ? 'Demo Videos' : 'Real-time'} description={version.slug === 'v2' ? `Watch ${version.name} generate accompaniment across ten melodies, with multiple recorded takes to explore.` : 'A human performer plays the melody, while the system generates accompaniment in real time.'} />
         {version.slug === 'v2' ? <V2VideoGallery /> : <MediaGallery items={version.media} />}
         {version.simulationMedia ? (
           <div className="demo-group">
