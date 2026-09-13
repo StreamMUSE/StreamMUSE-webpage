@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.evaluation-invitation { display: flex; align-items: center; justify-content: space-between; gap: 28px; margin: 16px 0 48px; padding: 30px; border: 1px solid #bcd5d0; border-radius: 18px; background: #f2f7f6; }
+.evaluation-eyebrow { display: flex; align-items: center; gap: 8px; font-size: 11px; letter-spacing: .13em; font-weight: 700; color: #115e59; }
+.evaluation-invitation h2 { margin: 12px 0; font-size: 26px; letter-spacing: -.035em; line-height: 1.25; }
+.evaluation-invitation p { max-width: 570px; margin: 0; color: #62625f; line-height: 1.65; font-size: 14px; }
+.evaluation-invitation > a { flex-shrink: 0; display: inline-flex; gap: 16px; align-items: center; justify-content: center; min-height: 48px; padding: 13px 18px; border-radius: 9px; background: #115e59; color: white; font-size: 13px; font-weight: 600; }
+.evaluation-invitation > a:focus-visible { outline: 3px solid #0f766e; outline-offset: 4px; }
+@media (max-width: 760px) { .evaluation-invitation { flex-direction: column; align-items: stretch; padding: 24px; } }
+
 :root {
   --background: #fbfaf8;
   --surface: #ffffff;

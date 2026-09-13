@@ -2,6 +2,10 @@
 
 This repository contains the StreamMUSE project page built with Next.js, React, TypeScript, and Tailwind CSS.
 
+## Listening Evaluation
+
+The v2 page links to a static listening study at `/versions/v2/evaluate`. API routes store anonymous sample assignments, three accompaniment-quality scores and an overall ranking per round in Neon PostgreSQL. See [the evaluation guide](docs/evaluation/README.md) for database setup, the 100 recordings and independent melody/accompaniment controls, validation, Preview deployment, and local CSV export. Copy `.env.example` to an untracked `.env.local` and use a development database when working locally.
+
 ## Development
 
 ```bash
