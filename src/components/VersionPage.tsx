@@ -16,7 +16,7 @@ export default function VersionPage({ version }: VersionPageProps) {
       <VersionHero version={version} />
 
       <section className="content-section" aria-labelledby="summary-title">
-        <SectionHeading eyebrow={version.shortName} title="Version Summary" description="What this version contributes to the StreamMUSE project." />
+        <SectionHeading eyebrow={version.shortName} title={version.slug === 'v2' ? 'How it works' : 'Version Summary'} description={version.slug === 'v2' ? 'Beat-wise generation, prompt-based startup, and live interaction.' : 'What this version contributes to the StreamMUSE project.'} />
         <div className="prose-block">
           {version.details.map((detail) => (
             <p key={detail}>{detail}</p>
@@ -25,7 +25,7 @@ export default function VersionPage({ version }: VersionPageProps) {
       </section>
 
       <section id="media" className="content-section" aria-label={version.slug === 'v2' ? 'Demo Videos' : 'Real-time demos'}>
-        <SectionHeading eyebrow="Recorded demos" title={version.slug === 'v2' ? 'Demo Videos' : 'Real-time'} description={version.slug === 'v2' ? `Watch ${version.name} generate accompaniment across ten melodies, with multiple recorded takes to explore.` : 'A human performer plays the melody, while the system generates accompaniment in real time.'} />
+        <SectionHeading eyebrow="Recorded demos" title={version.slug === 'v2' ? 'Demo Videos' : 'Real-time'} description={version.slug === 'v2' ? `Watch ${version.name} respond to an unfolding melody in twenty recordings across ten songs. Multiple takes show how the accompaniment can vary between runs.` : 'A human performer plays the melody, while the system generates accompaniment in real time.'} />
         {version.slug === 'v2' ? <V2VideoGallery /> : <MediaGallery items={version.media} />}
         {version.simulationMedia ? (
           <div className="demo-group">
@@ -40,13 +40,13 @@ export default function VersionPage({ version }: VersionPageProps) {
       </section>
 
       <section id="midi" className="content-section" aria-label="MIDI Examples">
-        <SectionHeading eyebrow="Playable assets" title="MIDI Examples" description={version.slug === 'v2' ? 'Explore three accompaniment samples for each melody. Listen in the browser or download the original MIDI.' : 'MIDI examples can be played directly in the browser or downloaded.'} />
+        <SectionHeading eyebrow="Playable assets" title="MIDI Examples" description={version.slug === 'v2' ? 'Explore ten melodies with three generated accompaniments each. Compare how different random seeds affect density, register, and texture; listen in the browser or download the original MIDI.' : 'MIDI examples can be played directly in the browser or downloaded.'} />
         {version.slug === 'v2' ? <V2MidiGallery /> : <MidiAssetList items={version.midi} />}
       </section>
 
       {version.slug !== 'v0' && (version.notes.length > 0 || version.roadmap) ? (
         <section className="content-section" aria-labelledby="results-title">
-          <SectionHeading eyebrow="Notes" title="Results And Status" description="Current observations, status notes, and future additions." />
+          <SectionHeading eyebrow="Notes" title={version.slug === 'v2' ? 'Evaluation and limitations' : 'Results And Status'} description={version.slug === 'v2' ? 'Findings from controlled experiments and an initial performance pilot.' : 'Current observations, status notes, and future additions.'} />
           <div className="notes-grid">
             {version.notes.map((note) => (
               <article key={note} className="note-card">
@@ -56,7 +56,7 @@ export default function VersionPage({ version }: VersionPageProps) {
           </div>
           {version.roadmap ? (
             <div className="roadmap-panel">
-              <h3>Roadmap</h3>
+              <h3>{version.slug === 'v2' ? 'Future work' : 'Roadmap'}</h3>
               <ul>
                 {version.roadmap.map((item) => (
                   <li key={item}>{item}</li>

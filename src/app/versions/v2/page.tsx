@@ -5,7 +5,7 @@ import { getVersionBySlug } from '@/data/versions'
 
 export const metadata: Metadata = {
   title: 'StreamMUSE+',
-  description: 'Explore recorded accompaniment demos and MIDI examples from StreamMUSE+.',
+  description: 'StreamMUSE+ combines BEAT-based generation, prompt-based startup, and live interaction for more stable real-time piano accompaniment. Explore demos and MIDI examples.',
 }
 
 export default function StreamMuseV2Page() {
