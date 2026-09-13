@@ -30,7 +30,7 @@ test('old rubric answers remain intact; current APIs reject old recovery, adopti
       await post('/api/evaluation-sessions', { sessionId: unfinishedId }),
       await post('/api/evaluation-rounds', { participantId: participant, sessionId: randomUUID(), previousSessionId: id }),
       await post('/api/evaluation-rounds', { participantId: newParticipant, sessionId: randomUUID(), previousSessionId: unfinishedId }),
-      await post('/api/evaluations', { sessionId: unfinishedId, ratings: { A: { quality: 3 }, B: { quality: 3 }, C: { quality: 3 } } }),
+      await post('/api/evaluations', { sessionId: unfinishedId, ratings: { A: { quality: 3 }, B: { quality: 3 }, C: { quality: 3 } }, ranking: ['A', 'B', 'C'] }),
     ]
     for (const response of responses) {
       assert.equal(response.status, 410)

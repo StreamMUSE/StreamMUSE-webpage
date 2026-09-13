@@ -12,7 +12,7 @@ import { rubricVersion } from '../src/lib/evaluation/rubric'
 
 const url = process.env.EVALUATION_TEST_DATABASE_URL
 const catalog = catalogData as Catalog
-const answers = validateAnswers({ ratings: { A: { quality: 1 }, B: { quality: 3 }, C: { quality: 5 } } })
+const answers = validateAnswers({ ratings: { A: { quality: 1 }, B: { quality: 3 }, C: { quality: 5 } }, ranking: ['C', 'B', 'A'] })
 
 test('participants complete ten unique songs; concurrent, stale and lost-response Next requests never skip a round', { skip: !url }, async () => {
   assert.ok(['localhost', '127.0.0.1', '[::1]'].includes(new URL(url!).hostname))

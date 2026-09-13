@@ -1,5 +1,12 @@
 # Evaluation validation
 
+## Overall ranking restored (2026-09-12)
+
+- The current form collects three single-criterion quality scores plus a separate first/second/third ranking. Scores may tie; the ranking must use each sample once. Existing quality scoring anchors, rubric version, browser keys, assets and listener progress are retained.
+- All 25 tests pass against local PostgreSQL and the HTTP API. Coverage includes all six valid ranking orders, incomplete/duplicate/invalid rankings, ranking-only retry conflicts, score/system/rank export mapping, and additive migration of quality-only records without fabricating rankings or restarting listeners. Lint and production build pass.
+- Desktop and 390 × 844 browser checks verify duplicate options are disabled, incomplete ranking blocks submission, scores and ranking survive reload, and the layout does not overflow horizontally.
+- Migration 004 adds a nullable ranking column so prior quality-only answers remain valid and older deployments can complete in-flight requests. The current API requires ranking. Production migrations 003 and 004 remain pending before release.
+
 ## Single accompaniment-quality score (2026-09-12)
 
 - Rubric `accompaniment-quality-v1` collects exactly three integer scores per round, one for A/B/C; ties are accepted and ranking is removed. Five anchors address melody fit, mechanical repetition, and appropriate changes. Audio files, assignments, MIDI visualization and independent volume controls are unchanged.

@@ -13,7 +13,7 @@ import { evaluationStorageKeys } from '@/lib/evaluation/storage'
 
 type DraftRatings = Partial<Record<Label, Partial<Record<Dimension, number>>>>
 type PendingRound = { sessionId: string; previousSessionId: string | null }
-type Draft = { participantId?: string; sessionId: string | null; ratings: DraftRatings; pendingNext?: PendingRound }
+type Draft = { participantId?: string; sessionId: string | null; ratings: DraftRatings; ranking: (Label | '')[]; pendingNext?: PendingRound }
 const isId = (value: unknown): value is string => typeof value === 'string' && /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(value)
 class RequestError extends Error { constructor(message: string, public status: number) { super(message) } }
 
@@ -43,9 +43,10 @@ function readDraft(value: string): Draft | null {
       const score = draft.ratings?.[label]?.[dimension]
       if (Number.isInteger(score) && score >= 1 && score <= 5) ratings[label] = { ...ratings[label], [dimension]: score }
     }
+    const ranking = [0, 1, 2].map(i => labels.includes(draft.ranking?.[i]) ? draft.ranking[i] : '')
     const pending = draft.pendingNext
     const pendingNext = pending && isId(pending.sessionId) && (pending.previousSessionId === null || isId(pending.previousSessionId)) ? pending : undefined
-    return { participantId: isId(draft.participantId) ? draft.participantId : undefined, sessionId: draft.sessionId, ratings, pendingNext }
+    return { participantId: isId(draft.participantId) ? draft.participantId : undefined, sessionId: draft.sessionId, ratings, ranking, pendingNext }
   } catch { return null }
 }
 
@@ -54,6 +55,7 @@ export default function ListeningEvaluation({ datasetVersion }: { datasetVersion
   const [session, setSession] = useState<PublicSession | null>(null)
   const [progress, setProgress] = useState<Pick<PublicStudy, 'completed' | 'total' | 'round'> | null>(null)
   const [ratings, setRatings] = useState<DraftRatings>({})
+  const [ranking, setRanking] = useState<(Label | '')[]>(['', '', ''])
   const [ready, setReady] = useState(false)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
@@ -61,8 +63,8 @@ export default function ListeningEvaluation({ datasetVersion }: { datasetVersion
   const sessionId = useRef<string | null>(null)
   const participantId = useRef<string | null>(null)
   const pendingNext = useRef<PendingRound | undefined>(undefined)
-  const answersRef = useRef({ ratings })
-  answersRef.current = { ratings }
+  const answersRef = useRef({ ratings, ranking })
+  answersRef.current = { ratings, ranking }
   const listeningRef = useRef<HTMLHeadingElement>(null)
   const activeAudio = useRef<PlaybackHandle | null>(null)
   const inFlight = useRef(false)
@@ -75,8 +77,8 @@ export default function ListeningEvaluation({ datasetVersion }: { datasetVersion
   const applyStudy = useCallback((study: PublicStudy, requestFinished = false) => {
     const nextId = study.session?.id ?? null
     const changed = nextId !== sessionId.current
-    const answers = changed ? { ratings: {} } : answersRef.current
-    if (changed) { setRatings(answers.ratings) }
+    const answers = changed ? { ratings: {}, ranking: ['', '', ''] as (Label | '')[] } : answersRef.current
+    if (changed) { setRatings(answers.ratings); setRanking(answers.ranking) }
     if (requestFinished || (nextId && nextId !== pendingNext.current?.previousSessionId)) pendingNext.current = undefined
     sessionId.current = nextId
     setSession(study.session)
@@ -106,8 +108,8 @@ export default function ListeningEvaluation({ datasetVersion }: { datasetVersion
       try { localStorage.setItem(participantKey, participantId.current) } catch { setStorageWarning(true) }
       if (draft) {
         sessionId.current = draft.sessionId; pendingNext.current = draft.pendingNext
-        setRatings(draft.ratings)
-        answersRef.current = { ratings: draft.ratings }
+        setRatings(draft.ratings); setRanking(draft.ranking)
+        answersRef.current = { ratings: draft.ratings, ranking: draft.ranking }
       }
       try {
         const study = await request<PublicStudy>(`/api/evaluation-participants/${participantId.current}`)
@@ -130,9 +132,9 @@ export default function ListeningEvaluation({ datasetVersion }: { datasetVersion
 
   useEffect(() => {
     if (ready && participantId.current && (sessionId.current || pendingNext.current)) {
-      persist({ participantId: participantId.current, sessionId: sessionId.current, ratings, pendingNext: pendingNext.current })
+      persist({ participantId: participantId.current, sessionId: sessionId.current, ratings, ranking, pendingNext: pendingNext.current })
     }
-  }, [ready, ratings, persist])
+  }, [ready, ratings, ranking, persist])
 
   async function start() {
     if (inFlight.current || !participantId.current) return
@@ -153,7 +155,7 @@ export default function ListeningEvaluation({ datasetVersion }: { datasetVersion
       }
       const next = pendingNext.current ?? { sessionId: crypto.randomUUID(), previousSessionId: sessionId.current }
       pendingNext.current = next
-      persist({ participantId: participantId.current, sessionId: sessionId.current, ratings, pendingNext: next })
+      persist({ participantId: participantId.current, sessionId: sessionId.current, ratings, ranking, pendingNext: next })
       const study = await request<PublicStudy>('/api/evaluation-rounds', { participantId: participantId.current, ...next })
       activeAudio.current?.release()
       applyStudy(study, true)
@@ -168,15 +170,16 @@ export default function ListeningEvaluation({ datasetVersion }: { datasetVersion
   }
 
   const ratingCount = labels.reduce((sum, label) => sum + dimensions.filter(dimension => ratings[label]?.[dimension] !== undefined).length, 0)
+  const rankingComplete = ranking.every(Boolean) && new Set(ranking).size === 3
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
     if (!session || inFlight.current) return
     setError('')
-    try { validateAnswers({ ratings }) }
-    catch { setError('Please choose one score for each sample: A, B, and C.'); return }
+    try { validateAnswers({ ratings, ranking }) }
+    catch { setError('Please choose one score for each sample and rank A, B, and C once each.'); return }
     inFlight.current = true; setBusy(true)
     try {
-      const result = await request<{ submitted: boolean }>('/api/evaluations', { sessionId: session.id, ratings })
+      const result = await request<{ submitted: boolean }>('/api/evaluations', { sessionId: session.id, ratings, ranking })
       if (!result.submitted) throw new Error('Your submission has not been confirmed. Please retry.')
       activeAudio.current?.release()
       setSession({ ...session, submitted: true })
@@ -194,8 +197,8 @@ export default function ListeningEvaluation({ datasetVersion }: { datasetVersion
       <header className={styles.hero}>
         <span className={styles.eyebrow}><Headphones size={17} aria-hidden="true" />LISTENING STUDY</span>
         <h1>One melody.<br /><span>Three interpretations.</span></h1>
-        <p>Listen to three accompaniment results for the same melody. Give each sample one score for how naturally its accompaniment supports the melody.</p>
-        <div className={styles.steps} aria-label="Evaluation steps"><span>01 &nbsp; Listen</span><span>02 &nbsp; Rate</span><span>03 &nbsp; Submit</span></div>
+        <p>Listen to three accompaniment results for the same melody. Give each sample one score for how naturally its accompaniment supports the melody, then rank the three samples overall.</p>
+        <div className={styles.steps} aria-label="Evaluation steps"><span>01 &nbsp; Listen</span><span>02 &nbsp; Rate</span><span>03 &nbsp; Rank &amp; submit</span></div>
       </header>
 
       {storageWarning ? <p className={styles.notice} role="status">This browser cannot save your progress. Keep this page open until you have submitted.</p> : null}
@@ -203,7 +206,7 @@ export default function ListeningEvaluation({ datasetVersion }: { datasetVersion
       {!ready ? <div className={styles.panel} role="status">Restoring your evaluation…</div> : session?.submitted ? (
         <div ref={statusRef} tabIndex={-1} className={`${styles.panel} ${styles.success}`} role="status">
           <CheckCircle2 size={42} aria-hidden="true" /><h2>{complete ? 'All 10 melodies complete.' : 'This round is saved.'}</h2>
-          <p>{complete ? 'Thank you for listening. All your scores have been saved.' : 'Your scores have been saved. Continue with a different melody whenever you are ready.'}</p>
+          <p>{complete ? 'Thank you for listening. All your responses have been saved.' : 'Your responses have been saved. Continue with a different melody whenever you are ready.'}</p>
           <p className={styles.progressCount}>{progress?.completed ?? 1} / {progress?.total ?? 10} melodies completed</p>
           {!complete ? <button type="button" className={styles.button} onClick={start} disabled={busy}>{busy ? 'Preparing your next melody…' : 'Listen to the next melody'}<ArrowRight size={17} aria-hidden="true" /></button> : null}
           <p className={styles.finePrint}>{complete ? 'Your listening study is complete.' : 'You can close this page and return later in the same browser. Your progress will be remembered.'}</p>
@@ -214,8 +217,8 @@ export default function ListeningEvaluation({ datasetVersion }: { datasetVersion
           <div className={styles.introIcon}><Music2 size={28} aria-hidden="true" /></div>
           <div><h2 id="before-title">A few minutes of careful listening</h2>
             <p>You will hear one reference melody and three anonymous samples, A, B, and C. Each sample combines the melody with a generated accompaniment.</p>
-            <ul><li>Use headphones if possible and keep your volume comfortable.</li><li>Rate the accompaniment and how it works with the melody, rather than your preference for the song.</li><li>Give one score per sample. Equal scores are welcome. You can listen again at any time.</li></ul>
-            <p className={styles.finePrint}>No name, email, or account is required. We collect your scores for this research study. You can evaluate up to 10 different melodies. Your progress is saved in this browser, including when you close this page.</p>
+            <ul><li>Use headphones if possible and keep your volume comfortable.</li><li>Rate the accompaniment and how it works with the melody, rather than your preference for the song.</li><li>Give one score per sample, then rank A, B, and C from first to third. Scores may tie; the overall ranking must use each sample once.</li></ul>
+            <p className={styles.finePrint}>No name, email, or account is required. We collect your scores and overall ranking for this research study. You can evaluate up to 10 different melodies. Your progress is saved in this browser, including when you close this page.</p>
             <button className={styles.button} type="button" onClick={start} disabled={busy}>{busy ? 'Preparing your samples…' : sessionId.current ? 'Restore evaluation' : 'Start listening'}<ArrowRight size={17} aria-hidden="true" /></button>
           </div>
         </section>
@@ -258,8 +261,17 @@ export default function ListeningEvaluation({ datasetVersion }: { datasetVersion
               ))}
             </section>
           ))}
+          <section className={`${styles.panel} ${styles.rankPanel}`} aria-labelledby="ranking-title">
+            <span className={styles.eyebrow}>YOUR OVERALL PREFERENCE</span><h2 id="ranking-title">Put the three samples in order.</h2>
+            <p>Considering how well each accompaniment supports the melody overall, rank the samples from first to third. Use each sample once, without ties, even if you gave some samples the same score.</p>
+            <div className={styles.ranks}>{['1st place · Favorite', '2nd place', '3rd place'].map((title, i) => (
+              <label key={title} className={styles.rank}><span>{title}</span><select aria-label={title} required value={ranking[i]} disabled={busy} onChange={event => setRanking(current => current.map((label, index) => index === i ? event.target.value as Label | '' : label))}>
+                <option value="">Choose a sample</option>{labels.map(label => <option key={label} value={label} disabled={ranking.some((chosen, index) => index !== i && chosen === label)}>Sample {label}</option>)}
+              </select></label>
+            ))}</div>
+          </section>
           <div className={styles.submitPanel}>
-            <div><p className={styles.progress}><Check size={17} aria-hidden="true" />{ratingCount} of 3 scores</p><p className={styles.finePrint}>Your answers are saved when the submission is confirmed.</p></div>
+            <div><p className={styles.progress}><Check size={17} aria-hidden="true" />{ratingCount} of 3 scores · {rankingComplete ? 'Ranking complete' : 'Ranking needed'}</p><p className={styles.finePrint}>Your answers are saved when the submission is confirmed.</p></div>
             <button className={styles.button} type="submit" disabled={busy}>{busy ? 'Saving your evaluation…' : 'Submit evaluation'}<ArrowRight size={17} aria-hidden="true" /></button>
           </div>
           {error ? <p role="alert" className={styles.error}>{error}</p> : null}

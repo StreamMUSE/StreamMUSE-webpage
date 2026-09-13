@@ -87,11 +87,11 @@ export function evaluationRepository(sql: Sql, activeDataset?: string, activeRub
       requireRubric(current.session.rubric_version, rubricVersion)
       // Separate statements are intentional: after a concurrent INSERT wins, the following
       // SELECT gets a fresh READ COMMITTED snapshot and sees the winning response.
-      const inserted = await sql`INSERT INTO evaluation_quality_responses (session_id, ratings)
-        SELECT id, ${sql.json(answers.ratings)} FROM evaluation_sessions WHERE id = ${id}
+      const inserted = await sql`INSERT INTO evaluation_quality_responses (session_id, ratings, ranking)
+        SELECT id, ${sql.json(answers.ratings)}, ${sql.json(answers.ranking)} FROM evaluation_sessions WHERE id = ${id}
         ON CONFLICT (session_id) DO NOTHING RETURNING submitted_at`
       if (inserted.length) return { submitted: true, submittedAt: inserted[0].submitted_at, duplicate: false }
-      const rows = await sql`SELECT submitted_at, (ratings = ${sql.json(answers.ratings)}::jsonb) AS identical
+      const rows = await sql`SELECT submitted_at, (ratings = ${sql.json(answers.ratings)}::jsonb AND ranking = ${sql.json(answers.ranking)}::jsonb) AS identical
         FROM evaluation_quality_responses WHERE session_id = ${id}`
       if (!rows.length) throw new EvaluationError(404, 'This evaluation could not be found. Your answers are still saved in this browser.')
       if (!rows[0].identical) throw new EvaluationError(409, 'This evaluation has already been submitted with different answers. The saved submission has been kept.')

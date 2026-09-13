@@ -8,7 +8,7 @@ export async function POST(request: Request) {
   try {
     const { sessionId, ...body } = await readBody(request)
     validateSessionId(sessionId)
-    if (Object.keys(body).length !== 1) throw new EvaluationError(400, 'Unexpected answer fields.')
+    if (Object.keys(body).length !== 2) throw new EvaluationError(400, 'Unexpected answer fields.')
     const answers = validateAnswers(body)
     return json(await repository().submit(sessionId, answers))
   } catch (error) { return failure(error) }

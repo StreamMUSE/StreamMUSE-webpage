@@ -9,7 +9,7 @@ import { flattenResponse, responsesCsv } from '../scripts/evaluation-csv.mjs'
 
 const catalog = catalogData as Catalog
 const ratings = { A: { quality: 1 }, B: { quality: 4 }, C: { quality: 4 } }
-const answers = { ratings }
+const answers = { ratings, ranking: ['C', 'A', 'B'] }
 
 test('catalog contains ten complete songs and 100 uniquely named, intact audio assets', () => {
   assert.equal(catalog.songs.length, 10)
@@ -60,11 +60,15 @@ test('public projection omits identities, source paths, seed and dataset metadat
 
 test('three quality scores allow ties and reject incomplete, non-integer or legacy answers', () => {
   assert.deepEqual(validateAnswers(answers), answers)
+  assert.throws(() => validateAnswers({ ratings }))
+  for (const ranking of [['A','B','C'], ['A','C','B'], ['B','A','C'], ['B','C','A'], ['C','A','B'], ['C','B','A']]) {
+    assert.deepEqual(validateAnswers({ ratings, ranking }).ranking, ranking)
+  }
   for (const label of labels) for (const d of dimensions) for (const value of [0, 6, 2.5, '3', null, true, undefined]) {
     const invalid = structuredClone(answers); (invalid.ratings[label][d] as unknown) = value
     assert.throws(() => validateAnswers(invalid))
   }
-  for (const ranking of [[], ['A'], ['A', 'A', 'B'], ['A', 'B', 'D'], ['A', 'B', 'C', 'A']]) assert.throws(() => validateAnswers({ ratings, ranking }))
+  for (const ranking of [null, undefined, {}, 'ABC', [], ['A'], ['A', 'A', 'B'], ['A', 'B', 'D'], ['A', 'B', 'C', 'A']]) assert.throws(() => validateAnswers({ ratings, ranking }))
   assert.throws(() => validateAnswers({ ...answers, version: 'v2' }))
   assert.throws(() => validateAnswers({ ...answers, ratings: { ...ratings, D: ratings.A } }))
   assert.throws(() => validateAnswers({ ...answers, ratings: { ...ratings, A: { ...ratings.A, other: 4 } } }))
@@ -84,18 +88,20 @@ test('JSON requests reject wrong origin, invalid JSON, arrays and oversized stre
   await assert.rejects(readBody(make('x'.repeat(4097))), { status: 413 })
 })
 
-test('CSV maps quality scores to actual systems and leaves legacy ratings and ranks blank', () => {
+test('CSV maps quality scores and independent ranking to actual systems', () => {
   const assignment = assignSamples(catalog, () => 0)
-  const row = { session_id: randomUUID(), assignment, ratings, ranking: null, source_origin: 'https://study.example', song_id: '01', created_at: new Date(0), submitted_at: new Date(1000) }
+  const row = { session_id: randomUUID(), assignment, ratings, ranking: answers.ranking, source_origin: 'https://study.example', song_id: '01', created_at: new Date(0), submitted_at: new Date(1000) }
   const flat = flattenResponse(row)
   for (const label of labels) {
     const sample = assignment.samples[label]
     assert.equal(flat[`${sample.version}_seed`], sample.seed)
     assert.equal(flat[`${sample.version}_label`], label)
-    assert.equal(flat[`${sample.version}_rank`], undefined)
+    assert.equal(flat[`${sample.version}_rank`], answers.ranking.indexOf(label) + 1)
     assert.equal(flat[`${sample.version}_coherence`], undefined)
     for (const d of dimensions) assert.equal(flat[`${sample.version}_${d}`], ratings[label][d])
   }
+  assert.equal(flattenResponse({ ...row, ranking: null }).rank_1, undefined, 'Earlier quality-only answers retain blank rankings')
+  assert.equal(flattenResponse({ ...row, ranking: null }).v0_rank, undefined)
   assert.equal(responsesCsv([row]).split('\r\n').length, 3)
   assert.ok(responsesCsv([{ ...row, source_origin: '=SUM(1,2)' }]).includes('"\'=SUM(1,2)"'))
 })

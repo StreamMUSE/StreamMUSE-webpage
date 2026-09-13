@@ -98,3 +98,11 @@
   .guide li { grid-template-columns: 1fr; gap: 4px; }
   .levelCopy strong { font-size: 10px; }
 }
+
+.rankPanel { margin-top: 36px; }
+.rankPanel > p { max-width: 720px; font-size: 14px; }
+.ranks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 24px; }
+.rank { display: flex; flex-direction: column; gap: 10px; font-size: 12px; font-weight: 600; }
+.rank select { font: inherit; font-size: 14px; font-weight: 400; color: var(--foreground); background: var(--surface); border: 1px solid var(--border); border-radius: 9px; padding: 12px; min-height: 48px; width: 100%; }
+.rank select:focus-visible { outline: 3px solid var(--teal); outline-offset: 4px; }
+@media (max-width: 680px) { .ranks { grid-template-columns: 1fr; } }

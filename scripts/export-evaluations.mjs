@@ -14,7 +14,7 @@ try {
     FROM (
       SELECT session_id, ratings, ranking, submitted_at FROM evaluation_responses
       UNION ALL
-      SELECT session_id, ratings, NULL::jsonb AS ranking, submitted_at FROM evaluation_quality_responses
+      SELECT session_id, ratings, ranking, submitted_at FROM evaluation_quality_responses
     ) r JOIN evaluation_sessions s ON s.id = r.session_id ORDER BY r.submitted_at, r.session_id`
   await writeFile(destination, responsesCsv(rows), { flag: 'wx', mode: 0o600 })
   console.log(`Exported ${rows.length} completed evaluations to ${destination}.`)
