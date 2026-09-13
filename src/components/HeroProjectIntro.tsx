@@ -15,13 +15,13 @@ export default function HeroProjectIntro() {
             <PlayCircle size={18} aria-hidden="true" />
             View demos
           </Link>
-          <Link className="secondary-button" href="/versions/v2">
-            Open StreamMUSE+
-            <ArrowRight size={18} aria-hidden="true" />
-          </Link>
           <Link className="secondary-button" href="/versions/v2#midi">
             <Music2 size={18} aria-hidden="true" />
             View MIDI
+          </Link>
+          <Link className="secondary-button" href="/versions/v2">
+            Open StreamMUSE+
+            <ArrowRight size={18} aria-hidden="true" />
           </Link>
         </div>
       </div>
