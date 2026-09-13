@@ -3,6 +3,7 @@ import MidiAssetList from '@/components/MidiAssetList'
 import SectionHeading from '@/components/SectionHeading'
 import VersionHero from '@/components/VersionHero'
 import type { StreamMuseVersion } from '@/types/project'
+import V2MidiGallery from '@/components/V2MidiGallery'
 
 interface VersionPageProps {
   version: StreamMuseVersion
@@ -37,9 +38,9 @@ export default function VersionPage({ version }: VersionPageProps) {
         ) : null}
       </section>
 
-      <section id="midi" className="content-section" aria-labelledby="midi-title">
-        <SectionHeading eyebrow="Playable assets" title="MIDI Examples" description="MIDI examples can be played directly in the browser or downloaded." />
-        <MidiAssetList items={version.midi} />
+      <section id="midi" className="content-section" aria-label="MIDI Examples">
+        <SectionHeading eyebrow="Playable assets" title="MIDI Examples" description={version.slug === 'v2' ? 'Explore three accompaniment samples for each melody. Listen in the browser or download the original MIDI.' : 'MIDI examples can be played directly in the browser or downloaded.'} />
+        {version.slug === 'v2' ? <V2MidiGallery /> : <MidiAssetList items={version.midi} />}
       </section>
 
       {version.slug !== 'v0' && (version.notes.length > 0 || version.roadmap) ? (

@@ -1,0 +1,312 @@
+[
+  {
+    "id": "01",
+    "title": "童话",
+    "timelineDuration": 76.878367,
+    "samples": [
+      {
+        "id": "v2-01-s0",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/01/sample-1.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/01/sample-1.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/01/sample-1.svg",
+        "duration": 76.878367
+      },
+      {
+        "id": "v2-01-s1",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/01/sample-2.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/01/sample-2.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/01/sample-2.svg",
+        "duration": 76.878367
+      },
+      {
+        "id": "v2-01-s2",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/01/sample-3.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/01/sample-3.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/01/sample-3.svg",
+        "duration": 76.878367
+      }
+    ]
+  },
+  {
+    "id": "02",
+    "title": "Night dancer",
+    "timelineDuration": 78.210612,
+    "samples": [
+      {
+        "id": "v2-02-s0",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/02/sample-1.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/02/sample-1.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/02/sample-1.svg",
+        "duration": 78.210612
+      },
+      {
+        "id": "v2-02-s1",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/02/sample-2.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/02/sample-2.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/02/sample-2.svg",
+        "duration": 78.210612
+      },
+      {
+        "id": "v2-02-s2",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/02/sample-3.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/02/sample-3.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/02/sample-3.svg",
+        "duration": 78.210612
+      }
+    ]
+  },
+  {
+    "id": "03",
+    "title": "群青",
+    "timelineDuration": 126.876735,
+    "samples": [
+      {
+        "id": "v2-03-s0",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/03/sample-1.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/03/sample-1.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/03/sample-1.svg",
+        "duration": 126.876735
+      },
+      {
+        "id": "v2-03-s1",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/03/sample-2.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/03/sample-2.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/03/sample-2.svg",
+        "duration": 126.876735
+      },
+      {
+        "id": "v2-03-s2",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/03/sample-3.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/03/sample-3.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/03/sample-3.svg",
+        "duration": 126.537143
+      }
+    ]
+  },
+  {
+    "id": "04",
+    "title": "lemon",
+    "timelineDuration": 62.197551,
+    "samples": [
+      {
+        "id": "v2-04-s0",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/04/sample-1.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/04/sample-1.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/04/sample-1.svg",
+        "duration": 62.197551
+      },
+      {
+        "id": "v2-04-s1",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/04/sample-2.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/04/sample-2.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/04/sample-2.svg",
+        "duration": 62.197551
+      },
+      {
+        "id": "v2-04-s2",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/04/sample-3.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/04/sample-3.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/04/sample-3.svg",
+        "duration": 62.197551
+      }
+    ]
+  },
+  {
+    "id": "05",
+    "title": "cruel angel",
+    "timelineDuration": 109.531429,
+    "samples": [
+      {
+        "id": "v2-05-s0",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/05/sample-1.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/05/sample-1.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/05/sample-1.svg",
+        "duration": 109.531429
+      },
+      {
+        "id": "v2-05-s1",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/05/sample-2.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/05/sample-2.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/05/sample-2.svg",
+        "duration": 109.531429
+      },
+      {
+        "id": "v2-05-s2",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/05/sample-3.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/05/sample-3.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/05/sample-3.svg",
+        "duration": 109.531429
+      }
+    ]
+  },
+  {
+    "id": "06",
+    "title": "告白气球",
+    "timelineDuration": 88.868571,
+    "samples": [
+      {
+        "id": "v2-06-s0",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/06/sample-1.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/06/sample-1.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/06/sample-1.svg",
+        "duration": 88.868571
+      },
+      {
+        "id": "v2-06-s1",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/06/sample-2.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/06/sample-2.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/06/sample-2.svg",
+        "duration": 88.868571
+      },
+      {
+        "id": "v2-06-s2",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/06/sample-3.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/06/sample-3.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/06/sample-3.svg",
+        "duration": 88.868571
+      }
+    ]
+  },
+  {
+    "id": "07",
+    "title": "青花瓷",
+    "timelineDuration": 108.199184,
+    "samples": [
+      {
+        "id": "v2-07-s0",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/07/sample-1.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/07/sample-1.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/07/sample-1.svg",
+        "duration": 108.199184
+      },
+      {
+        "id": "v2-07-s1",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/07/sample-2.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/07/sample-2.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/07/sample-2.svg",
+        "duration": 108.199184
+      },
+      {
+        "id": "v2-07-s2",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/07/sample-3.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/07/sample-3.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/07/sample-3.svg",
+        "duration": 108.199184
+      }
+    ]
+  },
+  {
+    "id": "08",
+    "title": "小幸运",
+    "timelineDuration": 110.863673,
+    "samples": [
+      {
+        "id": "v2-08-s0",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/08/sample-1.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/08/sample-1.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/08/sample-1.svg",
+        "duration": 110.863673
+      },
+      {
+        "id": "v2-08-s1",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/08/sample-2.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/08/sample-2.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/08/sample-2.svg",
+        "duration": 110.863673
+      },
+      {
+        "id": "v2-08-s2",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/08/sample-3.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/08/sample-3.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/08/sample-3.svg",
+        "duration": 110.863673
+      }
+    ]
+  },
+  {
+    "id": "09",
+    "title": "月亮代表我的心",
+    "timelineDuration": 85.55102,
+    "samples": [
+      {
+        "id": "v2-09-s0",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/09/sample-1.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/09/sample-1.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/09/sample-1.svg",
+        "duration": 85.211429
+      },
+      {
+        "id": "v2-09-s1",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/09/sample-2.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/09/sample-2.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/09/sample-2.svg",
+        "duration": 85.55102
+      },
+      {
+        "id": "v2-09-s2",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/09/sample-3.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/09/sample-3.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/09/sample-3.svg",
+        "duration": 85.211429
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "天空之城",
+    "timelineDuration": 87.536327,
+    "samples": [
+      {
+        "id": "v2-10-s0",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/10/sample-1.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/10/sample-1.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/10/sample-1.svg",
+        "duration": 87.536327
+      },
+      {
+        "id": "v2-10-s1",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/10/sample-2.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/10/sample-2.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/10/sample-2.svg",
+        "duration": 87.536327
+      },
+      {
+        "id": "v2-10-s2",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/10/sample-3.mid",
+        "audioSrc": "/media/streammuse/v2/midi-examples/10/sample-3.mp3",
+        "posterSrc": "/media/streammuse/v2/midi-examples/10/sample-3.svg",
+        "duration": 87.536327
+      }
+    ]
+  }
+]

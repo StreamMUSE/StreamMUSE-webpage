@@ -168,7 +168,7 @@ export const streamMuseVersions: StreamMuseVersion[] = [
     details: [
       'Represents the next version direction.',
       'Can be used to communicate planned improvements without exposing unfinished technical details.',
-      'Media and MIDI demos can be added when early previews are ready.',
+      'Explore ten melodies with three generated accompaniment samples each in the MIDI examples below.',
     ],
     links: {
       project: '/versions/v2',
