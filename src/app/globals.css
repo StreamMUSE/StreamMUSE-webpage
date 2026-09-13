@@ -204,6 +204,11 @@ main {
   padding: clamp(3rem, 7vw, 5rem) 0;
 }
 
+#media,
+#midi {
+  scroll-margin-top: 6rem;
+}
+
 .section-heading {
   max-width: 760px;
   margin-bottom: 2rem;

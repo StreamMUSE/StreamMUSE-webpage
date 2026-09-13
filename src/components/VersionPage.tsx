@@ -4,6 +4,7 @@ import SectionHeading from '@/components/SectionHeading'
 import VersionHero from '@/components/VersionHero'
 import type { StreamMuseVersion } from '@/types/project'
 import V2MidiGallery from '@/components/V2MidiGallery'
+import V2VideoGallery from '@/components/V2VideoGallery'
 
 interface VersionPageProps {
   version: StreamMuseVersion
@@ -23,9 +24,9 @@ export default function VersionPage({ version }: VersionPageProps) {
         </div>
       </section>
 
-      <section id="media" className="content-section" aria-labelledby="media-title">
-        <SectionHeading eyebrow="Recorded demos" title="Real-time" description="A human performer plays the melody, while the system generates accompaniment in real time." />
-        <MediaGallery items={version.media} />
+      <section id="media" className="content-section" aria-label={version.slug === 'v2' ? 'Demo Videos' : 'Real-time demos'}>
+        <SectionHeading eyebrow="Recorded demos" title={version.slug === 'v2' ? 'Demo Videos' : 'Real-time'} description={version.slug === 'v2' ? 'Watch StreamMUSE v2 generate accompaniment across ten melodies, with multiple recorded takes to explore.' : 'A human performer plays the melody, while the system generates accompaniment in real time.'} />
+        {version.slug === 'v2' ? <V2VideoGallery /> : <MediaGallery items={version.media} />}
         {version.simulationMedia ? (
           <div className="demo-group">
             <SectionHeading

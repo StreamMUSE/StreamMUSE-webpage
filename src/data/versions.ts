@@ -163,11 +163,11 @@ export const streamMuseVersions: StreamMuseVersion[] = [
     shortName: 'v2',
     status: 'Under development',
     statusTone: 'development',
-    summary: 'A future StreamMUSE version reserved for upcoming research and system improvements.',
-    focus: 'Roadmap placeholder for the next research iteration.',
+    summary: 'Explore recorded accompaniment demos and MIDI examples from StreamMUSE v2.',
+    focus: 'Melody-conditioned accompaniment, demonstrated through recorded performances and generated samples.',
     details: [
-      'Represents the next version direction.',
-      'Can be used to communicate planned improvements without exposing unfinished technical details.',
+      'The current research iteration of StreamMUSE.',
+      'Watch twenty recorded demonstrations across ten melodies, with multiple takes for selected songs.',
       'Explore ten melodies with three generated accompaniment samples each in the MIDI examples below.',
     ],
     links: {
@@ -177,11 +177,10 @@ export const streamMuseVersions: StreamMuseVersion[] = [
     midi: [],
     notes: [
       'Under development.',
-      'Keep this page concise until v2 technical direction and demos are ready.',
+      'Demo recordings and MIDI examples are available on this page for listening and exploration.',
     ],
     roadmap: [
       'Model and inference improvements to be announced.',
-      'Additional recorded demos once stable.',
       'Expanded evaluation notes after internal validation.',
     ],
   },

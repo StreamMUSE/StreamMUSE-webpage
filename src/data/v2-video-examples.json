@@ -1,0 +1,242 @@
+[
+  {
+    "id": "01",
+    "title": "童话",
+    "takes": [
+      {
+        "id": "v2-video-01-1",
+        "take": 1,
+        "src": "/media/streammuse/v2/videos/01/take-1.mp4",
+        "poster": "/media/streammuse/v2/videos/01/take-1.webp",
+        "duration": 86.3,
+        "width": 1280,
+        "height": 816
+      }
+    ]
+  },
+  {
+    "id": "02",
+    "title": "Night dancer",
+    "takes": [
+      {
+        "id": "v2-video-02-1",
+        "take": 1,
+        "src": "/media/streammuse/v2/videos/02/take-1.mp4",
+        "poster": "/media/streammuse/v2/videos/02/take-1.webp",
+        "duration": 102.466667,
+        "width": 1280,
+        "height": 816
+      }
+    ]
+  },
+  {
+    "id": "03",
+    "title": "群青",
+    "takes": [
+      {
+        "id": "v2-video-03-1",
+        "take": 1,
+        "src": "/media/streammuse/v2/videos/03/take-1.mp4",
+        "poster": "/media/streammuse/v2/videos/03/take-1.webp",
+        "duration": 132.206897,
+        "width": 960,
+        "height": 608
+      }
+    ]
+  },
+  {
+    "id": "04",
+    "title": "lemon",
+    "takes": [
+      {
+        "id": "v2-video-04-1",
+        "take": 1,
+        "src": "/media/streammuse/v2/videos/04/take-1.mp4",
+        "poster": "/media/streammuse/v2/videos/04/take-1.webp",
+        "duration": 68.933333,
+        "width": 1280,
+        "height": 816
+      }
+    ]
+  },
+  {
+    "id": "05",
+    "title": "cruel angel",
+    "takes": [
+      {
+        "id": "v2-video-05-1",
+        "take": 1,
+        "src": "/media/streammuse/v2/videos/05/take-1.mp4",
+        "poster": "/media/streammuse/v2/videos/05/take-1.webp",
+        "duration": 116.166667,
+        "width": 1280,
+        "height": 816
+      }
+    ]
+  },
+  {
+    "id": "06",
+    "title": "告白气球",
+    "takes": [
+      {
+        "id": "v2-video-06-1",
+        "take": 1,
+        "src": "/media/streammuse/v2/videos/06/take-1.mp4",
+        "poster": "/media/streammuse/v2/videos/06/take-1.webp",
+        "duration": 94.8,
+        "width": 1280,
+        "height": 816
+      },
+      {
+        "id": "v2-video-06-2",
+        "take": 2,
+        "src": "/media/streammuse/v2/videos/06/take-2.mp4",
+        "poster": "/media/streammuse/v2/videos/06/take-2.webp",
+        "duration": 94.3,
+        "width": 1280,
+        "height": 816
+      },
+      {
+        "id": "v2-video-06-3",
+        "take": 3,
+        "src": "/media/streammuse/v2/videos/06/take-3.mp4",
+        "poster": "/media/streammuse/v2/videos/06/take-3.webp",
+        "duration": 94.566667,
+        "width": 1280,
+        "height": 816
+      }
+    ]
+  },
+  {
+    "id": "07",
+    "title": "青花瓷",
+    "takes": [
+      {
+        "id": "v2-video-07-1",
+        "take": 1,
+        "src": "/media/streammuse/v2/videos/07/take-1.mp4",
+        "poster": "/media/streammuse/v2/videos/07/take-1.webp",
+        "duration": 114.233333,
+        "width": 1280,
+        "height": 816
+      },
+      {
+        "id": "v2-video-07-2",
+        "take": 2,
+        "src": "/media/streammuse/v2/videos/07/take-2.mp4",
+        "poster": "/media/streammuse/v2/videos/07/take-2.webp",
+        "duration": 115.133333,
+        "width": 1280,
+        "height": 816
+      },
+      {
+        "id": "v2-video-07-3",
+        "take": 3,
+        "src": "/media/streammuse/v2/videos/07/take-3.mp4",
+        "poster": "/media/streammuse/v2/videos/07/take-3.webp",
+        "duration": 113.6,
+        "width": 1280,
+        "height": 816
+      }
+    ]
+  },
+  {
+    "id": "08",
+    "title": "小幸运",
+    "takes": [
+      {
+        "id": "v2-video-08-1",
+        "take": 1,
+        "src": "/media/streammuse/v2/videos/08/take-1.mp4",
+        "poster": "/media/streammuse/v2/videos/08/take-1.webp",
+        "duration": 118.433333,
+        "width": 1280,
+        "height": 816
+      },
+      {
+        "id": "v2-video-08-2",
+        "take": 2,
+        "src": "/media/streammuse/v2/videos/08/take-2.mp4",
+        "poster": "/media/streammuse/v2/videos/08/take-2.webp",
+        "duration": 114.9,
+        "width": 1280,
+        "height": 816
+      },
+      {
+        "id": "v2-video-08-3",
+        "take": 3,
+        "src": "/media/streammuse/v2/videos/08/take-3.mp4",
+        "poster": "/media/streammuse/v2/videos/08/take-3.webp",
+        "duration": 114.633333,
+        "width": 1280,
+        "height": 816
+      }
+    ]
+  },
+  {
+    "id": "09",
+    "title": "月亮代表我的心",
+    "takes": [
+      {
+        "id": "v2-video-09-1",
+        "take": 1,
+        "src": "/media/streammuse/v2/videos/09/take-1.mp4",
+        "poster": "/media/streammuse/v2/videos/09/take-1.webp",
+        "duration": 94.066667,
+        "width": 1280,
+        "height": 816
+      },
+      {
+        "id": "v2-video-09-2",
+        "take": 2,
+        "src": "/media/streammuse/v2/videos/09/take-2.mp4",
+        "poster": "/media/streammuse/v2/videos/09/take-2.webp",
+        "duration": 92.966667,
+        "width": 1280,
+        "height": 816
+      },
+      {
+        "id": "v2-video-09-3",
+        "take": 3,
+        "src": "/media/streammuse/v2/videos/09/take-3.mp4",
+        "poster": "/media/streammuse/v2/videos/09/take-3.webp",
+        "duration": 92.833333,
+        "width": 1280,
+        "height": 816
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "天空之城",
+    "takes": [
+      {
+        "id": "v2-video-10-1",
+        "take": 1,
+        "src": "/media/streammuse/v2/videos/10/take-1.mp4",
+        "poster": "/media/streammuse/v2/videos/10/take-1.webp",
+        "duration": 93.066667,
+        "width": 1280,
+        "height": 816
+      },
+      {
+        "id": "v2-video-10-2",
+        "take": 2,
+        "src": "/media/streammuse/v2/videos/10/take-2.mp4",
+        "poster": "/media/streammuse/v2/videos/10/take-2.webp",
+        "duration": 97.1,
+        "width": 1280,
+        "height": 816
+      },
+      {
+        "id": "v2-video-10-3",
+        "take": 3,
+        "src": "/media/streammuse/v2/videos/10/take-3.mp4",
+        "poster": "/media/streammuse/v2/videos/10/take-3.webp",
+        "duration": 97.3,
+        "width": 1280,
+        "height": 816
+      }
+    ]
+  }
+]

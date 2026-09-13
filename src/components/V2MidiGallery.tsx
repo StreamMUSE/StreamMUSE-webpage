@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Download, Loader2, Pause, Play, RotateCcw } from 'lucide-react'
 import songs from '@/data/v2-midi-examples.json'
 import styles from './V2MidiGallery.module.css'
+import { pauseOtherMedia } from '@/lib/media-playback'
 
 type Sample = typeof songs[number]['samples'][number]
 type PlaybackStatus = 'idle' | 'loading' | 'playing' | 'paused' | 'ended' | 'error'
@@ -113,6 +114,7 @@ export default function V2MidiGallery() {
       </div>
       <p className={styles.footnote}>Click a piano roll to listen. Use the slider to seek. Download the MIDI to explore the notes.</p>
       <audio ref={audioRef} preload="none" aria-hidden="true"
+        onPlay={event => pauseOtherMedia(event.currentTarget)}
         onTimeUpdate={() => { const audio = audioRef.current; if (audio?.getAttribute('src')) update({ time: audio.currentTime }) }}
         onEnded={() => update({ status: 'ended' })}
         onPause={() => { if (audioRef.current?.paused && stateRef.current.status === 'playing') update({ status: 'paused' }) }}
