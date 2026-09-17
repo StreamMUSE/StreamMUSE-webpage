@@ -5,7 +5,7 @@ const navItems = [
   { href: '/#goal', label: 'Goal' },
   { href: '/#news', label: 'News' },
   { href: '/#versions', label: 'Versions' },
-  { href: '/#demos', label: 'Demos' },
+  { href: '/versions/v2#media', label: 'Demos' },
   { href: '/#publication', label: 'Publication' },
   { href: '/#contact', label: 'Contact' },
 ]

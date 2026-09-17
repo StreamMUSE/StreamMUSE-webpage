@@ -5,6 +5,7 @@ import { Download, Loader2, Pause, Play, RotateCcw } from 'lucide-react'
 import songs from '@/data/v2-midi-examples.json'
 import styles from './V2MidiGallery.module.css'
 import { pauseOtherMedia } from '@/lib/media-playback'
+import { getSongTitle } from '@/lib/song-titles'
 
 type Sample = typeof songs[number]['samples'][number]
 type PlaybackStatus = 'idle' | 'loading' | 'playing' | 'paused' | 'ended' | 'error'
@@ -74,19 +75,21 @@ export default function V2MidiGallery() {
   return (
     <div className={styles.gallery}>
       <div className={styles.intro}>
-        <p>Ten melodies, three accompaniment samples each.</p>
+        <p>Samples 1, 2, and 3 use seeds 0, 1, and 2, respectively.</p>
         <div className={styles.legend}><span><i className={styles.melodyDot} />Melody</span><span><i className={styles.accompanimentDot} />Accompaniment</span></div>
       </div>
       <div className={styles.columns} aria-hidden="true"><span>MELODY</span>{[1, 2, 3].map(n => <span key={n}>Sample {n}</span>)}</div>
       <div className={styles.rows}>
-        {songs.map(song => (
+        {songs.map(song => {
+          const title = getSongTitle(song.title)
+          return (
           <section className={styles.row} key={song.id} aria-labelledby={`midi-song-${song.id}`}>
-            <header className={styles.song}><span className={styles.number}>{song.id}</span><h3 id={`midi-song-${song.id}`}>{song.title}</h3></header>
+            <header className={styles.song}><span className={styles.number}>{song.id}</span><h3 id={`midi-song-${song.id}`}>{title}</h3></header>
             {song.samples.map(sample => {
               const active = playback.id === sample.id
               const status = active ? playback.status : 'idle'
               const time = active ? playback.time : 0
-              const label = `${song.title}, Sample ${sample.seed + 1}`
+              const label = `${title}, Sample ${sample.seed + 1}`
               const playing = status === 'playing', loading = status === 'loading'
               const action = loading ? 'Cancel loading' : playing ? 'Pause' : status === 'ended' ? 'Replay' : status === 'error' ? 'Retry' : 'Play'
               return (
@@ -110,7 +113,8 @@ export default function V2MidiGallery() {
               )
             })}
           </section>
-        ))}
+          )
+        })}
       </div>
       <p className={styles.footnote}>Click a piano roll to listen. Use the slider to seek. Download the MIDI to explore the notes.</p>
       <audio ref={audioRef} preload="none" aria-hidden="true"

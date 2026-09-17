@@ -40,7 +40,13 @@ export default function VersionPage({ version }: VersionPageProps) {
       </section>
 
       <section id="midi" className="content-section" aria-label="MIDI Examples">
-        <SectionHeading eyebrow="Playable assets" title="MIDI Examples" description={version.slug === 'v2' ? 'Explore ten melodies with three generated accompaniments each. Compare how different random seeds affect density, register, and texture; listen in the browser or download the original MIDI.' : 'MIDI examples can be played directly in the browser or downloaded.'} />
+        <SectionHeading eyebrow="Playable assets" title="MIDI Examples" description={version.slug === 'v2' ? 'Ten songs performed by a human musician, with three generated accompaniment samples per song.' : 'MIDI examples can be played directly in the browser or downloaded.'} />
+        {version.slug === 'v2' ? (
+          <div className="prose-block midi-method">
+            <p>We invited a musician to perform the melodies of ten different songs and recorded the melody part as MIDI. Each recording was then replayed through StreamMUSE+ in real-time simulation, feeding the melody to the system incrementally as a live performer would. We ran inference three times per song with different random seeds to produce the accompaniment samples below.</p>
+            <p>The simulation uses the same generation and playback process as live performance. With the same melody input and system settings, these examples should therefore, in principle, reflect the accompaniment a real user would hear while playing. Different seeds produce variations in density, register, and texture.</p>
+          </div>
+        ) : null}
         {version.slug === 'v2' ? <V2MidiGallery /> : <MidiAssetList items={version.midi} />}
       </section>
 

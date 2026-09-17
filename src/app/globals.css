@@ -209,6 +209,10 @@ main {
   scroll-margin-top: 6rem;
 }
 
+.midi-method {
+  margin-bottom: 2rem;
+}
+
 .section-heading {
   max-width: 760px;
   margin-bottom: 2rem;

@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { ArrowLeft, ExternalLink } from 'lucide-react'
-import PaperStatusBadge from '@/components/PaperStatusBadge'
 import type { StreamMuseVersion } from '@/types/project'
 
 interface VersionHeroProps {
@@ -14,7 +13,6 @@ export default function VersionHero({ version }: VersionHeroProps) {
         <ArrowLeft size={16} aria-hidden="true" />
         Back to versions
       </Link>
-      {version.slug === 'v2' ? <PaperStatusBadge tone={version.statusTone}>{version.status}</PaperStatusBadge> : null}
       <h1>{version.name}</h1>
       <p className="version-focus">{version.focus}</p>
       <p>{version.summary}</p>

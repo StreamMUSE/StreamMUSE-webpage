@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { ExternalLink, Play, RotateCcw } from 'lucide-react'
 import songs from '@/data/v2-video-examples.json'
 import { pauseOtherMedia } from '@/lib/media-playback'
+import { getSongTitle } from '@/lib/song-titles'
 import styles from './V2VideoGallery.module.css'
 
 type Song = typeof songs[number]
@@ -67,24 +68,25 @@ function RecordingPlayer({ recording, title }: { recording: Recording; title: st
 function SongCard({ song }: { song: Song }) {
   const [selected, setSelected] = useState(0)
   const recording = song.takes[selected]
+  const title = getSongTitle(song.title)
   return (
     <article className={styles.card} aria-labelledby={`video-song-${song.id}`}>
       <header className={styles.heading}>
         <span className={styles.number}>{song.id}</span>
-        <h3 id={`video-song-${song.id}`}>{song.title}</h3>
+        <h3 id={`video-song-${song.id}`}>{title}</h3>
         <span className={styles.duration}>{durationLabel(recording.duration)}</span>
       </header>
-      <RecordingPlayer key={recording.id} recording={recording} title={song.title} />
+      <RecordingPlayer key={recording.id} recording={recording} title={title} />
       <footer className={styles.footer}>
         {song.takes.length > 1 ? (
-          <div className={styles.takes} role="group" aria-label={`Recordings of ${song.title}`}>
+          <div className={styles.takes} role="group" aria-label={`Recordings of ${title}`}>
             {song.takes.map((take, index) => (
               <button key={take.id} type="button" aria-pressed={index === selected}
-                aria-label={`${song.title}, Take ${take.take}`} onClick={() => setSelected(index)}>Take {take.take}</button>
+                aria-label={`${title}, Take ${take.take}`} onClick={() => setSelected(index)}>Take {take.take}</button>
             ))}
           </div>
         ) : <span className={styles.singleTake}>Take 1</span>}
-        <a className={styles.open} href={recording.src} target="_blank" rel="noreferrer" aria-label={`Open MP4: ${song.title}, Take ${recording.take}`}>
+        <a className={styles.open} href={recording.src} target="_blank" rel="noreferrer" aria-label={`Open MP4: ${title}, Take ${recording.take}`}>
           MP4 <ExternalLink size={13} aria-hidden="true" />
         </a>
       </footer>
