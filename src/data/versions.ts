@@ -91,17 +91,7 @@ export const streamMuseVersions: StreamMuseVersion[] = [
         versionLabel: 'v0',
       },
     ],
-    midi: [
-      {
-        id: 'v0-midi-example',
-        title: 'v0 MIDI accompaniment example',
-        src: '/media/streammuse/v0/midi/streammuse-v0-example.mid',
-        caption: 'Playable placeholder MIDI for validating in-page playback and download.',
-        duration: '00:05',
-        scenario: 'Accompaniment output',
-        downloadName: 'streammuse-v0-example.mid',
-      },
-    ],
+    midi: [],
     notes: [
       'Accepted by RTAS 2026.',
       'The page should highlight latency-aware streaming inference and real-time accompaniment as the central contribution.',

@@ -30,7 +30,7 @@ export default function VersionHero({ version }: VersionHeroProps) {
           </a>
         ) : null}
         <a href="#media">Video</a>
-        <a href="#midi">MIDI</a>
+        {version.slug === 'v2' || version.midi.length > 0 ? <a href="#midi">MIDI</a> : null}
       </div>
     </section>
   )
