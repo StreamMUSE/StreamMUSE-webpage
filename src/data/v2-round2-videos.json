@@ -1,0 +1,237 @@
+[
+  {
+    "id": "01",
+    "title": "童话",
+    "takes": [
+      {
+        "id": "v2-round2-01-1",
+        "take": 1,
+        "duration": 38.1,
+        "camera": {
+          "src": "/media/streammuse/v2/round2/01/take-1-camera.mp4",
+          "poster": "/media/streammuse/v2/round2/01/take-1-camera.webp",
+          "width": 1280,
+          "height": 720
+        },
+        "screen": {
+          "src": "/media/streammuse/v2/round2/01/take-1-screen.mp4",
+          "poster": "/media/streammuse/v2/round2/01/take-1-screen.webp",
+          "width": 1920,
+          "height": 1058
+        }
+      },
+      {
+        "id": "v2-round2-01-2",
+        "take": 2,
+        "duration": 52.03333333333333,
+        "camera": {
+          "src": "/media/streammuse/v2/round2/01/take-2-camera.mp4",
+          "poster": "/media/streammuse/v2/round2/01/take-2-camera.webp",
+          "width": 1280,
+          "height": 720
+        },
+        "screen": {
+          "src": "/media/streammuse/v2/round2/01/take-2-screen.mp4",
+          "poster": "/media/streammuse/v2/round2/01/take-2-screen.webp",
+          "width": 1920,
+          "height": 1058
+        }
+      }
+    ]
+  },
+  {
+    "id": "04",
+    "title": "Lemon",
+    "takes": [
+      {
+        "id": "v2-round2-04-1",
+        "take": 1,
+        "duration": 55.333333333333336,
+        "camera": {
+          "src": "/media/streammuse/v2/round2/04/take-1-camera.mp4",
+          "poster": "/media/streammuse/v2/round2/04/take-1-camera.webp",
+          "width": 1280,
+          "height": 720
+        },
+        "screen": {
+          "src": "/media/streammuse/v2/round2/04/take-1-screen.mp4",
+          "poster": "/media/streammuse/v2/round2/04/take-1-screen.webp",
+          "width": 1920,
+          "height": 1058
+        }
+      },
+      {
+        "id": "v2-round2-04-2",
+        "take": 2,
+        "duration": 69.5,
+        "camera": {
+          "src": "/media/streammuse/v2/round2/04/take-2-camera.mp4",
+          "poster": "/media/streammuse/v2/round2/04/take-2-camera.webp",
+          "width": 1280,
+          "height": 720
+        },
+        "screen": {
+          "src": "/media/streammuse/v2/round2/04/take-2-screen.mp4",
+          "poster": "/media/streammuse/v2/round2/04/take-2-screen.webp",
+          "width": 1920,
+          "height": 1058
+        }
+      }
+    ]
+  },
+  {
+    "id": "05",
+    "title": "A Cruel Angel's Thesis",
+    "takes": [
+      {
+        "id": "v2-round2-05-1",
+        "take": 1,
+        "duration": 78.83333333333333,
+        "camera": {
+          "src": "/media/streammuse/v2/round2/05/take-1-camera.mp4",
+          "poster": "/media/streammuse/v2/round2/05/take-1-camera.webp",
+          "width": 1280,
+          "height": 720
+        },
+        "screen": {
+          "src": "/media/streammuse/v2/round2/05/take-1-screen.mp4",
+          "poster": "/media/streammuse/v2/round2/05/take-1-screen.webp",
+          "width": 1920,
+          "height": 1058
+        }
+      }
+    ]
+  },
+  {
+    "id": "06",
+    "title": "告白气球",
+    "takes": [
+      {
+        "id": "v2-round2-06-1",
+        "take": 1,
+        "duration": 99.1,
+        "camera": {
+          "src": "/media/streammuse/v2/round2/06/take-1-camera.mp4",
+          "poster": "/media/streammuse/v2/round2/06/take-1-camera.webp",
+          "width": 1280,
+          "height": 720
+        },
+        "screen": {
+          "src": "/media/streammuse/v2/round2/06/take-1-screen.mp4",
+          "poster": "/media/streammuse/v2/round2/06/take-1-screen.webp",
+          "width": 1920,
+          "height": 1058
+        }
+      },
+      {
+        "id": "v2-round2-06-2",
+        "take": 2,
+        "duration": 99.9,
+        "camera": {
+          "src": "/media/streammuse/v2/round2/06/take-2-camera.mp4",
+          "poster": "/media/streammuse/v2/round2/06/take-2-camera.webp",
+          "width": 1280,
+          "height": 720
+        },
+        "screen": {
+          "src": "/media/streammuse/v2/round2/06/take-2-screen.mp4",
+          "poster": "/media/streammuse/v2/round2/06/take-2-screen.webp",
+          "width": 1920,
+          "height": 1058
+        }
+      }
+    ]
+  },
+  {
+    "id": "07",
+    "title": "青花瓷",
+    "takes": [
+      {
+        "id": "v2-round2-07-1",
+        "take": 1,
+        "duration": 96.3,
+        "camera": {
+          "src": "/media/streammuse/v2/round2/07/take-1-camera.mp4",
+          "poster": "/media/streammuse/v2/round2/07/take-1-camera.webp",
+          "width": 1280,
+          "height": 720
+        },
+        "screen": {
+          "src": "/media/streammuse/v2/round2/07/take-1-screen.mp4",
+          "poster": "/media/streammuse/v2/round2/07/take-1-screen.webp",
+          "width": 1920,
+          "height": 1058
+        }
+      }
+    ]
+  },
+  {
+    "id": "09",
+    "title": "月亮代表我的心",
+    "takes": [
+      {
+        "id": "v2-round2-09-1",
+        "take": 1,
+        "duration": 87.9,
+        "camera": {
+          "src": "/media/streammuse/v2/round2/09/take-1-camera.mp4",
+          "poster": "/media/streammuse/v2/round2/09/take-1-camera.webp",
+          "width": 1280,
+          "height": 720
+        },
+        "screen": {
+          "src": "/media/streammuse/v2/round2/09/take-1-screen.mp4",
+          "poster": "/media/streammuse/v2/round2/09/take-1-screen.webp",
+          "width": 1920,
+          "height": 1058
+        }
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "天空之城",
+    "takes": [
+      {
+        "id": "v2-round2-10-1",
+        "take": 1,
+        "duration": 98.4,
+        "camera": {
+          "src": "/media/streammuse/v2/round2/10/take-1-camera.mp4",
+          "poster": "/media/streammuse/v2/round2/10/take-1-camera.webp",
+          "width": 1280,
+          "height": 720
+        },
+        "screen": {
+          "src": "/media/streammuse/v2/round2/10/take-1-screen.mp4",
+          "poster": "/media/streammuse/v2/round2/10/take-1-screen.webp",
+          "width": 1920,
+          "height": 1058
+        }
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "title": "一路向北",
+    "takes": [
+      {
+        "id": "v2-round2-11-1",
+        "take": 1,
+        "duration": 71.8,
+        "camera": {
+          "src": "/media/streammuse/v2/round2/11/take-1-camera.mp4",
+          "poster": "/media/streammuse/v2/round2/11/take-1-camera.webp",
+          "width": 1280,
+          "height": 720
+        },
+        "screen": {
+          "src": "/media/streammuse/v2/round2/11/take-1-screen.mp4",
+          "poster": "/media/streammuse/v2/round2/11/take-1-screen.webp",
+          "width": 1920,
+          "height": 1058
+        }
+      }
+    ]
+  }
+]

@@ -11,6 +11,7 @@ const displayTitles: Record<string, string> = {
   '小幸运': '小幸运 (A Little Happiness)',
   '月亮代表我的心': '月亮代表我的心 (The Moon Represents My Heart)',
   '天空之城': '天空之城 (Castle in the Sky)',
+  '一路向北': '一路向北 (All the Way North)',
 }
 
 export function getSongTitle(sourceTitle: string): string {

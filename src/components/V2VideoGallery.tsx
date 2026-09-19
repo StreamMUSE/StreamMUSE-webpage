@@ -3,12 +3,14 @@
 import { useEffect, useRef, useState } from 'react'
 import { ExternalLink, Play, RotateCcw } from 'lucide-react'
 import songs from '@/data/v2-video-examples.json'
+import round2Songs from '@/data/v2-round2-videos.json'
+import DualViewVideoPlayer from './DualViewVideoPlayer'
 import { pauseOtherMedia } from '@/lib/media-playback'
 import { getSongTitle } from '@/lib/song-titles'
 import styles from './V2VideoGallery.module.css'
 
-type Song = typeof songs[number]
-type Recording = Song['takes'][number]
+type Song = typeof songs[number] | typeof round2Songs[number]
+type Recording = typeof songs[number]['takes'][number]
 const durationLabel = (seconds: number) => `${Math.floor(seconds / 60)}:${String(Math.floor(seconds) % 60).padStart(2, '0')}`
 
 function RecordingPlayer({ recording, title }: { recording: Recording; title: string }) {
@@ -65,18 +67,20 @@ function RecordingPlayer({ recording, title }: { recording: Recording; title: st
   )
 }
 
-function SongCard({ song }: { song: Song }) {
+function SongCard({ song, round, number }: { song: Song; round: number; number: number }) {
   const [selected, setSelected] = useState(0)
   const recording = song.takes[selected]
   const title = getSongTitle(song.title)
   return (
-    <article className={styles.card} aria-labelledby={`video-song-${song.id}`}>
+    <article className={styles.card} aria-labelledby={`video-round-${round}-song-${song.id}`}>
       <header className={styles.heading}>
-        <span className={styles.number}>{song.id}</span>
-        <h3 id={`video-song-${song.id}`}>{title}</h3>
+        <span className={styles.number}>{String(number).padStart(2, '0')}</span>
+        <h3 id={`video-round-${round}-song-${song.id}`}>{title}</h3>
         <span className={styles.duration}>{durationLabel(recording.duration)}</span>
       </header>
-      <RecordingPlayer key={recording.id} recording={recording} title={title} />
+      {'camera' in recording
+        ? <DualViewVideoPlayer key={recording.id} recording={recording} title={title} />
+        : <RecordingPlayer key={recording.id} recording={recording} title={title} />}
       <footer className={styles.footer}>
         {song.takes.length > 1 ? (
           <div className={styles.takes} role="group" aria-label={`Recordings of ${title}`}>
@@ -86,7 +90,7 @@ function SongCard({ song }: { song: Song }) {
             ))}
           </div>
         ) : <span className={styles.singleTake}>Take 1</span>}
-        <a className={styles.open} href={recording.src} target="_blank" rel="noreferrer" aria-label={`Open MP4: ${title}, Take ${recording.take}`}>
+        <a className={styles.open} href={'camera' in recording ? recording.camera.src : recording.src} target="_blank" rel="noreferrer" aria-label={`Open ${'camera' in recording ? 'camera ' : ''}MP4: ${title}, Take ${recording.take}`}>
           MP4 <ExternalLink size={13} aria-hidden="true" />
         </a>
       </footer>
@@ -95,10 +99,19 @@ function SongCard({ song }: { song: Song }) {
 }
 
 export default function V2VideoGallery() {
+  const [round, setRound] = useState(2)
+  const selectedSongs = round === 2 ? round2Songs : songs
   return (
     <div>
-      <div className={styles.intro}><p>10 melodies · 20 recordings</p><p>Select a take, then press play to watch.</p></div>
-      <div className={styles.grid}>{songs.map(song => <SongCard key={song.id} song={song} />)}</div>
+      <div className={styles.rounds} role="group" aria-label="Recording rounds">
+        <button type="button" aria-pressed={round === 2} onClick={() => setRound(2)}>Round 2 <span>Dual view</span></button>
+        <button type="button" aria-pressed={round === 1} onClick={() => setRound(1)}>Round 1 <span>Screen recordings</span></button>
+      </div>
+      <div className={styles.intro}>
+        <p>{selectedSongs.length} melodies · {selectedSongs.reduce((sum, song) => sum + song.takes.length, 0)} performances</p>
+        <p>{round === 2 ? 'Select a take. Swap the camera and screen views while listening to the camera audio.' : 'Select a take, then press play to watch.'}</p>
+      </div>
+      <div className={styles.grid} key={round}>{selectedSongs.map((song, index) => <SongCard key={song.id} song={song} round={round} number={index + 1} />)}</div>
     </div>
   )
 }

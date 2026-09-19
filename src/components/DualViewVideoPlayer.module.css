@@ -1,0 +1,32 @@
+.player { background: #f5f5ef; color: #31574f; }
+.frame { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #141c19; }
+.frame video { position: absolute; display: block; object-fit: contain; background: #141c19; }
+.main { inset: 0; width: 100%; height: 100%; z-index: 1; }
+.inset, .insetButton { right: 2.5%; bottom: 4%; width: 32%; height: 32%; border-radius: 8px; }
+.inset { z-index: 2; border: 2px solid #ffffffed; box-shadow: 0 3px 14px #0005; }
+.insetButton { position: absolute; z-index: 5; padding: 0; border: 0; background: transparent; cursor: pointer; }
+.insetButton span { position: absolute; right: 5px; bottom: 5px; display: flex; align-items: center; gap: 5px; padding: 2px 6px; border-radius: 4px; background: #112820d9; color: white; font-size: 10px; }
+.mainLabel { position: absolute; z-index: 2; top: 12px; left: 12px; padding: 3px 9px; border-radius: 5px; background: #112820d9; color: white; font-size: 11px; }
+.overlay { position: absolute; inset: 0; z-index: 3; display: grid; place-items: center; width: 100%; border: 0; background: #10281d0a; cursor: pointer; }
+.overlay span { display: grid; place-items: center; width: 60px; height: 60px; border: 1px solid white; border-radius: 50%; background: #fffffff0; color: #28544e; box-shadow: 0 3px 18px #12291e35; }
+.loading { position: absolute; z-index: 4; left: 12px; bottom: 12px; padding: 4px 8px; border-radius: 5px; color: white; background: #112820d9; font-size: 12px; }
+.controls { padding: 8px 12px; }
+.transport, .options, .sound { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.transport > input { flex: 1; min-width: 0; }
+.controls input { accent-color: #357f78; cursor: pointer; min-height: 28px; }
+.controls button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-width: 34px; min-height: 36px; border: 0; border-radius: 6px; background: transparent; color: inherit; cursor: pointer; }
+.controls button:hover { background: #357f7815; }
+.time { font-size: 11px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.options { justify-content: space-between; gap: 4px; }
+.sound { gap: 4px; }
+.sound input { width: 54px; }
+.sound span, .swap { font-size: 11px; white-space: nowrap; }
+.swap { margin-left: auto; padding: 0 7px; }
+.player button:focus-visible, .player input:focus-visible { outline: 2px solid #218b80; outline-offset: 2px; }
+.overlay:focus-visible { outline-offset: -4px; }
+.error { margin: 0; padding: 8px 14px; color: #a63832; font-size: 13px; }
+.error a { text-decoration: underline; }
+.player:fullscreen { display: flex; flex-direction: column; background: #141c19; color: #e5f0ea; }
+.player:fullscreen .frame { flex: 1; min-height: 0; aspect-ratio: auto; }
+.player:fullscreen .controls { width: min(100%, 1000px); margin: 0 auto; }
+@media (max-width: 400px) { .controls { padding: 6px 8px; } .sound input { width: 40px; } .controls button { min-height: 40px; } }

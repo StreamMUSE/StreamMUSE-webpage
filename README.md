@@ -43,4 +43,4 @@ Then update `src/data/versions.ts`. Local `.mp4` files, YouTube links, Bilibili 
 
 The v2 page has a dedicated [MIDI example gallery](docs/v2-midi-examples.md) with ten melodies and three samples per melody. Its catalog is in `src/data/v2-midi-examples.json`.
 
-The [v2 demo video gallery](docs/v2-video-examples.md) includes twenty original recordings grouped by melody, with take selection and playback on demand. Its catalog is in `src/data/v2-video-examples.json`.
+The [StreamMUSE+ demo video gallery](docs/v2-video-examples.md) includes two rounds: twenty original screen recordings, and eleven synchronized camera/screen pairs with switchable main and inset views and camera audio. Catalogs are in `src/data/v2-video-examples.json` and `src/data/v2-round2-videos.json`.
