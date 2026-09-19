@@ -68,10 +68,12 @@ export default function Home() {
         />
         <h3 className="demo-subheading">Video</h3>
         <MediaGallery items={featuredMedia} />
-        <div className="demo-group">
-          <h3 className="demo-subheading">MIDI</h3>
-          <MidiAssetList items={featuredMidi} />
-        </div>
+        {featuredMidi.length > 0 ? (
+          <div className="demo-group">
+            <h3 className="demo-subheading">MIDI</h3>
+            <MidiAssetList items={featuredMidi} />
+          </div>
+        ) : null}
       </section>
 
       <section id="publication" className="content-section publication-card">

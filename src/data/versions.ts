@@ -129,18 +129,7 @@ export const streamMuseVersions: StreamMuseVersion[] = [
         versionLabel: 'v1',
       },
     ],
-    simulationMedia: [],
-    midi: [
-      {
-        id: 'v1-midi-example',
-        title: 'v1 MIDI accompaniment example',
-        src: '/media/streammuse/v1/midi/streammuse-v1-example.mid',
-        caption: 'Playable placeholder MIDI for the public v1 page.',
-        duration: '00:05',
-        scenario: 'Accompaniment output',
-        downloadName: 'streammuse-v1-example.mid',
-      },
-    ],
+    midi: [],
     notes: [
       'Publicly visible version page.',
       'The main currently confirmed difference from v0 is a model update.',
