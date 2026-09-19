@@ -2,15 +2,15 @@
 
 `/versions/v2#midi` contains ten song groups. Each group has three system rows and three sample columns (seeds 0, 1, 2):
 
-- StreamMUSE: `legacy_m2a`
-- StreamMUSE+ (w/o PM): `lekai_no_prompt`
 - StreamMUSE+: `pc_rule_if_else_n10`
+- StreamMUSE+ (w/o Prompt): `lekai_no_prompt`
+- StreamMUSE: `legacy_m2a`
 
 All 90 source MIDI files are the playback exports in `ISMIR_LBD_202609010`, verified against the evaluation catalog; raw generation files are excluded. Seven prompt-free samples have no generated accompaniment. They remain present with an explicit card note, rather than being replaced with another take.
 
-Card backgrounds use mist blue, lavender, and pale rose, with a system legend at the top. Piano-roll backgrounds are transparent so the tint remains visible. Teal notes always mean melody and amber notes always mean accompaniment. All nine cards for a song share the same pitch range and time scale. The system names are announced by screen readers and available in card titles, without taking up a left-hand column.
+Card headers and playback controls use pale rose for StreamMUSE+, lavender for StreamMUSE+ (w/o Prompt), and mist blue for StreamMUSE, with a system legend in the same order at the top. Each legend label stays on one line. The piano-roll area uses the same neutral background for every system. Teal notes always mean melody and amber notes always mean accompaniment. All nine cards for a song share the same pitch range and time scale. The system names are announced by screen readers and available in card titles, without taking up a left-hand column.
 
-The first song starts expanded; other songs can be expanded individually or all at once. At widths of 600px and below, each system shows one card and a Sample 1 / 2 / 3 selector. Collapsing the active song or changing its mobile sample pauses playback.
+All ten songs start expanded and can be collapsed individually or all at once. At widths of 600px and below, each system shows one card and a Sample 1 / 2 / 3 selector. Collapsing the active song or changing its mobile sample pauses playback.
 
 ## Playback
 

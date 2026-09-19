@@ -21,7 +21,7 @@ export default function V2MidiGallery() {
   const volumesRef = useRef(structuredClone(defaultVolumes))
   const [playback, setPlayback] = useState<Playback>(initial)
   const [volumes, setVolumes] = useState(structuredClone(defaultVolumes))
-  const [expanded, setExpanded] = useState(() => new Set([songs[0].id]))
+  const [expanded, setExpanded] = useState(() => new Set(songs.map(song => song.id)))
   const [mobileSamples, setMobileSamples] = useState<Record<string, number>>({})
 
   useEffect(() => {

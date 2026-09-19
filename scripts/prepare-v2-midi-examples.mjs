@@ -11,9 +11,9 @@ const evaluationAudit = JSON.parse(await readFile(path.join(evaluationRoot, 'doc
 assert.equal(catalog.datasetVersion, 'ismir-lbd-202609010-playback-v1')
 assert.equal(catalog.songs.length, 10)
 const systems = [
-  { id: 'v0', label: 'StreamMUSE', condition: 'legacy_m2a' },
-  { id: 'v1', label: 'StreamMUSE+ (w/o PM)', condition: 'lekai_no_prompt' },
   { id: 'v2', label: 'StreamMUSE+', condition: 'pc_rule_if_else_n10' },
+  { id: 'v1', label: 'StreamMUSE+ (w/o Prompt)', condition: 'lekai_no_prompt' },
+  { id: 'v0', label: 'StreamMUSE', condition: 'legacy_m2a' },
 ]
 const sha256 = data => createHash('sha256').update(data).digest('hex')
 const songs = [], audit = [], outputs = new Map()
@@ -59,7 +59,7 @@ for (const song of catalog.songs) {
     outputs.set(`public${base}.mid`, midi)
     const x = t => (t / timelineDuration * W).toFixed(2), pitchHeight = (H - 12) / (maxPitch - minPitch + 1)
     const y = pitch => (6 + (maxPitch - pitch) * pitchHeight).toFixed(2)
-    // Transparent piano-roll backgrounds let each card's system tint remain visible.
+    // The gallery supplies a neutral piano-roll background behind these transparent SVGs.
     let svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="Melody and accompaniment piano roll">`
     for (let pitch = minPitch; pitch <= maxPitch; pitch++) {
       if ([1, 3, 6, 8, 10].includes(pitch % 12)) svg += `<rect x="0" y="${y(pitch)}" width="${W}" height="${pitchHeight.toFixed(2)}" fill="#273447" opacity=".025"/>`

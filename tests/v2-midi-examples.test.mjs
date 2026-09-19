@@ -14,9 +14,9 @@ test('ten melodies contain all three intended systems and seeds from the exact p
   assert.equal(audit.assets.length, 90)
   assert.equal(audit.source, 'ISMIR_LBD_202609010')
   assert.deepEqual(systems, [
-    { id: 'v0', label: 'StreamMUSE', condition: 'legacy_m2a' },
-    { id: 'v1', label: 'StreamMUSE+ (w/o PM)', condition: 'lekai_no_prompt' },
     { id: 'v2', label: 'StreamMUSE+', condition: 'pc_rule_if_else_n10' },
+    { id: 'v1', label: 'StreamMUSE+ (w/o Prompt)', condition: 'lekai_no_prompt' },
+    { id: 'v0', label: 'StreamMUSE', condition: 'legacy_m2a' },
   ])
   assert.deepEqual(audit.systems, systems)
   assert.deepEqual(audit.mix, { melodyDb: 0, accompanimentDb: -12 })
@@ -69,7 +69,7 @@ test('published MIDI, stems, and piano rolls match the source audit; silent acco
     const poster = readFileSync(`public${sample.posterSrc}`, 'utf8')
     assert.match(poster, /viewBox="0 0 640 300"/)
     assert.ok(poster.includes('#357f78') && poster.includes('#c5824a'))
-    assert.ok(!poster.includes('#faf9f5'), 'transparent backgrounds preserve the system tint')
+    assert.ok(!poster.includes('#faf9f5'), 'transparent SVGs use the gallery CSS background')
     assert.ok(!/NaN|undefined|<script|https?:\/\/(?!www.w3.org)/.test(poster))
   }
   assert.equal(empty, 7, 'do not discard or replace original empty accompaniment outputs')

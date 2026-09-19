@@ -1,17 +1,17 @@
 [
   {
-    "id": "v0",
-    "label": "StreamMUSE",
-    "condition": "legacy_m2a"
-  },
-  {
-    "id": "v1",
-    "label": "StreamMUSE+ (w/o PM)",
-    "condition": "lekai_no_prompt"
-  },
-  {
     "id": "v2",
     "label": "StreamMUSE+",
     "condition": "pc_rule_if_else_n10"
+  },
+  {
+    "id": "v1",
+    "label": "StreamMUSE+ (w/o Prompt)",
+    "condition": "lekai_no_prompt"
+  },
+  {
+    "id": "v0",
+    "label": "StreamMUSE",
+    "condition": "legacy_m2a"
   }
 ]
