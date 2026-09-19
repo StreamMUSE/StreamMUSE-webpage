@@ -41,10 +41,10 @@ export default function VersionPage({ version }: VersionPageProps) {
 
       {version.slug === 'v2' || version.midi.length > 0 ? (
         <section id="midi" className="content-section" aria-label="MIDI Examples">
-          <SectionHeading eyebrow="Playable assets" title="MIDI Examples" description={version.slug === 'v2' ? 'Ten songs performed by a human musician, with three generated accompaniment samples per song.' : 'MIDI examples can be played directly in the browser or downloaded.'} />
+          <SectionHeading eyebrow="Playable assets" title="MIDI Examples" description={version.slug === 'v2' ? 'Ten recorded melodies, three systems, and three accompaniment samples per system.' : 'MIDI examples can be played directly in the browser or downloaded.'} />
           {version.slug === 'v2' ? (
             <div className="prose-block midi-method">
-              <p>We invited a musician to perform the melodies of ten different songs and recorded the melody part as MIDI. Each recording was then replayed through StreamMUSE+ in real-time simulation, feeding the melody to the system incrementally as a live performer would. We ran inference three times per song with different random seeds to produce the accompaniment samples below.</p>
+              <p>We invited a musician to perform the melodies of ten different songs and recorded the melody part as MIDI. Each recording was then replayed through StreamMUSE, StreamMUSE+ without the prompt model (w/o PM), and StreamMUSE+ in real-time simulation, feeding the melody to each system incrementally as a live performer would. We ran each system three times per song with different random seeds to produce the samples below.</p>
               <p>The simulation uses the same generation and playback process as live performance. With the same melody input and system settings, these examples should therefore, in principle, reflect the accompaniment a real user would hear while playing. Different seeds produce variations in density, register, and texture.</p>
             </div>
           ) : null}

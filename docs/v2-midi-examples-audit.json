@@ -1,6 +1,22 @@
 {
   "source": "ISMIR_LBD_202609010",
-  "condition": "pc_rule_if_else_n10",
+  "systems": [
+    {
+      "id": "v0",
+      "label": "StreamMUSE",
+      "condition": "legacy_m2a"
+    },
+    {
+      "id": "v1",
+      "label": "StreamMUSE+ (w/o PM)",
+      "condition": "lekai_no_prompt"
+    },
+    {
+      "id": "v2",
+      "label": "StreamMUSE+",
+      "condition": "pc_rule_if_else_n10"
+    }
+  ],
   "mix": {
     "melodyDb": 0,
     "accompanimentDb": -12
@@ -8,362 +24,2252 @@
   "assets": [
     {
       "song": "01",
+      "system": "v0",
+      "seed": 0,
+      "sourceFile": "01_童话/legacy_m2a_s0.mid",
+      "midiSha256": "49b36e09daaee1a05a2a9fdfa60acc07d7507689a6a0a4e848baab69f9602c49",
+      "stemAudio": {
+        "melody": {
+          "sha256": "2229c3ae0e475d8d8e83e832a904287ce915a1706fdc1fe39e5524ff524dc06a",
+          "duration": 77.714286,
+          "peak": 0.08504629880189896
+        },
+        "accompaniment": {
+          "sha256": "2ce4f79b93e804e2b45d167fe86c7fffd94249b4741c587e47c1ca34c2f4bf98",
+          "duration": 77.714286,
+          "peak": 0.1152106449007988
+        }
+      },
+      "posterSha256": "0dcbd54d34b3326eb33cc34d5e9564a30c28fc4dc21e6c87abb970e8f16c900e",
+      "noteCount": 417,
+      "accompanimentNotes": 277,
+      "minPitch": 29,
+      "maxPitch": 97,
+      "duration": 77.714286
+    },
+    {
+      "song": "01",
+      "system": "v0",
+      "seed": 1,
+      "sourceFile": "01_童话/legacy_m2a_s1.mid",
+      "midiSha256": "187b2f7c7c8b25d85c772e5e02086755a40ef81c166bd78c440211b74c76e413",
+      "stemAudio": {
+        "melody": {
+          "sha256": "58509adc9ddc82bcf1edf19f9d6df7f4ef75d31c464db96005e824962225fa20",
+          "duration": 78.706939,
+          "peak": 0.08504629880189896
+        },
+        "accompaniment": {
+          "sha256": "5d665b0e68dfe11905a65519516b2609d34295aa4dff6a901e81b02e1b19fb38",
+          "duration": 78.706939,
+          "peak": 0.1679733544588089
+        }
+      },
+      "posterSha256": "75f89899329d925b417c056aec6dd4d68217971e0be1c8513d435901d252aadf",
+      "noteCount": 631,
+      "accompanimentNotes": 491,
+      "minPitch": 29,
+      "maxPitch": 97,
+      "duration": 78.706939
+    },
+    {
+      "song": "01",
+      "system": "v0",
+      "seed": 2,
+      "sourceFile": "01_童话/legacy_m2a_s2.mid",
+      "midiSha256": "ed20300881dd575596192165323f32c25115d983654959ff1ef76fffff910550",
+      "stemAudio": {
+        "melody": {
+          "sha256": "f9eb0c42f6b49bee8b8da99643e96c9e2f4d36cda5ce268f63c1fc2615b49d3a",
+          "duration": 77.217959,
+          "peak": 0.08504629880189896
+        },
+        "accompaniment": {
+          "sha256": "8163eb20d2e5a8bef360fabca1ca1963ee3499ad57806c2ee59ee57136b5bd60",
+          "duration": 77.217959,
+          "peak": 0.07437627762556076
+        }
+      },
+      "posterSha256": "f43077657876e9c2c9cd06e6a91216c631c8233835d99614cd61d6a7240d73a0",
+      "noteCount": 221,
+      "accompanimentNotes": 81,
+      "minPitch": 29,
+      "maxPitch": 97,
+      "duration": 77.217959
+    },
+    {
+      "song": "01",
+      "system": "v1",
+      "seed": 0,
+      "sourceFile": "01_童话/lekai_no_prompt_s0.mid",
+      "midiSha256": "4a99796e1619dec52f54a35fcdfbaa9ada45dadfdef2d278f816552dedd2ba21",
+      "stemAudio": {
+        "melody": {
+          "sha256": "2bcea9e3447ac76c39279345e07f3458bac5bec21180fe8a4144f0234547ba8e",
+          "duration": 76.878367,
+          "peak": 0.03615467622876167
+        },
+        "accompaniment": {
+          "sha256": "63173b1d3aa9d45c549b8ca1a96233b9d08fe6dc939c9525f8ae4bed05a76a4a",
+          "duration": 76.878367,
+          "peak": 0
+        }
+      },
+      "posterSha256": "08d85f513fae8367df0e14a2d65d8a1492ad24730351ff149b481a5eb5e31d64",
+      "noteCount": 141,
+      "accompanimentNotes": 0,
+      "minPitch": 29,
+      "maxPitch": 97,
+      "duration": 76.878367
+    },
+    {
+      "song": "01",
+      "system": "v1",
+      "seed": 1,
+      "sourceFile": "01_童话/lekai_no_prompt_s1.mid",
+      "midiSha256": "4a99796e1619dec52f54a35fcdfbaa9ada45dadfdef2d278f816552dedd2ba21",
+      "stemAudio": {
+        "melody": {
+          "sha256": "2bcea9e3447ac76c39279345e07f3458bac5bec21180fe8a4144f0234547ba8e",
+          "duration": 76.878367,
+          "peak": 0.03615467622876167
+        },
+        "accompaniment": {
+          "sha256": "63173b1d3aa9d45c549b8ca1a96233b9d08fe6dc939c9525f8ae4bed05a76a4a",
+          "duration": 76.878367,
+          "peak": 0
+        }
+      },
+      "posterSha256": "08d85f513fae8367df0e14a2d65d8a1492ad24730351ff149b481a5eb5e31d64",
+      "noteCount": 141,
+      "accompanimentNotes": 0,
+      "minPitch": 29,
+      "maxPitch": 97,
+      "duration": 76.878367
+    },
+    {
+      "song": "01",
+      "system": "v1",
+      "seed": 2,
+      "sourceFile": "01_童话/lekai_no_prompt_s2.mid",
+      "midiSha256": "aada76bdd66835e07d7cac4b23157480803df826e6784aece6869692eddd2c3b",
+      "stemAudio": {
+        "melody": {
+          "sha256": "2bcea9e3447ac76c39279345e07f3458bac5bec21180fe8a4144f0234547ba8e",
+          "duration": 76.878367,
+          "peak": 0.03615467622876167
+        },
+        "accompaniment": {
+          "sha256": "87fe40b3bfcfd912c08d1126fa310a6eac75129ce43ac47862803f935bc41095",
+          "duration": 76.878367,
+          "peak": 0.07982849329710007
+        }
+      },
+      "posterSha256": "296c7d98b0cf74e1032d9ce0554939a9bc0693e1d99e1e607add27667cb1e162",
+      "noteCount": 264,
+      "accompanimentNotes": 123,
+      "minPitch": 29,
+      "maxPitch": 97,
+      "duration": 76.878367
+    },
+    {
+      "song": "01",
+      "system": "v2",
       "seed": 0,
       "sourceFile": "01_童话/pc_rule_if_else_n10_s0.mid",
       "midiSha256": "4b11258d086edef390628533be20dee88e242891958aed7b646dc1171bcd35f8",
-      "audioSha256": "e0f496be17831d731dbc303d545d0b7b3eb4d7449826e6caaeb2abb4cc28fd6f",
-      "posterSha256": "161f3e9b54001cb909522a659f5398a822ec4eea0c6ac5ec2a8fbe97be99242c",
+      "stemAudio": {
+        "melody": {
+          "sha256": "2bcea9e3447ac76c39279345e07f3458bac5bec21180fe8a4144f0234547ba8e",
+          "duration": 76.878367,
+          "peak": 0.03615467622876167
+        },
+        "accompaniment": {
+          "sha256": "f792ded99e7972799be7fc5bdd88276a2265893c784bef1572cb3c0207b452e5",
+          "duration": 76.878367,
+          "peak": 0.1318959891796112
+        }
+      },
+      "posterSha256": "2bde7d2e73d784814e797593e099505efd16574da773aaa5f9bc183c88721c5d",
       "noteCount": 354,
-      "minPitch": 39,
-      "maxPitch": 86,
+      "accompanimentNotes": 213,
+      "minPitch": 29,
+      "maxPitch": 97,
       "duration": 76.878367
     },
     {
       "song": "01",
+      "system": "v2",
       "seed": 1,
       "sourceFile": "01_童话/pc_rule_if_else_n10_s1.mid",
       "midiSha256": "1f7bb8289ac9cd5c3dcdb362fd32339c5e96ef6925dd9a4b787201f9bd2d58a2",
-      "audioSha256": "20e8d7c3d2e2f9cadb1c438c916b8a5283fa471af6c0d8e92da0c28c08f485b8",
-      "posterSha256": "e9f2355ba6060e1e5660ab9d913c12624c14d66e974d578f6f0b40ee907ff27b",
+      "stemAudio": {
+        "melody": {
+          "sha256": "2bcea9e3447ac76c39279345e07f3458bac5bec21180fe8a4144f0234547ba8e",
+          "duration": 76.878367,
+          "peak": 0.03615467622876167
+        },
+        "accompaniment": {
+          "sha256": "44392067452bc873bba47f7370e48179a5cdfb6139df9d743681d0c75606c8d2",
+          "duration": 76.878367,
+          "peak": 0.1177697479724884
+        }
+      },
+      "posterSha256": "68a5caab4f096e5c7de5c9227ab7c540f2743b5ba2bddec284828c98e5a41e97",
       "noteCount": 314,
-      "minPitch": 39,
-      "maxPitch": 86,
+      "accompanimentNotes": 173,
+      "minPitch": 29,
+      "maxPitch": 97,
       "duration": 76.878367
     },
     {
       "song": "01",
+      "system": "v2",
       "seed": 2,
       "sourceFile": "01_童话/pc_rule_if_else_n10_s2.mid",
       "midiSha256": "da97b9e0d7d422f8fe1903912634cf9e0ffa6bc301d5d5bb576a35d01c9f55ee",
-      "audioSha256": "ecae241e2ed766dc0c7604cab08d9a1f75374571b778b9d348fba438e3652dac",
-      "posterSha256": "e9e7713f5ce5387918635378dc540cddf4ff910b877acc526316d50e648e3aa7",
+      "stemAudio": {
+        "melody": {
+          "sha256": "2bcea9e3447ac76c39279345e07f3458bac5bec21180fe8a4144f0234547ba8e",
+          "duration": 76.878367,
+          "peak": 0.03615467622876167
+        },
+        "accompaniment": {
+          "sha256": "93b277693b319a102548c6136ea93a653812ffdd7fab6adfa0502f060d08b22c",
+          "duration": 76.878367,
+          "peak": 0.09844786673784256
+        }
+      },
+      "posterSha256": "e39d3b9f16d8b5fb087351ea5e656ce763d0c351525f3a59a26d75f0f6750b00",
       "noteCount": 280,
-      "minPitch": 39,
-      "maxPitch": 86,
+      "accompanimentNotes": 139,
+      "minPitch": 29,
+      "maxPitch": 97,
       "duration": 76.878367
     },
     {
       "song": "02",
+      "system": "v0",
+      "seed": 0,
+      "sourceFile": "02_Night dancer/legacy_m2a_s0.mid",
+      "midiSha256": "fd9eae112d4d14dd296417b484641890cf4f953a581ef03c8c6b96aa2e8dc956",
+      "stemAudio": {
+        "melody": {
+          "sha256": "5c3788258603db15193fa2a8b09fd4f3e70d2df1e2c91e078984e63733d8925b",
+          "duration": 79.882449,
+          "peak": 0.1176852136850357
+        },
+        "accompaniment": {
+          "sha256": "c0e337db46ef987c42218e77a9808abd29dda90f018091bcc73269473259e04d",
+          "duration": 79.882449,
+          "peak": 0.13169020414352417
+        }
+      },
+      "posterSha256": "e829c4d941211928281d6040a78bcce34999d78261ed2608b17c7deab7d9244e",
+      "noteCount": 513,
+      "accompanimentNotes": 353,
+      "minPitch": 21,
+      "maxPitch": 106,
+      "duration": 79.882449
+    },
+    {
+      "song": "02",
+      "system": "v0",
+      "seed": 1,
+      "sourceFile": "02_Night dancer/legacy_m2a_s1.mid",
+      "midiSha256": "ae99305eff8d1ac3666876e3c4e52a196c8a4e12794f81297ed348a9c4da555e",
+      "stemAudio": {
+        "melody": {
+          "sha256": "ff886627fd93ac73b92e289f74eaaaf53c0893953f1f6bc5826910d222ec4e9b",
+          "duration": 78.863673,
+          "peak": 0.1176852136850357
+        },
+        "accompaniment": {
+          "sha256": "003c3afc4013848ba8d99d0899fceb7915b6cc718e8fb62dc660bc640efa2413",
+          "duration": 78.863673,
+          "peak": 0.08672400563955307
+        }
+      },
+      "posterSha256": "5b60e60ef62052de1f87873aba0c45e8db72baac7434c866887b660f22a8ce1c",
+      "noteCount": 295,
+      "accompanimentNotes": 135,
+      "minPitch": 21,
+      "maxPitch": 106,
+      "duration": 78.863673
+    },
+    {
+      "song": "02",
+      "system": "v0",
+      "seed": 2,
+      "sourceFile": "02_Night dancer/legacy_m2a_s2.mid",
+      "midiSha256": "e2c5f6d5f6e4b8201f5ad4ae77094bcd630d5d6242b2217290a670b5fc5a4bb9",
+      "stemAudio": {
+        "melody": {
+          "sha256": "fe3a1c76fd72cce66d607f110b6b42fe67c77f7db54db888ef2991470c5390bf",
+          "duration": 79.542857,
+          "peak": 0.1176852136850357
+        },
+        "accompaniment": {
+          "sha256": "28cda87642af355a828f20d407c4455a9e40a5d47d65d9f29f713de169291e04",
+          "duration": 79.542857,
+          "peak": 0.07065118104219437
+        }
+      },
+      "posterSha256": "4e6c547b3cd0fd62929b27cc0ea3c9f05f5f96f1a656311d8d2db35548492e27",
+      "noteCount": 266,
+      "accompanimentNotes": 106,
+      "minPitch": 21,
+      "maxPitch": 106,
+      "duration": 79.542857
+    },
+    {
+      "song": "02",
+      "system": "v1",
+      "seed": 0,
+      "sourceFile": "02_Night dancer/lekai_no_prompt_s0.mid",
+      "midiSha256": "683954220cd6705dcce60505de2e32db7b626fe81940338b41cd320ddc12dc32",
+      "stemAudio": {
+        "melody": {
+          "sha256": "fca5d7b345cb7ca721ea634809a8db232dee83520fd92a4b31a73db5c23780ff",
+          "duration": 78.210612,
+          "peak": 0.051569852977991104
+        },
+        "accompaniment": {
+          "sha256": "daa8d37dcdc65f16a83936a4948bbc2cbd14d74680c5a547f8749528cc359c77",
+          "duration": 78.210612,
+          "peak": 0.07461779564619064
+        }
+      },
+      "posterSha256": "3b9de2aae368ccfe33495451465fe27b2667afd763b3da124cd82f138530c159",
+      "noteCount": 370,
+      "accompanimentNotes": 209,
+      "minPitch": 21,
+      "maxPitch": 106,
+      "duration": 78.210612
+    },
+    {
+      "song": "02",
+      "system": "v1",
+      "seed": 1,
+      "sourceFile": "02_Night dancer/lekai_no_prompt_s1.mid",
+      "midiSha256": "d55712ef6d6834277bae0c1ac3308e7bcd2dd6b816322cd37c4b69742260482f",
+      "stemAudio": {
+        "melody": {
+          "sha256": "fca5d7b345cb7ca721ea634809a8db232dee83520fd92a4b31a73db5c23780ff",
+          "duration": 78.210612,
+          "peak": 0.051569852977991104
+        },
+        "accompaniment": {
+          "sha256": "69870c80b1c02045f8dbbeaeeea4e7d55433fcff45f9c7dae5d3e7a2bc647634",
+          "duration": 78.210612,
+          "peak": 0.062481414526700974
+        }
+      },
+      "posterSha256": "8e7a90b8ea48842cbb74898247a26b31061b8844709494851ed77c2a0f05482c",
+      "noteCount": 205,
+      "accompanimentNotes": 44,
+      "minPitch": 21,
+      "maxPitch": 106,
+      "duration": 78.210612
+    },
+    {
+      "song": "02",
+      "system": "v1",
+      "seed": 2,
+      "sourceFile": "02_Night dancer/lekai_no_prompt_s2.mid",
+      "midiSha256": "e39f6b5a6f30fadd369107d8e223b9803ba8f297a6b1f5afd93039bd54248816",
+      "stemAudio": {
+        "melody": {
+          "sha256": "fca5d7b345cb7ca721ea634809a8db232dee83520fd92a4b31a73db5c23780ff",
+          "duration": 78.210612,
+          "peak": 0.051569852977991104
+        },
+        "accompaniment": {
+          "sha256": "0fce5f7db55477fddc501941946b21f716d122ee0f29fe135773e45aaa0b7289",
+          "duration": 78.210612,
+          "peak": 0.15574148297309875
+        }
+      },
+      "posterSha256": "1580d7ce23906431a18e82b887a24d4f81d61f91a1f68bc28d9ebdb1ebfbae6b",
+      "noteCount": 239,
+      "accompanimentNotes": 78,
+      "minPitch": 21,
+      "maxPitch": 106,
+      "duration": 78.210612
+    },
+    {
+      "song": "02",
+      "system": "v2",
       "seed": 0,
       "sourceFile": "02_Night dancer/pc_rule_if_else_n10_s0.mid",
       "midiSha256": "459d65ed34d40efbbc6eda20457e36b136e58ddb6781b8d9f6b72ebec77768a9",
-      "audioSha256": "dc28e6cb96cc366c37fd931b051211f076de4d41a647f7f26c0a0f4e61d86f7a",
-      "posterSha256": "4f59646c4cec0e0b886a2b20190d431bfb4adfe63fb08f168464ece370ac8d31",
+      "stemAudio": {
+        "melody": {
+          "sha256": "fca5d7b345cb7ca721ea634809a8db232dee83520fd92a4b31a73db5c23780ff",
+          "duration": 78.210612,
+          "peak": 0.051569852977991104
+        },
+        "accompaniment": {
+          "sha256": "67d9ffd2623f9a6e0d6471fbab304c7821097d43458d524b4c135ce5025e26a1",
+          "duration": 78.210612,
+          "peak": 0.09168510884046555
+        }
+      },
+      "posterSha256": "f37f85f933bed70f235356eefb3a1d786f20f133f8c701c34fabf63bbb353cbd",
       "noteCount": 280,
-      "minPitch": 27,
-      "maxPitch": 86,
+      "accompanimentNotes": 119,
+      "minPitch": 21,
+      "maxPitch": 106,
       "duration": 78.210612
     },
     {
       "song": "02",
+      "system": "v2",
       "seed": 1,
       "sourceFile": "02_Night dancer/pc_rule_if_else_n10_s1.mid",
       "midiSha256": "6c2992891cdbbb4395b6d2c6ff7ea8b0905b059dc2dc09aaccc12c3571ce335a",
-      "audioSha256": "b915bba3e6b9465405b94d43f6e730f850fa459937e1501fa2a7069bc80eb83a",
-      "posterSha256": "e4e14fd3d290e7b23ca09c2e0555f024f92ef3b4be7975627bb40730aded416a",
+      "stemAudio": {
+        "melody": {
+          "sha256": "fca5d7b345cb7ca721ea634809a8db232dee83520fd92a4b31a73db5c23780ff",
+          "duration": 78.210612,
+          "peak": 0.051569852977991104
+        },
+        "accompaniment": {
+          "sha256": "0a6c90c4df22e04722ae9967c153426e611c848c79914ceecd51d6dd68602a3d",
+          "duration": 78.210612,
+          "peak": 0.14082111418247223
+        }
+      },
+      "posterSha256": "e22905138dd4693abe5a234712d8da87c1a0d663454fee3d3252d82475bfebf9",
       "noteCount": 365,
-      "minPitch": 27,
-      "maxPitch": 86,
+      "accompanimentNotes": 204,
+      "minPitch": 21,
+      "maxPitch": 106,
       "duration": 78.210612
     },
     {
       "song": "02",
+      "system": "v2",
       "seed": 2,
       "sourceFile": "02_Night dancer/pc_rule_if_else_n10_s2.mid",
       "midiSha256": "bd18d1d38f85366e80f91f71d05a8db0df5594e0fd262a6f67120e0a14ab4b7a",
-      "audioSha256": "db62fd4e73fc01fe6e7eac0290992662203fbcf21d763e92db5cba96cf401103",
-      "posterSha256": "db79372a02e7af7e70976bd9cb309a9297b8204381e5d8ecae7eb79c5fa7cb2d",
+      "stemAudio": {
+        "melody": {
+          "sha256": "fca5d7b345cb7ca721ea634809a8db232dee83520fd92a4b31a73db5c23780ff",
+          "duration": 78.210612,
+          "peak": 0.051569852977991104
+        },
+        "accompaniment": {
+          "sha256": "0fc23d3dd91e106852f5c466074747eb211377a87f2925c9aefa467d0d289a57",
+          "duration": 78.210612,
+          "peak": 0.08260109275579453
+        }
+      },
+      "posterSha256": "e4ebf9900728d76595bce2a339c3b7886582e2b28ce20478d16fe577bfaf21a4",
       "noteCount": 298,
-      "minPitch": 27,
-      "maxPitch": 86,
+      "accompanimentNotes": 137,
+      "minPitch": 21,
+      "maxPitch": 106,
       "duration": 78.210612
     },
     {
       "song": "03",
+      "system": "v0",
+      "seed": 0,
+      "sourceFile": "03_群青/legacy_m2a_s0.mid",
+      "midiSha256": "324cf21261940ab639897a6b1a1dc359057c4f04c4a0cbfee37f5251dec04105",
+      "stemAudio": {
+        "melody": {
+          "sha256": "7a34eb8b4d1f89d0bd7fb579f872939179dcb6b97abb4f046066318b95441474",
+          "duration": 130.533878,
+          "peak": 0.12788869440555573
+        },
+        "accompaniment": {
+          "sha256": "5cfd42e0a33c09fcf0a685d56f28cb2513b7bd6dd80b00823d30bfabb8ab1578",
+          "duration": 130.533878,
+          "peak": 0.1178433746099472
+        }
+      },
+      "posterSha256": "db687c4facb81fe3ffd31f4f66038914c924175bea19cbf673b05c01134accab",
+      "noteCount": 595,
+      "accompanimentNotes": 338,
+      "minPitch": 20,
+      "maxPitch": 99,
+      "duration": 130.533878
+    },
+    {
+      "song": "03",
+      "system": "v0",
+      "seed": 1,
+      "sourceFile": "03_群青/legacy_m2a_s1.mid",
+      "midiSha256": "2a5bbc233dc3ad2c72a9b45b88a2b34f212440ec2d1f07737ff380f13e905b76",
+      "stemAudio": {
+        "melody": {
+          "sha256": "a90c88d147b257225367cf182d0de697d0c162de4a70d3a2ca665a6c1ec4fe16",
+          "duration": 128.052245,
+          "peak": 0.12788869440555573
+        },
+        "accompaniment": {
+          "sha256": "ddb0d62b4795da7f6d747f4c2711604590bb40d06b28eb637459b25b8ff1b4e4",
+          "duration": 128.052245,
+          "peak": 0.1368986815214157
+        }
+      },
+      "posterSha256": "496b39e676f03602b6087dc5bae46c5eba91846dbb24325798658b8eb8400e74",
+      "noteCount": 844,
+      "accompanimentNotes": 587,
+      "minPitch": 20,
+      "maxPitch": 99,
+      "duration": 128.052245
+    },
+    {
+      "song": "03",
+      "system": "v0",
+      "seed": 2,
+      "sourceFile": "03_群青/legacy_m2a_s2.mid",
+      "midiSha256": "57fcde2ef3c6f529ca7d52bc1c720e6c1583db0b17f590195f269e2f842f6d73",
+      "stemAudio": {
+        "melody": {
+          "sha256": "4ad70ceb2660b7e11675f6ad40f983a3e7c9daab9cf407f2c9181d006388a4d0",
+          "duration": 125.701224,
+          "peak": 0.12788869440555573
+        },
+        "accompaniment": {
+          "sha256": "fbd5d4808718a70d42c2474eed89b5105782d1f9de8c7052277dec60b76d51fe",
+          "duration": 125.701224,
+          "peak": 0.0865388959646225
+        }
+      },
+      "posterSha256": "542cba5413ee2ec054edce9eae411e11d2ecc60361efd20877a543f0576f417e",
+      "noteCount": 452,
+      "accompanimentNotes": 195,
+      "minPitch": 20,
+      "maxPitch": 99,
+      "duration": 125.701224
+    },
+    {
+      "song": "03",
+      "system": "v1",
+      "seed": 0,
+      "sourceFile": "03_群青/lekai_no_prompt_s0.mid",
+      "midiSha256": "cabfa92f84d3f05ab3ec10f0262d0c425acef2c5fa793cf50c0089a88acf0672",
+      "stemAudio": {
+        "melody": {
+          "sha256": "cfe2aca91d21c93309387ca46dd6037f2f2049a9abd61d569c78927bd7e30c3a",
+          "duration": 126.876735,
+          "peak": 0.05692068114876747
+        },
+        "accompaniment": {
+          "sha256": "e4e2b02ae372bb0b6001ec2350031234cc161bfc356d5c10593f932bc354f3aa",
+          "duration": 126.876735,
+          "peak": 0.14745302498340607
+        }
+      },
+      "posterSha256": "1c6708447da64c526b40c0ba3ced5e8fd22894844ca2b08457cff479efd9e5c0",
+      "noteCount": 409,
+      "accompanimentNotes": 151,
+      "minPitch": 20,
+      "maxPitch": 99,
+      "duration": 126.876735
+    },
+    {
+      "song": "03",
+      "system": "v1",
+      "seed": 1,
+      "sourceFile": "03_群青/lekai_no_prompt_s1.mid",
+      "midiSha256": "75c3f1124eb5a11cc2f8e55e457b29c74b7e25523f22b217195afc59c9b19b5a",
+      "stemAudio": {
+        "melody": {
+          "sha256": "efd836652ebf9a6e29c7255cd6fc04b4253adf6afaa010d9dd3496ea7322c2dc",
+          "duration": 126.537143,
+          "peak": 0.05692068114876747
+        },
+        "accompaniment": {
+          "sha256": "9db93b3b2ee80ea7c65a2445ba00324560b5cf81fcb4b6b6022da8c2df21aaeb",
+          "duration": 126.537143,
+          "peak": 0.09421297907829285
+        }
+      },
+      "posterSha256": "22a17cade4356c22f8c693bb52658039e0fffe3184639a1ddc0846af85f7d275",
+      "noteCount": 312,
+      "accompanimentNotes": 54,
+      "minPitch": 20,
+      "maxPitch": 99,
+      "duration": 126.537143
+    },
+    {
+      "song": "03",
+      "system": "v1",
+      "seed": 2,
+      "sourceFile": "03_群青/lekai_no_prompt_s2.mid",
+      "midiSha256": "9e3ed4888ab6f8eb71c5c7c96fcf61c1551a7cf7249e450c78dcb7a03ac9b4fc",
+      "stemAudio": {
+        "melody": {
+          "sha256": "efd836652ebf9a6e29c7255cd6fc04b4253adf6afaa010d9dd3496ea7322c2dc",
+          "duration": 126.537143,
+          "peak": 0.05692068114876747
+        },
+        "accompaniment": {
+          "sha256": "0bdd56a00c1fd92b8065adf6b6763365e6289fa6dca9e987d9ec02cf5f190252",
+          "duration": 126.537143,
+          "peak": 0.06836312264204025
+        }
+      },
+      "posterSha256": "722a0245afc3f60124a4e3e41b8defae5fd341248a6c6d50bd1d2d05acc88428",
+      "noteCount": 398,
+      "accompanimentNotes": 140,
+      "minPitch": 20,
+      "maxPitch": 99,
+      "duration": 126.537143
+    },
+    {
+      "song": "03",
+      "system": "v2",
       "seed": 0,
       "sourceFile": "03_群青/pc_rule_if_else_n10_s0.mid",
       "midiSha256": "11eeb2c2508270dac55435ba4ca44d78934b662d9a94350a93fcdd84aefb354b",
-      "audioSha256": "9ec9589bfa7a8467fbce75d873a0e673c06113e3249863364e086ec1c5a80632",
-      "posterSha256": "ac4b4dd7b92dc910b8d53efe2c68f613147f98fa6054044277cb4b5855568890",
+      "stemAudio": {
+        "melody": {
+          "sha256": "cfe2aca91d21c93309387ca46dd6037f2f2049a9abd61d569c78927bd7e30c3a",
+          "duration": 126.876735,
+          "peak": 0.05692068114876747
+        },
+        "accompaniment": {
+          "sha256": "c79b356d774f574a7c2109b74028b1b20718f029ca3603d66ba786925fc7bd2e",
+          "duration": 126.876735,
+          "peak": 0.06827758252620697
+        }
+      },
+      "posterSha256": "39dbba8fa4850f414d7a0e70fc9d606f649d0686c7445b3f6739d24ed0363256",
       "noteCount": 419,
-      "minPitch": 32,
-      "maxPitch": 91,
+      "accompanimentNotes": 161,
+      "minPitch": 20,
+      "maxPitch": 99,
       "duration": 126.876735
     },
     {
       "song": "03",
+      "system": "v2",
       "seed": 1,
       "sourceFile": "03_群青/pc_rule_if_else_n10_s1.mid",
       "midiSha256": "cc0e6ce56616132b0e55b23f9b3532bf945d21a94047ce32d485e1ce4637e03c",
-      "audioSha256": "40f3759349ac73fa603395b33bb05ed9f10ff8f5502ec18d83a219a551c0dfc7",
-      "posterSha256": "1982f5bf673ae3e970ede029bcb81e34e047d3cb97d8fbf70bc9354a67bd34e1",
+      "stemAudio": {
+        "melody": {
+          "sha256": "cfe2aca91d21c93309387ca46dd6037f2f2049a9abd61d569c78927bd7e30c3a",
+          "duration": 126.876735,
+          "peak": 0.05692068114876747
+        },
+        "accompaniment": {
+          "sha256": "1b55bae9bf8eb110b18c205a3821beae57c20f07742be74a9df847de5819f949",
+          "duration": 126.876735,
+          "peak": 0.12311605364084244
+        }
+      },
+      "posterSha256": "fee46d58d898572238e539983bf6537ec446f2e16e5879b1b2939d1d5d068693",
       "noteCount": 540,
-      "minPitch": 32,
-      "maxPitch": 91,
+      "accompanimentNotes": 282,
+      "minPitch": 20,
+      "maxPitch": 99,
       "duration": 126.876735
     },
     {
       "song": "03",
+      "system": "v2",
       "seed": 2,
       "sourceFile": "03_群青/pc_rule_if_else_n10_s2.mid",
       "midiSha256": "7c901761cf4857fc9907ab4af66026fbc48813f44b849bc064f0795077dbf63a",
-      "audioSha256": "58feddff4a55409a2bbaa6cb9788f19f2e4719a9bd13bbfa25b7d5bd085cc546",
-      "posterSha256": "cf1090b1b835d68077953e64072da922ec6c85a69f35c8398675fdfef20d6755",
+      "stemAudio": {
+        "melody": {
+          "sha256": "efd836652ebf9a6e29c7255cd6fc04b4253adf6afaa010d9dd3496ea7322c2dc",
+          "duration": 126.537143,
+          "peak": 0.05692068114876747
+        },
+        "accompaniment": {
+          "sha256": "a99123ee3a9c3b2211bf9c0ac391ab694bc364cb7b5fa3b298ead0fc99505063",
+          "duration": 126.537143,
+          "peak": 0.10348138213157654
+        }
+      },
+      "posterSha256": "30d9ab5d8aaa700ed6b5bb4011741c470d4f583197f91a5b4c399311d0cd1b02",
       "noteCount": 462,
-      "minPitch": 32,
-      "maxPitch": 91,
+      "accompanimentNotes": 204,
+      "minPitch": 20,
+      "maxPitch": 99,
       "duration": 126.537143
     },
     {
       "song": "04",
+      "system": "v0",
+      "seed": 0,
+      "sourceFile": "04_lemon/legacy_m2a_s0.mid",
+      "midiSha256": "002efbfde4196d34d098e25b0e6137879281e9449413885394822a2e448220ab",
+      "stemAudio": {
+        "melody": {
+          "sha256": "2df0240e45cc6b942df2229d6332b35949e1ca232cf89fc77e3994538dede787",
+          "duration": 64.052245,
+          "peak": 0.11408140510320663
+        },
+        "accompaniment": {
+          "sha256": "9710d7e470171465dda9850eefa769d90ec68dcd2a8a01505de6fd129c5ddd6c",
+          "duration": 64.052245,
+          "peak": 0.1090182438492775
+        }
+      },
+      "posterSha256": "f29573f4b3d0fcdf0b2405694eddc60bc11f08cab1aa03d35935d42867b693f1",
+      "noteCount": 410,
+      "accompanimentNotes": 239,
+      "minPitch": 25,
+      "maxPitch": 101,
+      "duration": 64.052245
+    },
+    {
+      "song": "04",
+      "system": "v0",
+      "seed": 1,
+      "sourceFile": "04_lemon/legacy_m2a_s1.mid",
+      "midiSha256": "4b947f454ed24d66a4ef5151284a860ea3a366405c28afe603586438b4bf93f4",
+      "stemAudio": {
+        "melody": {
+          "sha256": "72b0b328d4a29bb580533cb480bc17d9e69a58204802b9e54e0c86c4e637d938",
+          "duration": 62.876735,
+          "peak": 0.11408140510320663
+        },
+        "accompaniment": {
+          "sha256": "55ea5c47e49d75410f984c3648ef2cf5a12833538e99f78314f57fd41e1cde26",
+          "duration": 62.876735,
+          "peak": 0.11747406423091888
+        }
+      },
+      "posterSha256": "c236c399292169f7b247cc82aba86319ae1c06a5d6519f7876ca9404034851dc",
+      "noteCount": 277,
+      "accompanimentNotes": 106,
+      "minPitch": 25,
+      "maxPitch": 101,
+      "duration": 62.876735
+    },
+    {
+      "song": "04",
+      "system": "v0",
+      "seed": 2,
+      "sourceFile": "04_lemon/legacy_m2a_s2.mid",
+      "midiSha256": "12762e9e611affcc883258bdb0130ec631eb20a4e03d242d853fdbc641fbec18",
+      "stemAudio": {
+        "melody": {
+          "sha256": "50ada65a7c9effb3c9ed7f7112c9c5c9ebbb7e17d1a82b74f8851ef915594164",
+          "duration": 63.529796,
+          "peak": 0.11408140510320663
+        },
+        "accompaniment": {
+          "sha256": "bd89640f9ae0138cacf2979558e5839a4eaa782f5db7fcf0fd25e662b5dea559",
+          "duration": 63.529796,
+          "peak": 0.09121167659759521
+        }
+      },
+      "posterSha256": "81a59cd3f93ca91b58ee7f1a2d81529ae8b2308897e7b2036cd6a0d91e6315db",
+      "noteCount": 293,
+      "accompanimentNotes": 122,
+      "minPitch": 25,
+      "maxPitch": 101,
+      "duration": 63.529796
+    },
+    {
+      "song": "04",
+      "system": "v1",
+      "seed": 0,
+      "sourceFile": "04_lemon/lekai_no_prompt_s0.mid",
+      "midiSha256": "f64fe94473be60afa8558f42f944ce19effc58e4fa76bcf5c4d6178cc72c29f2",
+      "stemAudio": {
+        "melody": {
+          "sha256": "93e43aa01593314e54a3305b6bbd02df15e1e713f753a137115014a4573f18d7",
+          "duration": 62.197551,
+          "peak": 0.050414249300956726
+        },
+        "accompaniment": {
+          "sha256": "a68117ee356ab58c73163304d9263a356b6f183b87165045010328628d65afec",
+          "duration": 62.197551,
+          "peak": 0.05716903507709503
+        }
+      },
+      "posterSha256": "60a8cf58ecf9282a318bf9ac34caef1e583bbdb0dbf5733b964c4f5abe16495d",
+      "noteCount": 213,
+      "accompanimentNotes": 41,
+      "minPitch": 25,
+      "maxPitch": 101,
+      "duration": 62.197551
+    },
+    {
+      "song": "04",
+      "system": "v1",
+      "seed": 1,
+      "sourceFile": "04_lemon/lekai_no_prompt_s1.mid",
+      "midiSha256": "6d35f3f63e0b26f40c3d0b1c93f227c8933e4eeaf1d06f90123ab7cf03f47c79",
+      "stemAudio": {
+        "melody": {
+          "sha256": "93e43aa01593314e54a3305b6bbd02df15e1e713f753a137115014a4573f18d7",
+          "duration": 62.197551,
+          "peak": 0.050414249300956726
+        },
+        "accompaniment": {
+          "sha256": "3cee1e4ffc7e488f8a3e07c357bf3800fe3f253615deecefc9df5903cbb11a93",
+          "duration": 62.197551,
+          "peak": 0.07096339017152786
+        }
+      },
+      "posterSha256": "512b2269a85ed4e78ce106619562fc6b92727a789266e1823882d2c88eb989f4",
+      "noteCount": 255,
+      "accompanimentNotes": 83,
+      "minPitch": 25,
+      "maxPitch": 101,
+      "duration": 62.197551
+    },
+    {
+      "song": "04",
+      "system": "v1",
+      "seed": 2,
+      "sourceFile": "04_lemon/lekai_no_prompt_s2.mid",
+      "midiSha256": "8cbdf3ad8ffb331d161c32c7a7d185f7f58856843b9e5a4a0f6e99032393618a",
+      "stemAudio": {
+        "melody": {
+          "sha256": "6aa9cfc40e20682f87d0eca909ab354a3a738de82e8040aa5bc81a0660ed8479",
+          "duration": 62.040816,
+          "peak": 0.050414249300956726
+        },
+        "accompaniment": {
+          "sha256": "548fe4efff696c849c06e35f1df29a20df637d8ebd03455f2b1460931505cad0",
+          "duration": 62.040816,
+          "peak": 0.09769030660390854
+        }
+      },
+      "posterSha256": "e71b1177eb51cd1ab8144b22374a132175e4e4661b433a79a58eee15975ce88d",
+      "noteCount": 294,
+      "accompanimentNotes": 122,
+      "minPitch": 25,
+      "maxPitch": 101,
+      "duration": 62.040816
+    },
+    {
+      "song": "04",
+      "system": "v2",
       "seed": 0,
       "sourceFile": "04_lemon/pc_rule_if_else_n10_s0.mid",
       "midiSha256": "d1be37ee75b83e66926ae2b7e16ac2bfa0c9b39e5cbedc75fa8e33da1142e95f",
-      "audioSha256": "1cde66261f2dac78b818ea6f5b0866ab033c7bbf0a6076a9271549ad17240783",
-      "posterSha256": "883f6222b99ce1857cb4c6489289f1558162302d5f688f3b9c9750c197b2ce6e",
+      "stemAudio": {
+        "melody": {
+          "sha256": "93e43aa01593314e54a3305b6bbd02df15e1e713f753a137115014a4573f18d7",
+          "duration": 62.197551,
+          "peak": 0.050414249300956726
+        },
+        "accompaniment": {
+          "sha256": "6b8bf8e06f0da572c87198964e80ba650780139a9aa0e4a13c48e1ce555781eb",
+          "duration": 62.197551,
+          "peak": 0.09431713074445724
+        }
+      },
+      "posterSha256": "6ce66120b3e8cab37d0566d9a7bb9bc07a6984406e06821c0e1ef6e7f7f2c8e0",
       "noteCount": 315,
-      "minPitch": 26,
-      "maxPitch": 86,
+      "accompanimentNotes": 143,
+      "minPitch": 25,
+      "maxPitch": 101,
       "duration": 62.197551
     },
     {
       "song": "04",
+      "system": "v2",
       "seed": 1,
       "sourceFile": "04_lemon/pc_rule_if_else_n10_s1.mid",
       "midiSha256": "ba7c458d1e3ccda6a90b0a7dbb1ad79fd17f0853a2f30b9d7018438a38e78f47",
-      "audioSha256": "a0e4df84ac3d0c7bf0575086c6b64ae643e8a9dd2ff3497c8b90a00517cd8c8e",
-      "posterSha256": "994b305eac54ddfc1bc5459eb1c39e5834fb16d7ba0d57d77fd0aca415524386",
+      "stemAudio": {
+        "melody": {
+          "sha256": "93e43aa01593314e54a3305b6bbd02df15e1e713f753a137115014a4573f18d7",
+          "duration": 62.197551,
+          "peak": 0.050414249300956726
+        },
+        "accompaniment": {
+          "sha256": "11fe955ec92ee55e2703d29e5fa80545ce7602f9adb806a47749ae6aa7afe7df",
+          "duration": 62.197551,
+          "peak": 0.11412519216537476
+        }
+      },
+      "posterSha256": "7b9c78ddb10a3c60a3a264e93d4068c8a0d2da8b896a09d77629c94ee7511121",
       "noteCount": 404,
-      "minPitch": 26,
-      "maxPitch": 86,
+      "accompanimentNotes": 232,
+      "minPitch": 25,
+      "maxPitch": 101,
       "duration": 62.197551
     },
     {
       "song": "04",
+      "system": "v2",
       "seed": 2,
       "sourceFile": "04_lemon/pc_rule_if_else_n10_s2.mid",
       "midiSha256": "a989f419609f0985a6bed5fc6c0ea2497084586fee82b0a98859e643df54fd95",
-      "audioSha256": "23b79d5cf5adb1e6877815863c4f674116745dea35d1839e6680feedec3ba0d1",
-      "posterSha256": "15de42cda76758af48e2ddb5065b6a406c1eb29686938d94789e0efabfbcaea4",
+      "stemAudio": {
+        "melody": {
+          "sha256": "93e43aa01593314e54a3305b6bbd02df15e1e713f753a137115014a4573f18d7",
+          "duration": 62.197551,
+          "peak": 0.050414249300956726
+        },
+        "accompaniment": {
+          "sha256": "ca81d141cabc1b33f71c2cd0c1e893436cae08bb4911bc5213e9635f751f049e",
+          "duration": 62.197551,
+          "peak": 0.11352468281984329
+        }
+      },
+      "posterSha256": "c9c06ce0c97ecc5dbd333e390e68a272cb05331d36eecab80b0c82f7f915d5c7",
       "noteCount": 312,
-      "minPitch": 26,
-      "maxPitch": 86,
+      "accompanimentNotes": 140,
+      "minPitch": 25,
+      "maxPitch": 101,
       "duration": 62.197551
     },
     {
       "song": "05",
+      "system": "v0",
+      "seed": 0,
+      "sourceFile": "05_cruel angel/legacy_m2a_s0.mid",
+      "midiSha256": "8b20b654933730912aa1035fdaf96dd14fec372bb499f3dce62dc2a057e39c17",
+      "stemAudio": {
+        "melody": {
+          "sha256": "d90d65e22db606571c27477b3572a243c8441df785ab4f6115ac248d9cdf67cb",
+          "duration": 110.550204,
+          "peak": 0.11897554248571396
+        },
+        "accompaniment": {
+          "sha256": "30d10c0d667dd2328984f2e90f19cc98e0deec1e2645dc7491505981aa578824",
+          "duration": 110.550204,
+          "peak": 0.11550761759281158
+        }
+      },
+      "posterSha256": "248a7d46d00b2ce78f16535fd4557d5e0bebc1d1fcc958973b3d6a39ac4bcab8",
+      "noteCount": 627,
+      "accompanimentNotes": 415,
+      "minPitch": 23,
+      "maxPitch": 97,
+      "duration": 110.550204
+    },
+    {
+      "song": "05",
+      "system": "v0",
+      "seed": 1,
+      "sourceFile": "05_cruel angel/legacy_m2a_s1.mid",
+      "midiSha256": "607b45b353ed67a245a9705522390661d0fcd8f6b645c7fe0f2ecbb939e8dcab",
+      "stemAudio": {
+        "melody": {
+          "sha256": "7cc21671993c85149783d1686efd857926d5901d8117dd1aae3d8be7ca9cb193",
+          "duration": 111.386122,
+          "peak": 0.11897554248571396
+        },
+        "accompaniment": {
+          "sha256": "c39af00f93c8f2c9fcb43350f2ef18168c006cf5efc0da02a8a88a4d918088ee",
+          "duration": 111.386122,
+          "peak": 0.11562969535589218
+        }
+      },
+      "posterSha256": "1ce642c5d0aef04a17d8a3e82621b2ac9e1b41a04652065693b5971cf7537ddd",
+      "noteCount": 778,
+      "accompanimentNotes": 566,
+      "minPitch": 23,
+      "maxPitch": 97,
+      "duration": 111.386122
+    },
+    {
+      "song": "05",
+      "system": "v0",
+      "seed": 2,
+      "sourceFile": "05_cruel angel/legacy_m2a_s2.mid",
+      "midiSha256": "588569f57e9583baac882b60578558affba9992320054fe176eee8a03be91163",
+      "stemAudio": {
+        "melody": {
+          "sha256": "10c18052a47402947db9a89cbd8c5e52e2c041f0d27e494baa38600b0c6c841e",
+          "duration": 110.210612,
+          "peak": 0.11897554248571396
+        },
+        "accompaniment": {
+          "sha256": "3ebebbf875180bb4fcc19e54636ee0de49aab4154754cd69652ec3a895e9617d",
+          "duration": 110.210612,
+          "peak": 0.0804150179028511
+        }
+      },
+      "posterSha256": "a3aa7b1cdd7ecb7a93b022bd1685490498030805187fb0ce12cf2c788d6f11ed",
+      "noteCount": 346,
+      "accompanimentNotes": 134,
+      "minPitch": 23,
+      "maxPitch": 97,
+      "duration": 110.210612
+    },
+    {
+      "song": "05",
+      "system": "v1",
+      "seed": 0,
+      "sourceFile": "05_cruel angel/lekai_no_prompt_s0.mid",
+      "midiSha256": "13b543e93e5209dc808029776399a1011a444daefc427cd3be810a918847c6fc",
+      "stemAudio": {
+        "melody": {
+          "sha256": "8b924746656f11f6f9eaa890efd4b293dd5d0d191b4f8dd60447edfdbf3828f4",
+          "duration": 109.531429,
+          "peak": 0.051951464265584946
+        },
+        "accompaniment": {
+          "sha256": "c7a6e9a69001bafccfb3ceec07501cea47297146a7e44c146ceeb570b1337289",
+          "duration": 109.531429,
+          "peak": 0.12331677228212357
+        }
+      },
+      "posterSha256": "9072138564e2587b5dd7a36084bc97a1634cfdceff54641bbfd51e9aa34e5680",
+      "noteCount": 531,
+      "accompanimentNotes": 318,
+      "minPitch": 23,
+      "maxPitch": 97,
+      "duration": 109.531429
+    },
+    {
+      "song": "05",
+      "system": "v1",
+      "seed": 1,
+      "sourceFile": "05_cruel angel/lekai_no_prompt_s1.mid",
+      "midiSha256": "9eb78166e0ce45df2da4f1875bef94c9cd31123ecbb4d16e425a52bdfe9e3a35",
+      "stemAudio": {
+        "melody": {
+          "sha256": "08ef73420bf835dfb591d3c45df8a49cc3c8abb34100b383441ba9f48f54b6b4",
+          "duration": 109.035102,
+          "peak": 0.051951464265584946
+        },
+        "accompaniment": {
+          "sha256": "4dba4d5d84c7ea143f092c1e08b30925f72c14a458ca7c9db9e21d56b0997a85",
+          "duration": 109.035102,
+          "peak": 0
+        }
+      },
+      "posterSha256": "df822420ef1e54e566634b7c76823007cfbe238cbadad36dbc47f2e823918b90",
+      "noteCount": 213,
+      "accompanimentNotes": 0,
+      "minPitch": 23,
+      "maxPitch": 97,
+      "duration": 109.035102
+    },
+    {
+      "song": "05",
+      "system": "v1",
+      "seed": 2,
+      "sourceFile": "05_cruel angel/lekai_no_prompt_s2.mid",
+      "midiSha256": "4fe9ef637515d43a8aacdd80003821eab122b0495ddd784dfa33d8f2ffe3ab96",
+      "stemAudio": {
+        "melody": {
+          "sha256": "08ef73420bf835dfb591d3c45df8a49cc3c8abb34100b383441ba9f48f54b6b4",
+          "duration": 109.035102,
+          "peak": 0.051951464265584946
+        },
+        "accompaniment": {
+          "sha256": "424caba4c52ed196ae638e23401cdefa1ac831e47c6b3d162fe4ef421d185e3e",
+          "duration": 109.035102,
+          "peak": 0.09859862923622131
+        }
+      },
+      "posterSha256": "495717d8c286733736d8e79df69d7cd5db316f34fb2b0cc697811245a71f9a9d",
+      "noteCount": 238,
+      "accompanimentNotes": 25,
+      "minPitch": 23,
+      "maxPitch": 97,
+      "duration": 109.035102
+    },
+    {
+      "song": "05",
+      "system": "v2",
       "seed": 0,
       "sourceFile": "05_cruel angel/pc_rule_if_else_n10_s0.mid",
       "midiSha256": "2afdb89cb64c15d8a899c2f88054a15c0870e1fee6eb44358bb71c98c692393e",
-      "audioSha256": "cc9feec0ccbbecf1f687b2c8bf75120d074cb1326e076e2ed2677cd4e294bee1",
-      "posterSha256": "f3489cb0e1b76f880e0a1505107eaf501fbbae2a894d210ef275de489ed202f5",
+      "stemAudio": {
+        "melody": {
+          "sha256": "8b924746656f11f6f9eaa890efd4b293dd5d0d191b4f8dd60447edfdbf3828f4",
+          "duration": 109.531429,
+          "peak": 0.051951464265584946
+        },
+        "accompaniment": {
+          "sha256": "3844ede5c3cbeec6cc8e22fd8a6644f0c39ed19044229f5c98c25ee4a10cae56",
+          "duration": 109.531429,
+          "peak": 0.13177140057086945
+        }
+      },
+      "posterSha256": "7683b9ea8ecad91e320c85565338f9e2950e8624af29310ba6be69f848a0f1ef",
       "noteCount": 335,
-      "minPitch": 32,
-      "maxPitch": 86,
+      "accompanimentNotes": 122,
+      "minPitch": 23,
+      "maxPitch": 97,
       "duration": 109.531429
     },
     {
       "song": "05",
+      "system": "v2",
       "seed": 1,
       "sourceFile": "05_cruel angel/pc_rule_if_else_n10_s1.mid",
       "midiSha256": "6fdbe7fdba2925bc248ddbf8229794f994411c32fd1a8d830c94ffb8ff5a38bd",
-      "audioSha256": "e384dc4727d8dd886b1958b4c70c58b3d64eaba3027da68e4a0e1f22dbbb11c2",
-      "posterSha256": "e2ef6bcb1a7d386b9f1312d92e6e10325b9e4df5b05d5599baddbe0d51d70984",
+      "stemAudio": {
+        "melody": {
+          "sha256": "8b924746656f11f6f9eaa890efd4b293dd5d0d191b4f8dd60447edfdbf3828f4",
+          "duration": 109.531429,
+          "peak": 0.051951464265584946
+        },
+        "accompaniment": {
+          "sha256": "fd82327cd84b9f8d18897b24410a012db0f28a86cf859cba801ae8bbeba30c6f",
+          "duration": 109.531429,
+          "peak": 0.12471974641084671
+        }
+      },
+      "posterSha256": "c3d4e949cf5ec3127fba61a846edd1cf9ba2a69d9803346fd9c0a21aa693b6a4",
       "noteCount": 516,
-      "minPitch": 32,
-      "maxPitch": 86,
+      "accompanimentNotes": 303,
+      "minPitch": 23,
+      "maxPitch": 97,
       "duration": 109.531429
     },
     {
       "song": "05",
+      "system": "v2",
       "seed": 2,
       "sourceFile": "05_cruel angel/pc_rule_if_else_n10_s2.mid",
       "midiSha256": "31472791f6a5097fb876d68ba1fc5e0588f225f422a596f68e963e5a6bc60673",
-      "audioSha256": "27cfd12fc809c8fbf745272cbd57084e46edabad21f2a3fb87521dd6f198f2ae",
-      "posterSha256": "000ce54d8f2aee200c30b4b3b514e7bc2080cc6b16c2daa38c569f36313ce629",
+      "stemAudio": {
+        "melody": {
+          "sha256": "8b924746656f11f6f9eaa890efd4b293dd5d0d191b4f8dd60447edfdbf3828f4",
+          "duration": 109.531429,
+          "peak": 0.051951464265584946
+        },
+        "accompaniment": {
+          "sha256": "f64b8a19a71e2c2068b89f39e036dd5d1fd9ec176561c114468dc87cb8134a18",
+          "duration": 109.531429,
+          "peak": 0.0856928750872612
+        }
+      },
+      "posterSha256": "9b2e3cfea430c8abcdd10e70f55813c56c89f566810d733e5f135e00ea591b06",
       "noteCount": 482,
-      "minPitch": 32,
-      "maxPitch": 86,
+      "accompanimentNotes": 269,
+      "minPitch": 23,
+      "maxPitch": 97,
       "duration": 109.531429
     },
     {
       "song": "06",
+      "system": "v0",
+      "seed": 0,
+      "sourceFile": "06_告白气球/legacy_m2a_s0.mid",
+      "midiSha256": "74d7786f8732cacbe2b52eca8e0bfa597ca657ee693e828fe6fdaad2bc4823ce",
+      "stemAudio": {
+        "melody": {
+          "sha256": "50e8f91a0c3d946d46c463a2d966837f740de7a8c9e56cf2edf93f6e06be88f6",
+          "duration": 89.364898,
+          "peak": 0.08007334172725677
+        },
+        "accompaniment": {
+          "sha256": "d8740d74f99bc448e9e2acbd3069ab090f544ccbe66fc15849559a7698358aa0",
+          "duration": 89.364898,
+          "peak": 0.11768550425767899
+        }
+      },
+      "posterSha256": "0d8b958725b7392b7d263150f82ce65675159908c5e87b290fd76478e83a826a",
+      "noteCount": 598,
+      "accompanimentNotes": 426,
+      "minPitch": 25,
+      "maxPitch": 97,
+      "duration": 89.364898
+    },
+    {
+      "song": "06",
+      "system": "v0",
+      "seed": 1,
+      "sourceFile": "06_告白气球/legacy_m2a_s1.mid",
+      "midiSha256": "b2dd2cae215768dbef15ec08cdcf4c81f9b0ca119cb45ced280fd7eb2e934b65",
+      "stemAudio": {
+        "melody": {
+          "sha256": "a3cbb49b211e6d1e0b2c8d03839a5324f2f187abfcb104f0013b3a0480371207",
+          "duration": 88.868571,
+          "peak": 0.08007334172725677
+        },
+        "accompaniment": {
+          "sha256": "a0c35c0c399fd4fe87e9689424ad4df9459ecffc3ff9e7ac9f1acd7c6501424a",
+          "duration": 88.868571,
+          "peak": 0.0919724628329277
+        }
+      },
+      "posterSha256": "253697555c2b45ed7a4d3562c97f989d95779f2784eab7085eca80472bd10049",
+      "noteCount": 504,
+      "accompanimentNotes": 332,
+      "minPitch": 25,
+      "maxPitch": 97,
+      "duration": 88.868571
+    },
+    {
+      "song": "06",
+      "system": "v0",
+      "seed": 2,
+      "sourceFile": "06_告白气球/legacy_m2a_s2.mid",
+      "midiSha256": "71728e19cc6ae05648d7084db9d497539ef73573f340fec53b61dd15e6fbe3c1",
+      "stemAudio": {
+        "melody": {
+          "sha256": "c4f8295ea3b27788dd5ebb10ba25214ce2729f2981ad9a9de4b159602eca15f8",
+          "duration": 91.533061,
+          "peak": 0.08007334172725677
+        },
+        "accompaniment": {
+          "sha256": "3c1392c4babcecf06e8508e75506945ff5d827fd93bd8e7c0178601eb17ca277",
+          "duration": 91.533061,
+          "peak": 0.10897671431303024
+        }
+      },
+      "posterSha256": "4bf9417f44dcffd39a0e6b67efbdc34d27f4353a8c399aaf4685f5df1b8b9619",
+      "noteCount": 423,
+      "accompanimentNotes": 251,
+      "minPitch": 25,
+      "maxPitch": 97,
+      "duration": 91.533061
+    },
+    {
+      "song": "06",
+      "system": "v1",
+      "seed": 0,
+      "sourceFile": "06_告白气球/lekai_no_prompt_s0.mid",
+      "midiSha256": "24103d7dbd227c63459af16b59b98373637b996d680c8bb67678fe0a2955bb25",
+      "stemAudio": {
+        "melody": {
+          "sha256": "1f26cb8f44c1b9df2ce16bff6667fa492d0f8a909bb1f5e0deec9b103861fed4",
+          "duration": 88.868571,
+          "peak": 0.03530264273285866
+        },
+        "accompaniment": {
+          "sha256": "81e62058584d3f60c588eb2175fc21ad57abb9ff1b392eaa8166a5f8369b45bc",
+          "duration": 88.868571,
+          "peak": 0.12816941738128662
+        }
+      },
+      "posterSha256": "c32302a1f56356b7e551cad3d3e4ca79bf9e9ff568ab5e7900c9f22d76bd8351",
+      "noteCount": 324,
+      "accompanimentNotes": 151,
+      "minPitch": 25,
+      "maxPitch": 97,
+      "duration": 88.868571
+    },
+    {
+      "song": "06",
+      "system": "v1",
+      "seed": 1,
+      "sourceFile": "06_告白气球/lekai_no_prompt_s1.mid",
+      "midiSha256": "fa1a0b14feee75381f83fa1b0727fcc2c9043c2f35b04c3fe2c51c7f83972762",
+      "stemAudio": {
+        "melody": {
+          "sha256": "1f26cb8f44c1b9df2ce16bff6667fa492d0f8a909bb1f5e0deec9b103861fed4",
+          "duration": 88.868571,
+          "peak": 0.03530264273285866
+        },
+        "accompaniment": {
+          "sha256": "8a5a5fce559bbf624697d18e7b663e105106a194b1fe99c5179f38bc678d3514",
+          "duration": 88.868571,
+          "peak": 0.08984255790710449
+        }
+      },
+      "posterSha256": "b28433f469c85120fdec18d4820d45256454d8f9722e02f98dd3cffe1e841c67",
+      "noteCount": 299,
+      "accompanimentNotes": 126,
+      "minPitch": 25,
+      "maxPitch": 97,
+      "duration": 88.868571
+    },
+    {
+      "song": "06",
+      "system": "v1",
+      "seed": 2,
+      "sourceFile": "06_告白气球/lekai_no_prompt_s2.mid",
+      "midiSha256": "fd342b5ff1bc2d0339330fc7e3ed3dce1d7d201c7a063e86bd9674b594f2e328",
+      "stemAudio": {
+        "melody": {
+          "sha256": "1f26cb8f44c1b9df2ce16bff6667fa492d0f8a909bb1f5e0deec9b103861fed4",
+          "duration": 88.868571,
+          "peak": 0.03530264273285866
+        },
+        "accompaniment": {
+          "sha256": "c4459850233e365488467fab6abca03020b85d39d6afca096b990d95ae5cd2b7",
+          "duration": 88.868571,
+          "peak": 0.08015451580286026
+        }
+      },
+      "posterSha256": "b627af6c70fbad4cf2327455d869cb28951d2317b21c59d74f15988402bf63df",
+      "noteCount": 296,
+      "accompanimentNotes": 123,
+      "minPitch": 25,
+      "maxPitch": 97,
+      "duration": 88.868571
+    },
+    {
+      "song": "06",
+      "system": "v2",
       "seed": 0,
       "sourceFile": "06_告白气球/pc_rule_if_else_n10_s0.mid",
       "midiSha256": "07493e62b9ef2638d3eb4e209411477f2d2305e6044343ab896b550cf96b4579",
-      "audioSha256": "db98205c4e5e2225cec7efec487c37705f2bc4b9f8e1311eb9720e71f6d918de",
-      "posterSha256": "39623b09a5ea2c8c2e6965ef47c4ed601e0a52d0190fb92606f676afa46d9cc9",
+      "stemAudio": {
+        "melody": {
+          "sha256": "1f26cb8f44c1b9df2ce16bff6667fa492d0f8a909bb1f5e0deec9b103861fed4",
+          "duration": 88.868571,
+          "peak": 0.03530264273285866
+        },
+        "accompaniment": {
+          "sha256": "cd92e54dc30c04fa13fe3ba04a1b52247abfc48cc0e3a38553c74b522230faa1",
+          "duration": 88.868571,
+          "peak": 0.07205688953399658
+        }
+      },
+      "posterSha256": "4b3a6742928bcf079dbc9cdd8291c4628b73710f3a401e969b88d1ab78850a36",
       "noteCount": 389,
-      "minPitch": 38,
-      "maxPitch": 83,
+      "accompanimentNotes": 216,
+      "minPitch": 25,
+      "maxPitch": 97,
       "duration": 88.868571
     },
     {
       "song": "06",
+      "system": "v2",
       "seed": 1,
       "sourceFile": "06_告白气球/pc_rule_if_else_n10_s1.mid",
       "midiSha256": "2f9623f42b947efd1a40216da80dd3421cc5b59f80b7d196ed8782a204f63b1e",
-      "audioSha256": "6a146a0b1b8b327b9f9358b9724acdcd344a0b027224fdd2bc5e080ed04df38e",
-      "posterSha256": "79582e3ffbd3ac9f56fa3486093c3b309ed761ffe5bac7c5a1a86511fa69aeda",
+      "stemAudio": {
+        "melody": {
+          "sha256": "1f26cb8f44c1b9df2ce16bff6667fa492d0f8a909bb1f5e0deec9b103861fed4",
+          "duration": 88.868571,
+          "peak": 0.03530264273285866
+        },
+        "accompaniment": {
+          "sha256": "50312d525e48ee962055330e666626dadd88685b506e590abc360af25cfcee6c",
+          "duration": 88.868571,
+          "peak": 0.07408977299928665
+        }
+      },
+      "posterSha256": "5aeeb01d51fe13ec7b02701704ac43267a4b54662a26286306316ba8d76169c2",
       "noteCount": 407,
-      "minPitch": 38,
-      "maxPitch": 83,
+      "accompanimentNotes": 234,
+      "minPitch": 25,
+      "maxPitch": 97,
       "duration": 88.868571
     },
     {
       "song": "06",
+      "system": "v2",
       "seed": 2,
       "sourceFile": "06_告白气球/pc_rule_if_else_n10_s2.mid",
       "midiSha256": "e77c1b2849349b39f0f43a1132536c5f2b7e2a8e4c3e7ea9eafac1b2b7137638",
-      "audioSha256": "aafaa39eef3179d24238b8dc4cd657aedff786116ac3148ce98ea650e44b6d63",
-      "posterSha256": "8b9c3a5be822982d31cf1c6f0011d0ac4558298fe64c048c4bf95fca52fc7d5f",
+      "stemAudio": {
+        "melody": {
+          "sha256": "1f26cb8f44c1b9df2ce16bff6667fa492d0f8a909bb1f5e0deec9b103861fed4",
+          "duration": 88.868571,
+          "peak": 0.03530264273285866
+        },
+        "accompaniment": {
+          "sha256": "14d19f25f6d1e80c38e4458271d238e05df3636c96256f105f9a9db98d02c12b",
+          "duration": 88.868571,
+          "peak": 0.1255444884300232
+        }
+      },
+      "posterSha256": "e038a1bd1600deecfb651f3cc1dc86e9cc68452a6cc66840a64e91c75c7906b0",
       "noteCount": 495,
-      "minPitch": 38,
-      "maxPitch": 83,
+      "accompanimentNotes": 322,
+      "minPitch": 25,
+      "maxPitch": 97,
       "duration": 88.868571
     },
     {
       "song": "07",
+      "system": "v0",
+      "seed": 0,
+      "sourceFile": "07_青花瓷/legacy_m2a_s0.mid",
+      "midiSha256": "acf5d868b9c07280c7c14b9d6f4317332e5e2a3ddd825852398b9084ec8ac5f5",
+      "stemAudio": {
+        "melody": {
+          "sha256": "f8fa6cae5c8fdc9d12bf13227cd927fd5b975d35891a731f122d9f1b52c95b2c",
+          "duration": 109.217959,
+          "peak": 0.07519450038671494
+        },
+        "accompaniment": {
+          "sha256": "2bb996d230204939449a9d5e1c39238ebdbaacc36c0b8cb86ebd34c30e8b2cba",
+          "duration": 109.217959,
+          "peak": 0.12878106534481049
+        }
+      },
+      "posterSha256": "06cf674f797a73ee3262c37f232ead81b40e19b6bb9249a6a64d2a124f2e9ad3",
+      "noteCount": 734,
+      "accompanimentNotes": 526,
+      "minPitch": 27,
+      "maxPitch": 109,
+      "duration": 109.217959
+    },
+    {
+      "song": "07",
+      "system": "v0",
+      "seed": 1,
+      "sourceFile": "07_青花瓷/legacy_m2a_s1.mid",
+      "midiSha256": "e3658e5a43b49f7d8b802aff81d07c300dd9db60ca85ae0132c6da33c2c850e3",
+      "stemAudio": {
+        "melody": {
+          "sha256": "990b888d92b37dd995bd2b513c33fee240f0cf8cf5e063fe27bc1c582724a2d2",
+          "duration": 109.87102,
+          "peak": 0.07519450038671494
+        },
+        "accompaniment": {
+          "sha256": "6b3b84d50c29db012cb3eb2fc711eb9e1e7eaddf337da11fc3d7a4a8e673551a",
+          "duration": 109.87102,
+          "peak": 0.15681758522987366
+        }
+      },
+      "posterSha256": "0be453ee11890ead22b12dca3501c7d143638ab12a386cfdbf9a4eb98dbc0b54",
+      "noteCount": 1013,
+      "accompanimentNotes": 805,
+      "minPitch": 27,
+      "maxPitch": 109,
+      "duration": 109.87102
+    },
+    {
+      "song": "07",
+      "system": "v0",
+      "seed": 2,
+      "sourceFile": "07_青花瓷/legacy_m2a_s2.mid",
+      "midiSha256": "65cb93e478f7d6181af3cc7958af0fa69fcf8c00af61d96c8bb427401d664ed6",
+      "stemAudio": {
+        "melody": {
+          "sha256": "b20173a2ec4c85d69cab11f45f5991712353a22e65816da4f260b22f25ce7449",
+          "duration": 109.531429,
+          "peak": 0.07519450038671494
+        },
+        "accompaniment": {
+          "sha256": "d5416f28f3bf3c5274d461f7b646cd55466b014518edf966aaaa651c41e4a7c4",
+          "duration": 109.531429,
+          "peak": 0.0865388959646225
+        }
+      },
+      "posterSha256": "ad7c091fb8e43eb14dcb50fb7036e7e1a4ed8aabafcf5c0de3f155dfbe5a492f",
+      "noteCount": 376,
+      "accompanimentNotes": 168,
+      "minPitch": 27,
+      "maxPitch": 109,
+      "duration": 109.531429
+    },
+    {
+      "song": "07",
+      "system": "v1",
+      "seed": 0,
+      "sourceFile": "07_青花瓷/lekai_no_prompt_s0.mid",
+      "midiSha256": "d8aff325526e6e12c998964d43a4fb275cc6a7a883a5c615ff6ff01b40e44103",
+      "stemAudio": {
+        "melody": {
+          "sha256": "d85a76a75a9c1c9694c55bdb8afc02cefbcb009272b5386b9d13a1b4a96d8dbe",
+          "duration": 108.042449,
+          "peak": 0.03384106606245041
+        },
+        "accompaniment": {
+          "sha256": "b53f0c54c308fc82987cce72c5a970272803f9b6d8fe0dded26e77092029f692",
+          "duration": 108.042449,
+          "peak": 0.11513570696115494
+        }
+      },
+      "posterSha256": "359efa94cb69e7763cd7b662bb63f33c0ae8bb023b750d39b2fbf424e48f7c3f",
+      "noteCount": 462,
+      "accompanimentNotes": 253,
+      "minPitch": 27,
+      "maxPitch": 109,
+      "duration": 108.042449
+    },
+    {
+      "song": "07",
+      "system": "v1",
+      "seed": 1,
+      "sourceFile": "07_青花瓷/lekai_no_prompt_s1.mid",
+      "midiSha256": "e3f45c14fb671fc29a159672ca498aba2dcbe96a76ac5a8499f3cb3b2281f83e",
+      "stemAudio": {
+        "melody": {
+          "sha256": "5c96950ebafc8b30d774034c11e3c3bf09d76467ecd98638a86dcc79e8acfb19",
+          "duration": 108.199184,
+          "peak": 0.03384106606245041
+        },
+        "accompaniment": {
+          "sha256": "3e8ce0fd306bd08d72d80850ffbc3ed5f1e384bb6ec5854990eb7d5dadaa91aa",
+          "duration": 108.199184,
+          "peak": 0.07180803269147873
+        }
+      },
+      "posterSha256": "7f6176120f67ac652502f289b4a091ce8275fc99f927a82876349eb36eb741c3",
+      "noteCount": 436,
+      "accompanimentNotes": 227,
+      "minPitch": 27,
+      "maxPitch": 109,
+      "duration": 108.199184
+    },
+    {
+      "song": "07",
+      "system": "v1",
+      "seed": 2,
+      "sourceFile": "07_青花瓷/lekai_no_prompt_s2.mid",
+      "midiSha256": "09c29d02704e089fc81f0868a59521980ec45d9cff28a58a8c2961a57bcd1009",
+      "stemAudio": {
+        "melody": {
+          "sha256": "5c96950ebafc8b30d774034c11e3c3bf09d76467ecd98638a86dcc79e8acfb19",
+          "duration": 108.199184,
+          "peak": 0.03384106606245041
+        },
+        "accompaniment": {
+          "sha256": "277429bfe42018117a71e78526924eb76a521fbbc83e3a039d87a7f19f3fd921",
+          "duration": 108.199184,
+          "peak": 0.07296624034643173
+        }
+      },
+      "posterSha256": "99346fde0beaedd854b776dad79e99b9faedfd1a7ac3bd7de8933dffd6539da4",
+      "noteCount": 346,
+      "accompanimentNotes": 137,
+      "minPitch": 27,
+      "maxPitch": 109,
+      "duration": 108.199184
+    },
+    {
+      "song": "07",
+      "system": "v2",
       "seed": 0,
       "sourceFile": "07_青花瓷/pc_rule_if_else_n10_s0.mid",
       "midiSha256": "9ea3f34f67305c754b46ee3618263c204fc9e27be99a229978d04d21d0618e7e",
-      "audioSha256": "5cb5b594bcb601ca1a6c32ddc3ac42ae68290d8f9edc64cfaa1e7d787f99f351",
-      "posterSha256": "3b0f6fa261aeef3b15f6962dc75590c966c01f1493b95f620c6a271d122f4fcc",
+      "stemAudio": {
+        "melody": {
+          "sha256": "5c96950ebafc8b30d774034c11e3c3bf09d76467ecd98638a86dcc79e8acfb19",
+          "duration": 108.199184,
+          "peak": 0.03384106606245041
+        },
+        "accompaniment": {
+          "sha256": "35f25ea1993891e620d835acac3fbab209e0e9ad642d7e7fa6ee593c71985145",
+          "duration": 108.199184,
+          "peak": 0.11691661179065704
+        }
+      },
+      "posterSha256": "c120821cee3b768f03597d2f7c7b7426e049d34e6c1c4660a966b259a28e2110",
       "noteCount": 444,
-      "minPitch": 31,
-      "maxPitch": 80,
+      "accompanimentNotes": 235,
+      "minPitch": 27,
+      "maxPitch": 109,
       "duration": 108.199184
     },
     {
       "song": "07",
+      "system": "v2",
       "seed": 1,
       "sourceFile": "07_青花瓷/pc_rule_if_else_n10_s1.mid",
       "midiSha256": "846d3ca613a7d621859eecfc0096c1ae46396df7c6c18612bf22df36c8358365",
-      "audioSha256": "bd29572f3c37843592858a67ffd5da74b0fbb2fe8861f41eeacb72cb4378e483",
-      "posterSha256": "d3165c612e59e2c8bfc087e8d490e5f5d38e8573ae15e7fdbef8f0506762a0b0",
+      "stemAudio": {
+        "melody": {
+          "sha256": "5c96950ebafc8b30d774034c11e3c3bf09d76467ecd98638a86dcc79e8acfb19",
+          "duration": 108.199184,
+          "peak": 0.03384106606245041
+        },
+        "accompaniment": {
+          "sha256": "213b85b28a6eff14ffc6f6ae2b6ab5ba84603ceda57513cdf1bd2c864c87505d",
+          "duration": 108.199184,
+          "peak": 0.13505320250988007
+        }
+      },
+      "posterSha256": "7c3726712aae1001222819c56eddad249fdcdffd669402c68b18f60f6ff12604",
       "noteCount": 385,
-      "minPitch": 31,
-      "maxPitch": 80,
+      "accompanimentNotes": 176,
+      "minPitch": 27,
+      "maxPitch": 109,
       "duration": 108.199184
     },
     {
       "song": "07",
+      "system": "v2",
       "seed": 2,
       "sourceFile": "07_青花瓷/pc_rule_if_else_n10_s2.mid",
       "midiSha256": "8af92008bb09dab266d0bcebf92e09f4eeb3e6b9fca47af3d1e02848d52d970a",
-      "audioSha256": "7367b6d59e1cfb062705035cd6aec6cc53a0ca82bda67f0ed030e2a7ec53df1d",
-      "posterSha256": "078a9f2c602730a4f700048874366c8ee7463ca126edb89d173e65a180a2adee",
+      "stemAudio": {
+        "melody": {
+          "sha256": "5c96950ebafc8b30d774034c11e3c3bf09d76467ecd98638a86dcc79e8acfb19",
+          "duration": 108.199184,
+          "peak": 0.03384106606245041
+        },
+        "accompaniment": {
+          "sha256": "6a15ad27ea77d67cc8436608b3b9438665832a68adb2527b24eb11c8b3409d14",
+          "duration": 108.199184,
+          "peak": 0.10664926469326019
+        }
+      },
+      "posterSha256": "315b6d906a1508b703d65c27c95d6ba86338cbd699cd8359dbd8024baff5f89a",
       "noteCount": 398,
-      "minPitch": 31,
-      "maxPitch": 80,
+      "accompanimentNotes": 189,
+      "minPitch": 27,
+      "maxPitch": 109,
       "duration": 108.199184
     },
     {
       "song": "08",
+      "system": "v0",
+      "seed": 0,
+      "sourceFile": "08_小幸运/legacy_m2a_s0.mid",
+      "midiSha256": "d0401376a7c66c67f3ebc54342bce49a3e9c3cec36b9898400929b1bb412ae68",
+      "stemAudio": {
+        "melody": {
+          "sha256": "59cfff6bfc0a3da6203f97d8baa593027b481ae87d397fed31b5ecfdba507054",
+          "duration": 111.882449,
+          "peak": 0.07523278892040253
+        },
+        "accompaniment": {
+          "sha256": "a4b0aa8bbe0ce51bf70962f449930e4b71786aa7ee029f30fdcef92c1163af41",
+          "duration": 111.882449,
+          "peak": 0.1194005161523819
+        }
+      },
+      "posterSha256": "46c8b7b3f0d0b9d44a1d96596441cc3bfa4707b22e60a49bfc7349c9946eef6c",
+      "noteCount": 733,
+      "accompanimentNotes": 506,
+      "minPitch": 29,
+      "maxPitch": 101,
+      "duration": 111.882449
+    },
+    {
+      "song": "08",
+      "system": "v0",
+      "seed": 1,
+      "sourceFile": "08_小幸运/legacy_m2a_s1.mid",
+      "midiSha256": "c4e6f54d0be7cdc8b5ed8f67d8b693ccb9e782c5394b2b9d753cb73cd3bfe412",
+      "stemAudio": {
+        "melody": {
+          "sha256": "230094196b6c682896dace7c7989baf6a12882889a69f7e715911d2ff439b159",
+          "duration": 111.542857,
+          "peak": 0.07523278892040253
+        },
+        "accompaniment": {
+          "sha256": "9adef05681df2c725d1380aa7f439a0d140bcab113deb782c7de8527da7ce522",
+          "duration": 111.542857,
+          "peak": 0.15299853682518005
+        }
+      },
+      "posterSha256": "5d71e3ca1caac6d163c2d6027f17f8004fcdb49808bdbe52b8cd98f322f8abd7",
+      "noteCount": 940,
+      "accompanimentNotes": 713,
+      "minPitch": 29,
+      "maxPitch": 101,
+      "duration": 111.542857
+    },
+    {
+      "song": "08",
+      "system": "v0",
+      "seed": 2,
+      "sourceFile": "08_小幸运/legacy_m2a_s2.mid",
+      "midiSha256": "1063e449d8005f2ab842160a7f100a9252b71f07c65925c402f837777ab39f75",
+      "stemAudio": {
+        "melody": {
+          "sha256": "230094196b6c682896dace7c7989baf6a12882889a69f7e715911d2ff439b159",
+          "duration": 111.542857,
+          "peak": 0.07523278892040253
+        },
+        "accompaniment": {
+          "sha256": "576cc055bb03c3417a7501a4f43d4169fc98036f2660ff07b73596701572e288",
+          "duration": 111.542857,
+          "peak": 0.09509706497192383
+        }
+      },
+      "posterSha256": "52c3fb2229fe02635d1df13a9bc74a04d10c76a39a6688bb4760f5c0d1c2ed03",
+      "noteCount": 464,
+      "accompanimentNotes": 237,
+      "minPitch": 29,
+      "maxPitch": 101,
+      "duration": 111.542857
+    },
+    {
+      "song": "08",
+      "system": "v1",
+      "seed": 0,
+      "sourceFile": "08_小幸运/lekai_no_prompt_s0.mid",
+      "midiSha256": "e5113004ef1b3aa0a68ce11dcfb11cbdaaa959377717a297147841563799b65b",
+      "stemAudio": {
+        "melody": {
+          "sha256": "45edd7a29a496fb1377c9dd745f7722981388706d263cb03fbcc3fe05116a19d",
+          "duration": 110.706939,
+          "peak": 0.03297144174575806
+        },
+        "accompaniment": {
+          "sha256": "09e2ef023b091a8778dc3b21895ba5dcfd097eb8c1d638a0c74854d458e09377",
+          "duration": 110.706939,
+          "peak": 0
+        }
+      },
+      "posterSha256": "eee78bddc24d9d0e35801405f50fb9ba3b26c1c8a70ad385fd9720ab6418583f",
+      "noteCount": 228,
+      "accompanimentNotes": 0,
+      "minPitch": 29,
+      "maxPitch": 101,
+      "duration": 110.706939
+    },
+    {
+      "song": "08",
+      "system": "v1",
+      "seed": 1,
+      "sourceFile": "08_小幸运/lekai_no_prompt_s1.mid",
+      "midiSha256": "4ff2d1b7e4b88e0885dd3c0c39b749a0127e7c2150d8c2114e57cb22e9df34bc",
+      "stemAudio": {
+        "melody": {
+          "sha256": "45edd7a29a496fb1377c9dd745f7722981388706d263cb03fbcc3fe05116a19d",
+          "duration": 110.706939,
+          "peak": 0.03297144174575806
+        },
+        "accompaniment": {
+          "sha256": "5e623bba76f701c05cca980179f1de8b68eb9a95901a456d134a66302211076c",
+          "duration": 110.706939,
+          "peak": 0.1416570395231247
+        }
+      },
+      "posterSha256": "9248dfbbd6145fe46de4cb5db905a418b024541a42af137b8bd4aa968de0616e",
+      "noteCount": 480,
+      "accompanimentNotes": 252,
+      "minPitch": 29,
+      "maxPitch": 101,
+      "duration": 110.706939
+    },
+    {
+      "song": "08",
+      "system": "v1",
+      "seed": 2,
+      "sourceFile": "08_小幸运/lekai_no_prompt_s2.mid",
+      "midiSha256": "cc323914ed89fcc1650e1d576021a396851edcae6efa0e2e63972dacc245443e",
+      "stemAudio": {
+        "melody": {
+          "sha256": "441f09ef01bd6707b1fd8eee4d415052ed7e1d267ed0474153988133e8282f7d",
+          "duration": 110.863673,
+          "peak": 0.03297144174575806
+        },
+        "accompaniment": {
+          "sha256": "4d87237a135f5773b3d6f88fcd1ab6711185406004f24e3fa975c01900e62923",
+          "duration": 110.863673,
+          "peak": 0.07564210891723633
+        }
+      },
+      "posterSha256": "c1bbd9e2ef0b757423afac325d7c09205de135a32f266a8c39e1b8fc2c601145",
+      "noteCount": 235,
+      "accompanimentNotes": 7,
+      "minPitch": 29,
+      "maxPitch": 101,
+      "duration": 110.863673
+    },
+    {
+      "song": "08",
+      "system": "v2",
       "seed": 0,
       "sourceFile": "08_小幸运/pc_rule_if_else_n10_s0.mid",
       "midiSha256": "8b86e25ce355fe81dc6ad835adb11205ed6d4a7a48e471255765c8ae4986998e",
-      "audioSha256": "7c03ea7ed91c8f0799e66f2103046c86c16dd48b74eb2d8b146c6416a55d09bd",
-      "posterSha256": "fb8762b45b7b5984339a5e214c51465fe9acd2162ebf249964ea693f88e0807b",
+      "stemAudio": {
+        "melody": {
+          "sha256": "441f09ef01bd6707b1fd8eee4d415052ed7e1d267ed0474153988133e8282f7d",
+          "duration": 110.863673,
+          "peak": 0.03297144174575806
+        },
+        "accompaniment": {
+          "sha256": "0c52c7b5841000b3d85bb764ce91194331d4020a0dfd1da7d4519b833a3d7941",
+          "duration": 110.863673,
+          "peak": 0.08335282653570175
+        }
+      },
+      "posterSha256": "0606211eb804c6fe4468b0635c3fb90658bd5ce6b5904d50107742e021d69c0e",
       "noteCount": 289,
-      "minPitch": 31,
-      "maxPitch": 86,
+      "accompanimentNotes": 61,
+      "minPitch": 29,
+      "maxPitch": 101,
       "duration": 110.863673
     },
     {
       "song": "08",
+      "system": "v2",
       "seed": 1,
       "sourceFile": "08_小幸运/pc_rule_if_else_n10_s1.mid",
       "midiSha256": "cc19bb25739ae9888af836f1b01dcfde7f4a8137e7e65267bad9f8a762e1cc5e",
-      "audioSha256": "6760b032d1de2a4cc55d26f2dc2e595d308738f3ebf90fbcb3d8c0cadcfa751e",
-      "posterSha256": "31d0d175d1875b9f65f21ee68d2bc396dd9927cf486a20ed4839ea5b447eb771",
+      "stemAudio": {
+        "melody": {
+          "sha256": "441f09ef01bd6707b1fd8eee4d415052ed7e1d267ed0474153988133e8282f7d",
+          "duration": 110.863673,
+          "peak": 0.03297144174575806
+        },
+        "accompaniment": {
+          "sha256": "b0b7cd3f87c1d640fcd29d831ac8ecff04dadd0f5a05612527a422e4b08e63c1",
+          "duration": 110.863673,
+          "peak": 0.07692449539899826
+        }
+      },
+      "posterSha256": "74534b33d4d4b8316fe6ea655afe89095b88f59f8ea74049ae508a7b8b772696",
       "noteCount": 494,
-      "minPitch": 31,
-      "maxPitch": 86,
+      "accompanimentNotes": 266,
+      "minPitch": 29,
+      "maxPitch": 101,
       "duration": 110.863673
     },
     {
       "song": "08",
+      "system": "v2",
       "seed": 2,
       "sourceFile": "08_小幸运/pc_rule_if_else_n10_s2.mid",
       "midiSha256": "72114374c075346f5375fe79b33d44208ebdbb28f2d993a9f9cf2184af1b04d6",
-      "audioSha256": "b6786613a19cdd2837423e78586436a32150b4678d49f1bf2c4f33de2affcacd",
-      "posterSha256": "23f8d14d27fb861db47cb8000279f87842c3864ea4851cf114beb48410bc6427",
+      "stemAudio": {
+        "melody": {
+          "sha256": "441f09ef01bd6707b1fd8eee4d415052ed7e1d267ed0474153988133e8282f7d",
+          "duration": 110.863673,
+          "peak": 0.03297144174575806
+        },
+        "accompaniment": {
+          "sha256": "29ed99226ba5fa722bfb7482f16b5b2f70f3a7a73616edb3df17bf16981bffb5",
+          "duration": 110.863673,
+          "peak": 0.1322627067565918
+        }
+      },
+      "posterSha256": "e6f0b573bd768dd5d42830a81f3046daa51d4f1ffe80c2169e6fd72f08814536",
       "noteCount": 396,
-      "minPitch": 31,
-      "maxPitch": 86,
+      "accompanimentNotes": 168,
+      "minPitch": 29,
+      "maxPitch": 101,
       "duration": 110.863673
     },
     {
       "song": "09",
+      "system": "v0",
       "seed": 0,
-      "sourceFile": "09_月亮代表我的心/pc_rule_if_else_n10_s0.mid",
-      "midiSha256": "963af2f4c278049e5207340aa0b5ff742f72226ac2c982da6dea99d733335313",
-      "audioSha256": "395647ad6356d8ff7af6d993745ff2f16eace25a9ccc4400637064cdfa1e9d84",
-      "posterSha256": "938e347f443101711039d1273c506d801d3717fd3f5a21e50cbc60d0b1ba52f8",
-      "noteCount": 341,
-      "minPitch": 36,
-      "maxPitch": 86,
+      "sourceFile": "09_月亮代表我的心/legacy_m2a_s0.mid",
+      "midiSha256": "3aad6fc10fd7a27afcb2fb7d5c4defdc87ff63b297ed410bbdc902d70afb3e97",
+      "stemAudio": {
+        "melody": {
+          "sha256": "bd887a0aee3aa48df4b6eca996d628acbcccebacf1555758c83851f67ff8c332",
+          "duration": 86.386939,
+          "peak": 0.08408685773611069
+        },
+        "accompaniment": {
+          "sha256": "fdeed1b809b26fbe21d2c8bf62e02e4edea2bbe1a86c783f1540c3bf78a39ccb",
+          "duration": 86.386939,
+          "peak": 0.11917054653167725
+        }
+      },
+      "posterSha256": "7ec19cac0928fc6268701b5e4267c6d15c588fcf42f3e84b0132357698625c60",
+      "noteCount": 397,
+      "accompanimentNotes": 281,
+      "minPitch": 29,
+      "maxPitch": 97,
+      "duration": 86.386939
+    },
+    {
+      "song": "09",
+      "system": "v0",
+      "seed": 1,
+      "sourceFile": "09_月亮代表我的心/legacy_m2a_s1.mid",
+      "midiSha256": "0e6640d9e1f76aaff8493fbf62ce4bfb96b8e6e2b76ffcfd00733fa7571f2435",
+      "stemAudio": {
+        "melody": {
+          "sha256": "4767e22ebfd17245b4f39210922327773c999b27ead7f5657df79d40131f6bfb",
+          "duration": 87.196735,
+          "peak": 0.08408685773611069
+        },
+        "accompaniment": {
+          "sha256": "22e55490dab352f5f5d4401e8f77b0d4aa087ee891374775a3d2f006d9f5354f",
+          "duration": 87.196735,
+          "peak": 0.09091267734766006
+        }
+      },
+      "posterSha256": "d2bcf7f94927b6af88048f4bf856262a53fcbc7bd4736ed787ca7594a72a5271",
+      "noteCount": 187,
+      "accompanimentNotes": 71,
+      "minPitch": 29,
+      "maxPitch": 97,
+      "duration": 87.196735
+    },
+    {
+      "song": "09",
+      "system": "v0",
+      "seed": 2,
+      "sourceFile": "09_月亮代表我的心/legacy_m2a_s2.mid",
+      "midiSha256": "7d97dc467e75468ccc3611452d40e21a07b8f090a049c5b312d36ae4487ab6c7",
+      "stemAudio": {
+        "melody": {
+          "sha256": "534f57a989afb9c00a8a0041f3c48bfe71300a1f6604c2b59aab5fd8b6be3e92",
+          "duration": 86.883265,
+          "peak": 0.08408685773611069
+        },
+        "accompaniment": {
+          "sha256": "5dc96073c22aa9512afc0fc67c25d8c47602a1963b237c15742a80ea601b8063",
+          "duration": 86.883265,
+          "peak": 0.0865388959646225
+        }
+      },
+      "posterSha256": "42c3e3432220e2e49fb72de2da896981fb8b26faa818b42b1c30a6e92d1ea80e",
+      "noteCount": 261,
+      "accompanimentNotes": 145,
+      "minPitch": 29,
+      "maxPitch": 97,
+      "duration": 86.883265
+    },
+    {
+      "song": "09",
+      "system": "v1",
+      "seed": 0,
+      "sourceFile": "09_月亮代表我的心/lekai_no_prompt_s0.mid",
+      "midiSha256": "10f2047b5bc4d7160be09214617e8be49d2f01fc6308d7f8484cc8c05c3bf834",
+      "stemAudio": {
+        "melody": {
+          "sha256": "b10a93400f2ac3150a581a41f930af6e0857f7f5691f37163b8c7e0f910e8df9",
+          "duration": 85.211429,
+          "peak": 0.0374525748193264
+        },
+        "accompaniment": {
+          "sha256": "72746d15dbeb74ec1d315023dca32bea10869759cfd296936cdd088f8b1ad0fd",
+          "duration": 85.211429,
+          "peak": 0
+        }
+      },
+      "posterSha256": "76d037099ff0a33cf6bfec5e182f9c7d0d595e259e9d252a3a244720bb75314c",
+      "noteCount": 118,
+      "accompanimentNotes": 0,
+      "minPitch": 29,
+      "maxPitch": 97,
       "duration": 85.211429
     },
     {
       "song": "09",
+      "system": "v1",
       "seed": 1,
-      "sourceFile": "09_月亮代表我的心/pc_rule_if_else_n10_s1.mid",
-      "midiSha256": "0f21ba9a68dc9cf745d5ee873fe047b504102384c0deb537ac5dbfcdf134144e",
-      "audioSha256": "4d9485959fa2c9ea04bf0461a1c30620a67ec3ecc1c3347657c59069590aed09",
-      "posterSha256": "2f534e87af583a05a1f396b38d8f222b3dd684d98f3d4949e22eb77a472c4db9",
-      "noteCount": 336,
-      "minPitch": 36,
-      "maxPitch": 86,
+      "sourceFile": "09_月亮代表我的心/lekai_no_prompt_s1.mid",
+      "midiSha256": "10f2047b5bc4d7160be09214617e8be49d2f01fc6308d7f8484cc8c05c3bf834",
+      "stemAudio": {
+        "melody": {
+          "sha256": "b10a93400f2ac3150a581a41f930af6e0857f7f5691f37163b8c7e0f910e8df9",
+          "duration": 85.211429,
+          "peak": 0.0374525748193264
+        },
+        "accompaniment": {
+          "sha256": "72746d15dbeb74ec1d315023dca32bea10869759cfd296936cdd088f8b1ad0fd",
+          "duration": 85.211429,
+          "peak": 0
+        }
+      },
+      "posterSha256": "76d037099ff0a33cf6bfec5e182f9c7d0d595e259e9d252a3a244720bb75314c",
+      "noteCount": 118,
+      "accompanimentNotes": 0,
+      "minPitch": 29,
+      "maxPitch": 97,
+      "duration": 85.211429
+    },
+    {
+      "song": "09",
+      "system": "v1",
+      "seed": 2,
+      "sourceFile": "09_月亮代表我的心/lekai_no_prompt_s2.mid",
+      "midiSha256": "4b095b1fdf2cd5327adb8b188808244715107bb8f948b3a979259bacf45aab53",
+      "stemAudio": {
+        "melody": {
+          "sha256": "8cd0916480ac1ec093d74aad789ce3f068d842d4154d372a88e3b693722efdc8",
+          "duration": 85.55102,
+          "peak": 0.0374525748193264
+        },
+        "accompaniment": {
+          "sha256": "c485980a1c566d2fc1f774c57ff5e44f2bfcbb3ac3eba6700309cb4d0fc312b5",
+          "duration": 85.55102,
+          "peak": 0.06666687875986099
+        }
+      },
+      "posterSha256": "59afa605740bd6ccf21ce2be543dedb8f8b9e9dbbee8c4379e67940c12a178b2",
+      "noteCount": 225,
+      "accompanimentNotes": 107,
+      "minPitch": 29,
+      "maxPitch": 97,
       "duration": 85.55102
     },
     {
       "song": "09",
+      "system": "v2",
+      "seed": 0,
+      "sourceFile": "09_月亮代表我的心/pc_rule_if_else_n10_s0.mid",
+      "midiSha256": "963af2f4c278049e5207340aa0b5ff742f72226ac2c982da6dea99d733335313",
+      "stemAudio": {
+        "melody": {
+          "sha256": "b10a93400f2ac3150a581a41f930af6e0857f7f5691f37163b8c7e0f910e8df9",
+          "duration": 85.211429,
+          "peak": 0.0374525748193264
+        },
+        "accompaniment": {
+          "sha256": "6f8ba5349427d5f938744da2ab7b969ad81d99b0fffef875cdc31b5230a0dbe7",
+          "duration": 85.211429,
+          "peak": 0.1696908175945282
+        }
+      },
+      "posterSha256": "641a0c7be09572b98b6b6b76bb8684b2be8f1a19c37e8a8985b7160829e682dd",
+      "noteCount": 341,
+      "accompanimentNotes": 223,
+      "minPitch": 29,
+      "maxPitch": 97,
+      "duration": 85.211429
+    },
+    {
+      "song": "09",
+      "system": "v2",
+      "seed": 1,
+      "sourceFile": "09_月亮代表我的心/pc_rule_if_else_n10_s1.mid",
+      "midiSha256": "0f21ba9a68dc9cf745d5ee873fe047b504102384c0deb537ac5dbfcdf134144e",
+      "stemAudio": {
+        "melody": {
+          "sha256": "8cd0916480ac1ec093d74aad789ce3f068d842d4154d372a88e3b693722efdc8",
+          "duration": 85.55102,
+          "peak": 0.0374525748193264
+        },
+        "accompaniment": {
+          "sha256": "89b50015afb2253bf02c3825cae0748a7a3d5130d8388c211325911452abe644",
+          "duration": 85.55102,
+          "peak": 0.15269160270690918
+        }
+      },
+      "posterSha256": "4cc0bf15a29ca88c417c05af321b0e0e751667f4d34ca735199cd5b9b83b654a",
+      "noteCount": 336,
+      "accompanimentNotes": 218,
+      "minPitch": 29,
+      "maxPitch": 97,
+      "duration": 85.55102
+    },
+    {
+      "song": "09",
+      "system": "v2",
       "seed": 2,
       "sourceFile": "09_月亮代表我的心/pc_rule_if_else_n10_s2.mid",
       "midiSha256": "1e058b5352abdbf9e45e7137b45afd7e3ee92fdde3750389e3ba9e44ccd39d7a",
-      "audioSha256": "19250e1937e00d29f26fea36feb559a00a32d0c1565cf1d436188c64eaf653aa",
-      "posterSha256": "b548464a73f4855e407c880fd1126c32ec20ee5c3f12165d40aac98d4fd65d30",
+      "stemAudio": {
+        "melody": {
+          "sha256": "b10a93400f2ac3150a581a41f930af6e0857f7f5691f37163b8c7e0f910e8df9",
+          "duration": 85.211429,
+          "peak": 0.0374525748193264
+        },
+        "accompaniment": {
+          "sha256": "a851c429f01e88170e94a7376ec7598e5099d0648f1152ca1f2714efe28a86dc",
+          "duration": 85.211429,
+          "peak": 0.06878525018692017
+        }
+      },
+      "posterSha256": "faa3eb27c41b9e5e3534bbb50235d92cd9154f42b56075f35413b0d52648c141",
       "noteCount": 247,
-      "minPitch": 36,
-      "maxPitch": 86,
+      "accompanimentNotes": 129,
+      "minPitch": 29,
+      "maxPitch": 97,
       "duration": 85.211429
     },
     {
       "song": "10",
+      "system": "v0",
+      "seed": 0,
+      "sourceFile": "10_天空之城/legacy_m2a_s0.mid",
+      "midiSha256": "8895f66e14b6b6cd4bf835fef2ba09e16c0ecb0bcb0b265d8e1cc21a84c096ff",
+      "stemAudio": {
+        "melody": {
+          "sha256": "5c11cc60327e63ede0a0121541d226a0a1463cf9b4e572565f57a1cd0e5d08c2",
+          "duration": 87.875918,
+          "peak": 0.08318798989057541
+        },
+        "accompaniment": {
+          "sha256": "3b866c4750e04b6317edfb93afdcadada431f6e57b3e5801cfca68c89f2511b2",
+          "duration": 87.875918,
+          "peak": 0.10949817299842834
+        }
+      },
+      "posterSha256": "9ce7571ff0d8938b4ec3e6cfac5278c39be8560e3634f4827804f1cbae56263e",
+      "noteCount": 405,
+      "accompanimentNotes": 301,
+      "minPitch": 27,
+      "maxPitch": 97,
+      "duration": 87.875918
+    },
+    {
+      "song": "10",
+      "system": "v0",
+      "seed": 1,
+      "sourceFile": "10_天空之城/legacy_m2a_s1.mid",
+      "midiSha256": "9ae92d41633c8dc4e18c4f6bb316d46311e25c7da8af6402b0998cc8138697f9",
+      "stemAudio": {
+        "melody": {
+          "sha256": "a0d239ecb0ffa17ff13a45f93d8294f971c64b3e95e33e90d1a6c94f2a050d48",
+          "duration": 88.711837,
+          "peak": 0.08318798989057541
+        },
+        "accompaniment": {
+          "sha256": "c66a828940a1687d9557aec45323d7ea6624a701772bc2c3c65534d977871386",
+          "duration": 88.711837,
+          "peak": 0.09338094294071198
+        }
+      },
+      "posterSha256": "d47a8ecb1f564d13a057e156aba458a6cf54a237cc4ee2aad9a7c017a80d3c84",
+      "noteCount": 229,
+      "accompanimentNotes": 125,
+      "minPitch": 27,
+      "maxPitch": 97,
+      "duration": 88.711837
+    },
+    {
+      "song": "10",
+      "system": "v0",
+      "seed": 2,
+      "sourceFile": "10_天空之城/legacy_m2a_s2.mid",
+      "midiSha256": "379e1d8ece79c058ebb115848d3585a1cf52c5d61eabf972c92f88b03f94533d",
+      "stemAudio": {
+        "melody": {
+          "sha256": "3f3ef8f6b55d3e2ec833853d2d12f3abf5ac246e8c0f6ccb29c50c47f94de9dd",
+          "duration": 92.212245,
+          "peak": 0.08318798989057541
+        },
+        "accompaniment": {
+          "sha256": "f33b11b1222c99993d3cfaeee4233c69c57cfb1025852651aa802434b63831b2",
+          "duration": 92.212245,
+          "peak": 0.0865388959646225
+        }
+      },
+      "posterSha256": "3dcc0f772960aa9acce87a01c665f9d0880e753426f31ee6b3e5f9f6cf3de914",
+      "noteCount": 245,
+      "accompanimentNotes": 141,
+      "minPitch": 27,
+      "maxPitch": 97,
+      "duration": 92.212245
+    },
+    {
+      "song": "10",
+      "system": "v1",
+      "seed": 0,
+      "sourceFile": "10_天空之城/lekai_no_prompt_s0.mid",
+      "midiSha256": "c960932e3022eaa6c8a6a2d19c2b3b8dabd2d8ad76e39dbcf3bdcc2c085ca2c8",
+      "stemAudio": {
+        "melody": {
+          "sha256": "367656349fb4d00d99aa9a7ed00e428d51f9b2b5b2f648fdc8b26c219d35af4c",
+          "duration": 87.379592,
+          "peak": 0.0374877005815506
+        },
+        "accompaniment": {
+          "sha256": "dee12a75c1aa4596f4bea78bd2e6811abcf5348b94c43050f0e7ada4c205764e",
+          "duration": 87.379592,
+          "peak": 0.1051386147737503
+        }
+      },
+      "posterSha256": "09d688edeaca61d1ffcdd6ed04bda4fec0271eed2890784fa74e2dd8d7fb197b",
+      "noteCount": 140,
+      "accompanimentNotes": 35,
+      "minPitch": 27,
+      "maxPitch": 97,
+      "duration": 87.379592
+    },
+    {
+      "song": "10",
+      "system": "v1",
+      "seed": 1,
+      "sourceFile": "10_天空之城/lekai_no_prompt_s1.mid",
+      "midiSha256": "6f14603e64d1cd5034dcc75906e9a806a58dddef053fedcc0b00de45bbcb07dc",
+      "stemAudio": {
+        "melody": {
+          "sha256": "367656349fb4d00d99aa9a7ed00e428d51f9b2b5b2f648fdc8b26c219d35af4c",
+          "duration": 87.379592,
+          "peak": 0.0374877005815506
+        },
+        "accompaniment": {
+          "sha256": "232cc23861c57fd592a6e4b5bff51948413af59b60720491b389f805b9cb14aa",
+          "duration": 87.379592,
+          "peak": 0
+        }
+      },
+      "posterSha256": "ad9f2851a3a27b1bd0cbf2e706054e15c265f1fee6d52d41d30bc66c31a8e0af",
+      "noteCount": 105,
+      "accompanimentNotes": 0,
+      "minPitch": 27,
+      "maxPitch": 97,
+      "duration": 87.379592
+    },
+    {
+      "song": "10",
+      "system": "v1",
+      "seed": 2,
+      "sourceFile": "10_天空之城/lekai_no_prompt_s2.mid",
+      "midiSha256": "a8d8bad356288baeb84c44e12b0814d04f4f90594a357eb83e3edb448889219e",
+      "stemAudio": {
+        "melody": {
+          "sha256": "15a6efd369a4d40bc8d9a4dc9c78019602dcf2678ea346be2025e35993fbee82",
+          "duration": 87.536327,
+          "peak": 0.0374877005815506
+        },
+        "accompaniment": {
+          "sha256": "b0ffc2bdcf6fcd1e64e5438a5d03fd6c09cafae024fa275dfb48885977fb3ba8",
+          "duration": 87.536327,
+          "peak": 0.06583113223314285
+        }
+      },
+      "posterSha256": "3d30eaa921abbbf977187feb188500409d7e7dff1a50a5b37fdc1fc636cc9658",
+      "noteCount": 170,
+      "accompanimentNotes": 65,
+      "minPitch": 27,
+      "maxPitch": 97,
+      "duration": 87.536327
+    },
+    {
+      "song": "10",
+      "system": "v2",
       "seed": 0,
       "sourceFile": "10_天空之城/pc_rule_if_else_n10_s0.mid",
       "midiSha256": "e341a75939550fb01075b7a796e59beea31c66a25294862bcb0e9a12d1cb53be",
-      "audioSha256": "dccdff889c6ff30efdd704bfbbe21051ce54967616540c4fdf8c4a2952bb46fc",
-      "posterSha256": "96349e4a6838ec0e1e77bba4fa3803cde0db79775f7d941292e0dd39c5ec60f0",
+      "stemAudio": {
+        "melody": {
+          "sha256": "15a6efd369a4d40bc8d9a4dc9c78019602dcf2678ea346be2025e35993fbee82",
+          "duration": 87.536327,
+          "peak": 0.0374877005815506
+        },
+        "accompaniment": {
+          "sha256": "b75ce8656205deec37fb801f854809cc081dae1eb79f251d198b9439a72691f6",
+          "duration": 87.536327,
+          "peak": 0.07754168659448624
+        }
+      },
+      "posterSha256": "0a67fe6170114691c5d90e5ee9d7a5b6d36b0d745b38d20947d42fd6ed39b007",
       "noteCount": 280,
-      "minPitch": 31,
-      "maxPitch": 83,
+      "accompanimentNotes": 175,
+      "minPitch": 27,
+      "maxPitch": 97,
       "duration": 87.536327
     },
     {
       "song": "10",
+      "system": "v2",
       "seed": 1,
       "sourceFile": "10_天空之城/pc_rule_if_else_n10_s1.mid",
       "midiSha256": "7af229df0c8e62a357e31e544833fc6ba6a35858aac3960e33a21fdd3b6469dd",
-      "audioSha256": "2f1913519d98541b37039fa0b4086f84fae01189125f839d7a43d31237ece47b",
-      "posterSha256": "8d9e06c57c2ba4bffb3c3ed32e274bb24574b402af7464903a5ed886a88c2b39",
+      "stemAudio": {
+        "melody": {
+          "sha256": "15a6efd369a4d40bc8d9a4dc9c78019602dcf2678ea346be2025e35993fbee82",
+          "duration": 87.536327,
+          "peak": 0.0374877005815506
+        },
+        "accompaniment": {
+          "sha256": "b25c212f71881a7a8c434e67bfb304e70873193b78ea34d185fe3ef75c7d929f",
+          "duration": 87.536327,
+          "peak": 0.11726365983486176
+        }
+      },
+      "posterSha256": "ebd1af0ddbd3009fab551839ca2f626bafc5725dee2911831f28aa3411a87e5e",
       "noteCount": 197,
-      "minPitch": 31,
-      "maxPitch": 83,
+      "accompanimentNotes": 92,
+      "minPitch": 27,
+      "maxPitch": 97,
       "duration": 87.536327
     },
     {
       "song": "10",
+      "system": "v2",
       "seed": 2,
       "sourceFile": "10_天空之城/pc_rule_if_else_n10_s2.mid",
       "midiSha256": "e1bcc74dae097a2aeff0cfda4c2d01c8cd70441694cc5012a30868d5f7a84089",
-      "audioSha256": "3eeff04de09510795d6622be43de0c9f7e28d6540124aabcaf3718870e50474d",
-      "posterSha256": "81ca9cb2ec09eadc216f843afbaec0401e777c9b446b6245d110fa1cd3d7f4e2",
+      "stemAudio": {
+        "melody": {
+          "sha256": "15a6efd369a4d40bc8d9a4dc9c78019602dcf2678ea346be2025e35993fbee82",
+          "duration": 87.536327,
+          "peak": 0.0374877005815506
+        },
+        "accompaniment": {
+          "sha256": "a2c3fd9c0d28a0f6d8cdb4102a207e0f719d602394ce2510c240afd97a81b792",
+          "duration": 87.536327,
+          "peak": 0.11284095048904419
+        }
+      },
+      "posterSha256": "bcaafcc7bc6a926f2156dd5edd2208234fe41064f7e958ccbb028f26dadb9093",
       "noteCount": 391,
-      "minPitch": 31,
-      "maxPitch": 83,
+      "accompanimentNotes": 286,
+      "minPitch": 27,
+      "maxPitch": 97,
       "duration": 87.536327
     }
   ]

@@ -2,310 +2,1240 @@
   {
     "id": "01",
     "title": "童话",
-    "timelineDuration": 76.878367,
+    "timelineDuration": 78.706939,
     "samples": [
       {
+        "id": "v0-01-s0",
+        "system": "v0",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/01/v0/sample-1.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/2229c3ae0e475d8d8e83e832.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/2ce4f79b93e804e2b45d167f.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/01/v0/sample-1.svg",
+        "duration": 77.714286,
+        "accompanimentNotes": 277
+      },
+      {
+        "id": "v0-01-s1",
+        "system": "v0",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/01/v0/sample-2.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/58509adc9ddc82bcf1edf19f.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/5d665b0e68dfe11905a65519.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/01/v0/sample-2.svg",
+        "duration": 78.706939,
+        "accompanimentNotes": 491
+      },
+      {
+        "id": "v0-01-s2",
+        "system": "v0",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/01/v0/sample-3.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/f9eb0c42f6b49bee8b8da996.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/8163eb20d2e5a8bef360fabc.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/01/v0/sample-3.svg",
+        "duration": 77.217959,
+        "accompanimentNotes": 81
+      },
+      {
+        "id": "v1-01-s0",
+        "system": "v1",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/01/v1/sample-1.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/2bcea9e3447ac76c39279345.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/63173b1d3aa9d45c549b8ca1.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/01/v1/sample-1.svg",
+        "duration": 76.878367,
+        "accompanimentNotes": 0
+      },
+      {
+        "id": "v1-01-s1",
+        "system": "v1",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/01/v1/sample-2.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/2bcea9e3447ac76c39279345.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/63173b1d3aa9d45c549b8ca1.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/01/v1/sample-2.svg",
+        "duration": 76.878367,
+        "accompanimentNotes": 0
+      },
+      {
+        "id": "v1-01-s2",
+        "system": "v1",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/01/v1/sample-3.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/2bcea9e3447ac76c39279345.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/87fe40b3bfcfd912c08d1126.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/01/v1/sample-3.svg",
+        "duration": 76.878367,
+        "accompanimentNotes": 123
+      },
+      {
         "id": "v2-01-s0",
+        "system": "v2",
         "seed": 0,
         "midiSrc": "/media/streammuse/v2/midi-examples/01/sample-1.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/01/sample-1.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/2bcea9e3447ac76c39279345.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/f792ded99e7972799be7fc5b.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/01/sample-1.svg",
-        "duration": 76.878367
+        "duration": 76.878367,
+        "accompanimentNotes": 213
       },
       {
         "id": "v2-01-s1",
+        "system": "v2",
         "seed": 1,
         "midiSrc": "/media/streammuse/v2/midi-examples/01/sample-2.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/01/sample-2.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/2bcea9e3447ac76c39279345.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/44392067452bc873bba47f73.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/01/sample-2.svg",
-        "duration": 76.878367
+        "duration": 76.878367,
+        "accompanimentNotes": 173
       },
       {
         "id": "v2-01-s2",
+        "system": "v2",
         "seed": 2,
         "midiSrc": "/media/streammuse/v2/midi-examples/01/sample-3.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/01/sample-3.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/2bcea9e3447ac76c39279345.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/93b277693b319a102548c613.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/01/sample-3.svg",
-        "duration": 76.878367
+        "duration": 76.878367,
+        "accompanimentNotes": 139
       }
     ]
   },
   {
     "id": "02",
     "title": "Night dancer",
-    "timelineDuration": 78.210612,
+    "timelineDuration": 79.882449,
     "samples": [
       {
+        "id": "v0-02-s0",
+        "system": "v0",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/02/v0/sample-1.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/5c3788258603db15193fa2a8.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/c0e337db46ef987c42218e77.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/02/v0/sample-1.svg",
+        "duration": 79.882449,
+        "accompanimentNotes": 353
+      },
+      {
+        "id": "v0-02-s1",
+        "system": "v0",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/02/v0/sample-2.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/ff886627fd93ac73b92e289f.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/003c3afc4013848ba8d99d08.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/02/v0/sample-2.svg",
+        "duration": 78.863673,
+        "accompanimentNotes": 135
+      },
+      {
+        "id": "v0-02-s2",
+        "system": "v0",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/02/v0/sample-3.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/fe3a1c76fd72cce66d607f11.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/28cda87642af355a828f20d4.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/02/v0/sample-3.svg",
+        "duration": 79.542857,
+        "accompanimentNotes": 106
+      },
+      {
+        "id": "v1-02-s0",
+        "system": "v1",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/02/v1/sample-1.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/fca5d7b345cb7ca721ea6348.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/daa8d37dcdc65f16a83936a4.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/02/v1/sample-1.svg",
+        "duration": 78.210612,
+        "accompanimentNotes": 209
+      },
+      {
+        "id": "v1-02-s1",
+        "system": "v1",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/02/v1/sample-2.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/fca5d7b345cb7ca721ea6348.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/69870c80b1c02045f8dbbeae.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/02/v1/sample-2.svg",
+        "duration": 78.210612,
+        "accompanimentNotes": 44
+      },
+      {
+        "id": "v1-02-s2",
+        "system": "v1",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/02/v1/sample-3.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/fca5d7b345cb7ca721ea6348.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/0fce5f7db55477fddc501941.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/02/v1/sample-3.svg",
+        "duration": 78.210612,
+        "accompanimentNotes": 78
+      },
+      {
         "id": "v2-02-s0",
+        "system": "v2",
         "seed": 0,
         "midiSrc": "/media/streammuse/v2/midi-examples/02/sample-1.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/02/sample-1.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/fca5d7b345cb7ca721ea6348.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/67d9ffd2623f9a6e0d6471fb.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/02/sample-1.svg",
-        "duration": 78.210612
+        "duration": 78.210612,
+        "accompanimentNotes": 119
       },
       {
         "id": "v2-02-s1",
+        "system": "v2",
         "seed": 1,
         "midiSrc": "/media/streammuse/v2/midi-examples/02/sample-2.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/02/sample-2.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/fca5d7b345cb7ca721ea6348.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/0a6c90c4df22e04722ae9967.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/02/sample-2.svg",
-        "duration": 78.210612
+        "duration": 78.210612,
+        "accompanimentNotes": 204
       },
       {
         "id": "v2-02-s2",
+        "system": "v2",
         "seed": 2,
         "midiSrc": "/media/streammuse/v2/midi-examples/02/sample-3.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/02/sample-3.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/fca5d7b345cb7ca721ea6348.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/0fc23d3dd91e106852f5c466.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/02/sample-3.svg",
-        "duration": 78.210612
+        "duration": 78.210612,
+        "accompanimentNotes": 137
       }
     ]
   },
   {
     "id": "03",
     "title": "群青",
-    "timelineDuration": 126.876735,
+    "timelineDuration": 130.533878,
     "samples": [
       {
+        "id": "v0-03-s0",
+        "system": "v0",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/03/v0/sample-1.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/7a34eb8b4d1f89d0bd7fb579.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/5cfd42e0a33c09fcf0a685d5.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/03/v0/sample-1.svg",
+        "duration": 130.533878,
+        "accompanimentNotes": 338
+      },
+      {
+        "id": "v0-03-s1",
+        "system": "v0",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/03/v0/sample-2.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/a90c88d147b257225367cf18.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/ddb0d62b4795da7f6d747f4c.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/03/v0/sample-2.svg",
+        "duration": 128.052245,
+        "accompanimentNotes": 587
+      },
+      {
+        "id": "v0-03-s2",
+        "system": "v0",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/03/v0/sample-3.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/4ad70ceb2660b7e11675f6ad.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/fbd5d4808718a70d42c2474e.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/03/v0/sample-3.svg",
+        "duration": 125.701224,
+        "accompanimentNotes": 195
+      },
+      {
+        "id": "v1-03-s0",
+        "system": "v1",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/03/v1/sample-1.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/cfe2aca91d21c93309387ca4.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/e4e2b02ae372bb0b6001ec23.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/03/v1/sample-1.svg",
+        "duration": 126.876735,
+        "accompanimentNotes": 151
+      },
+      {
+        "id": "v1-03-s1",
+        "system": "v1",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/03/v1/sample-2.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/efd836652ebf9a6e29c7255c.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/9db93b3b2ee80ea7c65a2445.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/03/v1/sample-2.svg",
+        "duration": 126.537143,
+        "accompanimentNotes": 54
+      },
+      {
+        "id": "v1-03-s2",
+        "system": "v1",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/03/v1/sample-3.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/efd836652ebf9a6e29c7255c.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/0bdd56a00c1fd92b8065adf6.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/03/v1/sample-3.svg",
+        "duration": 126.537143,
+        "accompanimentNotes": 140
+      },
+      {
         "id": "v2-03-s0",
+        "system": "v2",
         "seed": 0,
         "midiSrc": "/media/streammuse/v2/midi-examples/03/sample-1.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/03/sample-1.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/cfe2aca91d21c93309387ca4.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/c79b356d774f574a7c2109b7.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/03/sample-1.svg",
-        "duration": 126.876735
+        "duration": 126.876735,
+        "accompanimentNotes": 161
       },
       {
         "id": "v2-03-s1",
+        "system": "v2",
         "seed": 1,
         "midiSrc": "/media/streammuse/v2/midi-examples/03/sample-2.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/03/sample-2.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/cfe2aca91d21c93309387ca4.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/1b55bae9bf8eb110b18c205a.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/03/sample-2.svg",
-        "duration": 126.876735
+        "duration": 126.876735,
+        "accompanimentNotes": 282
       },
       {
         "id": "v2-03-s2",
+        "system": "v2",
         "seed": 2,
         "midiSrc": "/media/streammuse/v2/midi-examples/03/sample-3.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/03/sample-3.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/efd836652ebf9a6e29c7255c.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/a99123ee3a9c3b2211bf9c0a.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/03/sample-3.svg",
-        "duration": 126.537143
+        "duration": 126.537143,
+        "accompanimentNotes": 204
       }
     ]
   },
   {
     "id": "04",
     "title": "lemon",
-    "timelineDuration": 62.197551,
+    "timelineDuration": 64.052245,
     "samples": [
       {
+        "id": "v0-04-s0",
+        "system": "v0",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/04/v0/sample-1.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/2df0240e45cc6b942df2229d.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/9710d7e470171465dda9850e.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/04/v0/sample-1.svg",
+        "duration": 64.052245,
+        "accompanimentNotes": 239
+      },
+      {
+        "id": "v0-04-s1",
+        "system": "v0",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/04/v0/sample-2.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/72b0b328d4a29bb580533cb4.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/55ea5c47e49d75410f984c36.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/04/v0/sample-2.svg",
+        "duration": 62.876735,
+        "accompanimentNotes": 106
+      },
+      {
+        "id": "v0-04-s2",
+        "system": "v0",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/04/v0/sample-3.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/50ada65a7c9effb3c9ed7f71.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/bd89640f9ae0138cacf29795.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/04/v0/sample-3.svg",
+        "duration": 63.529796,
+        "accompanimentNotes": 122
+      },
+      {
+        "id": "v1-04-s0",
+        "system": "v1",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/04/v1/sample-1.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/93e43aa01593314e54a3305b.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/a68117ee356ab58c73163304.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/04/v1/sample-1.svg",
+        "duration": 62.197551,
+        "accompanimentNotes": 41
+      },
+      {
+        "id": "v1-04-s1",
+        "system": "v1",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/04/v1/sample-2.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/93e43aa01593314e54a3305b.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/3cee1e4ffc7e488f8a3e07c3.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/04/v1/sample-2.svg",
+        "duration": 62.197551,
+        "accompanimentNotes": 83
+      },
+      {
+        "id": "v1-04-s2",
+        "system": "v1",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/04/v1/sample-3.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/6aa9cfc40e20682f87d0eca9.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/548fe4efff696c849c06e35f.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/04/v1/sample-3.svg",
+        "duration": 62.040816,
+        "accompanimentNotes": 122
+      },
+      {
         "id": "v2-04-s0",
+        "system": "v2",
         "seed": 0,
         "midiSrc": "/media/streammuse/v2/midi-examples/04/sample-1.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/04/sample-1.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/93e43aa01593314e54a3305b.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/6b8bf8e06f0da572c8719896.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/04/sample-1.svg",
-        "duration": 62.197551
+        "duration": 62.197551,
+        "accompanimentNotes": 143
       },
       {
         "id": "v2-04-s1",
+        "system": "v2",
         "seed": 1,
         "midiSrc": "/media/streammuse/v2/midi-examples/04/sample-2.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/04/sample-2.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/93e43aa01593314e54a3305b.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/11fe955ec92ee55e2703d29e.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/04/sample-2.svg",
-        "duration": 62.197551
+        "duration": 62.197551,
+        "accompanimentNotes": 232
       },
       {
         "id": "v2-04-s2",
+        "system": "v2",
         "seed": 2,
         "midiSrc": "/media/streammuse/v2/midi-examples/04/sample-3.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/04/sample-3.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/93e43aa01593314e54a3305b.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/ca81d141cabc1b33f71c2cd0.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/04/sample-3.svg",
-        "duration": 62.197551
+        "duration": 62.197551,
+        "accompanimentNotes": 140
       }
     ]
   },
   {
     "id": "05",
     "title": "cruel angel",
-    "timelineDuration": 109.531429,
+    "timelineDuration": 111.386122,
     "samples": [
       {
+        "id": "v0-05-s0",
+        "system": "v0",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/05/v0/sample-1.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/d90d65e22db606571c27477b.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/30d10c0d667dd2328984f2e9.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/05/v0/sample-1.svg",
+        "duration": 110.550204,
+        "accompanimentNotes": 415
+      },
+      {
+        "id": "v0-05-s1",
+        "system": "v0",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/05/v0/sample-2.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/7cc21671993c85149783d168.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/c39af00f93c8f2c9fcb43350.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/05/v0/sample-2.svg",
+        "duration": 111.386122,
+        "accompanimentNotes": 566
+      },
+      {
+        "id": "v0-05-s2",
+        "system": "v0",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/05/v0/sample-3.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/10c18052a47402947db9a89c.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/3ebebbf875180bb4fcc19e54.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/05/v0/sample-3.svg",
+        "duration": 110.210612,
+        "accompanimentNotes": 134
+      },
+      {
+        "id": "v1-05-s0",
+        "system": "v1",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/05/v1/sample-1.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/8b924746656f11f6f9eaa890.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/c7a6e9a69001bafccfb3ceec.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/05/v1/sample-1.svg",
+        "duration": 109.531429,
+        "accompanimentNotes": 318
+      },
+      {
+        "id": "v1-05-s1",
+        "system": "v1",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/05/v1/sample-2.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/08ef73420bf835dfb591d3c4.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/4dba4d5d84c7ea143f092c1e.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/05/v1/sample-2.svg",
+        "duration": 109.035102,
+        "accompanimentNotes": 0
+      },
+      {
+        "id": "v1-05-s2",
+        "system": "v1",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/05/v1/sample-3.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/08ef73420bf835dfb591d3c4.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/424caba4c52ed196ae638e23.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/05/v1/sample-3.svg",
+        "duration": 109.035102,
+        "accompanimentNotes": 25
+      },
+      {
         "id": "v2-05-s0",
+        "system": "v2",
         "seed": 0,
         "midiSrc": "/media/streammuse/v2/midi-examples/05/sample-1.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/05/sample-1.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/8b924746656f11f6f9eaa890.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/3844ede5c3cbeec6cc8e22fd.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/05/sample-1.svg",
-        "duration": 109.531429
+        "duration": 109.531429,
+        "accompanimentNotes": 122
       },
       {
         "id": "v2-05-s1",
+        "system": "v2",
         "seed": 1,
         "midiSrc": "/media/streammuse/v2/midi-examples/05/sample-2.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/05/sample-2.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/8b924746656f11f6f9eaa890.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/fd82327cd84b9f8d18897b24.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/05/sample-2.svg",
-        "duration": 109.531429
+        "duration": 109.531429,
+        "accompanimentNotes": 303
       },
       {
         "id": "v2-05-s2",
+        "system": "v2",
         "seed": 2,
         "midiSrc": "/media/streammuse/v2/midi-examples/05/sample-3.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/05/sample-3.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/8b924746656f11f6f9eaa890.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/f64b8a19a71e2c2068b89f39.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/05/sample-3.svg",
-        "duration": 109.531429
+        "duration": 109.531429,
+        "accompanimentNotes": 269
       }
     ]
   },
   {
     "id": "06",
     "title": "告白气球",
-    "timelineDuration": 88.868571,
+    "timelineDuration": 91.533061,
     "samples": [
       {
+        "id": "v0-06-s0",
+        "system": "v0",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/06/v0/sample-1.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/50e8f91a0c3d946d46c463a2.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/d8740d74f99bc448e9e2acbd.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/06/v0/sample-1.svg",
+        "duration": 89.364898,
+        "accompanimentNotes": 426
+      },
+      {
+        "id": "v0-06-s1",
+        "system": "v0",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/06/v0/sample-2.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/a3cbb49b211e6d1e0b2c8d03.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/a0c35c0c399fd4fe87e96894.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/06/v0/sample-2.svg",
+        "duration": 88.868571,
+        "accompanimentNotes": 332
+      },
+      {
+        "id": "v0-06-s2",
+        "system": "v0",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/06/v0/sample-3.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/c4f8295ea3b27788dd5ebb10.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/3c1392c4babcecf06e8508e7.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/06/v0/sample-3.svg",
+        "duration": 91.533061,
+        "accompanimentNotes": 251
+      },
+      {
+        "id": "v1-06-s0",
+        "system": "v1",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/06/v1/sample-1.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/1f26cb8f44c1b9df2ce16bff.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/81e62058584d3f60c588eb21.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/06/v1/sample-1.svg",
+        "duration": 88.868571,
+        "accompanimentNotes": 151
+      },
+      {
+        "id": "v1-06-s1",
+        "system": "v1",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/06/v1/sample-2.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/1f26cb8f44c1b9df2ce16bff.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/8a5a5fce559bbf624697d18e.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/06/v1/sample-2.svg",
+        "duration": 88.868571,
+        "accompanimentNotes": 126
+      },
+      {
+        "id": "v1-06-s2",
+        "system": "v1",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/06/v1/sample-3.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/1f26cb8f44c1b9df2ce16bff.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/c4459850233e365488467fab.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/06/v1/sample-3.svg",
+        "duration": 88.868571,
+        "accompanimentNotes": 123
+      },
+      {
         "id": "v2-06-s0",
+        "system": "v2",
         "seed": 0,
         "midiSrc": "/media/streammuse/v2/midi-examples/06/sample-1.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/06/sample-1.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/1f26cb8f44c1b9df2ce16bff.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/cd92e54dc30c04fa13fe3ba0.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/06/sample-1.svg",
-        "duration": 88.868571
+        "duration": 88.868571,
+        "accompanimentNotes": 216
       },
       {
         "id": "v2-06-s1",
+        "system": "v2",
         "seed": 1,
         "midiSrc": "/media/streammuse/v2/midi-examples/06/sample-2.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/06/sample-2.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/1f26cb8f44c1b9df2ce16bff.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/50312d525e48ee962055330e.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/06/sample-2.svg",
-        "duration": 88.868571
+        "duration": 88.868571,
+        "accompanimentNotes": 234
       },
       {
         "id": "v2-06-s2",
+        "system": "v2",
         "seed": 2,
         "midiSrc": "/media/streammuse/v2/midi-examples/06/sample-3.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/06/sample-3.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/1f26cb8f44c1b9df2ce16bff.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/14d19f25f6d1e80c38e44582.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/06/sample-3.svg",
-        "duration": 88.868571
+        "duration": 88.868571,
+        "accompanimentNotes": 322
       }
     ]
   },
   {
     "id": "07",
     "title": "青花瓷",
-    "timelineDuration": 108.199184,
+    "timelineDuration": 109.87102,
     "samples": [
       {
+        "id": "v0-07-s0",
+        "system": "v0",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/07/v0/sample-1.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/f8fa6cae5c8fdc9d12bf1322.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/2bb996d230204939449a9d5e.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/07/v0/sample-1.svg",
+        "duration": 109.217959,
+        "accompanimentNotes": 526
+      },
+      {
+        "id": "v0-07-s1",
+        "system": "v0",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/07/v0/sample-2.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/990b888d92b37dd995bd2b51.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/6b3b84d50c29db012cb3eb2f.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/07/v0/sample-2.svg",
+        "duration": 109.87102,
+        "accompanimentNotes": 805
+      },
+      {
+        "id": "v0-07-s2",
+        "system": "v0",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/07/v0/sample-3.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/b20173a2ec4c85d69cab11f4.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/d5416f28f3bf3c5274d461f7.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/07/v0/sample-3.svg",
+        "duration": 109.531429,
+        "accompanimentNotes": 168
+      },
+      {
+        "id": "v1-07-s0",
+        "system": "v1",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/07/v1/sample-1.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/d85a76a75a9c1c9694c55bdb.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/b53f0c54c308fc82987cce72.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/07/v1/sample-1.svg",
+        "duration": 108.042449,
+        "accompanimentNotes": 253
+      },
+      {
+        "id": "v1-07-s1",
+        "system": "v1",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/07/v1/sample-2.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/5c96950ebafc8b30d774034c.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/3e8ce0fd306bd08d72d80850.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/07/v1/sample-2.svg",
+        "duration": 108.199184,
+        "accompanimentNotes": 227
+      },
+      {
+        "id": "v1-07-s2",
+        "system": "v1",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/07/v1/sample-3.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/5c96950ebafc8b30d774034c.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/277429bfe42018117a71e785.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/07/v1/sample-3.svg",
+        "duration": 108.199184,
+        "accompanimentNotes": 137
+      },
+      {
         "id": "v2-07-s0",
+        "system": "v2",
         "seed": 0,
         "midiSrc": "/media/streammuse/v2/midi-examples/07/sample-1.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/07/sample-1.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/5c96950ebafc8b30d774034c.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/35f25ea1993891e620d835ac.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/07/sample-1.svg",
-        "duration": 108.199184
+        "duration": 108.199184,
+        "accompanimentNotes": 235
       },
       {
         "id": "v2-07-s1",
+        "system": "v2",
         "seed": 1,
         "midiSrc": "/media/streammuse/v2/midi-examples/07/sample-2.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/07/sample-2.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/5c96950ebafc8b30d774034c.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/213b85b28a6eff14ffc6f6ae.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/07/sample-2.svg",
-        "duration": 108.199184
+        "duration": 108.199184,
+        "accompanimentNotes": 176
       },
       {
         "id": "v2-07-s2",
+        "system": "v2",
         "seed": 2,
         "midiSrc": "/media/streammuse/v2/midi-examples/07/sample-3.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/07/sample-3.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/5c96950ebafc8b30d774034c.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/6a15ad27ea77d67cc8436608.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/07/sample-3.svg",
-        "duration": 108.199184
+        "duration": 108.199184,
+        "accompanimentNotes": 189
       }
     ]
   },
   {
     "id": "08",
     "title": "小幸运",
-    "timelineDuration": 110.863673,
+    "timelineDuration": 111.882449,
     "samples": [
       {
+        "id": "v0-08-s0",
+        "system": "v0",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/08/v0/sample-1.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/59cfff6bfc0a3da6203f97d8.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/a4b0aa8bbe0ce51bf70962f4.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/08/v0/sample-1.svg",
+        "duration": 111.882449,
+        "accompanimentNotes": 506
+      },
+      {
+        "id": "v0-08-s1",
+        "system": "v0",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/08/v0/sample-2.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/230094196b6c682896dace7c.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/9adef05681df2c725d1380aa.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/08/v0/sample-2.svg",
+        "duration": 111.542857,
+        "accompanimentNotes": 713
+      },
+      {
+        "id": "v0-08-s2",
+        "system": "v0",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/08/v0/sample-3.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/230094196b6c682896dace7c.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/576cc055bb03c3417a7501a4.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/08/v0/sample-3.svg",
+        "duration": 111.542857,
+        "accompanimentNotes": 237
+      },
+      {
+        "id": "v1-08-s0",
+        "system": "v1",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/08/v1/sample-1.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/45edd7a29a496fb1377c9dd7.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/09e2ef023b091a8778dc3b21.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/08/v1/sample-1.svg",
+        "duration": 110.706939,
+        "accompanimentNotes": 0
+      },
+      {
+        "id": "v1-08-s1",
+        "system": "v1",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/08/v1/sample-2.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/45edd7a29a496fb1377c9dd7.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/5e623bba76f701c05cca9801.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/08/v1/sample-2.svg",
+        "duration": 110.706939,
+        "accompanimentNotes": 252
+      },
+      {
+        "id": "v1-08-s2",
+        "system": "v1",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/08/v1/sample-3.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/441f09ef01bd6707b1fd8eee.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/4d87237a135f5773b3d6f88f.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/08/v1/sample-3.svg",
+        "duration": 110.863673,
+        "accompanimentNotes": 7
+      },
+      {
         "id": "v2-08-s0",
+        "system": "v2",
         "seed": 0,
         "midiSrc": "/media/streammuse/v2/midi-examples/08/sample-1.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/08/sample-1.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/441f09ef01bd6707b1fd8eee.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/0c52c7b5841000b3d85bb764.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/08/sample-1.svg",
-        "duration": 110.863673
+        "duration": 110.863673,
+        "accompanimentNotes": 61
       },
       {
         "id": "v2-08-s1",
+        "system": "v2",
         "seed": 1,
         "midiSrc": "/media/streammuse/v2/midi-examples/08/sample-2.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/08/sample-2.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/441f09ef01bd6707b1fd8eee.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/b0b7cd3f87c1d640fcd29d83.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/08/sample-2.svg",
-        "duration": 110.863673
+        "duration": 110.863673,
+        "accompanimentNotes": 266
       },
       {
         "id": "v2-08-s2",
+        "system": "v2",
         "seed": 2,
         "midiSrc": "/media/streammuse/v2/midi-examples/08/sample-3.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/08/sample-3.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/441f09ef01bd6707b1fd8eee.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/29ed99226ba5fa722bfb7482.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/08/sample-3.svg",
-        "duration": 110.863673
+        "duration": 110.863673,
+        "accompanimentNotes": 168
       }
     ]
   },
   {
     "id": "09",
     "title": "月亮代表我的心",
-    "timelineDuration": 85.55102,
+    "timelineDuration": 87.196735,
     "samples": [
       {
+        "id": "v0-09-s0",
+        "system": "v0",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/09/v0/sample-1.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/bd887a0aee3aa48df4b6eca9.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/fdeed1b809b26fbe21d2c8bf.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/09/v0/sample-1.svg",
+        "duration": 86.386939,
+        "accompanimentNotes": 281
+      },
+      {
+        "id": "v0-09-s1",
+        "system": "v0",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/09/v0/sample-2.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/4767e22ebfd17245b4f39210.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/22e55490dab352f5f5d4401e.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/09/v0/sample-2.svg",
+        "duration": 87.196735,
+        "accompanimentNotes": 71
+      },
+      {
+        "id": "v0-09-s2",
+        "system": "v0",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/09/v0/sample-3.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/534f57a989afb9c00a8a0041.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/5dc96073c22aa9512afc0fc6.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/09/v0/sample-3.svg",
+        "duration": 86.883265,
+        "accompanimentNotes": 145
+      },
+      {
+        "id": "v1-09-s0",
+        "system": "v1",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/09/v1/sample-1.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/b10a93400f2ac3150a581a41.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/72746d15dbeb74ec1d315023.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/09/v1/sample-1.svg",
+        "duration": 85.211429,
+        "accompanimentNotes": 0
+      },
+      {
+        "id": "v1-09-s1",
+        "system": "v1",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/09/v1/sample-2.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/b10a93400f2ac3150a581a41.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/72746d15dbeb74ec1d315023.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/09/v1/sample-2.svg",
+        "duration": 85.211429,
+        "accompanimentNotes": 0
+      },
+      {
+        "id": "v1-09-s2",
+        "system": "v1",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/09/v1/sample-3.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/8cd0916480ac1ec093d74aad.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/c485980a1c566d2fc1f774c5.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/09/v1/sample-3.svg",
+        "duration": 85.55102,
+        "accompanimentNotes": 107
+      },
+      {
         "id": "v2-09-s0",
+        "system": "v2",
         "seed": 0,
         "midiSrc": "/media/streammuse/v2/midi-examples/09/sample-1.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/09/sample-1.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/b10a93400f2ac3150a581a41.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/6f8ba5349427d5f938744da2.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/09/sample-1.svg",
-        "duration": 85.211429
+        "duration": 85.211429,
+        "accompanimentNotes": 223
       },
       {
         "id": "v2-09-s1",
+        "system": "v2",
         "seed": 1,
         "midiSrc": "/media/streammuse/v2/midi-examples/09/sample-2.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/09/sample-2.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/8cd0916480ac1ec093d74aad.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/89b50015afb2253bf02c3825.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/09/sample-2.svg",
-        "duration": 85.55102
+        "duration": 85.55102,
+        "accompanimentNotes": 218
       },
       {
         "id": "v2-09-s2",
+        "system": "v2",
         "seed": 2,
         "midiSrc": "/media/streammuse/v2/midi-examples/09/sample-3.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/09/sample-3.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/b10a93400f2ac3150a581a41.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/a851c429f01e88170e94a737.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/09/sample-3.svg",
-        "duration": 85.211429
+        "duration": 85.211429,
+        "accompanimentNotes": 129
       }
     ]
   },
   {
     "id": "10",
     "title": "天空之城",
-    "timelineDuration": 87.536327,
+    "timelineDuration": 92.212245,
     "samples": [
       {
+        "id": "v0-10-s0",
+        "system": "v0",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/10/v0/sample-1.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/5c11cc60327e63ede0a01215.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/3b866c4750e04b6317edfb93.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/10/v0/sample-1.svg",
+        "duration": 87.875918,
+        "accompanimentNotes": 301
+      },
+      {
+        "id": "v0-10-s1",
+        "system": "v0",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/10/v0/sample-2.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/a0d239ecb0ffa17ff13a45f9.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/c66a828940a1687d9557aec4.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/10/v0/sample-2.svg",
+        "duration": 88.711837,
+        "accompanimentNotes": 125
+      },
+      {
+        "id": "v0-10-s2",
+        "system": "v0",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/10/v0/sample-3.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/3f3ef8f6b55d3e2ec833853d.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/f33b11b1222c99993d3cfaee.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/10/v0/sample-3.svg",
+        "duration": 92.212245,
+        "accompanimentNotes": 141
+      },
+      {
+        "id": "v1-10-s0",
+        "system": "v1",
+        "seed": 0,
+        "midiSrc": "/media/streammuse/v2/midi-examples/10/v1/sample-1.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/367656349fb4d00d99aa9a7e.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/dee12a75c1aa4596f4bea78b.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/10/v1/sample-1.svg",
+        "duration": 87.379592,
+        "accompanimentNotes": 35
+      },
+      {
+        "id": "v1-10-s1",
+        "system": "v1",
+        "seed": 1,
+        "midiSrc": "/media/streammuse/v2/midi-examples/10/v1/sample-2.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/367656349fb4d00d99aa9a7e.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/232cc23861c57fd592a6e4b5.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/10/v1/sample-2.svg",
+        "duration": 87.379592,
+        "accompanimentNotes": 0
+      },
+      {
+        "id": "v1-10-s2",
+        "system": "v1",
+        "seed": 2,
+        "midiSrc": "/media/streammuse/v2/midi-examples/10/v1/sample-3.mid",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/15a6efd369a4d40bc8d9a4dc.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/b0ffc2bdcf6fcd1e64e5438a.mp3"
+        },
+        "posterSrc": "/media/streammuse/v2/midi-examples/10/v1/sample-3.svg",
+        "duration": 87.536327,
+        "accompanimentNotes": 65
+      },
+      {
         "id": "v2-10-s0",
+        "system": "v2",
         "seed": 0,
         "midiSrc": "/media/streammuse/v2/midi-examples/10/sample-1.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/10/sample-1.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/15a6efd369a4d40bc8d9a4dc.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/b75ce8656205deec37fb801f.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/10/sample-1.svg",
-        "duration": 87.536327
+        "duration": 87.536327,
+        "accompanimentNotes": 175
       },
       {
         "id": "v2-10-s1",
+        "system": "v2",
         "seed": 1,
         "midiSrc": "/media/streammuse/v2/midi-examples/10/sample-2.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/10/sample-2.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/15a6efd369a4d40bc8d9a4dc.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/b25c212f71881a7a8c434e67.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/10/sample-2.svg",
-        "duration": 87.536327
+        "duration": 87.536327,
+        "accompanimentNotes": 92
       },
       {
         "id": "v2-10-s2",
+        "system": "v2",
         "seed": 2,
         "midiSrc": "/media/streammuse/v2/midi-examples/10/sample-3.mid",
-        "audioSrc": "/media/streammuse/v2/midi-examples/10/sample-3.mp3",
+        "stemSources": {
+          "melody": "/media/streammuse/v2/midi-examples/audio/15a6efd369a4d40bc8d9a4dc.mp3",
+          "accompaniment": "/media/streammuse/v2/midi-examples/audio/a2c3fd9c0d28a0f6d8cdb410.mp3"
+        },
         "posterSrc": "/media/streammuse/v2/midi-examples/10/sample-3.svg",
-        "duration": 87.536327
+        "duration": 87.536327,
+        "accompanimentNotes": 286
       }
     ]
   }
