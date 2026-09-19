@@ -29,7 +29,7 @@ export default function VersionHero({ version }: VersionHeroProps) {
             <ExternalLink size={15} aria-hidden="true" />
           </a>
         ) : null}
-        <a href="#media">Media</a>
+        <a href="#media">Video</a>
         <a href="#midi">MIDI</a>
       </div>
     </section>
