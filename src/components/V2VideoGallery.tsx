@@ -104,12 +104,8 @@ export default function V2VideoGallery() {
   return (
     <div>
       <div className={styles.rounds} role="group" aria-label="Recording rounds">
-        <button type="button" aria-pressed={round === 2} onClick={() => setRound(2)}>Round 2 <span>Dual view</span></button>
-        <button type="button" aria-pressed={round === 1} onClick={() => setRound(1)}>Round 1 <span>Screen recordings</span></button>
-      </div>
-      <div className={styles.intro}>
-        <p>{selectedSongs.length} melodies · {selectedSongs.reduce((sum, song) => sum + song.takes.length, 0)} performances</p>
-        <p>{round === 2 ? 'Select a take. Swap the camera and screen views while listening to the camera audio.' : 'Select a take, then press play to watch.'}</p>
+        <button type="button" aria-pressed={round === 2} onClick={() => setRound(2)}>Round 2</button>
+        <button type="button" aria-pressed={round === 1} onClick={() => setRound(1)}>Round 1</button>
       </div>
       <div className={styles.grid} key={round}>{selectedSongs.map((song, index) => <SongCard key={song.id} song={song} round={round} number={index + 1} />)}</div>
     </div>

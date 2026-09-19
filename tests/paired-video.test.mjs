@@ -8,16 +8,20 @@ const compiled = ts.transpileModule(readFileSync('src/lib/paired-video.ts', 'utf
 }).outputText
 const { PairedVideoPlayback } = await import(`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`)
 let frame = 0
-globalThis.requestAnimationFrame = () => ++frame
-globalThis.cancelAnimationFrame = () => {}
+const frames = new Map()
+globalThis.requestAnimationFrame = callback => { frames.set(++frame, callback); return frame }
+globalThis.cancelAnimationFrame = id => frames.delete(id)
+const tick = () => { const callbacks = [...frames.values()]; frames.clear(); callbacks.forEach(callback => callback()) }
 const settled = () => new Promise(resolve => setImmediate(resolve))
 
 class Video extends EventTarget {
   src = ''; currentTime = 0; duration = 90; readyState = 4; seeking = false
   volume = .8; muted = false; paused = true; playbackRate = 1; error = null
+  pauseCalls = 0; bufferEnd = 90
+  buffered = { length: 1, start: () => 0, end: () => this.bufferEnd }
   result = () => Promise.resolve()
   play() { this.paused = false; return this.result() }
-  pause() { this.paused = true; this.emit('pause') }
+  pause() { this.pauseCalls++; this.paused = true; this.emit('pause') }
   load() { if (this.src) this.emit('loadedmetadata') }
   removeAttribute() { this.src = '' }
   emit(event) { this.dispatchEvent(new Event(event)) }
@@ -45,16 +49,33 @@ test('pair loads on demand, uses only camera sound, and pauses together for anot
   player.dispose()
 })
 
-test('a buffering view holds both videos, resumes together, and respects pause during buffering', async () => {
+test('screen stalls and drift never pause or seek the audible camera', async () => {
   const { camera, screen, states, player } = setup()
   player.play(); await settled()
-  screen.readyState = 2; screen.emit('waiting')
+  camera.currentTime = 12; screen.currentTime = 10
+  screen.readyState = 2; screen.emit('waiting'); tick()
+  assert.equal(camera.paused, false)
+  assert.equal(states.at(-1), 'playing')
+  screen.readyState = 4; screen.emit('canplay'); tick(); await settled()
+  assert.equal(screen.currentTime, 12)
+  assert.equal(camera.currentTime, 12)
+  assert.equal(camera.pauseCalls, 0)
+  assert.equal(camera.playbackRate, 1)
+  player.dispose()
+})
+
+test('camera buffering builds a cushion and respects pause before data arrives', async () => {
+  const { camera, screen, states, player } = setup()
+  player.play(); await settled()
+  camera.currentTime = 10; camera.readyState = 2; camera.emit('waiting')
   assert.ok(camera.paused && screen.paused)
   assert.equal(states.at(-1), 'loading')
-  screen.readyState = 4; screen.emit('canplay'); await settled()
+  camera.readyState = 3; camera.bufferEnd = 10.2; camera.emit('canplay'); await settled()
+  assert.ok(camera.paused && screen.paused)
+  camera.bufferEnd = 14; camera.emit('progress'); await settled(); tick(); await settled()
   assert.ok(!camera.paused && !screen.paused)
-  screen.readyState = 2; screen.emit('waiting'); player.pause()
-  screen.readyState = 4; screen.emit('canplay'); await settled()
+  camera.readyState = 2; camera.emit('waiting'); player.pause()
+  camera.readyState = 4; camera.emit('canplay'); await settled()
   assert.ok(camera.paused && screen.paused)
   assert.equal(states.at(-1), 'paused')
   player.dispose()

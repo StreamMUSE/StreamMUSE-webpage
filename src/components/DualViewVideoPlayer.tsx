@@ -83,7 +83,7 @@ export default function DualViewVideoPlayer({ recording, title }: { recording: D
             <span>{state === 'error' ? <RotateCcw size={25} /> : <Play size={25} fill="currentColor" />}</span>
           </button>
         ) : null}
-        {state === 'loading' ? <span className={styles.loading} role="status">Loading both views…</span> : null}
+        {state === 'loading' ? <span className={styles.loading} role="status">Loading video…</span> : null}
       </div>
       <div className={styles.controls}>
         <div className={styles.transport}>

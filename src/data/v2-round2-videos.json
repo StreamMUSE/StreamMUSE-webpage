@@ -16,8 +16,8 @@
         "screen": {
           "src": "/media/streammuse/v2/round2/01/take-1-screen.mp4",
           "poster": "/media/streammuse/v2/round2/01/take-1-screen.webp",
-          "width": 1920,
-          "height": 1058
+          "width": 1280,
+          "height": 706
         }
       },
       {
@@ -33,8 +33,8 @@
         "screen": {
           "src": "/media/streammuse/v2/round2/01/take-2-screen.mp4",
           "poster": "/media/streammuse/v2/round2/01/take-2-screen.webp",
-          "width": 1920,
-          "height": 1058
+          "width": 1280,
+          "height": 706
         }
       }
     ]
@@ -56,8 +56,8 @@
         "screen": {
           "src": "/media/streammuse/v2/round2/04/take-1-screen.mp4",
           "poster": "/media/streammuse/v2/round2/04/take-1-screen.webp",
-          "width": 1920,
-          "height": 1058
+          "width": 1280,
+          "height": 706
         }
       },
       {
@@ -73,8 +73,8 @@
         "screen": {
           "src": "/media/streammuse/v2/round2/04/take-2-screen.mp4",
           "poster": "/media/streammuse/v2/round2/04/take-2-screen.webp",
-          "width": 1920,
-          "height": 1058
+          "width": 1280,
+          "height": 706
         }
       }
     ]
@@ -96,8 +96,8 @@
         "screen": {
           "src": "/media/streammuse/v2/round2/05/take-1-screen.mp4",
           "poster": "/media/streammuse/v2/round2/05/take-1-screen.webp",
-          "width": 1920,
-          "height": 1058
+          "width": 1280,
+          "height": 706
         }
       }
     ]
@@ -119,8 +119,8 @@
         "screen": {
           "src": "/media/streammuse/v2/round2/06/take-1-screen.mp4",
           "poster": "/media/streammuse/v2/round2/06/take-1-screen.webp",
-          "width": 1920,
-          "height": 1058
+          "width": 1280,
+          "height": 706
         }
       },
       {
@@ -136,8 +136,8 @@
         "screen": {
           "src": "/media/streammuse/v2/round2/06/take-2-screen.mp4",
           "poster": "/media/streammuse/v2/round2/06/take-2-screen.webp",
-          "width": 1920,
-          "height": 1058
+          "width": 1280,
+          "height": 706
         }
       }
     ]
@@ -159,8 +159,8 @@
         "screen": {
           "src": "/media/streammuse/v2/round2/07/take-1-screen.mp4",
           "poster": "/media/streammuse/v2/round2/07/take-1-screen.webp",
-          "width": 1920,
-          "height": 1058
+          "width": 1280,
+          "height": 706
         }
       }
     ]
@@ -182,8 +182,8 @@
         "screen": {
           "src": "/media/streammuse/v2/round2/09/take-1-screen.mp4",
           "poster": "/media/streammuse/v2/round2/09/take-1-screen.webp",
-          "width": 1920,
-          "height": 1058
+          "width": 1280,
+          "height": 706
         }
       }
     ]
@@ -205,8 +205,8 @@
         "screen": {
           "src": "/media/streammuse/v2/round2/10/take-1-screen.mp4",
           "poster": "/media/streammuse/v2/round2/10/take-1-screen.webp",
-          "width": 1920,
-          "height": 1058
+          "width": 1280,
+          "height": 706
         }
       }
     ]
@@ -228,8 +228,8 @@
         "screen": {
           "src": "/media/streammuse/v2/round2/11/take-1-screen.mp4",
           "poster": "/media/streammuse/v2/round2/11/take-1-screen.webp",
-          "width": 1920,
-          "height": 1058
+          "width": 1280,
+          "height": 706
         }
       }
     ]

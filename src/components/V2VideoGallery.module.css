@@ -1,8 +1,5 @@
-.intro { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; margin-bottom: 22px; color: var(--muted); font-size: 13px; }
-.intro p { margin: 0; }
 .rounds { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
 .rounds button { display: flex; align-items: center; gap: 10px; padding: 10px 16px; min-height: 44px; border: 1px solid #d9e3db; border-radius: 9px; background: #fffefa; color: #486356; font-size: 14px; font-weight: 650; cursor: pointer; }
-.rounds button span { font-size: 11px; font-weight: 500; opacity: .8; }
 .rounds button[aria-pressed="true"] { background: #285e57; border-color: #285e57; color: white; }
 .rounds button:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
 .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: start; }
