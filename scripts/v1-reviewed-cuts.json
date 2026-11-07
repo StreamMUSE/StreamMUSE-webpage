@@ -1,0 +1,26 @@
+{
+  "reviewDate": "2026-11-07",
+  "clips": [
+    {"sourceId":"R01","start":0,"end":66.1,"view":"camera","reason":"Continuous performance; retain the recorded opening and remove the idle ending."},
+    {"sourceId":"R02","start":0,"end":70.4,"view":"camera","reason":"Continuous performance with active piano roll; remove post-performance waiting."},
+    {"sourceId":"R04","start":0,"end":70.8,"view":"camera","reason":"Continuous performance with visible accompaniment; remove operator interaction at the end."},
+    {"sourceId":"R06","start":0,"end":51.4,"view":"camera","reason":"Continuous performance; remove the terminal interaction after the performer stops."},
+    {"sourceId":"P04","start":0,"end":53.4,"view":"camera","reason":"Continuous captured performance; preserve opening melody and remove the terminal-switch ending."},
+    {"sourceId":"P06","start":0,"end":50.1,"view":"camera","reason":"Continuous captured performance with visible piano-roll responses; remove idle ending."},
+    {"sourceId":"P08","start":0,"end":56.8,"view":"camera","reason":"Continuous captured performance; preserve opening melody and remove the terminal-switch ending."},
+    {"sourceId":"P10","start":0,"end":67.0,"view":"camera","reason":"Continuous performance with visible accompaniment; remove terminal interaction at the end."},
+    {"sourceId":"P12","start":0,"end":25.5,"view":"camera","reason":"Short continuous performance excerpt; remove conversation and operator interaction after playing stops."},
+    {"sourceId":"P14","start":0,"end":66.2,"view":"camera","reason":"Continuous performance with visible piano-roll responses; remove terminal-switch ending."},
+    {"sourceId":"P16","start":0,"end":67.4666666667,"view":"camera","reason":"Retain the continuous captured performance through the source end; no artificial ending is added."},
+    {"sourceId":"P01","start":13.2,"end":49.8,"view":"screen","reason":"Begin on the active session, excluding browser connection-error transition frames; retain a short release."},
+    {"sourceId":"P07","start":17.0,"end":45.3,"view":"screen","reason":"First independent active session; remove preceding disconnected/black frames and subsequent waiting."},
+    {"sourceId":"P07","start":102.85,"end":164.5,"view":"screen","reason":"Second independent active session; exclude the preceding browser-error transition, and do not splice to the earlier attempt."},
+    {"sourceId":"P09","start":59.8,"end":107.0,"view":"screen","reason":"Begin on the active performance after the long disconnected lead-in and allow a short release."},
+    {"sourceId":"P11","start":45.6,"end":112.0,"view":"screen","reason":"Begin on the active performance after setup/black frames and allow a short release."}
+  ],
+  "excluded": [
+    {"sourceId":"P02","reason":"Repeated terminal/debugging interruptions during the captured performance; no clearly uninterrupted representative session selected."},
+    {"sourceId":"P13","reason":"Piano-roll display remains on stale disconnected Bar 28; audio alone does not establish a valid screen demonstration."},
+    {"sourceId":"P15","reason":"Piano-roll display remains on stale disconnected Bar 28; audio alone does not establish a valid screen demonstration."}
+  ]
+}
