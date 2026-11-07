@@ -1,71 +1,16 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
-import { ExternalLink, Play, RotateCcw } from 'lucide-react'
+import { useState } from 'react'
+import { ExternalLink } from 'lucide-react'
 import songs from '@/data/v2-video-examples.json'
 import round2Songs from '@/data/v2-round2-videos.json'
 import DualViewVideoPlayer from './DualViewVideoPlayer'
-import { pauseOtherMedia } from '@/lib/media-playback'
+import SingleViewVideoPlayer from './SingleViewVideoPlayer'
 import { getSongTitle } from '@/lib/song-titles'
 import styles from './V2VideoGallery.module.css'
 
 type Song = typeof songs[number] | typeof round2Songs[number]
-type Recording = typeof songs[number]['takes'][number]
 const durationLabel = (seconds: number) => `${Math.floor(seconds / 60)}:${String(Math.floor(seconds) % 60).padStart(2, '0')}`
-
-function RecordingPlayer({ recording, title }: { recording: Recording; title: string }) {
-  const videoRef = useRef<HTMLVideoElement>(null)
-  const requests = useRef({ generation: 0 })
-  const [status, setStatus] = useState<'idle' | 'loading' | 'ready' | 'error'>('idle')
-  const label = `${title}, Take ${recording.take}`
-
-  useEffect(() => {
-    const video = videoRef.current
-    const pending = requests.current
-    return () => {
-      pending.generation++
-      video?.pause()
-      video?.removeAttribute('src')
-      video?.load()
-    }
-  }, [])
-
-  async function play() {
-    const video = videoRef.current
-    if (!video) return
-    const request = ++requests.current.generation
-    setStatus('loading')
-    video.src = recording.src
-    video.load()
-    try {
-      await video.play()
-      if (request === requests.current.generation) setStatus('ready')
-    } catch (error) {
-      if (request === requests.current.generation) {
-        setStatus(error instanceof DOMException && error.name === 'AbortError' ? 'ready' : 'error')
-      }
-    }
-  }
-
-  return (
-    <div id={`${recording.id}-player`} className={styles.player}>
-      <div className={styles.frame} style={{ aspectRatio: `${recording.width} / ${recording.height}` }}>
-        <video ref={videoRef} poster={recording.poster} preload="none" playsInline
-          controls={status === 'loading' || status === 'ready'} aria-label={label}
-          onPlay={event => pauseOtherMedia(event.currentTarget)}
-          onPlaying={() => setStatus('ready')}
-          onError={() => setStatus('error')} />
-        {status === 'idle' || status === 'error' ? (
-          <button type="button" className={styles.play} onClick={() => void play()} aria-label={`${status === 'error' ? 'Retry' : 'Play'} video: ${label}`}>
-            <span>{status === 'error' ? <RotateCcw size={25} aria-hidden="true" /> : <Play size={25} fill="currentColor" aria-hidden="true" />}</span>
-          </button>
-        ) : null}
-      </div>
-      {status === 'error' ? <p className={styles.error} role="alert">Video could not load. Try again or <a href={recording.src} target="_blank" rel="noreferrer">open the MP4</a>.</p> : null}
-      <span className={styles.srOnly} role="status">{status === 'loading' ? `Loading ${label}` : ''}</span>
-    </div>
-  )
-}
 
 function SongCard({ song, round, number }: { song: Song; round: number; number: number }) {
   const [selected, setSelected] = useState(0)
@@ -80,7 +25,7 @@ function SongCard({ song, round, number }: { song: Song; round: number; number: 
       </header>
       {'camera' in recording
         ? <DualViewVideoPlayer key={recording.id} recording={recording} title={title} />
-        : <RecordingPlayer key={recording.id} recording={recording} title={title} />}
+        : <SingleViewVideoPlayer key={recording.id} recording={recording} title={title} />}
       <footer className={styles.footer}>
         {song.takes.length > 1 ? (
           <div className={styles.takes} role="group" aria-label={`Recordings of ${title}`}>

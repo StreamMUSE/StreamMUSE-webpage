@@ -1,0 +1,178 @@
+[
+  {
+    "id": "v1-performance-03",
+    "title": "Performance 03",
+    "take": 1,
+    "view": "camera",
+    "duration": 66.1,
+    "src": "/media/streammuse/v1/single-view/performance-03-camera.mp4",
+    "poster": "/media/streammuse/v1/single-view/performance-03-camera.jpg",
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "id": "v1-performance-04",
+    "title": "Performance 04",
+    "take": 1,
+    "view": "camera",
+    "duration": 70.4,
+    "src": "/media/streammuse/v1/single-view/performance-04-camera.mp4",
+    "poster": "/media/streammuse/v1/single-view/performance-04-camera.jpg",
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "id": "v1-performance-05",
+    "title": "Performance 05",
+    "take": 1,
+    "view": "camera",
+    "duration": 70.8,
+    "src": "/media/streammuse/v1/single-view/performance-05-camera.mp4",
+    "poster": "/media/streammuse/v1/single-view/performance-05-camera.jpg",
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "id": "v1-performance-06",
+    "title": "Performance 06",
+    "take": 1,
+    "view": "camera",
+    "duration": 51.4,
+    "src": "/media/streammuse/v1/single-view/performance-06-camera.mp4",
+    "poster": "/media/streammuse/v1/single-view/performance-06-camera.jpg",
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "id": "v1-performance-07",
+    "title": "Performance 07",
+    "take": 1,
+    "view": "camera",
+    "duration": 53.4,
+    "src": "/media/streammuse/v1/single-view/performance-07-camera.mp4",
+    "poster": "/media/streammuse/v1/single-view/performance-07-camera.jpg",
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "id": "v1-performance-08",
+    "title": "Performance 08",
+    "take": 1,
+    "view": "camera",
+    "duration": 50.1,
+    "src": "/media/streammuse/v1/single-view/performance-08-camera.mp4",
+    "poster": "/media/streammuse/v1/single-view/performance-08-camera.jpg",
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "id": "v1-performance-09",
+    "title": "Performance 09",
+    "take": 1,
+    "view": "camera",
+    "duration": 56.8,
+    "src": "/media/streammuse/v1/single-view/performance-09-camera.mp4",
+    "poster": "/media/streammuse/v1/single-view/performance-09-camera.jpg",
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "id": "v1-performance-10",
+    "title": "Performance 10",
+    "take": 1,
+    "view": "camera",
+    "duration": 67.0,
+    "src": "/media/streammuse/v1/single-view/performance-10-camera.mp4",
+    "poster": "/media/streammuse/v1/single-view/performance-10-camera.jpg",
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "id": "v1-performance-11",
+    "title": "Performance 11",
+    "take": 1,
+    "view": "camera",
+    "duration": 25.5,
+    "src": "/media/streammuse/v1/single-view/performance-11-camera.mp4",
+    "poster": "/media/streammuse/v1/single-view/performance-11-camera.jpg",
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "id": "v1-performance-12",
+    "title": "Performance 12",
+    "take": 1,
+    "view": "camera",
+    "duration": 66.2,
+    "src": "/media/streammuse/v1/single-view/performance-12-camera.mp4",
+    "poster": "/media/streammuse/v1/single-view/performance-12-camera.jpg",
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "id": "v1-performance-13",
+    "title": "Performance 13",
+    "take": 1,
+    "view": "camera",
+    "duration": 67.466667,
+    "src": "/media/streammuse/v1/single-view/performance-13-camera.mp4",
+    "poster": "/media/streammuse/v1/single-view/performance-13-camera.jpg",
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "id": "v1-performance-14",
+    "title": "Performance 14",
+    "take": 1,
+    "view": "screen",
+    "duration": 36.6,
+    "src": "/media/streammuse/v1/single-view/performance-14-screen.mp4",
+    "poster": "/media/streammuse/v1/single-view/performance-14-screen.jpg",
+    "width": 1108,
+    "height": 720
+  },
+  {
+    "id": "v1-performance-15",
+    "title": "Performance 15",
+    "take": 1,
+    "view": "screen",
+    "duration": 28.296296,
+    "src": "/media/streammuse/v1/single-view/performance-15-screen.mp4",
+    "poster": "/media/streammuse/v1/single-view/performance-15-screen.jpg",
+    "width": 960,
+    "height": 624
+  },
+  {
+    "id": "v1-performance-16",
+    "title": "Performance 16",
+    "take": 1,
+    "view": "screen",
+    "duration": 61.62963,
+    "src": "/media/streammuse/v1/single-view/performance-16-screen.mp4",
+    "poster": "/media/streammuse/v1/single-view/performance-16-screen.jpg",
+    "width": 960,
+    "height": 624
+  },
+  {
+    "id": "v1-performance-17",
+    "title": "Performance 17",
+    "take": 1,
+    "view": "screen",
+    "duration": 47.2,
+    "src": "/media/streammuse/v1/single-view/performance-17-screen.mp4",
+    "poster": "/media/streammuse/v1/single-view/performance-17-screen.jpg",
+    "width": 1108,
+    "height": 720
+  },
+  {
+    "id": "v1-performance-18",
+    "title": "Performance 18",
+    "take": 1,
+    "view": "screen",
+    "duration": 66.4,
+    "src": "/media/streammuse/v1/single-view/performance-18-screen.mp4",
+    "poster": "/media/streammuse/v1/single-view/performance-18-screen.jpg",
+    "width": 1108,
+    "height": 720
+  }
+]

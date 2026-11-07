@@ -5,7 +5,7 @@
 .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: start; }
 .card { min-width: 0; overflow: hidden; border: 1px solid #e3e0d6; border-radius: 15px; background: #fffefa; box-shadow: 0 3px 12px #423a2410; }
 .heading { display: flex; align-items: center; gap: 12px; padding: 16px 18px; }
-.heading h3 { flex: 1; margin: 0; font-size: 17px; font-weight: 650; line-height: 1.4; }
+.heading h3, .heading h4 { flex: 1; margin: 0; font-size: 17px; font-weight: 650; line-height: 1.4; }
 .number { color: #90988e; font-family: Georgia, serif; font-size: 22px; font-variant-numeric: tabular-nums; }
 .duration { color: #6c7970; font-size: 12px; font-variant-numeric: tabular-nums; }
 .frame { position: relative; background: #161d1a; }

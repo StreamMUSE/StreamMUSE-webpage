@@ -1,6 +1,6 @@
 # v1 performance videos
 
-The v1 Real-time section presents two verified camera/screen pairs as Performance 01 and Performance 02. Song names have not been verified. Other unmatched recordings and disconnected/stalled screen recordings are not published.
+The v1 Real-time section presents two verified camera/screen pairs as Performance 01 and Performance 02, followed by reviewed standalone camera and screen recordings (Performance 03-18). Song names have not been verified. Debug-interrupted and stale disconnected screen recordings are excluded. See [the unmatched review](v1-unmatched-review.md) for per-source decisions and cuts.
 
 The four MP4s and four JPEG posters are copied without re-encoding from `Sample/StreamMUSE v1/Rematched_720p`. Sources were relocated from the older `Sample/video` directory; the manifest still contains that historical root. Files are matched by relative path, not by the stale absolute root.
 
@@ -15,7 +15,7 @@ The existing v2 dual-view player supplies synchronized playback/seeking, view sw
 
 ## Storage and quality
 
-The four videos total 24,310,797 bytes (24.31 MB decimal), plus posters. Website delivery intentionally uses prepared 720p files to limit Git repository size and bandwidth. Originals remain in OneDrive; future YouTube uploads must use the highest-quality originals, not these prepared copies. No original media is changed and no video is automatically uploaded to YouTube.
+The four paired videos total 24,310,797 bytes (24.31 MB decimal), plus posters; additional reviewed single-view video sizes are recorded separately in `v1-reviewed-videos-audit.json`. Website delivery intentionally uses 720p-or-lower derivatives to limit Git repository size and bandwidth. Originals remain in OneDrive; future YouTube uploads must use the highest-quality originals, not these prepared copies. No original media is changed and no video is automatically uploaded to YouTube.
 
 The former 6-second placeholder is removed from version metadata; its existing files are retained to avoid unrelated deletions.
 

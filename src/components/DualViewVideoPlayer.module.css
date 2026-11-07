@@ -29,4 +29,11 @@
 .player:fullscreen { display: flex; flex-direction: column; background: #141c19; color: #e5f0ea; }
 .player:fullscreen .frame { flex: 1; min-height: 0; aspect-ratio: auto; }
 .player:fullscreen .controls { width: min(100%, 1000px); margin: 0 auto; }
-@media (max-width: 400px) { .controls { padding: 6px 8px; } .sound input { width: 40px; } .controls button { min-height: 40px; } }
+@media (max-width: 400px) {
+  .controls { padding: 6px 8px; }
+  .sound { flex-basis: 100%; }
+  .sound input { width: 40px; }
+  .controls button { min-height: 40px; }
+  .options { flex-wrap: wrap; justify-content: flex-end; }
+  .swap { margin-left: 0; }
+}
