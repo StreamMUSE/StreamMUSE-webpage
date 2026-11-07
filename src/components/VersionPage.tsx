@@ -5,6 +5,7 @@ import VersionHero from '@/components/VersionHero'
 import type { StreamMuseVersion } from '@/types/project'
 import V2MidiGallery from '@/components/V2MidiGallery'
 import V2VideoGallery from '@/components/V2VideoGallery'
+import V1VideoGallery from '@/components/V1VideoGallery'
 
 interface VersionPageProps {
   version: StreamMuseVersion
@@ -26,7 +27,7 @@ export default function VersionPage({ version }: VersionPageProps) {
 
       <section id="media" className="content-section" aria-label={version.slug === 'v2' ? 'Demo Videos' : 'Real-time demos'}>
         <SectionHeading eyebrow="Recorded demos" title={version.slug === 'v2' ? 'Demo Videos' : 'Real-time'} description={version.slug === 'v2' ? `We tested ${version.name} with a human performer playing melodies from Chinese and Japanese pop songs. Each round is a separate recording session, and each take is one performance of a song within that session. Not every song was tested in every round, and some songs have only one take in a round. Round 2 includes synchronized camera and screen recordings.` : 'A human performer plays the melody, while the system generates accompaniment in real time.'} />
-        {version.slug === 'v2' ? <V2VideoGallery /> : <MediaGallery items={version.media} />}
+        {version.slug === 'v2' ? <V2VideoGallery /> : version.slug === 'v1' ? <V1VideoGallery /> : <MediaGallery items={version.media} />}
         {version.simulationMedia && version.simulationMedia.length > 0 ? (
           <div className="demo-group">
             <SectionHeading

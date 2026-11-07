@@ -115,20 +115,7 @@ export const streamMuseVersions: StreamMuseVersion[] = [
       project: '/versions/v1',
       code: 'https://github.com/StreamMUSE/StreamMUSE-v1',
     },
-    media: [
-      {
-        id: 'v1-local-demo',
-        title: 'v1 local demo slot',
-        kind: 'video',
-        sourceType: 'local',
-        src: '/media/streammuse/v1/videos/streammuse-v1-demo.mp4',
-        poster: '/media/streammuse/v1/thumbnails/streammuse-v1-demo.png',
-        caption: 'Placeholder video used to validate the v1 media layout.',
-        duration: '00:06',
-        scenario: 'Recorded demo',
-        versionLabel: 'v1',
-      },
-    ],
+    media: [],
     midi: [],
     notes: [
       'Publicly visible version page.',

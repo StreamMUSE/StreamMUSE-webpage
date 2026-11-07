@@ -1,0 +1,38 @@
+[
+  {
+    "id": "v1-performance-01",
+    "title": "Performance 01",
+    "take": 1,
+    "duration": 59.13333333333333,
+    "camera": {
+      "src": "/media/streammuse/v1/performances/01/camera.mp4",
+      "poster": "/media/streammuse/v1/performances/01/camera.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    "screen": {
+      "src": "/media/streammuse/v1/performances/01/screen.mp4",
+      "poster": "/media/streammuse/v1/performances/01/screen.jpg",
+      "width": 1108,
+      "height": 720
+    }
+  },
+  {
+    "id": "v1-performance-02",
+    "title": "Performance 02",
+    "take": 1,
+    "duration": 54.53333333333333,
+    "camera": {
+      "src": "/media/streammuse/v1/performances/02/camera.mp4",
+      "poster": "/media/streammuse/v1/performances/02/camera.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    "screen": {
+      "src": "/media/streammuse/v1/performances/02/screen.mp4",
+      "poster": "/media/streammuse/v1/performances/02/screen.jpg",
+      "width": 1130,
+      "height": 720
+    }
+  }
+]
