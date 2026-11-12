@@ -82,6 +82,13 @@ export default function VersionPage({ version }: VersionPageProps) {
           <h3>{version.publication.title}</h3>
           <p>{version.publication.venue}</p>
           <p>{version.publication.authors.join(', ')}</p>
+          {version.publication.paperUrl ? (
+            <div className="publication-actions">
+              <a href={version.publication.paperUrl} target="_blank" rel="noreferrer">
+                Paper link
+              </a>
+            </div>
+          ) : null}
           {version.publication.doi ? <p>DOI: {version.publication.doi}</p> : null}
           {version.publication.bibtex ? <pre>{version.publication.bibtex}</pre> : null}
         </section>
