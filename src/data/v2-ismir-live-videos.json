@@ -1,0 +1,11 @@
+{
+  "playlistUrl": "https://www.youtube.com/playlist?list=PLWtz_NmQItmo",
+  "videos": [
+    { "id": "ismir-live-01", "title": "Performance 01", "src": "https://www.youtube.com/watch?v=3Ak4-rNcdrg", "duration": "0:39", "sourceFilename": "1916_1794504037.mp4", "width": 568, "height": 320 },
+    { "id": "ismir-live-02", "title": "Performance 02", "src": "https://www.youtube.com/watch?v=ThAX0rz7fBg", "duration": "0:41", "sourceFilename": "1917_1794504060.mp4", "width": 568, "height": 320 },
+    { "id": "ismir-live-03", "title": "Performance 03", "src": "https://www.youtube.com/watch?v=kKc1Myz9KPk", "duration": "0:36", "sourceFilename": "1918_1794504102.mp4", "width": 1280, "height": 720 },
+    { "id": "ismir-live-04", "title": "Performance 04", "src": "https://www.youtube.com/watch?v=lXUSxfwI22o", "duration": "0:45", "sourceFilename": "1921_1794504260.mp4", "width": 1280, "height": 720 },
+    { "id": "ismir-live-05", "title": "Performance 05", "src": "https://www.youtube.com/watch?v=gI19r5MC2nk", "duration": "0:24", "sourceFilename": "1929_1794504602.mp4", "width": 1280, "height": 720 },
+    { "id": "ismir-live-06", "title": "Performance 06", "src": "https://www.youtube.com/watch?v=O6nOeaqwtms", "duration": "0:17", "sourceFilename": "1930_1794504612.mp4", "width": 1280, "height": 720 }
+  ]
+}

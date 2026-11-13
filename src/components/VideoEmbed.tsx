@@ -68,6 +68,7 @@ export default function VideoEmbed({ item }: VideoEmbedProps) {
     return (
       <iframe
         className="media-video"
+        loading="lazy"
         src={embedUrl}
         title={item.title}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

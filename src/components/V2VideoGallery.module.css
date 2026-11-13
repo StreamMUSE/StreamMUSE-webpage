@@ -3,6 +3,8 @@
 .rounds button[aria-pressed="true"] { background: #285e57; border-color: #285e57; color: white; }
 .rounds button:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
 .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: start; }
+.liveHeading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; }
+.liveHeading h3 { margin: 0; font-size: 20px; }
 .card { min-width: 0; overflow: hidden; border: 1px solid #e3e0d6; border-radius: 15px; background: #fffefa; box-shadow: 0 3px 12px #423a2410; }
 .heading { display: flex; align-items: center; gap: 12px; padding: 16px 18px; }
 .heading h3, .heading h4 { flex: 1; margin: 0; font-size: 17px; font-weight: 650; line-height: 1.4; }
