@@ -155,6 +155,13 @@ export const streamMuseVersions: StreamMuseVersion[] = [
         'Ziyu Wang',
       ],
       paperUrl: 'https://ismir2026program.ismir.net/lbd_655.html#detail',
+      bibtex: `@misc{qian2026streammuseplus,
+  title = {StreamMUSE+: Towards More Stable and Interactive Real-Time Piano Accompaniment Generation},
+  author = {Qian, Lekai and Chen, Yuan-Hsin and Zhang, Jiadong and Zheng, Bowen and Yang, Andrew H. and Ma, Xiaosong and Wang, Ziyu},
+  year = {2026},
+  howpublished = {ISMIR 2026 Late-Breaking/Demo},
+  url = {https://ismir2026program.ismir.net/lbd_655.html}
+}`,
     },
     media: [],
     midi: [],

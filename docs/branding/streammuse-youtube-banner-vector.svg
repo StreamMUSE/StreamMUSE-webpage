@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="0 0 2560 1440">
+  <title>StreamMUSE YouTube channel banner</title>
+  <desc>Two synchronized MIDI-block M shapes beside the StreamMUSE wordmark, centered for all-device cropping.</desc>
+  <rect width="2560" height="1440" fill="#ffffff"/>
+  <g transform="translate(205 28)">
+  <g transform="translate(590 610) scale(.82)">
+    <g fill="#28675f">
+      <rect x="56" y="0" width="52" height="24" rx="4"/>
+      <rect x="168" y="0" width="52" height="24" rx="4"/>
+      <rect x="0" y="32" width="52" height="24" rx="4"/>
+      <rect x="62" y="32" width="20" height="24" rx="3"/>
+      <rect x="168" y="32" width="20" height="24" rx="3"/>
+      <rect x="224" y="32" width="52" height="24" rx="4"/>
+      <rect x="0" y="64" width="52" height="24" rx="4"/>
+      <rect x="84" y="64" width="52" height="24" rx="4"/>
+      <rect x="140" y="64" width="52" height="24" rx="4"/>
+      <rect x="224" y="64" width="52" height="24" rx="4"/>
+    </g>
+    <g fill="#e37768" transform="translate(0 112)">
+      <rect x="56" y="0" width="52" height="24" rx="4"/>
+      <rect x="168" y="0" width="52" height="24" rx="4"/>
+      <rect x="0" y="32" width="52" height="24" rx="4"/>
+      <rect x="62" y="32" width="20" height="24" rx="3"/>
+      <rect x="168" y="32" width="20" height="24" rx="3"/>
+      <rect x="224" y="32" width="52" height="24" rx="4"/>
+      <rect x="0" y="64" width="52" height="24" rx="4"/>
+      <rect x="84" y="64" width="52" height="24" rx="4"/>
+      <rect x="140" y="64" width="52" height="24" rx="4"/>
+      <rect x="224" y="64" width="52" height="24" rx="4"/>
+    </g>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="860" y="710" font-size="112" font-weight="700" fill="#101412">StreamMUSE</text>
+    <text x="866" y="770" font-size="39" font-weight="400" fill="#414b47">Real-Time Music Accompaniment</text>
+  </g>
+  </g>
+</svg>

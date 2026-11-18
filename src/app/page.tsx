@@ -3,7 +3,8 @@ import MediaGallery from '@/components/MediaGallery'
 import MidiAssetList from '@/components/MidiAssetList'
 import SectionHeading from '@/components/SectionHeading'
 import VersionCard from '@/components/VersionCard'
-import { getFeaturedMedia, getFeaturedMidi, streamMuseVersions, v0Publication } from '@/data/versions'
+import PublicationEntry from '@/components/PublicationEntry'
+import { getFeaturedMedia, getFeaturedMidi, streamMuseVersions } from '@/data/versions'
 
 export default function Home() {
   const featuredMedia = getFeaturedMedia(4)
@@ -35,6 +36,18 @@ export default function Home() {
       <section id="news" className="content-section">
         <SectionHeading eyebrow="News" title="Latest updates" />
         <div className="news-list">
+          <article className="news-item">
+            <time dateTime="2026-10">October 2026</time>
+            <div>
+              <h3>StreamMUSE+ accepted by ISMIR 2026 LBD</h3>
+              <p>
+                <span>StreamMUSE+: Towards More Stable and Interactive Real-Time Piano Accompaniment Generation</span> was accepted by ISMIR 2026 Late-Breaking/Demo (LBD).
+              </p>
+              <a className="text-link" href="https://ismir2026program.ismir.net/lbd_655.html#detail" target="_blank" rel="noreferrer">
+                Official ISMIR 2026 page
+              </a>
+            </div>
+          </article>
           <article className="news-item">
             <time dateTime="2026-01">January 2026</time>
             <div>
@@ -76,26 +89,11 @@ export default function Home() {
         ) : null}
       </section>
 
-      <section id="publication" className="content-section publication-card">
-        <SectionHeading eyebrow="Publication" title="StreamMUSE v0" description="The first accepted StreamMUSE paper." />
-        {v0Publication ? (
-          <>
-            <h3>{v0Publication.title}</h3>
-            <p>{v0Publication.venue}</p>
-            <p>{v0Publication.authors.join(', ')}</p>
-            <div className="publication-actions">
-              {v0Publication.paperUrl ? (
-                <a href={v0Publication.paperUrl} target="_blank" rel="noreferrer">
-                  DOI / Paper link
-                </a>
-              ) : null}
-              <a href="https://github.com/StreamMUSE/AE" target="_blank" rel="noreferrer">
-                Code
-              </a>
-            </div>
-            {v0Publication.bibtex ? <pre>{v0Publication.bibtex}</pre> : null}
-          </>
-        ) : null}
+      <section id="publication" className="content-section publication-list" aria-label="Publications">
+        <SectionHeading eyebrow="Publication" title="Research publications" />
+        {streamMuseVersions.filter((version) => version.publication).map((version) => (
+          <PublicationEntry key={version.slug} version={version} />
+        ))}
       </section>
     </main>
   )

@@ -72,6 +72,7 @@ main {
   width: 2rem;
   height: 2rem;
   border-radius: 999px;
+  overflow: hidden;
   color: white;
   background: var(--teal);
 }
@@ -536,7 +537,105 @@ main {
 }
 
 .publication-card {
+  min-width: 0;
   padding: 1.5rem;
+}
+
+.publication-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.publication-entry {
+  min-width: 0;
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.publication-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  color: var(--teal-dark);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.publication-entry h3 {
+  max-width: 980px;
+  margin: 0.85rem 0 0.65rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.publication-authors,
+.publication-venue {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.publication-venue {
+  color: var(--muted);
+}
+
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.15rem;
+}
+
+.publication-links a,
+.publication-links button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 40px;
+  padding: 0.5rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--teal-dark);
+  background: var(--surface);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.publication-links a:hover,
+.publication-links button:hover {
+  border-color: var(--teal);
+}
+
+.publication-links a:focus-visible,
+.publication-links button:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+}
+
+.citation-chevron-open {
+  transform: rotate(180deg);
+}
+
+.publication-citation {
+  min-width: 0;
+  margin-top: 1rem;
+}
+
+.publication-citation pre {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  font-size: 0.85rem;
+  line-height: 1.6;
 }
 
 .publication-card pre {

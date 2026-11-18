@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Activity } from 'lucide-react'
+import Image from 'next/image'
 
 const navItems = [
   { href: '/#goal', label: 'Goal' },
@@ -15,7 +15,7 @@ export default function SiteHeader() {
     <header className="site-header">
       <Link href="/" className="site-brand" aria-label="StreamMUSE home">
         <span className="brand-mark">
-          <Activity size={18} aria-hidden="true" />
+          <Image src="/brand/streammuse-s.png" alt="" width={32} height={32} />
         </span>
         <span>StreamMUSE</span>
       </Link>
